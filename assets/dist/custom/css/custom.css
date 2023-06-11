@@ -1,0 +1,69 @@
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'IM Fell DW Pica', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rochester', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'UnifrakturMaguntia', cursive;
+*/
+
+:root {
+    --lover: #df6395;
+}
+
+header {
+    background-image: linear-gradient(to right, #a0c3a2, #edbd7a, #d0b4d4, #6c333b, #abe2f5, #6d6d6d, #f7a8c8, #c9c5bf, #b6a083);
+}
+
+header img {
+    width: 100%;
+}
+
+.font-lover {
+    font-family: 'Satisfy', cursive;
+}
+
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.bd-callout-lover {
+    border-left-color: var(--lover);
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    margin: 1em 0;
+}
+
+article {
+    margin: 0 4rem;
+}
+
+.cipher {
+    font-family: monospace;
+}
+.cipher-tone {
+    margin: 5px 0 25px;
+    font-weight: bold;
+}
+
+#lover b {
+    color: var(--lover);
+    font-weight: bold;
+}
+
+#lover .title {
+    font-family: 'Satisfy', cursive;
+    font-size: 48px;
+    color: var(--lover);
+}
