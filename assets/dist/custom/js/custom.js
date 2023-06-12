@@ -3,5 +3,5 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active')
     })
 
-    $("#lover-album-content").load("/templates/lover/index.html")
+    $("#lover-album-content").load("templates/lover/index.html")
 })
