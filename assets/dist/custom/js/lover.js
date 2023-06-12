@@ -3,5 +3,5 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active')
     })
 
-    $("#the-man").load("/templates/lover/the-man.html")
+    $("#the-man").load("templates/lover/the-man.html")
 })
