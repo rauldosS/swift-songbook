@@ -11,6 +11,7 @@ font-family: 'UnifrakturMaguntia', cursive;
 */
 
 :root {
+    --taylor-swift: #8caa87;
     --lover: #df6395;
 }
 
@@ -22,8 +23,15 @@ header img {
     width: 100%;
 }
 
+.font-taylor-swift {
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    color: var(--taylor-swift);
+}
+
 .font-lover {
     font-family: 'Satisfy', cursive;
+    color: var(--lover);
 }
 
 .bd-callout {

@@ -37,6 +37,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500&family=IM+Fell+DW+Pica:ital@0;1&family=Montserrat:wght@100&family=Permanent+Marker&family=Roboto:wght@500&family=Rochester&family=Sacramento&family=Satisfy&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
     <link href="assets/dist/custom/css/custom.css" rel="stylesheet">
+    <link href="assets/dist/custom/css/sidbar.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -47,179 +48,91 @@
             </h1>
         </div>
     </header>
-    <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
-        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Álbuns</h2>
-        <nav class="small" id="toc">
-            <ul class="list-unstyled">
-                <li class="my-2">
-                    <button
-                        class="btn d-inline-flex align-items-center collapsed"
-                        data-bs-toggle="collapse"
-                        aria-expanded="false" data-bs-target="#contents-collapse"
-                        aria-controls="contents-collapse"
-                    >
-                        Lover
-                    </button>
-                    <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
-                        <li><a class="d-inline-flex align-items-center rounded" href="#the-man">The Man</a></li>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Chords</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#taylor-swift-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle taylor-swift-album font-taylor-swift">Taylor Swift</a>
+                    <ul class="collapse list-unstyled" id="taylor-swift-album">
+                        <li>
+                            <a href="#">The Man</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#lover-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle lover-album font-lover">Lover</a>
+                    <ul class="collapse list-unstyled" id="lover-album">
+                        <li>
+                            <a href="#">The Man</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
+
+            <ul class="list-unstyled CTAs">
+                Creted by Raul
+            </ul>
         </nav>
-    </aside>
-    <div class="bd-cheatsheet container-fluid bg-body">
-        <section id="lover">
-            <article class="my-3" id="the-man">
 
-                <div class="title">The Man</div>
+        <!-- Page Content  -->
+        <div id="content">
 
-                <div class="cipher">
-                    <span class="cipher-tone">Tom: <b>C</b></span>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
-                    <div class="bd-callout bd-callout-lover text-black-50 fw-normal">
-                        <div class="d-flex justify-content-between">
-                            <div>| <b>F</b> | <b>G</b> | <b>C</b> | <b>Am</b> |</div>
-                            <div class="fw-bold">D - U D U - D - - - - - - - - -</div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div class="fw-bold">INTRO/VERSION</div>
-                            <div>1 a + e 2 a + e 3 a + e 4 a + e</div>
-                        </div>
-                    </div>
+                    <button type="button" id="sidebarCollapse" class="btn btn-outline-secondary">
+                        <i class="fas fa-align-left"></i>
+                        <span>Hide Chords</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
 
-<pre>
-[Intro]
-
-<b>F</b>                    <b>G</b>
-I would be complex, I would be cool
-            <b>C</b>                                 <b>Am</b>
-They'd say I played the field before I found someone to commit to
-                <b>F</b>               <b>G</b>
-And that would be okay for me to do
-    <b>C</b>                                 <b>Am</b>
-Every conquest I had made would make me more of a boss to you
-
-[Pre-Chorus]
-
-<b>F</b>
-I'd be a fearless leader
-<b>G</b>
-I'd be an alpha type
-<b>C</b>
-When everyone believes ya
-<b>Am</b>
-What's that like?
-
-[Chorus]
-
-<b>F</b>                          <b>G</b>
-I'm so sick of running as fast as I can
-<b>C</b>                                      <b>Am</b>
-Wondering if I'd get there quicker if I was a man
-    <b>F</b>                          <b>G</b>
-And I'm so sick of them coming at me again
-        <b>C</b>                 <b>Am</b>
-'Cause if I was a man, then I'd be the man
-            <b>F</b>   <b>G</b>
-I'd be the man
-            <b>C</b>   <b>Am</b>
-I'd be the man
-
-[Segunda Parte]
-
-            <b>F</b>                   <b>G</b>
-They'd say I hustled, put in the work
-                <b>C</b>                                     <b>Am</b>
-They wouldn't shake their heads and question how much of this I deserve
-            <b>F</b>                 <b>G</b>
-What I was wearing, if I was rude
-            <b>C</b>                       <b>Am</b>
-Could all be separated from my good ideas and power moves
-
-<b>F</b>                            <b>G</b>
-And they would toast to me, oh, let the players play
-<b>C</b>                   <b>Am</b>
-I'd be just like Leo in Saint Tropez
-
-[Refrão]
-
-<b>F</b>                          <b>G</b>
-I'm so sick of running as fast as I can
-<b>C</b>                                      <b>Am</b>
-Wondering if I'd get there quicker if I was a man
-    <b>F</b>                          <b>G</b>
-And I'm so sick of them coming at me again
-        <b>C</b>                 <b>Am</b>
-'Cause if I was a man, then I'd be the man
-            <b>F</b>   <b>G</b>
-I'd be the man
-            <b>C</b>   <b>Am</b>
-I'd be the man
-
-[Ponte]
-
-                            <b>F</b>
-What's it like to brag about drinking and dollars
-            <b>G</b>
-And getting bitches and models?
-            <b>C</b>
-And it's all good if you're bad
-        <b>Am</b>
-And it's okay if you're mad
-            <b>F</b>                             <b>G</b>
-If I was out flashing my dollars, I'd be a bitch not a baller
-                <b>C</b>
-They'd paint me out to be bad
-        <b>Am</b>
-So, it's okay that I'm mad
-
-[Refrão]
-
-<b>F</b>                          <b>G</b>
-I'm so sick of running as fast as I can
-<b>C</b>                                      <b>Am</b>
-Wondering if I'd get there quicker if I was a man (You know that)
-    <b>F</b>                          <b>G</b>
-And I'm so sick of them coming at me again (Coming at me again)
-        <b>C</b>
-'Cause if I was a man (If I was a man)
-    <b>Am</b>
-Then I'd be the man (Then I'd be the man)
-<b>F</b>                          <b>G</b>
-I'm so sick of running as fast as I can (As fast as I can)
-<b>C</b>                                      <b>Am</b>
-Wondering if I'd get there quicker if I was a man (Hey)
-    <b>F</b>                          <b>G</b>
-And I'm so sick of them coming at me again (Coming at me again)
-        <b>C</b>                                  <b>Am</b>
-'Cause if I was a man (If I was a man), then I'd be the man
-            <b>F</b>   <b>G</b>
-I'd be the man
-            <b>C</b>       <b>Am</b>
-I'd be the man (Oh)
-            <b>F</b>         <b>G</b>
-I'd be the man (Yeah)
-            <b>C</b>   <b>Am</b>
-I'd be the man (I'd be the man)
-
-If I was a man, then I'd be the man
-</pre>
-                </div>
-
-                <div>
-                    <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                        <h3>Details</h3>
-                        <a class="d-flex align-items-center" href="https://genius.com/Taylor-swift-the-man-lyrics" target="_blank">🎤 Lyrics</a>
-                        <a class="d-flex align-items-center" href="https://www.youtube.com/watch?v=JH14683wgl0&t=570s&ab_channel=GuitarGoddess" target="_blank">🎸 Youtube Guitar Tutorial by Guitar Goddess</a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        Taylor Swift Songs From The Vault
                     </div>
                 </div>
+            </nav>
 
-            </article>
-        </section>
+            <h2>Lorem ipsum dolor sit amet</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+        </div>
     </div>
 
+    <main>
+        <div id="lover-album-content"></div>
+    </main>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/dist/bootstrap/cheatsheets/js/cheatsheet.js"></script>
+    <script src="assets/dist/custom/js/custom.js"></script>
 </body>
 
 </html>
