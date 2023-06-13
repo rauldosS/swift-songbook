@@ -13,6 +13,7 @@ font-family: 'UnifrakturMaguntia', cursive;
     --taylor-swift: #8caa87;
     --fearless: #cca965;
     --lover: #df6395;
+    --red: #b21847;
 }
 
 header {
@@ -72,15 +73,20 @@ header {
     margin-left: -250px !important;
 }
 
+#menu-toggle {
+    position: relative;
+    margin-top: 10px;
+    left: 34px;
+    background-color: var(--fearless);
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
 #page-content-wrapper nav {
     position: fixed;
     width: 80%;
     background-color: #7343435c !important;
     color: #FFF;
-}
-
-#page-content-wrapper .content {
-    margin-top: 8%;
 }
 
 .scrolling {
@@ -152,8 +158,22 @@ article {
 }
 
 @media(max-width: 768px) {
+    #wrapper {
+        padding: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+    }
+
     #sidebar.toggled {
         margin-left: 0px !important;
         display: block;
+    }
+
+    #menu-toggle {
+        position: relative;
+        margin-top: 10px;
+        left: 48px;
     }
 }
