@@ -19,6 +19,26 @@ header {
     background-image: linear-gradient(to right, #a0c3a2, #edbd7a, #d0b4d4, #6c333b, #abe2f5, #6d6d6d, #f7a8c8, #c9c5bf, #b6a083);
 }
 
+.content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+/* Toggle Styles */
+
+#sidebar {
+    padding-left: 0;
+    -webkit-transition: all s ease;
+    -moz-transition: all s ease;
+    -o-transition: all s ease;
+    transition: all s ease;
+}
+
+#sidebar.toggled {
+    margin-left: -250px !important;
+}
+
 iframe {
     width: 100%;
 }
@@ -83,4 +103,17 @@ article {
     font-family: 'Satisfy', cursive !important;
     font-size: 48px;
     color: var(--lover);
+}
+
+@media(max-width: 992px) {
+    #navbarSupportedContent {
+        padding-top: 1rem !important;
+    }
+}
+
+@media(max-width: 768px) {
+    #sidebar.toggled {
+        margin-left: 0px !important;
+        display: block;
+    }
 }
