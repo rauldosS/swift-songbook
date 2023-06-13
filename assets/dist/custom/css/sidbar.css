@@ -98,6 +98,11 @@ a:focus {
     background: var(--taylor-swift);
 }
 
+#sidebar ul li a.fearless-album:hover {
+    color: #FFF;
+    background: var(--fearless);
+}
+
 #sidebar ul li a.lover-album:hover {
     color: #FFF;
     background: var(--lover);
@@ -112,6 +117,11 @@ a[aria-expanded="true"] {
 a.taylor-swift-album[aria-expanded="true"] {
     color: #FFF;
     background: var(--taylor-swift);
+}
+
+a.fearless-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--fearless);
 }
 
 a.lover-album[aria-expanded="true"] {

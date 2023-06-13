@@ -46,9 +46,9 @@
             </h1>
         </div>
     </header>
-    <div id="wrapper" class="wrapper">
+    <div id="wrapper" class="wrapper container-fluid">
         <!-- Sidebar  -->
-        <nav id="sidebar">
+        <nav id="sidebar" class="shadow">
             <div class="sidebar-header">
                 <h5>Albuns</h3>
             </div>
@@ -57,8 +57,13 @@
                 <li>
                     <a href="#taylor-swift-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle taylor-swift-album font-taylor-swift">Taylor Swift</a>
                     <ul class="collapse list-unstyled" id="taylor-swift-album">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#fearless-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Taylor Swift</a>
+                    <ul class="collapse list-unstyled" id="fearless-album">
                         <li>
-                            <a href="#">The Man</a>
+                            <a href="#" class="fw-bold">Fearless</a>
                         </li>
                     </ul>
                 </li>
@@ -78,11 +83,11 @@
         </nav>
 
         <!-- Page Content  -->
-        <div class="content" id="page-content-wrapper">
+        <div id="page-content-wrapper" class="content scrolling">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="menu-toggle" class="btn btn-outline-secondary">
+                    <button type="button" id="menu-toggle" class="btn btn-light">
                         <i class="fas fa-align-left"></i>
                         <span>Hide Albuns</span>
                     </button>
@@ -96,14 +101,19 @@
                 </div>
             </nav>
 
-            <h1>Taylor Swift: The Music Industry</h1>
+            <div class="content shadow">
+                <h1>Taylor Swift: The Music Industry</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-            
-            <div id="lover-album-content"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                <div class="line"></div>
+                
+                <div id="albuns-content">
+                    <div id="fearless-album-content"></div>
+                    <div id="lover-album-content"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -114,7 +124,6 @@
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 
     <!-- Popper.JS -->

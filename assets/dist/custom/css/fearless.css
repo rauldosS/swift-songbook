@@ -1,0 +1,15 @@
+#fearless-album-content .bd-callout-info {
+    border-left-color: var(--fearless);
+}
+
+#fearless-album-content b {
+    color: var(--fearless);
+    font-weight: bold;
+}
+
+#fearless-album-content .title {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: var(--fearless);
+}

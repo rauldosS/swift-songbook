@@ -2,7 +2,6 @@
 font-family: 'Anton', sans-serif;
 font-family: 'Cinzel', serif;
 font-family: 'IM Fell DW Pica', serif;
-font-family: 'Montserrat', sans-serif;
 font-family: 'Permanent Marker', cursive;
 font-family: 'Roboto', sans-serif;
 font-family: 'Rochester', cursive;
@@ -12,6 +11,7 @@ font-family: 'UnifrakturMaguntia', cursive;
 
 :root {
     --taylor-swift: #8caa87;
+    --fearless: #cca965;
     --lover: #df6395;
 }
 
@@ -25,7 +25,40 @@ header {
     min-height: 100vh;
     transition: all 0.3s;
 }
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 /* Toggle Styles */
+
+#wrapper {
+    position:   fixed;
+    top:        10%;
+    bottom:     0;
+    left:       0;
+    right:      0;
+    /*padding: 25px;*/
+}
 
 #sidebar {
     padding-left: 0;
@@ -39,6 +72,22 @@ header {
     margin-left: -250px !important;
 }
 
+#page-content-wrapper nav {
+    position: fixed;
+    width: 80%;
+    background-color: #7343435c !important;
+    color: #FFF;
+}
+
+#page-content-wrapper .content {
+    margin-top: 8%;
+}
+
+.scrolling {
+    overflow: auto;
+    max-height: 98%;
+}
+
 iframe {
     width: 100%;
 }
@@ -47,15 +96,20 @@ header img {
     width: 100%;
 }
 
-.font-taylor-swift {
-    font-family: 'Sacramento', cursive;
-    font-weight: 400;
-    color: var(--taylor-swift);
+.font-fearless {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fearless);
 }
 
 .font-lover {
     font-family: 'Satisfy', cursive;
     color: var(--lover);
+}
+
+.font-taylor-swift {
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    color: var(--taylor-swift);
 }
 
 .bd-callout {
@@ -67,14 +121,11 @@ header img {
     border-radius: 0.25rem;
 }
 
-.bd-callout-lover {
-    border-left-color: var(--lover);
-}
-
 pre {
     display: block;
     font-family: monospace;
     margin: 1em 0;
+    white-space: break-spaces;
 }
 
 article {
@@ -92,17 +143,6 @@ article {
 
 .title-album {
     font-size: 78px !important;
-}
-
-#lover-album-content b {
-    color: var(--lover);
-    font-weight: bold;
-}
-
-#lover-album-content .title {
-    font-family: 'Satisfy', cursive !important;
-    font-size: 48px;
-    color: var(--lover);
 }
 
 @media(max-width: 992px) {

@@ -8,5 +8,6 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("toggled")
     })
 
-    $("#lover-album-content").load("templates/lover/index.html")
+    $("#fearless-album-content").load("templates/fearless/album.html")
+    $("#lover-album-content").load("templates/lover/album.html")
 })

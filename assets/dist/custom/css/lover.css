@@ -1,0 +1,14 @@
+#lover-album-content .bd-callout-info {
+    border-left-color: var(--lover);
+}
+
+#lover-album-content b {
+    color: var(--lover);
+    font-weight: bold;
+}
+
+#lover-album-content .title {
+    font-family: 'Satisfy', cursive;
+    font-size: 48px;
+    color: var(--lover);
+}
