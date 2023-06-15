@@ -82,6 +82,11 @@ header {
     border: 1px solid #FFF;
 }
 
+#sidebar.toggled #menu-toggle {
+    transform: rotate(180deg);
+    left: 48px;
+}
+
 #page-content-wrapper nav {
     position: fixed;
     width: 80%;
@@ -163,38 +168,7 @@ article {
     font-size: 78px !important;
 }
 
-@media(max-width: 992px) {
-    #navbarSupportedContent {
-        padding-top: 1rem !important;
-    }
-}
-
-@media(max-width: 768px) {
-    #wrapper {
-        padding: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 0;
-    }
-
-    #sidebar.toggled {
-        margin-left: 0px !important;
-        display: block;
-    }
-
-    #menu-toggle {
-        position: relative;
-        margin-top: 10px;
-        left: 48px;
-    }
-}
-
-
-
-
-
-
+/* Mini player */
 
 .player--min, .player--close {
     position: fixed;
@@ -211,6 +185,8 @@ article {
 
 .player--min .player-miniPlayerCloseButton {
     display: block;
+    font-family: monospace;
+    padding: 0 8px;
 }
 
 .player-closePlayerControl {
@@ -240,4 +216,32 @@ article {
 .player--music:hover .player-closePlayerControl {
     visibility: visible;
     opacity: 1;
+}
+
+
+@media(max-width: 992px) {
+    #navbarSupportedContent {
+        padding-top: 1rem !important;
+    }
+}
+
+@media(max-width: 768px) {
+    #wrapper {
+        padding: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+    }
+
+    #sidebar.toggled {
+        margin-left: 0px !important;
+        display: block;
+    }
+
+    #menu-toggle {
+        position: relative;
+        margin-top: 10px;
+        left: 48px;
+    }
 }

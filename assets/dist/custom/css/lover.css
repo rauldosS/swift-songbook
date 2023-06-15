@@ -1,14 +1,18 @@
-#lover-album-content .bd-callout-info {
+#cipher .bd-callout-info {
     border-left-color: var(--lover);
 }
 
-#lover-album-content b {
+#cipher b {
     color: var(--lover);
     font-weight: bold;
 }
 
-#lover-album-content .title {
+#cipher .title, #lover-album .title {
     font-family: 'Satisfy', cursive;
     font-size: 48px;
     color: var(--lover);
+}
+
+#cipher .bg-album {
+    background-color: var(--lover);
 }

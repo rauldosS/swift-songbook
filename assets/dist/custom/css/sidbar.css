@@ -93,6 +93,8 @@ a:focus {
     background: #e7e8ed;
 }
 
+/* Menu */
+
 #sidebar ul li a.taylor-swift-album:hover {
     color: #FFF;
     background: var(--taylor-swift);
@@ -107,6 +109,21 @@ a:focus {
     color: #FFF;
     background: var(--lover);
 }
+
+/* Sub-menu style */
+
+#fearless-list-unstyled a {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fearless);
+}
+
+#lover-list-unstyled {
+    /* font-family: 'Satisfy', cursive; */
+    color: var(--lover);
+}
+
+/* end */
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
@@ -144,7 +161,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #e7e8ed;
+    background: #FFF;
 }
 
 ul.CTAs {

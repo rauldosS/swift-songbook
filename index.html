@@ -13,6 +13,8 @@
 
     <link href="assets/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -61,18 +63,28 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#fearless-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Taylor Swift</a>
-                    <ul class="collapse list-unstyled" id="fearless-album">
+                    <a href="#fearless-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Taylor Swift</a>
+                    <ul class="collapse list-unstyled" id="fearless-list-unstyled">
                         <li>
-                            <a href="#fearless">Fearless</a>
+                            <a onclick="selectMusic('fearless', 'fearless')">Fearless</a>
+                            <a onclick="selectMusic('fearless', 'fearless')">You Belong With Me</a>
+                            <a onclick="selectMusic('fearless', 'fearless')">Loe Story</a>
+                            <a onclick="selectAlbum('fearless')" class="d-flex justify-content-between pe-3">
+                                About
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                            </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#lover-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle lover-album font-lover">Lover</a>
-                    <ul class="collapse list-unstyled" id="lover-album">
+                    <a href="#lover-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle lover-album font-lover">Lover</a>
+                    <ul class="collapse list-unstyled" id="lover-list-unstyled">
                         <li>
-                            <a href="#the-man">The Man</a>
+                            <a onclick="selectMusic('lover', 'the-man')">The Man</a>
+                            <a onclick="selectAlbum('lover')" class="d-flex justify-content-between pe-3">
+                                About
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -87,17 +99,28 @@
         <div id="page-content-wrapper" class="content scrolling">
 
             <div class="content shadow bg-white">
-                <h1>Taylor Swift: The Music Industry</h1>
+                <div id="home">
+                    <h1>Taylor Swift: The Music Industry</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
-                <div class="line"></div>
-                
-                <div id="albuns-content">
-                    <div id="fearless-album-content"></div>
-                    <div id="lover-album-content"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="line"></div>
                 </div>
+
+                <div id="album" class="animate__animated animate__fadeInLeft"></div>
+
+                <div id="cipher" class="my-3 cipher fearless-album-content animate__animated animate__fadeInLeft"></div>
+
+                <section id="mini-player" class="player player--music player--init player--min" id="js-pl-v">
+                    <div class="player-core">
+                        <div id="video">
+                        </div>
+                    </div>
+                    <div class="player-closePlayerControl">
+                        <button class="player-miniPlayerCloseButton btn btn-dark" data-title="Fechar Miniplayer">Fechar Miniplayer</button>
+                    </div>
+                </section>
             </div>
         </div>
     </div>

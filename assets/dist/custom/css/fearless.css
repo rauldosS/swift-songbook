@@ -1,19 +1,19 @@
-#fearless-album-content .bd-callout-info {
+#cipher .bd-callout-info {
     border-left-color: var(--fearless);
 }
 
-#fearless-album-content b {
+#cipher b {
     color: var(--fearless);
     font-weight: bold;
 }
 
-#fearless-album-content .title {
+#cipher .title, #fearless-album .title {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     color: var(--fearless);
 }
 
-#fearless-album-content .bg-album {
+#cipher .bg-album {
     background-color: var(--fearless);
 }
