@@ -149,6 +149,10 @@ article {
     display: block;
 }
 
+#chords {
+    display: none;
+}
+
 .cipher > span {    
     display: block;
     margin-bottom: 5px;
@@ -173,7 +177,7 @@ article {
 .player--min, .player--close {
     position: fixed;
     bottom: 14px;
-    right: 14px;
+    right: 60px;
     top: inherit;
     margin-right: 0;
     z-index: 15;
@@ -217,7 +221,6 @@ article {
     visibility: visible;
     opacity: 1;
 }
-
 
 @media(max-width: 992px) {
     #navbarSupportedContent {

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log('lover')
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
     })

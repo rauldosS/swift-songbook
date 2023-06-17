@@ -8,8 +8,7 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("toggled")
     })
 
-    $("#fearless-album-content").load("templates/fearless/album.html")
-    $("#lover-album-content").load("templates/lover/album.html")
+    $("#toolbar").load("templates/base/toolbar.html")
 })
 
 let lastAlbum = null
