@@ -122,16 +122,16 @@ $(document).ready(function () {
     // Font
 
     $('.font-action-button.increase').click(() => {
-        const currentFontSize = $('pre[type="tabs"]').css('font-size').split('px')[0]
+        const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
         if (currentFontSize >= 7) {
-            $('pre[type="tabs"], pre[type="lyrics"], .progressions').css({ 'font-size': parseInt(currentFontSize) - 2 + 'px' })
+            $('.tabs, .progressions, pre[type="lyrics"]').css({ 'font-size': parseInt(currentFontSize) - 2 + 'px' })
         }
     })
 
     $('.font-action-button.decrease').click(() => {
-        const currentFontSize = $('pre[type="tabs"]').css('font-size').split('px')[0]
+        const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
         if (currentFontSize <= 25) {
-            $('pre[type="tabs"], pre[type="lyrics"], .progressions').css({ 'font-size': parseInt(currentFontSize) + 2 + 'px' })
+            $('.tabs, .progressions, pre[type="lyrics"]').css({ 'font-size': parseInt(currentFontSize) + 2 + 'px' })
         }
     })
 
@@ -154,7 +154,7 @@ $(document).ready(function () {
 
     $('#hide-lyrics').click(() => { hide('#hide-lyrics', 'pre[type="lyrics"]') })
     $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions') })
-    $('#hide-tabs').click(() => { hide('#hide-tabs', 'pre[type="tabs"]') })
+    $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs') })
     $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
     $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
 })
