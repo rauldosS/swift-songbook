@@ -1,7 +1,6 @@
 
 #toolbar {
     font-family: 'Poppins', sans-serif;
-    width: 440px;
     bottom: 90px;
     grid-area: panel;
     height: 62px;
@@ -10,7 +9,6 @@
     color: #212121;
     background: hsla(0,0%,100%,.9);
     border: 1px solid #e0e0e0;
-    transform: translateX(15%);
 }
 
 #toolbar .change-auto-scroll-speed {

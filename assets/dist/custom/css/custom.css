@@ -130,7 +130,6 @@ header img {
     border: 1px solid #e9ecef;
     border-left-width: 0.25rem;
     border-radius: 0.25rem;
-    max-width: 700px;
 }
 
 pre {
@@ -150,7 +149,13 @@ article {
 }
 
 #chords {
+    justify-content: center!important;
     display: none;
+    position: sticky !important;
+    top: 15px;
+    background-color: #FFF;
+    opacity: 1;
+    z-index: 998;
 }
 
 .cipher > span {    
@@ -176,7 +181,7 @@ article {
 
 .player--min, .player--close {
     position: fixed;
-    bottom: 14px;
+    bottom: 98px;
     right: 60px;
     top: inherit;
     margin-right: 0;

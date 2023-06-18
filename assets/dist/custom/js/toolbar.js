@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    ScrollDown.current=$('#page-content-wrapper').scrollTop();
-    ScrollDown.rate=60;
+    ScrollDown.current = $('#page-content-wrapper').scrollTop();
+    ScrollDown.lastRate = 60;
     ScrollDown.lastValue;
     ScrollDown.lastType;
-    ScrollDown.enabled=true;
-    ScrollDown.custom=function(value, rate) {  //let's say value==='bottom' and rate=10
-        ScrollDown.rate += rate
+    ScrollDown.enabled = true;
+    ScrollDown.custom = function(value, rate) {  //let's say value==='bottom' and rate=10
+        ScrollDown.lastRate += rate
         if(value==='bottom') {
             value=$('#cipher').height()-$('#page-content-wrapper').height()
         }
@@ -38,10 +38,14 @@ $(document).ready(function () {
                         ScrollDown.stop()
                     }
                     poll()
-                } else {
+                } else if (prev!==ScrollDown.current-1) {
                     ScrollDown.slow('bottom')
+                } else {
+                    ScrollDown.stop()
                 }
-            }, ScrollDown.rate)
+
+                ScrollDown.userInteraction = false
+            }, ScrollDown.lastRate)
         })()
     }
 
@@ -102,15 +106,13 @@ $(document).ready(function () {
     // }
 
     $('.btn-action-autoscroll').click(() => {
-        if ($('.action-autoscrol').hasClass('autoscroll')) {
+        if ($('.action-autoscroll').hasClass('autoscroll') == true) {
             ScrollDown.stop()
         } else {
             ScrollDown.slow('bottom')
-            $('.action-autoscroll').toggleClass('autoscroll')
         }
+        $('.action-autoscroll').toggleClass('autoscroll')
     })
-
-    ScrollDown.stop()
 
     $('.increase-auto-scroll-speed').click(() => {
         ScrollDown.down('bottom')
@@ -123,7 +125,7 @@ $(document).ready(function () {
     // Chords
 
     $('.btn-action-chords').click(() => {
-        $('#chords').toggleClass('d-block')
+        $('#chords').toggleClass('d-flex')
         $('.btn-action-chords').toggleClass('active')
     })
 
