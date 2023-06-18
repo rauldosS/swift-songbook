@@ -1,19 +1,19 @@
-#cipher .bd-callout-info {
+#cipher-content .bd-callout-info {
     border-left-color: var(--fearless);
 }
 
-#cipher b {
+#cipher-content b {
     color: var(--fearless);
     font-weight: bold;
 }
 
-#cipher .title, #fearless-album .title {
+#cipher-content .title, #fearless-album .title {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     color: var(--fearless);
 }
 
-#cipher .bg-album {
+#cipher-content .bg-album {
     background-color: var(--fearless);
 }

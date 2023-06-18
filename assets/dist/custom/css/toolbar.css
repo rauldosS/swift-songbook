@@ -57,6 +57,16 @@
     text-transform: uppercase;
 }
 
+#toolbar .font-action-columns {
+    font-size: 13px;
+    line-height: 36px;
+    margin-right: 14px;
+    margin-left: 14px;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 #toolbar .NWgb3, #toolbar .font-action {
     display: flex;
 }

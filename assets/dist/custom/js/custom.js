@@ -17,7 +17,7 @@ selectAlbum = (album) => {
     $('#toolbar').hide()
     $('#album').hide()
     $('#home').hide()
-    $('#cipher').hide()
+    $('#cipher-content').hide()
     $('#mini-player').hide()
 
     $('#album').load(`templates/${album}/album.html`)
@@ -26,13 +26,13 @@ selectAlbum = (album) => {
 }
 
 selectMusic = (album, music) => {
-    $('#cipher').hide()
+    $('#cipher-content').hide()
     $('#album').hide()
     $('#home').hide()
 
-    $('#cipher').load(`templates/${album}/${music}.html`)
+    $('#cipher-content').load(`templates/${album}/${music}/music.html`)
 
-    $('#cipher').show()
+    $('#cipher-content').show()
     $('#toolbar').show()
     $('#mini-player').show()
 }

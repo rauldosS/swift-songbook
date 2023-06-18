@@ -1,18 +1,18 @@
-#cipher .bd-callout-info {
+#cipher-content .bd-callout-info {
     border-left-color: var(--lover);
 }
 
-#cipher b {
+#cipher-content b {
     color: var(--lover);
     font-weight: bold;
 }
 
-#cipher .title, #lover-album .title {
+#cipher-content .title, #lover-album .title {
     font-family: 'Satisfy', cursive;
     font-size: 48px;
     color: var(--lover);
 }
 
-#cipher .bg-album {
+#cipher-content .bg-album {
     background-color: var(--lover);
 }

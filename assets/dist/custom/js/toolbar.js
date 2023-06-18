@@ -7,7 +7,7 @@ $(document).ready(function () {
     ScrollDown.custom = function(value, rate) {  //let's say value==='bottom' and rate=10
         ScrollDown.lastRate += rate
         if(value==='bottom') {
-            value=$('#cipher').height()-$('#page-content-wrapper').height()
+            value=$('#cipher-content').height()-$('#page-content-wrapper').height()
         }
         ScrollDown.current=$('#page-content-wrapper').scrollTop();
         ScrollDown.lastValue=value;
@@ -112,14 +112,14 @@ $(document).ready(function () {
         ScrollDown.plus('bottom')
     })
 
-    // Chords
+    // CHORDS
 
     $('.btn-action-chords').click(() => {
         $('#chords').toggleClass('d-flex')
         $('.btn-action-chords').toggleClass('active')
     })
 
-    // Font
+    // FONT
 
     $('.font-action-button.increase').click(() => {
         const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
@@ -132,6 +132,35 @@ $(document).ready(function () {
         const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
         if (currentFontSize <= 25) {
             $('.tabs, .progressions, pre[type="lyrics"]').css({ 'font-size': parseInt(currentFontSize) + 2 + 'px' })
+        }
+    })
+
+    // COLUMNS
+
+    $('.columns-action-button.increase').click(() => {
+        columns = parseInt($('#chords-columns pre').css('columns').split('auto ')[1])
+
+        console.log($('#chords-columns pre').css('columns'))
+
+        if (columns > 1) {
+            $('#cipher').hide()
+            $('#chords-columns pre').css('columns', (columns - 1).toString())
+            $('#chords-columns').show()
+        } else {
+            $('#cipher').show()
+            $('#chords-columns').hide()
+        }
+    })
+
+    $('.columns-action-button.decrease').click(() => {
+        columns = parseInt($('#chords-columns pre').css('columns').split('auto ')[1])
+
+        console.log($('#chords-columns pre').css('columns'))
+
+        if (columns <= 5) {
+            $('#cipher').hide()
+            $('#chords-columns pre').css('columns', (columns + 1).toString())
+            $('#chords-columns').show()
         }
     })
 
@@ -157,4 +186,6 @@ $(document).ready(function () {
     $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs') })
     $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
     $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
+
+    chords-columns
 })

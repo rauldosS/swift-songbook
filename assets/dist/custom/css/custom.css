@@ -163,6 +163,14 @@ article {
     z-index: 998;
 }
 
+#chords-columns {
+    display: none;
+}
+
+#chords-columns pre {
+    columns: 1;
+}
+
 .cipher > span {    
     display: block;
     margin-bottom: 5px;
