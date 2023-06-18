@@ -13,17 +13,17 @@
     transform: translateX(15%);
 }
 
-.change-auto-scroll-speed {
+#toolbar .change-auto-scroll-speed {
     display: none !important;
 }
 
-.m9T1U {
+#toolbar .m9T1U {
     bottom: 60px;
     position: absolute;
     right: -1px;
 }
 
-.menu-actions {
+#toolbar .menu-actions {
     border-radius: 2px;
     display: inline-flex;
     padding: 12px;
@@ -31,21 +31,21 @@
     z-index: 26;
 }
 
-.action-autoscroll {
+#toolbar .action-autoscroll {
     padding: 0 12px;
 }
 
-.action {
+#toolbar .action {
     display: flex;
     padding: 0 3px;
 }
 
-.font-action {
+#toolbar .font-action {
     display: flex;
     justify-content: space-between;
 }
 
-.font-action-title {
+#toolbar .font-action-title {
     font-size: 13px;
     line-height: 36px;
     margin-right: 14px;
@@ -54,25 +54,25 @@
     text-transform: uppercase;
 }
 
-.NWgb3, .font-action {
+#toolbar .NWgb3, #toolbar .font-action {
     display: flex;
 }
 
-.normal-btn-action, .normal-btn-action {
+#toolbar .normal-btn-action, #toolbar .normal-btn-action {
     font-size: 13px;
 }
 
-.font-action-button {
+#toolbar .font-action-button {
     padding-left: 3px;
     padding-right: 3px;
 }
 
-.mcpNL {
+#toolbar .mcpNL {
     height: 36px;
     padding: 10px;
 }
 
-.btn-action {
+#toolbar .btn-action {
     -moz-appearance: none;
     appearance: none;
     -webkit-appearance: none;
@@ -101,27 +101,27 @@
     padding: 10px !important;
 }
 
-.btn-action .action-content {
+#toolbar .btn-action .action-content {
     padding: 0 4px;
 }
 
-.font-action .divider {
+#toolbar .font-action .divider {
     background: silver;
 }
 
-.divider {
+#toolbar .divider {
     margin: 6px 0;
     opacity: 0;
     width: 1px;
 }
 
-.btn-action-autoscroll:before {
+#toolbar .btn-action-autoscroll:before {
     background: transparent;
     border: 1px solid;
     opacity: .5;
 }
 
-.btn-action:before {
+#toolbar .btn-action:before {
     background: transparent;
     border-radius: 2px;
     bottom: 0;
@@ -139,15 +139,15 @@
     color: #212121;
 }
 
-.btn-action .action-content {
+#toolbar .btn-action .action-content {
     padding: 0 4px;
 }
 
-.btn-action svg {
+#toolbar .btn-action svg {
     vertical-align: top;
 }
 
-svg {
+#toolbar svg {
     height: 16px;
     width: 16px;
     background: no-repeat 50%;
@@ -155,47 +155,47 @@ svg {
     vertical-align: middle;
 }
 
-.active {
+#toolbar .active {
     color: #44db5e;
 }
 
-.btn-action.btn-action-cursor-pointer:hover, .btn-action.btn-action-cursor-pointer:hover .action-content {
+#toolbar .btn-action.btn-action-cursor-pointer:hover, #toolbar .btn-action.btn-action-cursor-pointer:hover .action-content {
     cursor: pointer;
 }
 
-.font-action-button:hover {
+#toolbar .font-action-button:hover {
     background: none;
     color: #7a7a7a;
     cursor: normal !important;
 }
 
-.font-action:hover .NWgb3 {
+#toolbar .font-action:hover .NWgb3 {
     background: #e0e0e0;
 }
 
-.font-action:hover .divider {
+#toolbar .font-action:hover .divider {
     opacity: 1;
 }
 
-.btn-action.btn-action-cursor-pointer:hover, .btn-action.btn-action-cursor-pointer:hover .action-content {
+#toolbar .btn-action.btn-action-cursor-pointer:hover, #toolbar .btn-action.btn-action-cursor-pointer:hover .action-content {
     cursor: pointer;
 }
 
-.normal-btn-action.t4NnV:before, .normal-btn-action.btn-action-cursor-pointer:hover:before {
+#toolbar .normal-btn-action.t4NnV:before, #toolbar .normal-btn-action.btn-action-cursor-pointer:hover:before {
     background-color: currentColor;
     opacity: .1;
 }
 
-.autoscroll .btn-action-autoscroll {
+#toolbar .autoscroll .btn-action-autoscroll {
     background: #44db5e;
     color: #fff;
 }
 
-.autoscroll .change-auto-scroll-speed {
+#toolbar .autoscroll .change-auto-scroll-speed {
     display: flex !important;
 }
 
-#chords.d-block .btn-action-chords {
+#toolbar #chords.d-block .btn-action-chords {
     background: #44db5e;
     color: #fff;
 }
