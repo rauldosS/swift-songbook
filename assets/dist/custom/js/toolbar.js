@@ -1,6 +1,6 @@
 $(document).ready(function () {
     ScrollDown.current = $('#page-content-wrapper').scrollTop();
-    ScrollDown.lastRate = 60;
+    ScrollDown.lastRate = 30;
     ScrollDown.lastValue;
     ScrollDown.lastType;
     ScrollDown.enabled = true;
@@ -81,7 +81,7 @@ $(document).ready(function () {
             ScrollDown.continue()
         } else {
             ScrollDown.lastType = 'slow'
-            ScrollDown.custom(value, -20)
+            ScrollDown.custom(value, -5)
         }
     }
     ScrollDown.down = function(value) {
@@ -94,16 +94,6 @@ $(document).ready(function () {
     }
 
     function ScrollDown() {}
-
-    // autoscroll = () => {
-    //     if ($("#end-auto-scroll").offset().top <= 0) {
-    //         $("#page-content-wrapper").animate({ scrollTop: 0 }, "slow")
-    //     }
-    //     $('#page-content-wrapper').stop()
-    //     $('#page-content-wrapper').animate({
-    //         scrollTop: $("#end-auto-scroll").offset().top
-    //     }, SPEED_AUTOSCROLL)
-    // }
 
     $('.btn-action-autoscroll').click(() => {
         if ($('.action-autoscroll').hasClass('autoscroll') == true) {
@@ -131,8 +121,40 @@ $(document).ready(function () {
 
     // Font
 
-    // $('.font-action-button.increase').click(() => {
-    //     $('#chords').toggleClass('d-block')
-    //     $('.btn-action-chords').toggleClass('active')
-    // })
+    $('.font-action-button.increase').click(() => {
+        const currentFontSize = $('pre[type="tabs"]').css('font-size').split('px')[0]
+        if (currentFontSize >= 7) {
+            $('pre[type="tabs"], pre[type="lyrics"], .progressions').css({ 'font-size': parseInt(currentFontSize) - 2 + 'px' })
+        }
+    })
+
+    $('.font-action-button.decrease').click(() => {
+        const currentFontSize = $('pre[type="tabs"]').css('font-size').split('px')[0]
+        if (currentFontSize <= 25) {
+            $('pre[type="tabs"], pre[type="lyrics"], .progressions').css({ 'font-size': parseInt(currentFontSize) + 2 + 'px' })
+        }
+    })
+
+    // Hide menu
+
+    hide = (actionElement, targetElement) => {
+        if ($(actionElement).hasClass('active')) {
+            $(targetElement).show()
+        } else {
+            $(targetElement).hide()
+        }
+
+        $(actionElement).toggleClass('active')
+    }
+
+    $('#unpin-toolbar').click(() => {
+        $('#toolbar').toggleClass('initial')
+        $('#unpin-toolbar').toggleClass('active')
+    })
+
+    $('#hide-lyrics').click(() => { hide('#hide-lyrics', 'pre[type="lyrics"]') })
+    $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions') })
+    $('#hide-tabs').click(() => { hide('#hide-tabs', 'pre[type="tabs"]') })
+    $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
+    $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
 })

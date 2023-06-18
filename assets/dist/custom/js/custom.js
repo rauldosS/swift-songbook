@@ -14,11 +14,14 @@ $(document).ready(function () {
 let lastAlbum = null
 
 selectAlbum = (album) => {
+    $('#toolbar').hide()
     $('#album').hide()
     $('#home').hide()
     $('#cipher').hide()
     $('#mini-player').hide()
+
     $('#album').load(`templates/${album}/album.html`)
+
     $('#album').show()
 }
 
@@ -26,7 +29,10 @@ selectMusic = (album, music) => {
     $('#cipher').hide()
     $('#album').hide()
     $('#home').hide()
+
     $('#cipher').load(`templates/${album}/${music}.html`)
+
     $('#cipher').show()
+    $('#toolbar').show()
     $('#mini-player').show()
 }

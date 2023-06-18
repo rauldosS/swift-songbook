@@ -9,6 +9,11 @@
     color: #212121;
     background: hsla(0,0%,100%,.9);
     border: 1px solid #e0e0e0;
+    display: none;
+}
+
+#toolbar.initial {
+    position: inherit !important;
 }
 
 #toolbar .change-auto-scroll-speed {
@@ -196,4 +201,14 @@
 #toolbar #chords.d-block .btn-action-chords {
     background: #44db5e;
     color: #fff;
+}
+
+#toolbar a.active {
+    color: #44db5e;
+    font-weight: bold;
+    background-color: #FFF !important;
+}
+
+#toolbar a.active:hover {
+    background-color: #ecfbee !important;
 }
