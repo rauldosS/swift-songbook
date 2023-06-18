@@ -142,7 +142,7 @@ $(document).ready(function () {
 
         console.log($('#chords-columns pre').css('columns'))
 
-        if (columns > 1) {
+        if (columns > 2) {
             $('#cipher').hide()
             $('#chords-columns pre').css('columns', (columns - 1).toString())
             $('#chords-columns').show()
