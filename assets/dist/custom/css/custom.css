@@ -252,6 +252,18 @@ article {
     #navbarSupportedContent {
         padding-top: 1rem !important;
     }
+
+    #toolbar {
+        position: fixed !important;
+        display: block !important;
+        bottom: 0px !important;
+        width: 100% !important;
+        right: 0 !important;
+    }
+
+    .column-action {
+        display: none !important;
+    }
 }
 
 @media(max-width: 768px) {

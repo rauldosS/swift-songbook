@@ -112,6 +112,10 @@ a:focus {
 
 /* Sub-menu style */
 
+.list-unstyled a {
+    cursor: pointer;
+}
+
 #fearless-list-unstyled a {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -119,7 +123,7 @@ a:focus {
 }
 
 #lover-list-unstyled {
-    /* font-family: 'Satisfy', cursive; */
+    font-family: 'Satisfy', cursive;
     color: var(--lover);
 }
 

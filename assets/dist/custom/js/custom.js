@@ -8,6 +8,7 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("toggled")
     })
 
+    $("#sidebar").load("templates/base/sidebar.html")
     $("#toolbar").load("templates/base/toolbar.html")
 })
 
@@ -26,6 +27,7 @@ selectAlbum = (album) => {
 }
 
 selectMusic = (album, music) => {
+    resertToolbar()
     $('#cipher-content').hide()
     $('#album').hide()
     $('#home').hide()
@@ -35,4 +37,9 @@ selectMusic = (album, music) => {
     $('#cipher-content').show()
     $('#toolbar').show()
     $('#mini-player').show()
+}
+
+resertToolbar = () => {
+    $('#toolbar a').removeClass('active')
+    $('.action-autoscroll').removeClass('autoscroll')
 }

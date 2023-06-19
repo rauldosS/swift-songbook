@@ -1,0 +1,42 @@
+<div class="sidebar-header d-flex justify-content-between">
+    <h5>Albuns</h5>
+    <button type="button" id="menu-toggle" class="btn shadow"><i class="fas fa-chevron-left"></i></button>
+</div>
+
+<ul class="list-unstyled components">
+    <li>
+        <a href="#taylor-swift-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle taylor-swift-album font-taylor-swift">Taylor Swift</a>
+        <ul class="collapse list-unstyled" id="taylor-swift-album">
+        </ul>
+    </li>
+    <li>
+        <a href="#fearless-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Taylor Swift</a>
+        <ul class="collapse list-unstyled" id="fearless-list-unstyled">
+            <li>
+                <a onclick="selectMusic('fearless', 'fearless')">Fearless</a>
+                <a onclick="selectMusic('fearless', '')">You Belong With Me</a>
+                <a onclick="selectMusic('fearless', '')">Loe Story</a>
+                <a onclick="selectAlbum('fearless')" class="d-flex justify-content-between pe-3">
+                    About
+                    <i class="fa-regular fa-circle-question"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#lover-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle lover-album font-lover">Lover</a>
+        <ul class="collapse list-unstyled" id="lover-list-unstyled">
+            <li>
+                <a onclick="selectMusic('lover', 'the-man')">The Man</a>
+                <a onclick="selectAlbum('lover')" class="d-flex justify-content-between pe-3">
+                    About
+                    <i class="fa-regular fa-circle-question"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="list-unstyled CTAs">
+    Created by Raul
+</ul>
