@@ -27,6 +27,9 @@ header {
     transition: all 0.3s;
 }
 
+#author {
+    display: none;
+}
 
 /* Scrollbar */
 

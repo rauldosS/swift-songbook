@@ -8,29 +8,33 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("toggled")
     })
 
+    $("#home").load("templates/base/home.html")
     $("#sidebar").load("templates/base/sidebar.html")
     $("#toolbar").load("templates/base/toolbar.html")
+    $("#mini-player").load("templates/base/mini-player.html")
+    $("#author").load("templates/base/author.html")
 })
 
-let lastAlbum = null
-
-selectAlbum = (album) => {
+hideContent = () => {
+    $('#home').hide()
     $('#toolbar').hide()
     $('#album').hide()
-    $('#home').hide()
     $('#cipher-content').hide()
     $('#mini-player').hide()
+    $('#author').hide()
+}
 
+selectAlbum = (album) => {
+    hideContent()
     $('#album').load(`templates/${album}/album.html`)
 
     $('#album').show()
 }
 
 selectMusic = (album, music) => {
+    hideContent()
     resertToolbar()
     $('#cipher-content').hide()
-    $('#album').hide()
-    $('#home').hide()
 
     $('#cipher-content').load(`templates/${album}/${music}/music.html`)
 
@@ -42,4 +46,10 @@ selectMusic = (album, music) => {
 resertToolbar = () => {
     $('#toolbar a').removeClass('active')
     $('.action-autoscroll').removeClass('autoscroll')
+}
+
+displayAuthor = () => {
+    hideContent()
+    $('#author').load('templates/base/author.html')
+    $('#author').show()
 }
