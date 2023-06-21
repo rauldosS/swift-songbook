@@ -3,11 +3,6 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active')
     })
 
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault()
-        $("#sidebar").toggleClass("toggled")
-    })
-
     $("#home").load("templates/base/home.html")
     $("#sidebar").load("templates/base/sidebar.html")
     $("#toolbar").load("templates/base/toolbar.html")

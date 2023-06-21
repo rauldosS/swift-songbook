@@ -16,6 +16,37 @@ $(document).ready(function () {
         $('.btn-action-chords').toggleClass('active')
     })
 
+    // FULL SCREEN
+
+    $('.btn-action-full-screen').click(() => {
+        if ($('.btn-action-full-screen').hasClass('active')) {
+            $('#sidebar').show()
+            $('#wrapper').css({
+                'position': 'fixed',
+                'top': '10%',
+                'bottom': '0',
+                'left': '0',
+                'right': '0'
+            })
+            $('#page-content-wrapper').css({ 'padding': '20px' })
+            $('#toolbar').css({ 'bottom': '90px'})
+        } else {
+            $('#sidebar').hide()
+            $('#wrapper').css({
+                'position': 'fixed',
+                'top': '0%',
+                'bottom': '0',
+                'left': '0',
+                'right': '0',
+                'padding': '0',
+            })
+            $('#page-content-wrapper').css({ 'padding': '0' })
+            $('#toolbar').css({ 'bottom': '12px'})
+        }
+        
+        $('.btn-action-full-screen').toggleClass('active')
+    })
+
     // FONT
 
     $('.font-action-button.increase').click(() => {

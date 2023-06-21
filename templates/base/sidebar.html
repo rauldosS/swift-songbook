@@ -40,3 +40,11 @@
 <ul class="CTAs" onclick="displayAuthor()">
     Created by Raul
 </ul>
+
+<script>
+    $("#menu-toggle").on('click', function (e) {
+        console.log('teste')
+        e.preventDefault()
+        $("#sidebar").toggleClass("toggled")
+    })
+</script>
