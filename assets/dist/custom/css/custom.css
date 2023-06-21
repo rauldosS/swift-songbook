@@ -172,6 +172,7 @@ article {
 
 #chords-columns pre {
     columns: 1;
+    column-count: 1;
 }
 
 .cipher > span {    

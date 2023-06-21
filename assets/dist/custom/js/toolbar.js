@@ -35,11 +35,13 @@ $(document).ready(function () {
     // COLUMNS
 
     $('.columns-action-button.increase').click(() => {
-        columns = parseInt($('#chords-columns pre').css('columns').split('auto ')[1])
+        str_columns = $('#chords-columns pre').css('columns')
+        columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns > 2) {
             $('#cipher').hide()
             $('#chords-columns pre').css('columns', (columns - 1).toString())
+            $('#chords-columns pre').css('column-count', (columns - 1).toString())
             $('#chords-columns').show()
         } else {
             $('#cipher').show()
@@ -48,11 +50,13 @@ $(document).ready(function () {
     })
 
     $('.columns-action-button.decrease').click(() => {
-        columns = parseInt($('#chords-columns pre').css('columns').split('auto ')[1])
+        str_columns = $('#chords-columns pre').css('columns')
+        columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns <= 5) {
             $('#cipher').hide()
             $('#chords-columns pre').css('columns', (columns + 1).toString())
+            $('#chords-columns pre').css('column-count', (columns + 1).toString())
             $('#chords-columns').show()
         }
     })
