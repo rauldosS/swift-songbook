@@ -8,6 +8,17 @@ $(document).ready(function () {
     $("#toolbar").load("templates/base/toolbar.html")
     $("#mini-player").load("templates/base/mini-player.html")
     $("#author").load("templates/base/author.html")
+
+    album_musics = {
+        'taylor-swift': [
+            {'title': 'Our Song', 'block': true},
+        ],
+        'fearless': [
+            {'title': 'Fearless', 'block': false},
+            {'title': 'You Belong With Me', 'block': true},
+            {'title': 'Love Story', 'block': true},
+        ],
+    }
 })
 
 hideContent = () => {
@@ -21,7 +32,7 @@ hideContent = () => {
 
 selectAlbum = (album) => {
     hideContent()
-    $('#album').load(`templates/${album}/album.html`)
+    $('#album').load(`templates/albuns/${album}/album.html`)
 
     $('#album').show()
 }
@@ -31,7 +42,7 @@ selectMusic = (album, music) => {
     resertToolbar()
     $('#cipher-content').hide()
 
-    $('#cipher-content').load(`templates/${album}/${music}/music.html`)
+    $('#cipher-content').load(`templates/albuns/${album}/${music}/music.html`)
 
     $('#cipher-content').show()
     $('#toolbar').show()

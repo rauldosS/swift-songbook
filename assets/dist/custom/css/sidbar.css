@@ -16,10 +16,13 @@ p {
     color: #999;
 }
 
+li {
+    border-bottom: 1px dashed #ddd;
+}
+
 a,
 a:hover,
 a:focus {
-    color: inherit;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -73,8 +76,16 @@ a:focus {
     background: #FFF;
 }
 
-#sidebar ul.components {
-    padding: 0 0 0 12px;
+#sidebar ul.components li a {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    align-items: center;
+    padding: 10px 10px 10px 22px;
+}
+
+#sidebar ul.components li a i.fa-ban {
+    color: #dfdfdf;
 }
 
 #sidebar ul p {
@@ -97,17 +108,52 @@ a:focus {
 
 #sidebar ul li a.taylor-swift-album:hover {
     color: #FFF;
-    background: var(--taylor-swift);
+    background: var(--color-taylor-swift);
 }
 
 #sidebar ul li a.fearless-album:hover {
     color: #FFF;
-    background: var(--fearless);
+    background: var(--color-fearless);
+}
+
+#sidebar ul li a.speak-now-album:hover {
+    color: #FFF;
+    background: var(--color-speak-now);
+}
+
+#sidebar ul li a.red-album:hover {
+    color: #FFF;
+    background: var(--color-red);
+}
+
+#sidebar ul li a.album-1989:hover {
+    color: #FFF;
+    background: var(--color-1989);
+}
+
+#sidebar ul li a.reputation-album:hover {
+    color: #FFF;
+    background: var(--color-reputation);
 }
 
 #sidebar ul li a.lover-album:hover {
     color: #FFF;
-    background: var(--lover);
+    background: var(--color-lover);
+}
+
+#sidebar ul li a.folklore-album:hover {
+    color: #FFF;
+    background: var(--color-folklore);
+}
+
+#sidebar ul li a.evermore-album:hover {
+    color: #FFF;
+    background: var(--color-evermore);
+}
+
+#sidebar ul li a.midnights-album:hover {
+    color: #FFF;
+    background: var(--color-midnights);
 }
 
 /* Sub-menu style */
@@ -116,15 +162,55 @@ a:focus {
     cursor: pointer;
 }
 
-#fearless-list-unstyled a {
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--fearless);
+#taylor-swift-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-taylor-swift);
 }
 
-#lover-list-unstyled {
-    font-family: 'Satisfy', cursive;
-    color: var(--lover);
+#fearless-list-unstyled a {
+    font-weight: bold;
+    font-family: var(--font-fearless);
+    color: var(--color-fearless);
+}
+
+#speak-now-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-speak-now);
+}
+
+#red-list-unstyled a {
+    font-family: var(--font-red);
+    color: var(--color-red);
+}
+
+#album-1989-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-1989);
+}
+
+#reputation-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-reputation);
+}
+
+#lover-list-unstyled a {
+    font-family: var(--font-lover);
+    color: var(--color-lover);
+}
+
+#folklore-list-unstyled a {
+    font-family: var(--font-folklore);
+    color: var(--color-folklore);
+}
+
+#evermore-list-unstyled a {
+    font-family: var(--font-evermore);
+    color: var(--color-evermore);
+}
+
+#midnights-list-unstyled a {
+    font-family: var(--font-midnights);
+    color: var(--color-midnights);
 }
 
 /* end */
@@ -137,17 +223,52 @@ a[aria-expanded="true"] {
 
 a.taylor-swift-album[aria-expanded="true"] {
     color: #FFF;
-    background: var(--taylor-swift);
+    background: var(--color-taylor-swift);
 }
 
 a.fearless-album[aria-expanded="true"] {
     color: #FFF;
-    background: var(--fearless);
+    background: var(--color-fearless);
+}
+
+a.speak-now-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-speak-now);
+}
+
+a.red-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-red);
+}
+
+a.album-1989[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-1989);
+}
+
+a.reputation-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-reputation);
 }
 
 a.lover-album[aria-expanded="true"] {
     color: #FFF;
-    background: var(--lover);
+    background: var(--color-lover);
+}
+
+a.folklore-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-folklore);
+}
+
+a.evermore-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-evermore);
+}
+
+a.midnights-album[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-midnights);
 }
 
 a[data-toggle="collapse"] {

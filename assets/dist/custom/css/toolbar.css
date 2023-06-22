@@ -29,7 +29,7 @@
 }
 
 #toolbar .dropdown-menu li i {
-    color: var(--taylor-swift);
+    color: var(--color-taylor-swift);
 }
 
 #toolbar .change-auto-scroll-speed {
@@ -185,7 +185,7 @@
 }
 
 #toolbar .active {
-    color: var(--taylor-swift);
+    color: var(--color-taylor-swift);
 }
 
 #toolbar .btn-action.btn-action-cursor-pointer:hover, #toolbar .btn-action.btn-action-cursor-pointer:hover .action-content {
@@ -216,7 +216,7 @@
 }
 
 #toolbar .autoscroll .btn-action-autoscroll {
-    background: var(--taylor-swift);
+    background: var(--color-taylor-swift);
     color: #fff;
 }
 
@@ -225,12 +225,12 @@
 }
 
 #toolbar #chords.d-block .btn-action-chords {
-    background: var(--taylor-swift);
+    background: var(--color-taylor-swift);
     color: #fff;
 }
 
 #toolbar a.active {
-    color: var(--taylor-swift);
+    color: var(--color-taylor-swift);
     font-weight: bold;
     background-color: #FFF !important;
 }

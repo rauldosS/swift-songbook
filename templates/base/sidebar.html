@@ -4,35 +4,64 @@
 </div>
 
 <ul class="list-unstyled components">
-    <li>
-        <a href="#taylor-swift-album" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle taylor-swift-album font-taylor-swift">Taylor Swift</a>
-        <ul class="collapse list-unstyled" id="taylor-swift-album">
+    <li album="taylor-swift">
+        <a href="#taylor-swift-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle taylor-swift-album font-taylor-swift">Taylor Swift</a>
+        <ul class="collapse list-unstyled" id="taylor-swift-list-unstyled">
+            <li></li>
         </ul>
     </li>
-    <li>
-        <a href="#fearless-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Taylor Swift</a>
+    <li album="fearless">
+        <a href="#fearless-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle fearless-album font-fearless fw-bold">Fearless</a>
         <ul class="collapse list-unstyled" id="fearless-list-unstyled">
-            <li>
-                <a onclick="selectMusic('fearless', 'fearless')">Fearless</a>
-                <a onclick="selectMusic('fearless', '')">You Belong With Me</a>
-                <a onclick="selectMusic('fearless', '')">Loe Story</a>
-                <a onclick="selectAlbum('fearless')" class="d-flex justify-content-between pe-3">
-                    About
-                    <i class="fa-regular fa-circle-question"></i>
-                </a>
-            </li>
+            <li></li>
         </ul>
     </li>
-    <li>
+    <li album="speak-now">
+        <a href="#speak-now-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle speak-now-album font-speak-now">Speak Now</a>
+        <ul class="collapse list-unstyled" id="speak-now-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="red">
+        <a href="#red-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle red-album font-red">RED</a>
+        <ul class="collapse list-unstyled" id="red-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="1989">
+        <a href="#album-1989-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle album-1989 font-1989">1989</a>
+        <ul class="collapse list-unstyled" id="album-1989-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="reputation">
+        <a href="#reputation-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle reputation-album font-reputation">Reputation</a>
+        <ul class="collapse list-unstyled" id="reputation-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="lover">
         <a href="#lover-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle lover-album font-lover">Lover</a>
         <ul class="collapse list-unstyled" id="lover-list-unstyled">
-            <li>
-                <a onclick="selectMusic('lover', 'the-man')">The Man</a>
-                <a onclick="selectAlbum('lover')" class="d-flex justify-content-between pe-3">
-                    About
-                    <i class="fa-regular fa-circle-question"></i>
-                </a>
-            </li>
+            <li></li>
+        </ul>
+    </li>
+    <li album="folklore">
+        <a href="#folklore-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle folklore-album font-folklore">Folklore</a>
+        <ul class="collapse list-unstyled" id="folklore-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="evermore">
+        <a href="#evermore-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle evermore-album font-evermore">Evermore</a>
+        <ul class="collapse list-unstyled" id="evermore-list-unstyled">
+            <li></li>
+        </ul>
+    </li>
+    <li album="midnights">
+        <a href="#midnights-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle midnights-album font-midnights">Midnights</a>
+        <ul class="collapse list-unstyled" id="midnights-list-unstyled">
+            <li></li>
         </ul>
     </li>
 </ul>
@@ -42,9 +71,49 @@
 </ul>
 
 <script>
-    $("#menu-toggle").on('click', function (e) {
-        console.log('teste')
-        e.preventDefault()
-        $("#sidebar").toggleClass("toggled")
+    $(document).ready(function () {
+        $("#menu-toggle").on('click', function (e) {
+            e.preventDefault()
+            $("#sidebar").toggleClass("toggled")
+        })
+
+        album_musics = {
+            'taylor-swift': [
+                {'title': 'Our Song', 'block': true},
+            ],
+            'fearless': [
+                {'link': 'fearless', 'title': 'Fearless', 'block': false},
+                {'link': 'you-belong-with-me', 'title': 'You Belong With Me', 'block': true},
+                {'link': 'love-story', 'title': 'Love Story', 'block': true},
+            ],
+            'speak-now': [],
+            'red': [],
+            '1989': [],
+            'reputation': [],
+            'lover': [
+                {'link': 'the-man', 'title': 'The Man', 'block': true},
+            ],
+            'folklore': [],
+            'evermore': [],
+            'midnights': [],
+        }
+
+        $(".list-unstyled li[album]").each(function() {
+            const album = $(this).attr('album')
+            const content = $(this).find('li')
+
+            album_musics[album].forEach(music => {
+                content.before(`
+                    <a ${ music['block'] ? '' : `onclick="selectMusic('${ album }', '${ music['title'] }')"`}>
+                        ${music['title']}
+                        ${ music['block'] ? '<i class="fa-solid fa-ban color-danger"></i>' : '' }
+                    </a>
+                `)
+            })
+
+            content.before(`
+                <a onclick="selectAlbum('${ album }')">About <i class="fa-regular fa-circle-question"></i></a>
+            `)
+        })
     })
 </script>

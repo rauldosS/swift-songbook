@@ -1,19 +1,25 @@
-/*
-font-family: 'Anton', sans-serif;
-font-family: 'Cinzel', serif;
-font-family: 'IM Fell DW Pica', serif;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Rochester', cursive;
-font-family: 'Sacramento', cursive;
-font-family: 'UnifrakturMaguntia', cursive;
-*/
-
 :root {
-    --taylor-swift: #8caa87;
-    --fearless: #cca965;
-    --lover: #df6395;
-    --red: #b21847;
+    --font-taylor: 'Cinzel', serif;
+    --color-taylor-swift: #8caa87;
+    --color-fearless: #cca965;
+    --color-lover: #df6395;
+    --color-red: #b21847;
+    --color-speak-now: #8572a0;
+    --color-1989: #667787;
+    --color-reputation: #c0b297;
+    --color-folklore: #a5a5a5;
+    --color-evermore: #cab193;
+    --color-midnights: #9b9dd8;
+    --font-taylor-swift: 'Sacramento', cursive;
+    --font-fearless: 'Montserrat', sans-serif;
+    --font-speak-now: 'Rochester', cursive;
+    --font-red: 'Anton', sans-serif;
+    --font-1989: 'Permanent Marker', cursive;
+    --font-reputation: 'UnifrakturMaguntia', cursive;
+    --font-lover: 'Satisfy', cursive;
+    --font-folklore: 'IM Fell DW Pica', serif;
+    --font-evermore: 'IM Fell DW Pica', serif;
+    --font-midnights: 'Roboto', sans-serif;
 }
 
 header {
@@ -80,7 +86,7 @@ header {
     position: relative;
     margin-top: 10px;
     left: 34px;
-    background-color: var(--fearless);
+    background-color: var(--color-fearless);
     color: #FFF;
     border: 1px solid #FFF;
 }
@@ -110,20 +116,55 @@ header img {
     width: 100%;
 }
 
+.font-taylor-swift {
+    font-family: var(--font-taylor-swift);
+    font-weight: 400;
+    color: var(--color-taylor-swift);
+}
+
 .font-fearless {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--fearless);
+    font-family: var(--font-fearless);
+    color: var(--color-fearless);
+}
+
+.font-speak-now {
+    font-family: var(--font-speak-now);
+    color: var(--color-speak-now);
+}
+
+.font-red {
+    font-family: var(--font-red);
+    color: var(--color-red);
+}
+
+.font-1989 {
+    font-family: var(--font-1989);
+    color: var(--color-color-1989);
+}
+
+.font-reputation {
+    font-family: var(--font-reputation);
+    color: var(--color-reputation);
 }
 
 .font-lover {
-    font-family: 'Satisfy', cursive;
-    color: var(--lover);
+    font-family: var(--font-lover);
+    color: var(--color-lover);
 }
 
-.font-taylor-swift {
-    font-family: 'Sacramento', cursive;
-    font-weight: 400;
-    color: var(--taylor-swift);
+.font-folklore {
+    font-family: var(--font-folklore);
+    color: var(--color-folklore);
+}
+
+.font-evermore {
+    font-family: var(--font-evermore);
+    color: var(--color-evermore);
+}
+
+.font-midnights {
+    font-family: var(--font-midnights);
+    color: var(--color-midnights);
 }
 
 .bd-callout {
