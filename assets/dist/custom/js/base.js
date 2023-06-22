@@ -8,17 +8,6 @@ $(document).ready(function () {
     $("#toolbar").load("templates/base/toolbar.html")
     $("#mini-player").load("templates/base/mini-player.html")
     $("#author").load("templates/base/author.html")
-
-    album_musics = {
-        'taylor-swift': [
-            {'title': 'Our Song', 'block': true},
-        ],
-        'fearless': [
-            {'title': 'Fearless', 'block': false},
-            {'title': 'You Belong With Me', 'block': true},
-            {'title': 'Love Story', 'block': true},
-        ],
-    }
 })
 
 hideContent = () => {
