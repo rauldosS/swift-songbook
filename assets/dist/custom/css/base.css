@@ -125,6 +125,7 @@ header img {
 .font-fearless {
     font-family: var(--font-fearless);
     color: var(--color-fearless);
+    font-weight: bold;
 }
 
 .font-speak-now {
