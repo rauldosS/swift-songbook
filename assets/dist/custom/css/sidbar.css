@@ -103,7 +103,7 @@ a:focus {
     justify-content: space-between;
     padding-right: 1rem;
     align-items: center;
-    padding: 10px 10px 10px 22px;
+    padding: 10px 16px 10px 22px;
 }
 
 #sidebar ul.components li a i.fa-ban {
