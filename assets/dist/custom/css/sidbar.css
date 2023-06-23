@@ -49,6 +49,28 @@ a:focus {
     margin: 40px 0;
 }
 
+/* Scrollbar */
+
+/* width */
+#sidebar ::-webkit-scrollbar {
+    width: 2px !important;
+}
+
+/* Track */
+#sidebar ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+#sidebar ::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+#sidebar ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -157,6 +179,17 @@ a:focus {
 }
 
 /* Sub-menu style */
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: none;
+}
+
+#list-unstyled {
+    height: 82%;
+    overflow-y: auto;
+}
 
 .list-unstyled a {
     cursor: pointer;
@@ -281,6 +314,10 @@ a[data-toggle="collapse"] {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+}
+
+.dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(180deg);
 }
 
 ul ul a {

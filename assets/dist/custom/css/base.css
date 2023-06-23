@@ -37,6 +37,10 @@ header {
     display: none;
 }
 
+.CTAs {
+    cursor: pointer;
+}
+
 /* Scrollbar */
 
 /* width */
