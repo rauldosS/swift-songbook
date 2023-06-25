@@ -66,29 +66,29 @@ $(document).ready(function () {
     // COLUMNS
 
     $('.columns-action-button.increase').click(() => {
-        str_columns = $('#chords-columns pre').css('columns')
+        str_columns = $('#cipher-columns pre').css('columns')
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns > 2) {
             $('#cipher').hide()
-            $('#chords-columns pre').css('columns', (columns - 1).toString())
-            $('#chords-columns pre').css('column-count', (columns - 1).toString())
-            $('#chords-columns').show()
+            $('#cipher-columns pre').css('columns', (columns - 1).toString())
+            $('#cipher-columns pre').css('column-count', (columns - 1).toString())
+            $('#cipher-columns').show()
         } else {
             $('#cipher').show()
-            $('#chords-columns').hide()
+            $('#cipher-columns').hide()
         }
     })
 
     $('.columns-action-button.decrease').click(() => {
-        str_columns = $('#chords-columns pre').css('columns')
+        str_columns = $('#cipher-columns pre').css('columns')
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns <= 5) {
             $('#cipher').hide()
-            $('#chords-columns pre').css('columns', (columns + 1).toString())
-            $('#chords-columns pre').css('column-count', (columns + 1).toString())
-            $('#chords-columns').show()
+            $('#cipher-columns pre').css('columns', (columns + 1).toString())
+            $('#cipher-columns pre').css('column-count', (columns + 1).toString())
+            $('#cipher-columns').show()
         }
     })
 

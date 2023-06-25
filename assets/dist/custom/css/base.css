@@ -184,7 +184,7 @@ header img {
 pre {
     display: block;
     font-family: monospace;
-    margin: 1em 0;
+    margin: 0;
     white-space: break-spaces;
 }
 
@@ -199,7 +199,11 @@ article {
 
 .tabs {
     white-space: pre-line;
-    padding: 0px 20px;
+    padding: 40px 20px 25px 20px;
+}
+
+.tabs .tab:not(:last-of-type) {
+    padding-bottom: 30px !important;
 }
 
 #chords {
@@ -212,11 +216,20 @@ article {
     z-index: 998;
 }
 
-#chords-columns {
+#cipher-header span {
+    width: 100%;
+    display: block;
+}
+
+#cipher-header iframe {
+    margin-top: 5px;
+}
+
+#cipher-columns {
     display: none;
 }
 
-#chords-columns pre {
+#cipher-columns pre {
     columns: 1;
     column-count: 1;
 }
@@ -229,6 +242,10 @@ article {
 .cipher-tone {
     margin: 5px 0 25px;
     font-weight: bold;
+}
+
+.song-capo {
+    margin-bottom: 5px;
 }
 
 .cipher_cnt > span {

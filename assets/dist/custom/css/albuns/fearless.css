@@ -17,3 +17,11 @@
 #cipher-content .bg-album {
     background-color: var(--color-fearless);
 }
+
+#cipher-content .alert {
+    margin-bottom: 1rem;
+    color: var(--color-fearless);
+    height: 10px;
+    border-radius: 50px;
+    border: 1px dashed var(--color-fearless);
+}
