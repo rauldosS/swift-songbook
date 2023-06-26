@@ -227,3 +227,4 @@ displayAuthor = () => {
     $('#author').load('templates/base/author.html')
     $('#author').show()
 }
+

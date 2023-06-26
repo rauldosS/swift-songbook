@@ -452,6 +452,44 @@ article {
     opacity: 1;
 }
 
+#summary {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#summary .collapse:not(.show) {
+    height: 96px !important;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+
+#summary .collapsing {
+    min-height: 96px !important;
+}
+
+#summary a {
+    background-color: #FFF;
+}
+
+#summary a.collapsed:after  {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    background-color: #FFF;
+    color: #212121;
+}
+
+#summary a:not(.collapsed):after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f106";
+    background-color: #FFF;
+    color: #212121;
+}
+
 @media(max-width: 992px) {
     #navbarSupportedContent {
         padding-top: 1rem !important;
