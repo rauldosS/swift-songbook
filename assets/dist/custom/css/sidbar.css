@@ -89,6 +89,7 @@ a:focus {
     background: #FFF;
     color: #000;
     transition: all 0.3s;
+    border-radius: 10px !important;
 }
 
 #sidebar.active {
@@ -98,6 +99,7 @@ a:focus {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #FFF;
+    border-radius: 10px;
 }
 
 #sidebar ul.components li a {
