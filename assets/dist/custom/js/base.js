@@ -104,40 +104,54 @@ createTabsHTML = () => {
 }
 
 createCipherLyricsHTML = () => {
-    const cipherLyricsList = cipher_lyrics.split(divider)
-    cipher_parts.forEach((part, index) => {
-        cipher_lyrics_parts_html[part] = `
+    const cipherLyricsList = cipherLyrics.split(divider)
+
+    cipherParts.forEach((part, index) => {
+        cipherLyricsPartsHtml[part.replace('-ignore', '')] = part.includes('-ignore') ? `
+            <pre type="lyrics">
+            ${ cipherLyricsList[index] }
+            </pre>
+        ` : `
             <pre type="lyrics">
 [${ part }]
-            ${ replaceOddLines(cipherLyricsList[index]) }
+            ${ cipherLyricsList[index] }
             </pre>
         `
     })
 }
 
-replaceOddLines = (cipherLyricsList) => {
-    const lines = cipherLyricsList.split('\n')
+function replaceWholeChordsInLines() {
+    const replacements_chords = chords_music.map(chord => { 
+        return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
+    })
 
-    for (let i = 0; i < lines.length; i++) {
-        if (i % 2 === 1) {
-            chords_music.forEach(chord => {
-                lines[i] = lines[i].replaceAll(`${chord}`, `<b>${ chord }</b>`)
-            })
-        }
+    for (const replacement of replacements_chords) {
+      const { searchValue, replaceValue } = replacement
+      const regex = new RegExp(`\\b${searchValue}\\b`, 'g')
+      cipherLyrics = cipherLyrics.replaceAll(regex, replaceValue)
     }
 
-    const cipherLyricsListUpdated = lines.join('\n')
-    return cipherLyricsListUpdated
+    return cipherLyrics
 }
 
 createChordColumns = () => {
-    cipherContent.append(`
-        <div id="cipher-columns">
-            <pre type="lyrics">
-                ${ replaceOddLines(cipher_lyrics.replaceAll(divider, '')) }
-            </pre>
-        </div>
-    `)
+    const cipherLyricsList = cipherLyrics.split(divider)
+
+    let cipherColumns = '<div id="cipher-columns" class="mt-3"><pre type="lyrics">'
+
+    cipherParts.forEach((part, index) => {
+        cipherColumns = cipherColumns.concat(
+            `[${ part }]`,
+            `${ cipherLyricsList[index] }`
+        )
+    })
+
+    cipherColumns.concat(
+        '</pre>',
+        '</div>'
+    )
+
+    cipherContent.append(cipherColumns)
 }
 
 selectMusic = (album, music) => {
@@ -147,8 +161,6 @@ selectMusic = (album, music) => {
     resertToolbar()
     cipherContent.hide()
 
-    // APAGAR FEARLESS.HTML (depois)
-
     createAlbumCSS(album)
     createCipherJS(album, music)
 
@@ -157,6 +169,8 @@ selectMusic = (album, music) => {
     cipherContent.show()
     $('#toolbar').show()
     $('#mini-player').show()
+
+    $('#page-content-wrapper')    .animate({ scrollTop: 0 }, 1000)
 }
 
 loadCipher = () => {
@@ -165,6 +179,9 @@ loadCipher = () => {
 
     createProgressionHTML()
     createTabsHTML()
+
+    replaceWholeChordsInLines()
+
     createCipherLyricsHTML()
 
     parts_cipher.forEach(part => {
@@ -175,8 +192,8 @@ loadCipher = () => {
             case 'tabs':
                 complete_cipher.push(tabs_html[part.id])
                 break;
-            case 'cipher_lyrics':
-                complete_cipher.push(cipher_lyrics_parts_html[part.id])
+            case 'cipherLyrics':
+                complete_cipher.push(cipherLyricsPartsHtml[part.id])
                 break;
             case 'alert':
                 complete_cipher.push(alerts_html[part.id])
@@ -194,6 +211,10 @@ loadCipher = () => {
     })
 
     createChordColumns()
+
+    // Mini player
+
+    $('#mini-player iframe').attr('src', videoUrl)
 }
 
 resertToolbar = () => {

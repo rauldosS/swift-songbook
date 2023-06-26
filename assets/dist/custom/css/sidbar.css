@@ -3,8 +3,10 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap';
+
 body {
-    font-family: 'Cinzel', serif;
+    /* font-family: 'Cinzel', serif; */
     background: #fafafa;
 }
 
@@ -201,7 +203,6 @@ a:focus {
 }
 
 #album-fearless-list-unstyled a {
-    font-weight: bold;
     font-family: var(--font-fearless);
     color: var(--color-fearless);
 }

@@ -120,6 +120,139 @@ header img {
     width: 100%;
 }
 
+/* BACKGROUND-COLOR */
+
+.bg-taylor-swift {
+    background-color: var(--color-taylor-swift);
+}
+
+.bg-fearless {
+    background-color: var(--color-fearless);
+}
+
+.bg-lover {
+    background-color: var(--color-lover);
+}
+
+.bg-red {
+    background-color: var(--color-red);
+}
+
+.bg-speak {
+    background-color: var(--color-speak);
+}
+
+.bg-1989 {
+    background-color: var(--color-1989);
+}
+
+.bg-reputation {
+    background-color: var(--color-reputation);
+}
+
+.bg-folklore {
+    background-color: var(--color-folklore);
+}
+
+.bg-evermore {
+    background-color: var(--color-evermore);
+}
+
+.bg-midnights {
+    background-color: var(--color-midnights);
+}
+
+/* COLOR */
+
+.color-taylor-swift {
+    color: var(--color-taylor-swift);
+}
+
+.color-fearless {
+    color: var(--color-fearless);
+}
+
+.color-lover {
+    color: var(--color-lover);
+}
+
+.color-red {
+    color: var(--color-red);
+}
+
+.color-speak-now {
+    color: var(--color-speak-now);
+}
+
+.color-1989 {
+    color: var(--color-1989);
+}
+
+.color-reputation {
+    color: var(--color-reputation);
+}
+
+.color-folklore {
+    color: var(--color-folklore);
+}
+
+.color-evermore {
+    color: var(--color-evermore);
+}
+
+.color-midnights {
+    color: var(--color-midnights);
+}
+
+/* BORDER */
+
+.border-taylor-swift {
+    border: 1px solid var(--color-taylor-swift);
+}
+
+.border-fearless {
+    border: 1px solid var(--color-fearless);
+}
+
+.border-lover {
+    border: 1px solid var(--color-lover);
+}
+
+.border-red {
+    border: 1px solid var(--color-red);
+}
+
+.border-speak-now {
+    border: 1px solid var(--color-speak-now);
+}
+
+.border-1989 {
+    border: 1px solid var(--color-1989);
+}
+
+.border-reputation {
+    border: 1px solid var(--color-reputation);
+}
+
+.border-folklore {
+    border: 1px solid var(--color-folklore);
+}
+
+.border-evermore {
+    border: 1px solid var(--color-evermore);
+}
+
+.border-midnights {
+    border: 1px solid var(--color-midnights);
+}
+
+/* FONT */
+
+.font-taylor-swift-base {
+    font-family: var(--font-taylor);
+    font-weight: 400;
+}
+
 .font-taylor-swift {
     font-family: var(--font-taylor-swift);
     font-weight: 400;
@@ -129,7 +262,7 @@ header img {
 .font-fearless {
     font-family: var(--font-fearless);
     color: var(--color-fearless);
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .font-speak-now {
@@ -267,13 +400,17 @@ article {
 
 /* Mini player */
 
+#mini-player {
+    display: none;
+}
+
 .player--min, .player--close {
     position: fixed;
     bottom: 98px;
     right: 60px;
     top: inherit;
     margin-right: 0;
-    z-index: 15;
+    z-index: 9999;
 }
 
 .player--min .player-closePlayerControl {

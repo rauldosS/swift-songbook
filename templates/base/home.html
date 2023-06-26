@@ -1,6 +1,120 @@
+<style>
+    #most-accessed ol {
+        margin-top: 20px !important;
+    }
 
-<h1>Taylor Swift: The Music Industry</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    #most-accessed li {
+        height: 44px;
+        cursor: pointer;
+        border: none;
+    }
+
+    #most-accessed li:hover {
+        border-radius: 8px;
+        background: #f5f5f5;
+    }
+
+    #most-accessed li .number {
+        font-size: 20px;
+        color: #e0e0e0;
+        font-family: Montserrat,sans-serif;
+        font-weight: 600;
+    }
+</style>
+
+<h1 class="font-taylor-swift-base text-center mt-4">Taylor Swift</h1>
+<h6  class="font-taylor-swift-base text-center">The Music Industry</h6>
+
+<p class="text-center mt-5">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 
 <div class="line"></div>
+
+<div id="most-accessed">
+    <h4 class="font-taylor-swift-base">Most Accessed</h4>
+
+    <ol class="list-group"></ol>
+</div>
+
+<div class="line"></div>
+
+<script>
+    const mostAccessedMusics = [
+        {
+            music: { id: 'fearless', name: 'Fearless' },
+            album: { id: 'fearless', name: 'Fearless' },
+            blocked: false
+        },
+        {
+            music: { id: '', name: 'Red' },
+            album: { id: 'red', name: 'Red' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'Cardigan' },
+            album: { id: 'folklore', name: 'Folklore' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'Cruel Summer' },
+            album: { id: 'lover', name: 'Lover' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'You Belong With Me' },
+            album: { id: 'fearless', name: 'Fearless' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'Love Story' },
+            album: { id: 'fearless', name: 'Fearless' },
+            blocked: true
+        },
+        {
+            music: { id: 'lover', name: 'Lover' },
+            album: { id: 'lover', name: 'Lover' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'Blank Space' },
+            album: { id: '1989', name: '1989' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'All Too Well (10 Minute Version)' },
+            album: { id: 'red', name: 'Red' },
+            blocked: true
+        },
+        {
+            music: { id: '', name: 'Enchanted' },
+            album: { id: 'speak-now', name: 'Speak Now' },
+            blocked: true
+        }
+    ]
+    const mostAccessed = $('#most-accessed ol')
+
+    mostAccessedMusics.forEach((data, index) => {
+        mostAccessed.append(`
+            <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+                music="${ data.music.id }"
+                album="${ data.album.id }"
+                ${ data.blocked ? 'blocked': '' }
+            >
+                <div class="p-2 number bd-highlight">${ index + 1 }</div>
+                <div class="p-2 bd-highlight">${ data.music.name }</div>
+                <div class="ms-auto p-2 bd-highlight">
+                    <span class="badge color-${ data.album.id } border-${ data.album.id } rounded-pill">${ data.album.name }</span>
+                </div>
+            </li>
+        `)
+    })
+
+    $('#most-accessed li').not('[blocked]').on('click', function() {
+        selectMusic($(this).attr('album'), $(this).attr('music'))
+    })
+</script>

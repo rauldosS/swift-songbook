@@ -5,19 +5,18 @@ let chord_shape = undefined
 let capo_fret = undefined
 let spotify = undefined
 let chords_music = undefined
-let video = undefined
+let videoUrl = undefined
 let versions = undefined
-let cipher_parts = undefined
-let cipher_lyrics = undefined
+let cipherParts = undefined
+let cipherLyrics = undefined
 let tabs_parts = undefined
 let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
-
 let progressions_html = {}
 let tabs_html = {}
-let cipher_lyrics_parts_html = {}
+let cipherLyricsPartsHtml = {}
 
 let parts_cipher = []
 let complete_cipher = []
@@ -34,7 +33,7 @@ const chords_html = {
 
 const alerts_html = {
     'repeatIntro': `
-        <div class="alert d-flex align-items-center" role="alert">
+        <div class="alert d-flex align-items-center mb-4" role="alert">
             <i class="fa-solid fa-rotate-right me-2"></i>
             <div>
                 Repeat Intro
@@ -93,7 +92,9 @@ const albuns = [
     {
         'id': 'red',
         'name': 'RED',
-        'musics': []
+        'musics': [
+            { 'id': 'red', 'name': 'Red', 'block': false },
+        ]
     },
     {
         'id': '1989',
@@ -108,7 +109,9 @@ const albuns = [
     {
         'id': 'lover',
         'name': 'Lover',
-        'musics': []
+        'musics': [
+            { 'id': 'the-man', 'name': 'The Man', 'block': false },
+        ]
     },
     {
         'id': 'folklore',
