@@ -56,7 +56,8 @@ $(document).ready(function () {
             $('#page-content-wrapper').css({ 'width': '100%' })
             $('#toolbar').css({ 'bottom': '0' })
         }
-        
+
+        $('#menu-toggle').toggleClass('d-none')
         $('.btn-action-full-screen').toggleClass('active')
     })
 

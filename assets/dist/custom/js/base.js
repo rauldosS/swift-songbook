@@ -241,3 +241,14 @@ scrollTop = (element = undefined) => {
     }
     $('.scrolling').animate({ scrollTop: scrollTop }, 1000)
 }
+
+headShake = (el) => {
+    console.log(el)
+    el.classList.toggle('animate__animated')
+    el.classList.toggle('animate__headShake')
+
+    setTimeout(() => {
+        el.classList.toggle('animate__animated')
+        el.classList.toggle('animate__headShake')
+    }, 1000)
+}

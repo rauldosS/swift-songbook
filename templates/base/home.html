@@ -49,7 +49,7 @@
 </div>
 
 <div class="d-flex justify-content-center align-items-center">
-    <a class="btn btn-whatsapp" href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">
+    <a class="btn btn-whatsapp animate__animated animate__bounce animate__delay-3s" href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">
         <div><i class="fa-brands fa-whatsapp"></i></div>
         <div>Interact with other fans and musicians in the community</div>
     </a>
@@ -57,7 +57,7 @@
 
 <div class="line"></div>
 
-<div id="most-accessed">
+<div id="most-accessed" class="animate__animated animate__fadeInDown animate__delay-1s">
     <h4 class="font-taylor-swift-base">Most Accessed</h4>
 
     <ol class="list-group"></ol>
@@ -139,5 +139,9 @@
 
     $('#most-accessed li').not('[blocked]').on('click', function() {
         selectMusic($(this).attr('album'), $(this).attr('music'))
+    })
+
+    $('#most-accessed li[blocked]').on('click', function() {
+        $(this).toggleClass('animate__animated animate__hinge z-index')
     })
 </script>

@@ -4,6 +4,12 @@ $(document).ready(function () {
     $("#menu-toggle").on('click', function (e) {
         e.preventDefault()
         $("#sidebar").toggleClass("toggled")
+
+        if ($("#sidebar").hasClass("toggled")) {
+            $("#page-content-wrapper").css({ 'width': 'calc(100% - 20px)' })
+        } else {
+            $("#page-content-wrapper").css({ 'width': 'calc(100% - 270px)' })
+        }
     })
 
     $.each(albuns, function(i, album) {
@@ -18,7 +24,7 @@ $(document).ready(function () {
 
         album.musics.forEach(music => {
             music_list.append(`
-                <a ${ music.block ? '' : `onclick="selectMusic('${ album.id }', '${ music.id }')"`}>
+                <a ${ music.block ? 'onclick="headShake(this)"' : `onclick="selectMusic('${ album.id }', '${ music.id }')"`}>
                     ${music.name}
                     ${ music.block ? '<i class="fa-solid fa-ban color-danger"></i>' : '' }
                 </a>

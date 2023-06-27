@@ -26,6 +26,15 @@ header {
     background-image: linear-gradient(to right, #a0c3a2, #edbd7a, #d0b4d4, #6c333b, #abe2f5, #6d6d6d, #f7a8c8, #c9c5bf, #b6a083);
 }
 
+.z-index {
+    z-index: 9999;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
 .content {
     width: 100%;
     padding: 20px;
@@ -89,17 +98,21 @@ header {
 }
 
 #menu-toggle {
-    position: relative;
-    margin-top: 10px;
-    left: 34px;
-    background-color: var(--color-fearless);
-    color: #FFF;
-    border: 1px solid #FFF;
+    color: #6c757d!important;
+    position: inherit;
+    width: auto;
+    /* left: 30px;
+    top: 8px;
+    z-index: 9999; */
+    border: 1px dashed #DDD;
+    transition: all .1s ease 0s;
 }
 
-#sidebar.toggled #menu-toggle {
+#sidebar.toggled > #menu-toggle {
     transform: rotate(180deg);
     left: 48px;
+    left: 240px;
+    top: 4px;
 }
 
 #page-content-wrapper {
@@ -414,7 +427,7 @@ article {
     right: 60px;
     top: inherit;
     margin-right: 0;
-    z-index: 9999;
+    z-index: 800;
 }
 
 .player--min .player-closePlayerControl {
