@@ -30,6 +30,7 @@ header {
     width: 100%;
     padding: 20px;
     height: 100%;
+    margin: 0 20px;
     transition: all 0.3s;
     border-radius: 10px;
     padding-bottom: 100px;
@@ -73,7 +74,6 @@ header {
     bottom:     1%;
     left:       0;
     right:      0;
-    /*padding: 25px;*/
 }
 
 #sidebar {
@@ -103,7 +103,7 @@ header {
 }
 
 #page-content-wrapper {
-    width: calc(100% - 270px) !important;
+    width: calc(100% - 270px);
 }
 
 #page-content-wrapper nav {
@@ -114,7 +114,6 @@ header {
 
 .scrolling {
     overflow: auto;
-    margin: 0 20px;
 }
 
 iframe {
@@ -547,8 +546,8 @@ article {
 
     #page-content-wrapper {
         padding: 0;
-        width: 100% !important;
-        margin: 0 !important;
+        width: 100%;
+        margin: 0;
     }
 
     .btn-whatsapp {

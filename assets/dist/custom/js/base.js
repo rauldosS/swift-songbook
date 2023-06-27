@@ -141,7 +141,9 @@ createChordColumns = () => {
 
     cipherParts.forEach((part, index) => {
         cipherColumns = cipherColumns.concat(
-            `[${ part }]`,
+            part.includes('-ignore') ? '' : `
+[${ part }]
+`,
             `${ cipherLyricsList[index] }`
         )
     })
@@ -170,7 +172,7 @@ selectMusic = (album, music) => {
     $('#toolbar').show()
     $('#mini-player').show()
 
-    $('#page-content-wrapper')    .animate({ scrollTop: 0 }, 1000)
+    scrollTop()
 }
 
 loadCipher = () => {
@@ -228,3 +230,14 @@ displayAuthor = () => {
     $('#author').show()
 }
 
+scrollTop = (element = undefined) => {
+    let scrollTop = 0
+    if (element !== undefined) {
+        scrollTop = $(element).position().top
+        console.log(parseInt(scrollTop))
+        if (parseInt(scrollTop) >= -10 && parseInt(scrollTop) <= 10) {
+            return false
+        }
+    }
+    $('.scrolling').animate({ scrollTop: scrollTop }, 1000)
+}

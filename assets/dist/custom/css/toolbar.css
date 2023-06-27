@@ -1,7 +1,7 @@
 
 #toolbar {
     font-family: 'Poppins', sans-serif;
-    bottom: 90px;
+    bottom: -88px;
     grid-area: panel;
     height: 62px;
     position: sticky;

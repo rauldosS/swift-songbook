@@ -24,12 +24,19 @@ $(document).ready(function () {
             $('#wrapper').css({
                 'position': 'fixed',
                 'top': '10%',
-                'bottom': '0',
+                'bottom': '1%',
                 'left': '0',
-                'right': '0'
+                'right': '0',
+                'padding-right': 'var(--bs-gutter-x,.75rem)',
+                'padding-left': 'var(--bs-gutter-x,.75rem)'
             })
-            $('#page-content-wrapper').css({ 'padding': '20px' })
-            $('#toolbar').css({ 'bottom': '90px'})
+            $('.content').css({
+                'margin': '0 20px',
+                'padding': '20px',
+                'border-radius': '10px'
+            })
+            $('#page-content-wrapper').css({ 'width': 'calc(100% - 270px)' })
+            $('#toolbar').css({ 'bottom': '-8px' })
         } else {
             $('#sidebar').hide()
             $('#wrapper').css({
@@ -38,10 +45,16 @@ $(document).ready(function () {
                 'bottom': '0',
                 'left': '0',
                 'right': '0',
-                'padding': '0',
+                'padding-right': '0',
+                'padding-left': '0',
             })
-            $('#page-content-wrapper').css({ 'padding': '0' })
-            $('#toolbar').css({ 'bottom': '12px'})
+            $('.content').css({
+                'margin': '0',
+                'padding': '1%',
+                'border-radius': '0'
+            })
+            $('#page-content-wrapper').css({ 'width': '100%' })
+            $('#toolbar').css({ 'bottom': '0' })
         }
         
         $('.btn-action-full-screen').toggleClass('active')
@@ -74,6 +87,7 @@ $(document).ready(function () {
             $('#cipher-columns pre').css('columns', (columns - 1).toString())
             $('#cipher-columns pre').css('column-count', (columns - 1).toString())
             $('#cipher-columns').show()
+            scrollTop('#cipher-columns')
         } else {
             $('#cipher').show()
             $('#cipher-columns').hide()
@@ -89,6 +103,7 @@ $(document).ready(function () {
             $('#cipher-columns pre').css('columns', (columns + 1).toString())
             $('#cipher-columns pre').css('column-count', (columns + 1).toString())
             $('#cipher-columns').show()
+            scrollTop('#cipher-columns')
         }
     })
 
