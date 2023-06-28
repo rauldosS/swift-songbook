@@ -1,11 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="rK0ZvaDkVdDYJwSdNkLl1IZF0RfWYftNFLMPsC-IfD8" />
+    <meta name="classification" content="Internet">
+    <meta name="distribution" content="Global">
+    <meta name="keywords" content="Taylor Swift, Taylor's Songbook, Taylor Swift Chords, cifra, cifras, letra cifrada, chords">
+    <meta property="og:title" content="Taylor's Songbook">
+    <meta name="rating" content="General">
+    <meta property="og:type" content="website">
+    <meta name="language" content="en-us">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Author: M.S. Raul, Category: Guitar tabs, Description: Lyrics and tabs of songs for guitar and guitar by Taylor Swift.">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Taylor's Songbook</title>
+    <!-- Bootstrap core CSS -->
+
+    <link href="assets/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="assets/dist/custom/js/config.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500&family=IM+Fell+DW+Pica:ital@0;1&family=Montserrat:wght@100&family=Permanent+Marker&family=Roboto:wght@500&family=Rochester&family=Sacramento&family=Satisfy&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <link href="assets/dist/custom/css/base.css" rel="stylesheet">
+    <link href="assets/dist/custom/css/sidbar.css" rel="stylesheet">
 </head>
-<body>
-    <h1>public</h1>
+
+<body class="bg-light">
+    <header class="bd-header bg-white py-3 d-flex align-items-stretch border-bottom">
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+                <img src="assets/images/header.png" class="me-3" alt="Bootstrap">
+            </h1>
+        </div>
+    </header>
+    <div id="wrapper" class="wrapper container-fluid">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="shadow animate__animated animate__slideInLeft"></nav>
+        <!-- Page Content  -->
+        <div id="page-content-wrapper" class="animate__animated animate__fadeInRightBig">
+
+            <div class="content shadow bg-white scrolling">
+
+                <div id="shortcuts">
+                    <button type="button" id="menu-toggle" class="btn animate__animated animate__slideInRight">
+                        Hide albuns
+                    </button>
+                    <a class="btn animate__animated animate__slideInRight" href="https://rauldoss.github.io/swift-songbook/">
+                        Back to Home
+                    </a>
+                    <button type="button" class="btn animate__animated animate__slideInRight">
+                        User Help
+                    </button>
+                </div>
+
+                <section id="home" class="animate__animated animate__fadeIn"></section>
+
+                <section id="album"></section>
+
+                <div id="cipher-wrapper">
+                    <section id="cipher-content" class="my-3 cipher fearless-album-content"></section>
+                    <section id="toolbar"></section>
+                </div>
+
+                <section id="mini-player" class="player player--music player--init player--min"></section>
+
+                <section id="author"></section>
+
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAj3f1djxqSKdEwXI4h333g7P26cngRMhUgrq_vJu8aERxgg/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Base JS -->
+    <script src="assets/dist/custom/js/base.js"></script>
+
+    <!-- https://github.com/acspike/ChordJS/blob/master/README.md -->
+    <script src="assets/dist/custom/js/chords.js"></script>
 </body>
+
 </html>
