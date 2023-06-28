@@ -22,13 +22,15 @@ let parts_cipher = []
 let complete_cipher = []
 
 const chords_html = {
-    'C': `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
-    'Em': `<chord name="Em" positions="022000" fingers="-23---" size="2" ></chord>`,
-    'F': `<chord name="F" positions="133211" fingers="134211" size="2" ></chord>`,
-    'G': `<chord name="G" positions="320033" fingers="21--34" size="2" ></chord>`,
-    'D': `<chord name="D" positions="xx0232" fingers="---132" size="2" ></chord>`,
-    'A': `<chord name="A" positions="x02220" fingers="--123-" size="2" ></chord>`,
-    'Am': `<chord name="Am" positions="x02210" fingers="--231-" size="2" ></chord>`,
+    C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
+    C9: `<chord name="C" positions="x32330" fingers="-2134-" size="2" ></chord>`,
+    E: `<chord name="E" positions="022100" fingers="-231--" size="2" ></chord>`,
+    Em: `<chord name="Em" positions="022000" fingers="-23---" size="2" ></chord>`,
+    F: `<chord name="F" positions="133211" fingers="134211" size="2" ></chord>`,
+    G: `<chord name="G" positions="320033" fingers="21--34" size="2" ></chord>`,
+    D: `<chord name="D" positions="xx0232" fingers="---132" size="2" ></chord>`,
+    A: `<chord name="A" positions="x02220" fingers="--123-" size="2" ></chord>`,
+    Am: `<chord name="Am" positions="x02210" fingers="--231-" size="2" ></chord>`,
 }
 
 const alerts_html = {

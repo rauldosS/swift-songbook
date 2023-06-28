@@ -574,4 +574,13 @@ article {
         margin-left: 0px !important;
         display: block;
     }
+
+    .tabs,
+    .progressions {
+        font-size: 10px;
+    }
+    
+    pre[type="lyrics"] {
+        font-size: 12px;
+    }
 }

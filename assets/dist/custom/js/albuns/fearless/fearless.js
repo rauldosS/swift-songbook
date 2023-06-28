@@ -4,7 +4,7 @@ tuning = 'F'
 chord_shape = '(Chord shape in the key of D)'
 capo_fret = '3'
 spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
-chords_music = ['D', 'A', 'Em', 'G']
+chords_music = ['D', 'A', 'Em', 'G', 'C9', 'E']
 videoUrl = 'https://www.youtube.com/embed/D8fuCW9-vOc'
 versions = [
     {
