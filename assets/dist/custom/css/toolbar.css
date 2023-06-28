@@ -144,7 +144,8 @@
     width: 1px;
 }
 
-#toolbar .btn-action-autoscroll:before {
+#toolbar .btn-action-autoscroll:before,
+#toolbar .btn-action-chords:before {
     background: transparent;
     border: 1px solid;
     opacity: .5;

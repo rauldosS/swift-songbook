@@ -123,6 +123,16 @@ $(document).ready(function () {
         $(actionElement).toggleClass('active')
     }
 
+    show = (actionElement, targetElement) => {
+        if ($(actionElement).hasClass('active')) {
+            $(targetElement).show()
+        } else {
+            $(targetElement).hide()
+        }
+
+        $(actionElement).toggleClass('active')
+    }
+
     $('#unpin-toolbar').click(() => {
         $('#toolbar').toggleClass('initial')
         $('#unpin-toolbar').toggleClass('active')
@@ -133,4 +143,8 @@ $(document).ready(function () {
     $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs') })
     $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
     $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
+    $('#only-lyrics').click(() => {
+        hide('#only-lyrics', '#cipher')
+        show('#only-lyrics', '#lyrics')
+    })
 })

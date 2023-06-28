@@ -156,6 +156,14 @@ createChordColumns = () => {
     cipherContent.append(cipherColumns)
 }
 
+createLyrics = () => {
+    cipherContent.append(`
+        <div id="lyrics" class="mt-3">
+            <pre type="only-lyrics">${ lyrics }</pre>
+        </div>
+    `)
+}
+
 selectMusic = (album, music) => {
     cipherContent.empty()
 
@@ -213,6 +221,7 @@ loadCipher = () => {
     })
 
     createChordColumns()
+    createLyrics()
 
     // Mini player
 
