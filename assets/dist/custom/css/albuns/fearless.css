@@ -14,12 +14,12 @@
     color: var(--color-fearless);
 }
 
-#cipher-content .bg-album {
+#cipher-content .bg-album,
+#cipher-content .badge-info-cipher {
     background-color: var(--color-fearless);
 }
 
 #cipher-content .alert {
-    margin-top: -26px;
     color: var(--color-fearless);
     height: 10px;
     border-radius: 50px;

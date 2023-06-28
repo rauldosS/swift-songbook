@@ -523,6 +523,7 @@ article {
     color: #FFF;
     background-color: #73c591;
     border: 2px solid #73c591;
+    gap: 5px;
 }
 
 .btn-whatsapp:hover {

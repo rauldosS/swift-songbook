@@ -107,13 +107,13 @@ createCipherLyricsHTML = () => {
     const cipherLyricsList = cipherLyrics.split(divider)
 
     cipherParts.forEach((part, index) => {
-        cipherLyricsPartsHtml[part.replace('-ignore', '')] = part.includes('-ignore') ? `
+        cipherLyricsPartsHtml[part.id] = part.ignoreTitle ? `
             <pre type="lyrics">
             ${ cipherLyricsList[index] }
             </pre>
         ` : `
             <pre type="lyrics">
-[${ part }]
+[${ part.title }]
             ${ cipherLyricsList[index] }
             </pre>
         `
@@ -141,8 +141,8 @@ createChordColumns = () => {
 
     cipherParts.forEach((part, index) => {
         cipherColumns = cipherColumns.concat(
-            part.includes('-ignore') ? '' : `
-[${ part }]
+            part.ignoreTitle ? '' : `
+[${ part.title }]
 `,
             `${ cipherLyricsList[index] }`
         )

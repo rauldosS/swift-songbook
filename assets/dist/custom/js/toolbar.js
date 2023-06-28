@@ -85,12 +85,14 @@ $(document).ready(function () {
 
         if (columns > 2) {
             $('#cipher').hide()
+            $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns - 1).toString())
             $('#cipher-columns pre').css('column-count', (columns - 1).toString())
             $('#cipher-columns').show()
             scrollTop('#cipher-columns')
         } else {
             $('#cipher').show()
+            $('.badge-info-cipher').show()
             $('#cipher-columns').hide()
         }
     })
@@ -101,6 +103,7 @@ $(document).ready(function () {
 
         if (columns <= 5) {
             $('#cipher').hide()
+            $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns + 1).toString())
             $('#cipher-columns pre').css('column-count', (columns + 1).toString())
             $('#cipher-columns').show()

@@ -32,14 +32,15 @@ const chords_html = {
 }
 
 const alerts_html = {
-    'repeatIntro': `
-        <div class="alert d-flex align-items-center mb-4" role="alert">
+    repeatIntro: `
+        <div class="alert d-flex align-items-center mb-3" role="alert">
             <i class="fa-solid fa-rotate-right me-2"></i>
             <div>
                 Repeat Intro
             </div>
         </div>
-    `
+    `,
+    mainProgression: `<span class="badge rounded-pill">Main progression</span>`
 }
 
 const divider = '======================================================='
