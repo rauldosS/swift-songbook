@@ -39,10 +39,18 @@ header {
     width: 100%;
     padding: 20px;
     height: 100%;
-    margin: 0 20px;
     transition: all 0.3s;
     border-radius: 10px;
     padding-bottom: 100px;
+}
+
+#shortcuts .btn {
+    color: #6c757d!important;
+    position: inherit;
+    width: auto;
+    border: 1px dashed #DDD;
+    transition: all .1s ease 0s;
+    margin-bottom: 6px;
 }
 
 #author {
@@ -83,6 +91,7 @@ header {
     bottom:     1%;
     left:       0;
     right:      0;
+    gap: 12px;
 }
 
 #sidebar {
@@ -97,26 +106,8 @@ header {
     margin-left: -250px !important;
 }
 
-#menu-toggle {
-    color: #6c757d!important;
-    position: inherit;
-    width: auto;
-    /* left: 30px;
-    top: 8px;
-    z-index: 9999; */
-    border: 1px dashed #DDD;
-    transition: all .1s ease 0s;
-}
-
-#sidebar.toggled > #menu-toggle {
-    transform: rotate(180deg);
-    left: 48px;
-    left: 240px;
-    top: 4px;
-}
-
 #page-content-wrapper {
-    width: calc(100% - 270px);
+    width: calc(100% - 260px);
 }
 
 #page-content-wrapper nav {
@@ -424,7 +415,7 @@ article {
 .player--min, .player--close {
     position: fixed;
     bottom: 98px;
-    right: 60px;
+    right: 10px;
     top: inherit;
     margin-right: 0;
     z-index: 800;
@@ -556,11 +547,13 @@ article {
     #wrapper {
         padding: 0;
         width: 100%;
+        gap: 0;
+        bottom: 0;
     }
 
     #page-content-wrapper {
         padding: 0;
-        width: 100%;
+        width: 100% !important;
         margin: 0;
     }
 
@@ -572,14 +565,13 @@ article {
         margin: 0 !important;
     }
 
+    #close-miniplayer {
+        visibility: visible;
+        opacity: 1;
+    }
+
     #sidebar.toggled {
         margin-left: 0px !important;
         display: block;
-    }
-
-    #menu-toggle {
-        position: relative;
-        margin-top: 10px;
-        left: 48px;
     }
 }

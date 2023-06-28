@@ -35,7 +35,7 @@ $(document).ready(function () {
                 'padding': '20px',
                 'border-radius': '10px'
             })
-            $('#page-content-wrapper').css({ 'width': 'calc(100% - 270px)' })
+            $('#page-content-wrapper').css({ 'width': 'calc(100% - 260px)' })
             $('#toolbar').css({ 'bottom': '-8px' })
         } else {
             $('#sidebar').hide()

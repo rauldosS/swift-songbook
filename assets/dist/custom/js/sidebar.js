@@ -6,9 +6,9 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("toggled")
 
         if ($("#sidebar").hasClass("toggled")) {
-            $("#page-content-wrapper").css({ 'width': 'calc(100% - 20px)' })
+            $("#page-content-wrapper").css({ 'width': 'calc(100% - 10px)' })
         } else {
-            $("#page-content-wrapper").css({ 'width': 'calc(100% - 270px)' })
+            $("#page-content-wrapper").css({ 'width': 'calc(100% - 260px)' })
         }
     })
 
