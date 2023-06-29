@@ -166,15 +166,16 @@ createLyrics = () => {
     `)
 }
 
-selectMusic = (album, music) => {
+selectMusic = (musicId) => {
+    const music = musics[musicId]
     cipherContent.empty()
 
     hideContent()
     resertToolbar()
     cipherContent.hide()
 
-    createAlbumCSS(album)
-    createCipherJS(album, music)
+    createAlbumCSS(music.album)
+    createCipherJS(music.album, music.id)
 
     loadCipher()
 
