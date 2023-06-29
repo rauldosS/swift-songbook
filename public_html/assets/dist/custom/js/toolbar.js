@@ -129,8 +129,6 @@ $(document).ready(function () {
         } else {
             $(targetElement).hide()
         }
-
-        $(actionElement).toggleClass('active')
     }
 
     $('#unpin-toolbar').click(() => {

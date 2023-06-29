@@ -53,6 +53,10 @@ header {
     margin-bottom: 6px;
 }
 
+#shortcuts #btn-home {
+    display: none;
+}
+
 #author {
     display: none;
 }

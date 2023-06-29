@@ -1,0 +1,246 @@
+<style>
+    #logo img {
+        width: 40px;
+    }
+
+    #contribution h1 {
+        font-size: 2.25rem;
+    }
+
+    #qr-data {
+        max-width: 512px;
+        min-width: 512px;
+        color: white;
+        background-color: var(--color-red);
+        padding: 2rem 4rem;
+    }
+
+    #qr-container {
+        border-color: white;
+    }
+
+    #qr-container {
+        width: 12em;
+        height: 12em;
+        mix-blend-mode: normal;
+        border-color: var(--color-red);
+    }
+
+    .copy-button {
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        user-select: none;
+        min-height: 56px;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: white;
+        color: var(--color-red);
+        -webkit-appearance: none !important;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--color-red);
+        width: 100%;
+    }
+
+    #qr-data h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        font-weight: 800;
+    }
+
+    #qr-data p {
+        padding: 1rem 4rem 0 4rem;
+        line-height: 1.2;
+        font-size: .875rem;
+        color: white;
+    }
+
+    #qr-container img {
+        border-radius: 6px;
+    }
+
+    #copy-code {
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        user-select: none;
+        min-height: 56px;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: white;
+        color: var(--color-red);
+        -webkit-appearance: none !important;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--color-red);
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    #key-data {
+        padding: 1rem 4rem;
+        border: 1px solid rgba(0,0,0,.1);
+    }
+
+    #key-data p {
+        font-size: 1rem;
+        color: black;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        text-align: center;
+    }
+
+    #key-data strong, span.b {
+        font-weight: 700;
+    }
+
+    #user-data {
+        margin-top: 0;
+    }
+    
+    #contribution-info .title {
+        font-size: 2.25rem;
+        font-weight: 800;
+    }
+
+    #contribution-info {
+        padding: 2rem 4rem 2rem 1rem;
+    }
+
+    #copy-key {
+        color: var(--color-red);
+        font-weight: 700;
+        border: 1px solid;
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    #copy-key:hover {
+        background-color: var(--color-red);
+        color: #FFF;
+    }
+
+    @media(max-width: 1094px) {
+        #contribution .main {
+            align-items: center!important;
+            flex-direction: column!important;
+        }
+
+        #qr-data {
+            min-width: none;
+        }
+
+        #contribution-info {
+            padding: 0rem;
+        }
+    }
+
+
+    @media(max-width: 700px) {
+        #payment-info {
+            zoom: 60%;
+        }
+    }
+
+    @media(max-width: 520px) {
+        #payment-info {
+            zoom: 50%;
+        }
+    }
+</style>
+
+<div class="main d-flex justify-content-evenly">
+    <!-- LEFT SECTION -->
+    <section id="contribution-info" class="d-flex center measure-wide w-auto">
+        <div class="d-flex flex-column m-auto text-left">        
+            <div id="logo">
+                <img src="assets/images/favicon.png" alt="Taylor Swift">
+            </div>
+            <div class="d-flex flex-column items-start">
+                <h4 class="title color-red">Ajude a manter Taylor's Songbook!</h4>
+            </div>
+            <div class="mt-4">
+                <p>Taylor's Songbook é um projeto dedicado a fornecer <strong class="color-red">acesso ilimitado</strong> e <strong class="color-red">gratuito</strong> às cifras da incrível Taylor Swift. Nosso objetivo é compartilhar a paixão pela música e tornar mais fácil para todos tocarem as canções que amam.</p>
+
+                <p>Agora, temos o prazer de anunciar que você pode contribuir através de doações via PIX! Sua contribuição ajudará a manter o site funcionando sem interrupções, permitindo que continuemos a adicionar mais cifras, recursos e atender suas solicitações. Além disso, <strong class="color-red">encorajamos você a enviar músicas específicas que gostaria de ver priorizadas</strong> e outras sugestões para melhorar ainda mais a sua experiência.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RIGHT SECTION -->
+    <section id="payment-info" class="d-flex flex-column">
+        <div id="qr-data" class="d-flex flex-column align-items-center text-center">
+            <h3 class="f4 fw8 mb0 mt-4 mb-2">Use o QR Code do Pix para pagar</h3>
+            <p class="">Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code</p>
+            <div id="qr-container">
+                <img src="assets/images/pix.png" alt="Taylor Swift">
+            </div>
+            <a id="copy-code" class="copy-button copy-icon db tc no-underline br3 fw6 ttu ttn-ns" data-clipboard-text="00020126580014BR.GOV.BCB.PIX0136d3a34c9c-04ab-4d03-aa2b-1b24a2a2edf75204000053039865802BR5922Raul dos Santos Moraes6009SAO PAULO610805409000622405205YWQAusHBDKemWB47v8463043E0D">
+                Copiar código do QR Code
+                <i class="fa-solid fa-key ms-2"></i>
+            </a>
+        </div>
+        <div id="key-data">
+            <p class="lh-copy tc center mb4 db-ns dn f5">Ou use <strong>a chave Pix</strong></p>
+            <div class="d-flex flex-column">
+                <div id="user-data">
+                    <div class="d-flex justify-content-center pb-4">
+                        <btn id="copy-key" data-clipboard-text="d3a34c9c-04ab-4d03-aa2b-1b24a2a2edf7">Copiar Chave Aleatória <i class="fa-solid fa-key ms-2"></i></btn>
+                    </div>
+                    <div class="d-flex justify-content-between pb-2">
+                        <span class="b">Nome</span>
+                        <span>Raul dos Santos Moraes</span>
+                    </div>
+                    <div class="d-flex justify-content-between pb-2">
+                        <span class="b">CPF</span>
+                        <span>•••.371.609-••</span>
+                    </div>
+                    <div class="d-flex justify-content-between pb-2">
+                        <span class="b">Banco</span>
+                        <span>260 - Nu Pagamentos S.A</span>
+                    </div>
+                    <div class="d-flex justify-content-between pb-2">
+                        <span class="b">Identificador</span>
+                        <span>5YWQAusHBDKemWB47v84</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="line"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<script>
+    $('[data-clipboard-text]').on('click', function() {
+        textToCopy = $(this).attr('data-clipboard-text')
+
+        const clipboard = new ClipboardJS('[data-clipboard-text]', {
+            text: function() { return textToCopy }
+        })
+
+        clipboard.onClick(event)
+        changeText($(this))
+    })
+
+    function changeText(element) {
+        const text = element.text()
+        
+        element.html(`Copiado <i class="fa-regular fa-circle-check ms-1"></i>`)
+
+        setTimeout(function() {
+            element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
+        }, 1000);
+    }
+</script>

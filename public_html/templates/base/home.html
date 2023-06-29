@@ -28,14 +28,33 @@
     .caption-home {
         font-size: 2rem;
     }
+
+    @media(max-width: 768px) {
+        .title-home {
+            font-size: 3rem;
+        }
+
+        .caption-home {
+            font-size: 1rem;
+        }
+    }
 </style>
 
-<h1 class="font-taylor-swift-base text-center mt-4 title-home">Taylor Swift</h1>
+<h1 class="font-taylor-swift-base text-center mt-4 title-home">Taylor's Songbook</h1>
 <h6  class="font-taylor-swift-base text-center caption-home">The Music Industry</h6>
 
 <div id="summary" class="mt-4 text-center">
     <div class="collapse" id="collapseSummary">
-        <p>Welcome to "Taylor's Songbook"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p>
+        <p>Bem-vindo ao "Taylor's Songbook"! Nosso site é um verdadeiro tesouro de acordes para as músicas da talentosa Taylor Swift. Aqui você encontrará uma coleção abrangente de acordes, letras e recursos interativos para cada uma de suas canções.</p>
+
+        <p>Navegue pelo nosso catálogo organizado por álbuns, onde cada página é cuidadosamente desenhada com tipografia e cores que representam o espírito de cada uma das obras musicais de Taylor. Nosso objetivo é proporcionar uma experiência imersiva para fãs e músicos que desejam explorar, tocar ou cantar as músicas de Taylor Swift.</p>
+
+        <p>Além de acordes e letras, fornecemos progressões rítmicas detalhadas para cada música, permitindo que você capture a essência do ritmo e do groove das músicas. Oferecemos também tablatura para violão e outros instrumentos (no futuro), possibilitando recriar os arranjos autênticos das músicas.</p>
+
+        <p>No "Taylor's Songbook" você encontra recursos adicionais como vídeos tutoriais, dicas de técnica e performance e a possibilidade de interagir com outros fãs e músicos da comunidade <a href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">(WhatsApp)</a>. Compartilhe suas próprias versões e descubra novas interpretações das canções de Taylor.</p>
+
+        <p>Prepare-se para explorar o mundo musical de Taylor Swift de uma forma abrangente e inspiradora. Abrace a magia de suas composições, refine sua performance e aproveite a incrível jornada musical que é "Taylor's Songbook". Vamos jogar como Taylor!</p>
+        <!-- <p>Welcome to "Taylor's Songbook"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p>
 
         <p>Browse our catalog organized by albums, where each page is carefully designed with typography and colors that represent the spirit of each of Taylor's musical works. Our goal is to provide an immersive experience for fans and musicians who want to explore, play or sing Taylor Swift's songs.</p>
 
@@ -43,7 +62,7 @@
 
         <p>In "Taylor's Songbook" you will find additional resources such as tutorial videos, technique and performance tips and the possibility to interact with other fans and musicians in the community <a href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">(WhatsApp)</a>. Share your own versions and discover new interpretations of Taylor's songs.</p>
 
-        <p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is "Taylor's Songbook". Let's play like Taylor!</p>
+        <p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is "Taylor's Songbook". Let's play like Taylor!</p> -->
     </div>
     <a class="collapsed action" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
 </div>
@@ -62,8 +81,6 @@
 
     <ol class="list-group"></ol>
 </div>
-
-<div class="line"></div>
 
 <script>
     const mostAccessedMusics = [

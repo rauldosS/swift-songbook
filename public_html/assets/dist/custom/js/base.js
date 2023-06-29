@@ -7,6 +7,7 @@ $(document).ready(function () {
     $("#sidebar").load("templates/base/sidebar.html")
     $("#toolbar").load("templates/base/toolbar.html")
     $("#mini-player").load("templates/base/mini-player.html")
+    $("#contribution").load("templates/base/contribution.html")
     $("#author").load("templates/base/author.html")
 })
 
@@ -20,6 +21,7 @@ hideContent = () => {
     $('#cipher-content').hide()
     $('#mini-player').hide()
     $('#author').hide()
+    $('#shortcuts #btn-home').css({ 'display': 'inline-block' })
 }
 
 selectAlbum = (album) => {
