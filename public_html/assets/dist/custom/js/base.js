@@ -180,6 +180,7 @@ selectMusic = (musicId) => {
     loadCipher()
 
     cipherContent.show()
+
     $('#toolbar').show()
     $('#mini-player').show()
 
@@ -246,7 +247,6 @@ scrollTop = (element = undefined) => {
     let scrollTop = 0
     if (element !== undefined) {
         scrollTop = $(element).position().top
-        console.log(parseInt(scrollTop))
         if (parseInt(scrollTop) >= -10 && parseInt(scrollTop) <= 10) {
             return false
         }
@@ -255,7 +255,6 @@ scrollTop = (element = undefined) => {
 }
 
 headShake = (el) => {
-    console.log(el)
     el.classList.toggle('animate__animated')
     el.classList.toggle('animate__headShake')
 

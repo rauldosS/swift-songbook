@@ -3,8 +3,24 @@
 }
 
 #cipher-content b {
-    color: var(--color-fearless);
     font-weight: bold;
+    color: var(--color-fearless);
+    background-color: transparent;
+    padding: 0
+}
+
+#cipher-content b::after {
+    display: block;
+    background: currentColor;
+    border-radius: 2px;
+    bottom: 0.2em;
+    content: "";
+    display: none;
+    left: 0.25em;
+    opacity: .1;
+    position: absolute;
+    right: 0.25em;
+    top: 0.2em;
 }
 
 #cipher-content .title, #fearless-album .title {

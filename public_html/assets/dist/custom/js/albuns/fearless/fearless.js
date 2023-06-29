@@ -4,16 +4,8 @@ tuning = 'F'
 chord_shape = '(Chord shape in the key of D)'
 capo_fret = '3'
 spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
-chords_music = ['D', 'A', 'Em', 'G', 'C9', 'E']
+chords_music = ['D', 'A', 'Em', 'G', 'Cadd9', 'E']
 videoUrl = 'https://www.youtube.com/embed/D8fuCW9-vOc'
-versions = [
-    {
-        id: '',
-        name: 'Luca',
-        difficulty: 'easy',
-        contributions: []
-    }
-]
 
 parts_cipher = [
     { type: 'progression',      id: 'intro' },
@@ -21,15 +13,14 @@ parts_cipher = [
 
     { type: 'cipherLyrics',     id: 'firstVerse' },
 
-    { type: 'alert',            id: 'repeatIntro' },
-    { type: 'cipherLyrics',     id: 'afterFirstVerse' },
-
     { type: 'cipherLyrics',     id: 'secondVerse' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
-    { type: 'alert',            id: 'repeatIntro' },
+
+    { type: 'cipherLyrics',     id: 'instrumental' },
+
     { type: 'cipherLyrics',     id: 'thirdVerse' },
 
-    { type: 'cipherLyrics',     id: 'firstChorus' },
+    { type: 'cipherLyrics',     id: 'secondChorus' },
 
     { type: 'progression',      id: 'solo' },
     { type: 'tabs',             id: 'solo' },
@@ -38,7 +29,7 @@ parts_cipher = [
     { type: 'cipherLyrics',     id: 'bridge' },
 
     { type: 'cipherLyrics',     id: 'secondChorus' },
-    { type: 'cipherLyrics',     id: 'thirdChorus' },
+    { type: 'cipherLyrics',     id: 'secondChorus' },
 
     { type: 'cipherLyrics',     id: 'outro' },
 ]
@@ -61,8 +52,8 @@ progressions = [
     {
         id: 'bridge',
         title: 'Bridge 2x',
-        caption: '2nd time from Em just play down',
-        notes: ['C9', 'D', 'Em', 'D', 'G', 'A'],
+        caption: '2nd time from Em just tap down',
+        notes: ['Cadd9', 'D', 'Em', 'D', 'G', 'A'],
         progression: 'L S - - L S - - L S - - L S - -'
     }
 ]
@@ -119,10 +110,6 @@ cipherParts = [
         ignoreTitle: false
     },
     {
-        id: 'afterFirstVerse',
-        ignoreTitle: true
-    },
-    {
         id: 'secondVerse',
         title: 'Verse 2',
         ignoreTitle: false
@@ -134,11 +121,6 @@ cipherParts = [
     },
     {
         id: 'secondChorus',
-        title: 'Chorus',
-        ignoreTitle: false
-    },
-    {
-        id: 'thirdChorus',
         title: 'Chorus',
         ignoreTitle: false
     },
@@ -157,97 +139,91 @@ cipherParts = [
         title: 'Outro',
         ignoreTitle: false
     },
+    {
+        id: 'instrumental',
+        title: 'Instrumental',
+        ignoreTitle: false
+    },
 ]
 
 cipherLyrics = `
-D 
- There's something 'bout the way
-A                                Em 
- The street looks when it's just rained
-                         G 
- There's a glow off the pavement
-                    D 
- You walk me to the car
-                      A                      Em 
- And you know I wanna ask you to dance right there
-                        G         D   A
- In the middle of the parking lot, yeah
-${ divider }
-Em   G
- Oh, yeah
+D
+  There's something 'bout the way
+A                                 Em
+  The street looks when it's just rained
+                       G
+There's a glow off the pavement
+               D
+Walk me to the car
+                     A                      Em
+And you know I wanna ask you to dance right there
+                     G                                      <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+In the middle of the parking lot
+ 
+     D A    Em  G                                           <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-rotate-right"></i> Repeat Intro</span>
+Yeah     Oh yeah
 ${ divider }
 D
- We're drivin' down the road
-A                Em
- I wonder if you know
-                    G
- I'm trying so hard not to get caught up now
-D
- But you're just so cool
- A                           Em
- Run your hands through your hair
-                  G        A                                <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DDDD</span>
- Absent mindedly making me want you
-${ divider }
-D                     A                   Em
- And I don't know how it gets better than this
-                               G           A                <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
- You take my hand and drag me head first, fearless
-D                     A                Em
- And I don't know why but with you I'd dance            
-                   G           A                            <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
- In a storm in my best dress, fearless
-${ divider }
-D                       A                   Em
-'Cause I don't know how it gets better than this
-                               G           A                <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> strum *cut *strum *cut</span>
- You take my hand and drag me head first, fearless
-D                     A                Em                   <span class="badge badge-info-cipher rounded-pill">Main Progression</span>
- And I don't know why but with you I'd dance                
-                   G           A                            <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
- In a storm in my best dress, fearless
-${ divider }
- D                       A                   Em
- 'Cause I don't know how it gets better than this
-                                G           A                <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
-  You take my hand and drag me head first, fearless
- D                     A                Em
-  And I don't know why but with you I'd dance            
-                    G           A                            <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
-  In a storm in my best dress, fearless
- D                     A                   Em
-  And I don't know how it gets better than this
-                                G           A                <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
-  You take my hand and drag me head first, fearless
-${ divider }
- D                   A                  Em
- So baby drive slow till we run out of road
+  We're drivin' down the road
+A                 Em
+  I wonder if you know
                    G
- In this one horse town
-                    D                       A
- I wanna stay right here in this passenger seat
-                      Em
- you put your eyes on me
-                    G             A                         <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> strum *cut *strum *cut</span>
- In this moment now capture it remember it
+I'm trying so hard not to get caught up now
+D
+  But you're just so cool
+A                           Em
+Run your hands through your hair
+                G         A                                 <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DDDD</span>
+Absent-mindedly making me want you
 ${ divider }
-C9                         D
+D                      A                   Em
+  And I don't know how it gets better than this
+                             G           A                  <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
+You take my hand and drag me head first, fearless
+D                      A                Em
+  And I don't know why but with you I'd dance
+                 G           A                              <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
+In a storm in my best dress, fearless
+${ divider }
+D                        A                   Em
+  'Cause I don't know how it gets better than this
+                             G           A                  <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> strum *cut *strum *cut</span>
+You take my hand and drag me head first, fearless
+D                      A                Em                  <span class="badge badge-info-cipher rounded-pill">Main Progression</span>
+  And I don't know why but with you I'd dance
+                 G           A                              <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> DD UD</span>
+In a storm in my best dress, fearless
+${ divider }
+D                   A                   Em
+  So baby drive slow till we run out of road
+                  G
+In this one horse town
+                   D
+I wanna stay right here 
+                      A                      Em
+in this passenger seat you put your eyes on me
+                   G            A                             <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> strum *cut *strum *cut</span>
+In this moment now capture it remember it
+${ divider }
+Cadd9                       D
  Well, you stood there with me in the doorway
-    Em               D       G        A
- my hands shake, I'm not usually this way
-     C9                         D
- But you pull me in and I'm a little more brave
-        Em                 D               G                
- It's a first kiss, it's flawless, really something         
-A
- It's fearless
-  D   A   Em      G
-          Ohh..  Yeah
+    Em                D          G       A
+My hands shake and I'm not usually this way but
+Cadd9                      D
+  You pull me in and I'm a little more brave
+        Em               D                G       A           <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+It's a first kiss, it's flawless, really something
+          D   A                                               <span class="badge badge-info-cipher rounded-pill">Main Progression</span>
+It's fearless
+Em     G
+Ohh..  yeah
 ${ divider }
 D     A
  Oh, oh
 E        G 
  Oh-oh, yeah
+${ divider }
+D A Em G            <span class="badge badge-info-cipher rounded-pill">Repeat second intro tab</span>
 `
 
 tabs_parts = [,
@@ -283,13 +259,7 @@ So, baby, drive slow 'til we run out of road in this onе-horse town
 I wanna stay right here, in this passenger's seat
 You put your eyes on me
 In this moment now, capture it, remember it
-You might also like
-You Belong With Me (Taylor’s Version)
-Taylor Swift
-Love Story (Taylor’s Version)
-Taylor Swift
-Fifteen (Taylor’s Version)
-Taylor Swift
+
 [Chorus]
 'Cause I don't know how it gets better than this
 You take my hand and drag me head first, fearless

@@ -9,7 +9,6 @@ let videoUrl = undefined
 let versions = undefined
 let cipherParts = undefined
 let cipherLyrics = undefined
-let tabs_parts = undefined
 let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
@@ -23,7 +22,7 @@ let complete_cipher = []
 
 const chords_html = {
     C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
-    C9: `<chord name="C" positions="x32330" fingers="-2134-" size="2" ></chord>`,
+    Cadd9: `<chord name="Cadd9" positions="x32030" fingers="-21-3-" size="2" ></chord>`,
     E: `<chord name="E" positions="022100" fingers="-231--" size="2" ></chord>`,
     Em: `<chord name="Em" positions="022000" fingers="-23---" size="2" ></chord>`,
     F: `<chord name="F" positions="133211" fingers="134211" size="2" ></chord>`,
