@@ -517,7 +517,6 @@ article {
 
 .btn-whatsapp {
     display: flex;
-    min-width: 508px;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
