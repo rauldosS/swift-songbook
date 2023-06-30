@@ -1,4 +1,5 @@
-let title = undefined
+let musicId = undefined
+let musicTitle = undefined
 let blocked = undefined
 let tuning = undefined
 let chord_shape = undefined
@@ -151,3 +152,14 @@ getMusic = (album, music) => {
         return obj.id === music
     })
 } 
+
+scrollTop = (element = undefined) => {
+    let scrollTop = 0
+    if (element !== undefined) {
+        scrollTop = $(element).position().top
+        if (parseInt(scrollTop) >= -10 && parseInt(scrollTop) <= 10) {
+            return false
+        }
+    }
+    $('.scrolling').animate({ scrollTop: scrollTop }, 500)
+}

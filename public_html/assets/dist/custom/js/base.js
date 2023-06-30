@@ -9,6 +9,28 @@ $(document).ready(function () {
     $("#mini-player").load("templates/base/mini-player.html")
     $("#contribution").load("templates/base/contribution.html")
     $("#author").load("templates/base/author.html")
+
+    window.onload = function() {
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        })
+
+        if (params.music !== null) {
+            selectMusic(params.music)
+            $('#toolbar').show()
+        }
+
+        $('[data-clipboard-text]').on('click', function() {
+            textToCopy = $(this).attr('data-clipboard-text')
+    
+            const clipboard = new ClipboardJS('[data-clipboard-text]', {
+                text: function() { return textToCopy }
+            })
+        
+            clipboard.onClick(event)
+            changeText($(this))
+        })
+    }
 })
 
 const cipherContent = $('#cipher-content')
@@ -42,7 +64,7 @@ createCipherJS = (album, music) => {
 createCipherHeaderHTML = () => {
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
-            <h1 class="title">${ title }</h1>
+            <h1 class="title">${ musicTitle }</h1>
             <span class="cipher-tone">Tuning: <b>${ tuning }</b> ${ chord_shape }</span>
             <span class="song-capo">
                 Capo on the <b>3rd fret</b>
@@ -187,6 +209,10 @@ selectMusic = (musicId) => {
     scrollTop()
 }
 
+updateShareLink = () => {
+    $('#share-cipher').attr('data-clipboard-text', `https://taylorsongbook.com.br?music=${musicId}`)
+}
+
 loadCipher = () => {
     createCipherHeaderHTML()
     createChordsHTML()
@@ -226,6 +252,7 @@ loadCipher = () => {
 
     createChordColumns()
     createLyrics()
+    updateShareLink()
 
     // Mini player
 
@@ -243,17 +270,6 @@ displayAuthor = () => {
     $('#author').show()
 }
 
-scrollTop = (element = undefined) => {
-    let scrollTop = 0
-    if (element !== undefined) {
-        scrollTop = $(element).position().top
-        if (parseInt(scrollTop) >= -10 && parseInt(scrollTop) <= 10) {
-            return false
-        }
-    }
-    $('.scrolling').animate({ scrollTop: scrollTop }, 1000)
-}
-
 headShake = (el) => {
     el.classList.toggle('animate__animated')
     el.classList.toggle('animate__headShake')
@@ -262,4 +278,14 @@ headShake = (el) => {
         el.classList.toggle('animate__animated')
         el.classList.toggle('animate__headShake')
     }, 1000)
+}
+
+changeText = (element) => {
+    const text = element.text()
+    
+    element.html(`Copiado <i class="fa-regular fa-circle-check ms-1"></i>`)
+
+    setTimeout(function() {
+        element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
+    }, 1000);
 }

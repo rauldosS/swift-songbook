@@ -219,28 +219,3 @@
 </div>
 
 <div class="line"></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-
-<script>
-    $('[data-clipboard-text]').on('click', function() {
-        textToCopy = $(this).attr('data-clipboard-text')
-
-        const clipboard = new ClipboardJS('[data-clipboard-text]', {
-            text: function() { return textToCopy }
-        })
-
-        clipboard.onClick(event)
-        changeText($(this))
-    })
-
-    function changeText(element) {
-        const text = element.text()
-        
-        element.html(`Copiado <i class="fa-regular fa-circle-check ms-1"></i>`)
-
-        setTimeout(function() {
-            element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
-        }, 1000);
-    }
-</script>

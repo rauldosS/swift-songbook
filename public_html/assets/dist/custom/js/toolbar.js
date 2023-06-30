@@ -21,6 +21,7 @@ $(document).ready(function () {
     $('.btn-action-full-screen').click(() => {
         if ($('.btn-action-full-screen').hasClass('active')) {
             $('#sidebar').show()
+            $('#shortcuts').show()
             $('#wrapper').css({
                 'position': 'fixed',
                 'top': '10%',
@@ -39,6 +40,7 @@ $(document).ready(function () {
             $('#toolbar').css({ 'bottom': '-8px' })
         } else {
             $('#sidebar').hide()
+            $('#shortcuts').hide()
             $('#wrapper').css({
                 'position': 'fixed',
                 'top': '0%',
@@ -113,7 +115,7 @@ $(document).ready(function () {
 
     // Hide menu
 
-    hide = (actionElement, targetElement) => {
+    hide = (actionElement, targetElement, runScrollTop = false) => {
         if ($(actionElement).hasClass('active')) {
             $(targetElement).show()
         } else {
@@ -121,6 +123,10 @@ $(document).ready(function () {
         }
 
         $(actionElement).toggleClass('active')
+
+        if (runScrollTop === true) {
+            scrollTop()
+        }
     }
 
     show = (actionElement, targetElement) => {
@@ -136,13 +142,13 @@ $(document).ready(function () {
         $('#unpin-toolbar').toggleClass('active')
     })
 
-    $('#hide-lyrics').click(() => { hide('#hide-lyrics', 'pre[type="lyrics"]') })
-    $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions') })
-    $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs') })
-    $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
+    $('#hide-lyrics').click(() => {hide('#hide-lyrics', 'pre[type="lyrics"]', true) })
+    $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions', true) })
+    $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs', true) })
+    $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b', true) })
     $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
     $('#only-lyrics').click(() => {
-        hide('#only-lyrics', '#cipher')
+        hide('#only-lyrics', '#cipher', true)
         show('#only-lyrics', '#lyrics')
     })
 })

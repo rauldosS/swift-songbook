@@ -1,5 +1,5 @@
-title = 'Fearless'
-block = false
+musicId = 'fearless'
+musicTitle = 'Fearless'
 tuning = 'F'
 chord_shape = '(Chord shape in the key of D)'
 capo_fret = '3'
