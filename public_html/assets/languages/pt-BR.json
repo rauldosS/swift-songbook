@@ -1,0 +1,50 @@
+{
+    "code": "pt-BR",
+    "mainAlert": "Apenas a cifra de \"Fearless\" está disponível no momento. Nosso site está em fase de testes. Ficaremos gratos por suas sugestões e feedbacks!",
+    "summary": "<p>Bem-vindo ao \"Taylor's Songbook\"! Nosso site é um verdadeiro tesouro de acordes para as músicas da talentosa Taylor Swift. Aqui você encontrará uma coleção abrangente de acordes, letras e recursos interativos para cada uma de suas canções.</p><p>Navegue pelo nosso catálogo organizado por álbuns, onde cada página é cuidadosamente desenhada com tipografia e cores que representam o espírito de cada uma das obras musicais de Taylor. Nosso objetivo é proporcionar uma experiência imersiva para fãs e músicos que desejam explorar, tocar ou cantar as músicas de Taylor Swift.</p><p>Além de acordes e letras, fornecemos progressões rítmicas detalhadas para cada música, permitindo que você capture a essência do ritmo e do groove das músicas. Oferecemos também tablatura para violão e outros instrumentos (no futuro), possibilitando recriar os arranjos autênticos das músicas.</p><p>No \"Taylor's Songbook\" você encontra recursos adicionais como vídeos tutoriais, dicas de técnica e performance e a possibilidade de interagir com outros fãs e músicos da comunidade <a href=\"https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP\" target=\"_blank\">(WhatsApp)</a>. Compartilhe suas próprias versões e descubra novas interpretações das canções de Taylor.</p><p>Prepare-se para explorar o mundo musical de Taylor Swift de uma forma abrangente e inspiradora. Abrace a magia de suas composições, refine sua performance e aproveite a incrível jornada musical que é \"Taylor's Songbook\". Let's play like Taylor!</p>",
+    "whatsapp": "Interaja com outros fãs e músicos do nosso grupo",
+    "mostAccessTitle": "Mais acessadas",
+    "contribution": {
+        "title": "Ajude a manter Taylor's Songbook!",
+        "info": "<p>Taylor's Songbook é um projeto dedicado a fornecer <strong class=\"color-red\">acesso ilimitado</strong> e <strong class=\"color-red\">gratuito</strong> às cifras da incrível Taylor Swift. Nosso objetivo é compartilhar a paixão pela música e tornar mais fácil para todos tocarem as canções que amam.</p><p>Agora, temos o prazer de anunciar que você pode contribuir através de doações via PIX! Sua contribuição ajudará a manter o site funcionando sem interrupções, permitindo que continuemos a adicionar mais cifras, recursos e atender suas solicitações. Além disso, <strong class=\"color-red\">encorajamos você a enviar músicas específicas que gostaria de ver priorizadas</strong> e outras sugestões para melhorar ainda mais a sua experiência.</p>",
+        "copy": "Copiado",
+        "paymant": {
+            "title": "Use o QR Code do Pix para pagar",
+            "info": "Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code",
+            "qrCode": "Copiar código do QR Code <i class=\"fa-solid fa-key ms-2\"></i>",
+            "pixKeyTitle": "Ou use a <strong>chave Pix</strong>",
+            "pixKey": "Copiar Chave Aleatória <i class=\"fa-solid fa-key ms-2\"></i>"
+        }
+    },
+    "shortcuts": {
+        "btnHome": "Início",
+        "hideAlbunsToggle": "",
+        "albumToggle": {
+            "show": "Exibir Álbuns",
+            "hide": "Ocultar Álbuns"
+        },
+        "dropdownMenuLanguages": "Alterar língua",
+        "instructions": "Instruções",
+        "unpinShortcuts": "Desafixar atalhos",
+        "languages": {
+            "ptBr": "Português Brasil",
+            "enUs": "Inglês"
+        }
+    },
+    "toolbar": {
+        "fontActionTitle": "FONTE",
+        "chordsActionTitle": "ACORDES",
+        "columnsActionTitle": "COLUNAS",
+        "unpinToolbar": "Desafixar",
+        "onlyLyrics": "Exibir apenas letra",
+        "hideLyrics": "Ocultar letra",
+        "hideProgressions": "Ocultar progressões",
+        "hideTabs": "Ocultar tablaturas",
+        "hideChords": "Hide chords",
+        "hideMiniplayer": "Ocultar miniplayer",
+        "shareCipher": "Compartilhar cifra"
+    },
+    "albuns": {
+        "about": "Sobre"
+    }
+}
