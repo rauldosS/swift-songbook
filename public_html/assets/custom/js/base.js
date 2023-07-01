@@ -260,7 +260,7 @@ selectMusic = (musicId) => {
 
     scrollTop()
 
-    if ($(window).width() < 768) {
+    if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
     }
 }
