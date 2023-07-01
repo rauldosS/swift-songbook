@@ -6,49 +6,32 @@
     <meta name="google-site-verification" content="F97SF6gvcrY8w-JGs-RqTu5GHLrnt6F1u3VOmqjSxAI" />
     <meta name="classification" content="Internet">
     <meta name="distribution" content="Global">
-    <meta name="keywords" content="Taylor Swift, Taylor's Songbook, Taylor Swift Chords, cifra, cifras, letra cifrada, chords">
+    <meta name="keywords" content="Taylor's Songbook, Taylor Swift, Taylor Swift Chords, cifra, cifras, letra cifrada, chords, Fearless">
     <meta property="og:title" content="Taylor's Songbook">
     <meta name="rating" content="General">
     <meta property="og:type" content="website">
-    <meta name="language" content="en-us">
+    <meta http-equiv="Content-Language" content="en-us,pt-BR">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Author: M.S. Raul, Category: Guitar tabs, Description: Lyrics and tabs of songs for guitar and guitar by Taylor Swift.">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
+    <meta name="description" content="Lyrics and tablature of songs for guitar and acoustic guitar by Taylor Swift.">
+    <meta name="author" content="Raul dos Santos Moraes">
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <title>Taylor's Songbook</title>
-    <!-- Bootstrap core CSS -->
 
+    <!-- Bootstrap core CSS -->
     <link href="assets/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="assets/dist/custom/js/config.js"></script>
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
+    <script src="assets/custom/js/config.js"></script>
 
     <!-- Custom fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500&family=IM+Fell+DW+Pica:ital@0;1&family=Montserrat:wght@100&family=Permanent+Marker&family=Roboto:wght@500&family=Rochester&family=Sacramento&family=Satisfy&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
-    <link href="assets/dist/custom/css/base.css" rel="stylesheet">
-    <link href="assets/dist/custom/css/sidbar.css" rel="stylesheet">
+    <link href="assets/custom/css/base.css" rel="stylesheet">
+    <link href="assets/custom/css/sidbar.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -68,17 +51,24 @@
             <div class="content shadow bg-white scrolling">
 
                 <div id="shortcuts">
-                    <a id="btn-home" class="btn animate__animated animate__slideInRight" href="https://taylorsongbook.com.br">
-                        <i class="fa-solid fa-house"></i> Início
+                    <a id="btn-home" class="btn" href="https://taylorsongbook.com.br">
+                        <i class="fa-solid fa-house"></i> <span>Início</span>
                     </a>
-                    <button type="button" id="menu-toggle" class="btn animate__animated animate__slideInRight">
-                        <i class="fa-regular fa-eye-slash"></i> Ocultar álbuns
+                    <button type="button" id="hide-albuns-toggle" class="btn">
+                        <i class="fa-solid fa-compact-disc"></i> <span>Ocultar álbuns</span>
                     </button>
-                    <button type="button" class="btn animate__animated animate__slideInRight">
-                        <i class="fa-solid fa-language"></i> English
+                    <button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" title="Alterar língua">
+                        <i class="fa-solid fa-language"></i>
                     </button>
-                    <button type="button" class="btn animate__animated animate__slideInRight">
-                        <i class="fa-regular fa-circle-question"></i> Ajuda
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-menu-languages">
+                        <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')">English</a></li>
+                        <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')">Português brasileiro</a></li>
+                    </ul>
+                    <button id="instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Instruções">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </button>
+                    <button id="unpin-shortcuts" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Desafixar atalhos">
+                        <i class="fa-solid fa-thumbtack"></i>
                     </button>
                 </div>
 
@@ -99,7 +89,7 @@
 
                 <section id="contribution" class="mt-5"></section>
 
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAj3f1djxqSKdEwXI4h333g7P26cngRMhUgrq_vJu8aERxgg/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAj3f1djxqSKdEwXI4h333g7P26cngRMhUgrq_vJu8aERxgg/viewform?embedded=true" height="670" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
             </div>
         </div>
     </div>
@@ -122,14 +112,14 @@
     <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Base JS -->
-    <script src="assets/dist/custom/js/base.js"></script>
+    <script src="assets/custom/js/base.js"></script>
 
     <!-- https://github.com/acspike/ChordJS/blob/master/README.md -->
-    <script src="assets/dist/custom/js/chords.js"></script>
+    <script src="assets/custom/js/chords.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZ30CLHS1"></script>
-    <script src="assets/dist/custom/js/analytics.js"></script>
+    <script src="assets/custom/js/analytics.js"></script>
 </body>
 
 </html>

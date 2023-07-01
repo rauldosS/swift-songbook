@@ -1,0 +1,49 @@
+{
+    "code": "en-US",
+    "mainAlert": "Only the chord sheet for \"Fearless\" is available at the moment. Our website is in the testing phase. We would appreciate your suggestions and feedback!",
+    "summary": "<p>Welcome to \"Taylor's Songbook\"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p><p>Browse our catalog organized by albums, where each page is carefully designed with typography and colors that represent the spirit of each of Taylor's musical works. Our goal is to provide an immersive experience for fans and musicians who want to explore, play or sing Taylor Swift's songs.</p><p>In addition to chords and lyrics, we provide detailed rhythm progressions for each song, allowing you to capture the essence of the songs' rhythm and groove. We also offer tablature for guitar and other instruments (in the future), making it possible to recreate the authentic arrangements of the songs.</p><p>In \"Taylor's Songbook\" you will find additional resources such as tutorial videos, technique and performance tips and the possibility to interact with other fans and musicians in the community <a href=\"https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP\" target=\"_blank\">(WhatsApp)</a>. Share your own versions and discover new interpretations of Taylor's songs.</p><p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is \"Taylor's Songbook\". Let's play like Taylor!</p>",
+    "whatsapp": "Interact with other fans and musicians in our group",
+    "mostAccessTitle": "Most Accessed",
+    "contribution": {
+        "title": "Help maintain Taylor's Songbook!",
+        "info": "<p>Taylor's Songbook is a project dedicated to providing <strong class=\"color-red\">free</strong> and <strong class=\"color-red\">unlimited</strong> access to the music of the amazing Taylor Swift. Our goal is to share the passion for music and make it easy for everyone to play the music they love.</p><p>Now, we are pleased to announce that you can contribute through donations via PIX! Your contribution will help keep the site running smoothly, allowing us to keep adding more pictures, features and fulfill your requests. <strong class=\"color-red\">we encourage you to submit specific songs you'd like to see prioritized</strong> and other suggestions to further improve your experience.</p>",
+        "copy": "Copied",
+        "paymant": {
+            "title": "Use Pix QR Code to pay",
+            "info": "Open the app where you are going to transfer, scan the image or paste the QR Code",
+            "qrCode": "Copy code from QR Code <i class=\"fa-solid fa-key ms-2\"></i>",
+            "pixKeyTitle": "Or use the <strong>Pix key</strong>",
+            "pixKey": "Copy Random Key <i class=\"fa-solid fa-key ms-2\"></i>"
+        }
+    },
+    "shortcuts": {
+        "btnHome": "Home",
+        "albumToggle": {
+            "show": "Show Albums",
+            "hide": "Hide Albums"
+        },
+        "dropdownMenuLanguages": "change Language",
+        "instructions": "Instructions",
+        "unpinShortcuts": "Unpin shortcuts",
+        "languages": {
+            "ptBr": "Portuguese - Brazil",
+            "enUs": "English"
+        }
+    },
+    "toolbar": {
+        "fontActionTitle": "FONT",
+        "chordsActionTitle": "CHORDS",
+        "columnsActionTitle": "COLUMNS",
+        "unpinToolbar": "Unpin",
+        "onlyLyrics": "Show lyrics only",
+        "hideLyrics": "Hide lyrics",
+        "hideProgressions": "Hide progressions",
+        "hideTabs": "Hide tabs",
+        "hideChords": "Hide chords",
+        "hideMiniplayer": "Hide miniplayer",
+        "shareCipher": "Share"
+    },
+    "albuns": {
+        "about": "About"
+    }
+}

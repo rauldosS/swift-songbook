@@ -1,20 +1,20 @@
 <style>
-    #most-accessed ol {
+    #mostAccessed ol {
         margin-top: 20px !important;
     }
 
-    #most-accessed li {
+    #mostAccessed li {
         height: 44px;
         cursor: pointer;
         border: none;
     }
 
-    #most-accessed li:hover {
+    #mostAccessed li:hover {
         border-radius: 8px;
         background: #f5f5f5;
     }
 
-    #most-accessed li .number {
+    #mostAccessed li .number {
         font-size: 20px;
         color: #e0e0e0;
         font-family: Montserrat,sans-serif;
@@ -26,7 +26,7 @@
     }
 
     .caption-home {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     @media(max-width: 768px) {
@@ -40,29 +40,17 @@
     }
 </style>
 
+<div class="alert alert-warning d-flex align-items-center mt-4 rounded-pill" role="alert">
+    <div id="main-alert" class="text-center w-100 w-bold">
+        Atenção: Apenas a cifra de "Fearless" está disponível no momento. Nosso site está em fase de testes. Ficaremos gratos por suas sugestões e feedbacks!
+    </div>
+</div>
+
 <h1 class="font-taylor-swift-base text-center mt-4 title-home">Taylor's Songbook</h1>
 <h6  class="font-taylor-swift-base text-center caption-home">The Music Industry</h6>
 
 <div id="summary" class="mt-4 text-center">
     <div class="collapse" id="collapseSummary">
-        <p>Bem-vindo ao "Taylor's Songbook"! Nosso site é um verdadeiro tesouro de acordes para as músicas da talentosa Taylor Swift. Aqui você encontrará uma coleção abrangente de acordes, letras e recursos interativos para cada uma de suas canções.</p>
-
-        <p>Navegue pelo nosso catálogo organizado por álbuns, onde cada página é cuidadosamente desenhada com tipografia e cores que representam o espírito de cada uma das obras musicais de Taylor. Nosso objetivo é proporcionar uma experiência imersiva para fãs e músicos que desejam explorar, tocar ou cantar as músicas de Taylor Swift.</p>
-
-        <p>Além de acordes e letras, fornecemos progressões rítmicas detalhadas para cada música, permitindo que você capture a essência do ritmo e do groove das músicas. Oferecemos também tablatura para violão e outros instrumentos (no futuro), possibilitando recriar os arranjos autênticos das músicas.</p>
-
-        <p>No "Taylor's Songbook" você encontra recursos adicionais como vídeos tutoriais, dicas de técnica e performance e a possibilidade de interagir com outros fãs e músicos da comunidade <a href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">(WhatsApp)</a>. Compartilhe suas próprias versões e descubra novas interpretações das canções de Taylor.</p>
-
-        <p>Prepare-se para explorar o mundo musical de Taylor Swift de uma forma abrangente e inspiradora. Abrace a magia de suas composições, refine sua performance e aproveite a incrível jornada musical que é "Taylor's Songbook". Vamos jogar como Taylor!</p>
-        <!-- <p>Welcome to "Taylor's Songbook"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p>
-
-        <p>Browse our catalog organized by albums, where each page is carefully designed with typography and colors that represent the spirit of each of Taylor's musical works. Our goal is to provide an immersive experience for fans and musicians who want to explore, play or sing Taylor Swift's songs.</p>
-
-        <p>In addition to chords and lyrics, we provide detailed rhythm progressions for each song, allowing you to capture the essence of the songs' rhythm and groove. We also offer tablature for guitar and other instruments (in the future), making it possible to recreate the authentic arrangements of the songs.</p>
-
-        <p>In "Taylor's Songbook" you will find additional resources such as tutorial videos, technique and performance tips and the possibility to interact with other fans and musicians in the community <a href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">(WhatsApp)</a>. Share your own versions and discover new interpretations of Taylor's songs.</p>
-
-        <p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is "Taylor's Songbook". Let's play like Taylor!</p> -->
     </div>
     <a class="collapsed action" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
 </div>
@@ -70,14 +58,14 @@
 <div class="d-flex justify-content-center align-items-center">
     <a class="btn btn-whatsapp animate__animated animate__bounce animate__delay-3s" href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">
         <div><i class="fa-brands fa-whatsapp"></i></div>
-        <div>Interaja com outros fãs e músicos do nosso grupo</div>
+        <div id="whatsapp">Interaja com outros fãs e músicos do nosso grupo</div>
     </a>
 </div>
 
 <div class="line"></div>
 
-<div id="most-accessed" class="animate__animated animate__fadeInDown animate__delay-1s">
-    <h4 class="font-taylor-swift-base">Most Accessed</h4>
+<div id="mostAccessed" class="animate__animated animate__fadeInDown animate__delay-1s">
+    <h4 class="font-taylor-swift-base"></h4>
 
     <ol class="list-group"></ol>
 </div>
@@ -135,7 +123,7 @@
             blocked: true
         }
     ]
-    const mostAccessed = $('#most-accessed ol')
+    const mostAccessed = $('#mostAccessed ol')
 
     mostAccessedMusics.forEach((data, index) => {
         mostAccessed.append(`
@@ -154,11 +142,11 @@
         `)
     })
 
-    $('#most-accessed li').not('[blocked]').on('click', function() {
+    $('#mostAccessed li').not('[blocked]').on('click', function() {
         selectMusic($(this).attr('album'), $(this).attr('music'))
     })
 
-    $('#most-accessed li[blocked]').on('click', function() {
+    $('#mostAccessed li[blocked]').on('click', function() {
         $(this).toggleClass('animate__animated animate__hinge z-index')
     })
 </script>
