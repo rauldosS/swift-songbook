@@ -196,18 +196,14 @@ createCipherLyricsHTML = () => {
     const cipherLyricsList = cipherLyrics.split(divider)
 
     cipherParts.forEach((part, index) => {
-        cipherLyricsPartsHtml[part.id] = part.ignoreTitle ? `
-            <pre type="lyrics">
+        cipherLyricsPartsHtml[part.id] = part.ignoreTitle ? `<pre type="lyrics">
             ${ cipherLyricsList[index] }
-            </pre>` : `
-            <pre type="lyrics">
+            </pre>` : `<pre type="lyrics">
 [${ part.title }]
             ${ cipherLyricsList[index] }
             </pre>`
 
-        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle ? `
-            ${ cipherLyricsList[index] }` : `
-[${ part.title }]
+        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle ? `${ cipherLyricsList[index] }` : `[${ part.title }]
             ${ cipherLyricsList[index] }`
     })
 }
@@ -232,7 +228,7 @@ createChordColumns = () => {
     const cipherColumnsPre = $('#cipher-columns pre')
 
     complete_cipher_columns.forEach(part => {
-        cipherColumnsPre.append(`<div class="border-column pb-2">${ part }</div>`)
+        cipherColumnsPre.append(`<div class="border-column pb-2 pt-2">${ part }</div>`)
     })
 }
 
