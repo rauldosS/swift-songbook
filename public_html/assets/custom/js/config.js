@@ -14,11 +14,14 @@ let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
-let currentlySelectedAlbum = undefined
 let progressions_html = {}
 let tabs_html = {}
 let cipherLyricsPartsHtml = {}
 let cipherLyricsColumnsPartsHtml = {}
+let currentContent = {
+    content: undefined,
+    name: undefined
+}
 
 let parts_cipher = []
 let complete_cipher = []

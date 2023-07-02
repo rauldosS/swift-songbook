@@ -34,7 +34,7 @@ $(document).ready(function () {
         })
 
         music_list.prepend(`
-            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentAlbum('${ album.id }')"><span class="about"></span> <i class="fa-regular fa-circle-question"></i></a>
+            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentContent('album', '${ album.id }')"><span class="about"></span> <i class="fa-regular fa-circle-question"></i></a>
         `)
     })
 

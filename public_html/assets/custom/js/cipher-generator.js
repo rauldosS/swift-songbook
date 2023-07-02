@@ -180,19 +180,17 @@ loadCipher = () => {
         switch (part.type) {
             case 'progression':
                 complete_cipher.push(progressions_html[part.id])
-                break;
+                break
             case 'tabs':
                 complete_cipher.push(tabs_html[part.id])
-                break;
+                break
             case 'cipherLyrics':
                 complete_cipher.push(cipherLyricsPartsHtml[part.id])
                 complete_cipher_columns.push(cipherLyricsColumnsPartsHtml[part.id])
-                break;
+                break
             case 'alert':
                 complete_cipher.push(alerts_html[part.id])
-                break;
-            default:
-                console.log('desconhecido')
+                break
         }
     })
 

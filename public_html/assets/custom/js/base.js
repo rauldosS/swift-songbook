@@ -38,6 +38,8 @@ const homePath = 'base/home'
 loadContent = (path, switchLanguage = false) => {
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`)
 
+    updateCurrentContent(path)
+
     setTimeout(() => {
         content.show()
     }, 500)
@@ -64,25 +66,21 @@ checkQueryParams = () => {
     if (params.music === null && params.album === null) {
         loadContent(homePath, false)
     } else if (params.music != null) {
-        try {
-            musics[params.music]
-            selectMusic(params.music)
-            $('#toolbar').show()
-        } catch (e) {
-            loadContent(homePath, false)
-        }
+        loadMusic(params.music)
     } else if (params.album != null) {
-        if (getAlbum(params.album) != undefined) {
-            loadContent(`albuns/${ params.album }`, true)
-            updateCurrentAlbum(params.album)
-        } else {
-            loadContent(homePath, false)
-        }
+        loadAlbum(params.album)
     }
 }
 
 updateLanguage = () => {
-    if (currentlySelectedAlbum !== undefined) loadContent(`albuns/${ currentlySelectedAlbum }`, true)
+    switch (currentContent.content) {
+        case 'album':
+            loadAlbum(currentContent.name)
+            break
+        case 'author':
+            loadContent('author', true)
+            break
+    }
 
     $('#main-alert').text(language.mainAlert)
 
@@ -152,4 +150,26 @@ changeText = (element) => {
     }, 1000);
 }
 
-updateCurrentAlbum = (album) => { currentlySelectedAlbum = album }
+loadMusic = music => {
+    try {
+        musics[music]
+        selectMusic(music)
+        $('#toolbar').show()
+    } catch (e) {
+        loadContent(homePath, false)
+    }
+}
+
+loadAlbum = album => {
+    if (getAlbum(album) != undefined) {
+        loadContent(`albuns/${ album }`, true)
+        updateCurrentContent('album', album)
+    } else {
+        loadContent(homePath, false)
+    }
+}
+
+updateCurrentContent = (content = undefined, name = undefined) => {
+    currentContent['content'] = content
+    currentContent['name'] = name
+}

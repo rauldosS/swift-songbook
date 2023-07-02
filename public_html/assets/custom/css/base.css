@@ -10,6 +10,7 @@
     --color-folklore: #a5a5a5;
     --color-evermore: #cab193;
     --color-midnights: #9b9dd8;
+    --color-whatsapp: #73c591;
     --font-taylor-swift: 'Sacramento', cursive;
     --font-fearless: 'Montserrat', sans-serif;
     --font-speak-now: 'Rochester', cursive;
@@ -83,6 +84,11 @@ header {
 
 #content, #cipher-wrapper {    
     display: none;
+}
+
+#contribution-info .title, #content .title {
+    font-size: 2.25rem;
+    font-weight: 800;
 }
 
 .loading {
@@ -161,6 +167,32 @@ iframe {
 
 header img {
     width: 100%;
+}
+
+/* Author */
+
+#author .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+#author b {
+    color: var(--color-red);
+}
+
+#author i.fa-whatsapp, a.whatsapp {
+    color: var(--color-whatsapp);
+    font-weight: 500;
+}
+
+#author i.fa-instagram, a.instagram {
+    color: var(--color-lover);
+    font-weight: 500;
+}
+
+#author i.fa-github, a.github {
+    color: var(--color-1989);
+    font-weight: 500;
 }
 
 /* BACKGROUND-COLOR */
@@ -565,13 +597,13 @@ article {
     font-size: 18px;
     border-radius: 100px;
     color: #FFF;
-    background-color: #73c591;
-    border: 2px solid #73c591;
+    background-color: var(--color-whatsapp);
+    border: 2px solid var(--color-whatsapp);
     gap: 5px;
 }
 
 .btn-whatsapp:hover {
-    color: #73c591;
+    color: var(--color-whatsapp);
     background-color: #FFF;
 }
 
