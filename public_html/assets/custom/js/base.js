@@ -36,7 +36,9 @@ const miniPlayer = $('#mini-player')
 const homePath = 'base/home'
 
 loadContent = (path, switchLanguage = false) => {
-    content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`)
+    content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+        updateLanguage()
+    })
 
     updateCurrentContent(path)
 
@@ -169,7 +171,20 @@ loadAlbum = album => {
     }
 }
 
+loadCipher = () => {
+    toolbar.show()
+    miniPlayer.show()
+}
+
 updateCurrentContent = (content = undefined, name = undefined) => {
     currentContent['content'] = content
     currentContent['name'] = name
+}
+
+changeSidebarTitle = () => {
+    if ($(window).width() < 768) {
+        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
+    } else {
+        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
+    }
 }

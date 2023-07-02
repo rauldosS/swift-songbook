@@ -16,9 +16,6 @@ selectMusic = (musicId) => {
 
     cipherContent.show()
 
-    // $('#toolbar').show()
-    // $('#mini-player').show()
-
     scrollTop()
 
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {

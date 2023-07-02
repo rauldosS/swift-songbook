@@ -49,17 +49,4 @@ $(document).ready(function () {
             )
        }
     })
-
-    $('#btn-author').on('click', function() {
-        hideContent()
-        $('#author').load('templates/base/author.html')
-    })
-
-    changeSidebarTitle = () => {
-        if ($(window).width() < 768) {
-            $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
-        } else {
-            $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
-        }
-    }
 })
