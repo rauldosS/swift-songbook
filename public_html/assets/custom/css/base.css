@@ -81,7 +81,7 @@ header {
     cursor: pointer;
 }
 
-#content {    
+#content, #cipher-wrapper {    
     display: none;
 }
 
