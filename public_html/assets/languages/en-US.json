@@ -44,6 +44,8 @@
         "shareCipher": "Share"
     },
     "albuns": {
-        "about": "About"
+        "about": "About",
+        "title": "Albums",
+        "hide": "Hide Albums"
     }
 }

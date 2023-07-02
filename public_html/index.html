@@ -44,7 +44,7 @@
     </header>
     <div id="wrapper" class="wrapper container-fluid">
         <!-- Sidebar  -->
-        <nav id="sidebar" class="shadow animate__animated animate__slideInLeft"></nav>
+        <nav id="sidebar" class="d-flex flex-column shadow animate__animated animate__slideInLeft"></nav>
         <!-- Page Content  -->
         <div id="page-content-wrapper" class="animate__animated animate__fadeInRightBig">
 
@@ -55,16 +55,16 @@
                         <i class="fa-solid fa-house"></i> <span>Início</span>
                     </a>
                     <button type="button" id="hide-albuns-toggle" class="btn">
-                        <i class="fa-solid fa-compact-disc"></i> <span>Ocultar álbuns</span>
+                        <i class="fa-solid fa-compact-disc"></i> <span></span>
                     </button>
                     <button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" title="Alterar língua">
                         <i class="fa-solid fa-language"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdown-menu-languages">
-                        <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')">English</a></li>
-                        <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')">Português brasileiro</a></li>
+                        <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')"></a></li>
+                        <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')"></a></li>
                     </ul>
-                    <button id="instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Instruções">
+                    <button id="btn-instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Instruções">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </button>
                     <button id="unpin-shortcuts" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Desafixar atalhos">
@@ -72,18 +72,18 @@
                     </button>
                 </div>
 
-                <section id="home" class="animate__animated animate__fadeIn"></section>
-
-                <section id="album"></section>
+                <section id="content" class="animate__animated animate__fadeIn">
+                    <div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>
+                </section>
 
                 <div id="cipher-wrapper">
-                    <section id="cipher-content" class="my-3 cipher fearless-album-content"></section>
+                    <section id="cipher-content" class="my-3 cipher fearless-album-content">
+                        <div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>
+                    </section>
                     <section id="toolbar"></section>
                 </div>
 
                 <section id="mini-player" class="player player--music player--init player--min"></section>
-
-                <section id="author"></section>
 
                 <div class="line"></div>
 
@@ -113,6 +113,7 @@
 
     <!-- Base JS -->
     <script src="assets/custom/js/base.js"></script>
+    <script src="assets/custom/js/cipher-generator.js"></script>
 
     <!-- https://github.com/acspike/ChordJS/blob/master/README.md -->
     <script src="assets/custom/js/chords.js"></script>

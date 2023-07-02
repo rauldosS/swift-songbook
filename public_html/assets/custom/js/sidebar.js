@@ -1,16 +1,16 @@
 $(document).ready(function () {
     const list_unstyled = $('#list-unstyled')
 
-    $("#hide-albuns-toggle").on('click', function (e) {
+    $("#hide-albuns-toggle, #albuns").on('click', function (e) {
         e.preventDefault()
         $("#sidebar").toggleClass("toggled")
 
         if ($("#sidebar").hasClass("toggled")) {
             $("#page-content-wrapper").css({ 'width': 'calc(100% - 10px)' })
-            $(this).find('span').text(language.shortcuts.albumToggle.show)
+            $('button#hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
         } else {
             $("#page-content-wrapper").css({ 'width': 'calc(100% - 260px)' })
-            $(this).find('span').text(language.shortcuts.albumToggle.hide)
+            $('button#hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
         }
     })
 
@@ -34,7 +34,32 @@ $(document).ready(function () {
         })
 
         music_list.prepend(`
-            <a onclick="selectAlbum('${ album.id }')"><span class="about"></span> <i class="fa-regular fa-circle-question"></i></a>
+            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentAlbum('${ album.id }')"><span class="about"></span> <i class="fa-regular fa-circle-question"></i></a>
         `)
     })
+
+    $(window).resize(function() {
+        if ($(window).width() < 768) {
+            $('#shortcuts #hide-albuns-toggle span').text(
+                $('#sidebar').hasClass('toggled') ? language.shortcuts.albumToggle.hide : language.shortcuts.albumToggle.show
+            )
+        } else {
+            $('#shortcuts #hide-albuns-toggle span').text(
+                $('#sidebar').hasClass('toggled') ? language.shortcuts.albumToggle.show : language.shortcuts.albumToggle.hide
+            )
+       }
+    })
+
+    $('#btn-author').on('click', function() {
+        hideContent()
+        $('#author').load('templates/base/author.html')
+    })
+
+    changeSidebarTitle = () => {
+        if ($(window).width() < 768) {
+            $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
+        } else {
+            $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
+        }
+    }
 })

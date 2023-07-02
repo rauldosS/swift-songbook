@@ -50,22 +50,22 @@ a:focus {
 /* Scrollbar */
 
 /* width */
-#sidebar ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 2px !important;
 }
 
 /* Track */
-#sidebar ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f1f1f1; 
 }
 
 /* Handle */
-#sidebar ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #888; 
 }
 
 /* Handle on hover */
-#sidebar ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
 
@@ -79,6 +79,10 @@ a:focus {
     align-items: stretch;
 }
 
+#albuns {
+    cursor: pointer;
+}
+
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -86,6 +90,7 @@ a:focus {
     color: #000;
     transition: all 0.3s;
     border-radius: 10px !important;
+    overflow-y: auto;
 }
 
 #sidebar.active {
@@ -184,11 +189,6 @@ a:focus {
     height: 0;
     overflow: hidden;
     transition: none;
-}
-
-#list-unstyled {
-    height: 82%;
-    overflow-y: auto;
 }
 
 .list-unstyled a {
@@ -351,14 +351,34 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
+@media (min-width: 768px) {
+    #sidebar #albuns .hide {
+        display: none;
+    }
+
+    #sidebar #albuns .title {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
+        display: none;
+    }
+
+    #sidebar #albuns .hide {
+        display: block;
+    }
+
+    #sidebar #albuns .title {
         display: none;
     }
 }

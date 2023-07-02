@@ -77,33 +77,40 @@ header {
     opacity: 1;
 }
 
-#author {
+.CTAs {
+    cursor: pointer;
+}
+
+#content {    
     display: none;
 }
 
-.CTAs {
-    cursor: pointer;
+.loading {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 420px;
 }
 
 /* Scrollbar */
 
 /* width */
-::-webkit-scrollbar {
-    width: 6px;
+#page-content-wrapper ::-webkit-scrollbar {
+    width: 6px !important;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+#page-content-wrapper ::-webkit-scrollbar-track {
     background: #f1f1f1; 
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+#page-content-wrapper ::-webkit-scrollbar-thumb {
     background: #888; 
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+#page-content-wrapper ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
 

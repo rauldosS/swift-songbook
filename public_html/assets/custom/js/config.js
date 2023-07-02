@@ -160,15 +160,33 @@ getMusic = (album, music) => {
     })
 } 
 
-scrollTop = (element = undefined) => {
-    let scrollTop = 0
-    if (element !== undefined) {
-        scrollTop = $(element).position().top
-        if (parseInt(scrollTop) >= -66 && parseInt(scrollTop) <= 66) {
-            return false
+scrollTop = () => {
+    $('.scrolling').animate({ scrollTop: 0 }, 500)
+}
+
+scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
+    const targetElement = $(elementSelector)
+    const scrollContainer = $(scrollContainerSelector)
+    
+    // Check if the target element and scroll container exist
+    if (targetElement.length > 0 && scrollContainer.length > 0) {
+        // Get the current scroll position in the container
+        const currentPosition = scrollContainer.scrollTop() - 32
+    
+        // Get the offset of the target element relative to the document
+        const targetOffset = targetElement.offset().top
+    
+        // Adjust the target position based on the scroll container's position
+        const targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 32
+    
+        // Check if the scroll is already at the correct position
+        if (currentPosition !== targetPosition) {
+        // Scroll to the element inside the container
+        scrollContainer.animate({
+            scrollTop: targetPosition
+        }, 500)
         }
     }
-    $('.scrolling').animate({ scrollTop: scrollTop - 56 }, 500)
 }
 
 getLanguage = () => {
@@ -178,10 +196,6 @@ getLanguage = () => {
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
-            
-            
-
-            console.log()
         }
     })
 }

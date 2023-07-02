@@ -45,6 +45,8 @@
         "shareCipher": "Compartilhar cifra"
     },
     "albuns": {
-        "about": "Sobre"
+        "about": "Sobre",
+        "title": "Álbuns",
+        "hide": "Ocultar Álbuns"
     }
 }

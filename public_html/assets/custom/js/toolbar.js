@@ -88,7 +88,7 @@ $(document).ready(function () {
             $('#cipher-columns pre').css('columns', (columns - 1).toString())
             $('#cipher-columns pre').css('column-count', (columns - 1).toString())
             $('#cipher-columns').show()
-            scrollTop('#cipher-columns')
+            scrollToElement('#cipher-columns')
         } else {
             $('#cipher').show()
             $('.badge-info-cipher').show()
@@ -106,13 +106,13 @@ $(document).ready(function () {
             $('#cipher-columns pre').css('columns', (columns + 1).toString())
             $('#cipher-columns pre').css('column-count', (columns + 1).toString())
             $('#cipher-columns').show()
-            scrollTop('#cipher-columns')
+            scrollToElement('#cipher-columns')
         }
     })
 
     // Hide menu
 
-    hide = (actionElement, targetElement, runScrollTop = false) => {
+    hide = (actionElement, targetElement, targetElementToScroll = '#cipher') => {
         if ($(actionElement).hasClass('active')) {
             $(targetElement).show()
         } else {
@@ -121,8 +121,9 @@ $(document).ready(function () {
 
         $(actionElement).toggleClass('active')
 
-        if (runScrollTop === true) {
-            scrollTop()
+        if (targetElementToScroll != null) {
+            console.log(targetElementToScroll)
+            scrollToElement(targetElementToScroll)
         }
     }
 
@@ -132,6 +133,9 @@ $(document).ready(function () {
         } else {
             $(targetElement).hide()
         }
+
+        console.log(targetElement)
+        scrollToElement(targetElement)
     }
 
     $('#unpin-toolbar').click(() => {
@@ -139,13 +143,13 @@ $(document).ready(function () {
         $('#unpin-toolbar').toggleClass('active')
     })
 
-    $('#hide-lyrics').click(() => {hide('#hide-lyrics', 'pre[type="lyrics"]', true) })
-    $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions', true) })
-    $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs', true) })
-    $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b', true) })
-    $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player') })
+    $('#hide-lyrics').click(() => {hide('#hide-lyrics', 'pre[type="lyrics"]') })
+    $('#hide-progressions').click(() => { hide('#hide-progressions', '.progressions') })
+    $('#hide-tabs').click(() => { hide('#hide-tabs', '.tabs') })
+    $('#hide-chords').click(() => { hide('#hide-chords', 'pre[type="lyrics"] b') })
+    $('#hide-miniplayer, #close-miniplayer').click(() => { hide('#hide-miniplayer', '#mini-player', null) })
     $('#only-lyrics').click(() => {
-        hide('#only-lyrics', '#cipher', true)
+        hide('#only-lyrics', '#cipher')
         show('#only-lyrics', '#lyrics')
     })
 })
