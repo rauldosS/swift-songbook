@@ -1,6 +1,7 @@
 let cipher = undefined
 
 selectMusic = (musicId) => {
+    btnHome.css({ 'display': 'inline-block' })
     cipherWrapper.show()
     const music = musics[musicId]
     cipherContent.empty()
@@ -17,6 +18,9 @@ selectMusic = (musicId) => {
     cipherContent.show()
 
     scrollTop()
+
+    toolbar.show()
+    miniPlayer.show()
 
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')

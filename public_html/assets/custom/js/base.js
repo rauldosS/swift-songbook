@@ -32,12 +32,19 @@ const cipherWrapper = $('#cipher-wrapper')
 const cipherContent = $('#cipher-content')
 const toolbar = $('#toolbar')
 const miniPlayer = $('#mini-player')
+const btnHome = $('#btn-home')
 
 const homePath = 'base/home'
 
 loadContent = (path, switchLanguage = false) => {
+    hideCipherWrapper()
+
+    content.append('<div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>')
+
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
-        updateLanguage()
+        if (!['album', 'author'].includes(currentContent.content)) {
+            updateLanguage()
+        }
     })
 
     updateCurrentContent(path)
@@ -127,6 +134,24 @@ updateLanguage = () => {
     changeSidebarTitle()
 }
 
+loadMusic = music => {
+    try {
+        musics[music]
+        selectMusic(music)
+    } catch (e) {
+        loadContent(homePath, false)
+    }
+}
+
+loadAlbum = album => {
+    if (getAlbum(album) != undefined) {
+        loadContent(`albuns/${ album }`, true)
+        updateCurrentContent('album', album)
+    } else {
+        loadContent(homePath, false)
+    }
+}
+
 resertToolbar = () => {
     $('#toolbar a').removeClass('active')
     $('.action-autoscroll').removeClass('autoscroll')
@@ -150,30 +175,6 @@ changeText = (element) => {
     setTimeout(function() {
         element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
     }, 1000);
-}
-
-loadMusic = music => {
-    try {
-        musics[music]
-        selectMusic(music)
-        $('#toolbar').show()
-    } catch (e) {
-        loadContent(homePath, false)
-    }
-}
-
-loadAlbum = album => {
-    if (getAlbum(album) != undefined) {
-        loadContent(`albuns/${ album }`, true)
-        updateCurrentContent('album', album)
-    } else {
-        loadContent(homePath, false)
-    }
-}
-
-loadCipher = () => {
-    toolbar.show()
-    miniPlayer.show()
 }
 
 updateCurrentContent = (content = undefined, name = undefined) => {
