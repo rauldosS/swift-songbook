@@ -409,9 +409,17 @@ article {
     display: block;
 }
 
+.tab {
+    white-space: break-spaces;
+}
+
+.tab .text-muted {
+    color: #cfcfcf !important;
+}
+
 .tabs {
     white-space: pre-line;
-    padding: 40px 20px 25px 20px;
+    padding: 20px;
 }
 
 .tabs .tab:not(:last-of-type) {

@@ -1,0 +1,50 @@
+#cipher-content .bd-callout-info {
+    border-left-color: var(--color-red);
+}
+
+#cipher-content b {
+    font-weight: bold;
+    color: var(--color-red);
+    background-color: transparent;
+    padding: 0
+}
+
+#cipher-content b::after {
+    display: block;
+    background: currentColor;
+    border-radius: 2px;
+    bottom: 0.2em;
+    content: "";
+    display: none;
+    left: 0.25em;
+    opacity: .1;
+    position: absolute;
+    right: 0.25em;
+    top: 0.2em;
+}
+
+#cipher-content .title, #red-album .title {
+    font-weight: 300;
+    font-family: var(--font-red);
+    font-size: 48px;
+    color: var(--color-red);
+}
+
+#cipher-content .bg-album,
+#cipher-content .badge-info-cipher {
+    background-color: var(--color-red);
+}
+
+#cipher-content .alert {
+    color: var(--color-red);
+    height: 10px;
+    border-radius: 50px;
+    border: 1px dashed var(--color-red);
+}
+
+#cipher-columns .border-column {
+    border-left: 2px dashed var(--color-red);
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 0 0 0 1rem;
+}

@@ -2,10 +2,10 @@ let musicId = undefined
 let musicTitle = undefined
 let blocked = undefined
 let tuning = undefined
-let chord_shape = undefined
-let capo_fret = undefined
+let chordShape = undefined
+let capoFret = undefined
 let spotify = undefined
-let chords_music = undefined
+let chordsMusic = undefined
 let videoUrl = undefined
 let versions = undefined
 let cipherParts = undefined
@@ -14,8 +14,8 @@ let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
-let progressions_html = {}
-let tabs_html = {}
+let progressionsHtml = {}
+let tabsHtml = {}
 let cipherLyricsPartsHtml = {}
 let cipherLyricsColumnsPartsHtml = {}
 let currentContent = {
@@ -23,9 +23,9 @@ let currentContent = {
     name: undefined
 }
 
-let parts_cipher = []
-let complete_cipher = []
-let complete_cipher_columns = []
+let partsCipher = []
+let completeCipher = []
+let completeCipherColumns = []
 
 const userLang = navigator.language || navigator.userLanguage
 const languages = ['en-US', 'pt-BR']
@@ -138,7 +138,7 @@ const albuns = [
         musics: [
             { id: "State of Grace", name: "State of Grace", blocked: true },
             { id: "State Of Grace (Acoustic Version)", name: "State Of Grace (Acoustic Version)", blocked: true },
-            { id: "Red", name: "Red", blocked: true },
+            { id: "red", name: "Red", blocked: true },
             { id: "Treacherous", name: "Treacherous", blocked: true },
             { id: "I Knew You Were Trouble", name: "I Knew You Were Trouble", blocked: true },
             { id: "All Too Well", name: "All Too Well", blocked: true },

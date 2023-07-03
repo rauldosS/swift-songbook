@@ -1,9 +1,11 @@
 let cipher = undefined
 
-selectMusic = (musicId) => {
+selectMusic = (selectedMusicId) => {
+    resetConfig()
+
     btnHome.css({ 'display': 'inline-block' })
     cipherWrapper.show()
-    const music = musics[musicId]
+    const music = musics[selectedMusicId]
     cipherContent.empty()
 
     hideContent()
@@ -25,6 +27,16 @@ selectMusic = (musicId) => {
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
     }
+}
+
+resetConfig = () => {
+    progressionsHtml = {}
+    tabsHtml = {}
+    cipherLyricsPartsHtml = {}
+    cipherLyricsColumnsPartsHtml = {}
+    partsCipher = []
+    completeCipher = []
+    completeCipherColumns = []
 }
 
 hideContent = () => {
@@ -50,7 +62,7 @@ createCipherHeaderHTML = () => {
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
             <h1 class="title">${ musicTitle }</h1>
-            <span class="cipher-tone">Tuning: <b>${ tuning }</b> ${ chord_shape }</span>
+            <span class="cipher-tone">Tuning: <b>${ tuning }</b> ${ chordShape ? chordShape : '' }</span>
             <span class="song-capo">
                 Capo on the <b>3rd fret</b>
             </span>
@@ -69,7 +81,7 @@ createChordsHTML = () => {
             </span>
         </div>`
     )
-    chords_music.forEach(chord => {
+    chordsMusic.forEach(chord => {
         cipherContent.find('#chords div').append(chords_html[chord])
     })
     ChordJS.replace()
@@ -79,7 +91,7 @@ createProgressionHTML = () => {
     progressions.forEach(progression => {
         const notes = progression.notes.map((note) => ` <b>${ note }</b> |`).join('')
 
-        progressions_html[progression.id] = `
+        progressionsHtml[progression.id] = `
             <div class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
                 <div class="d-flex justify-content-between">
                     <div>| ${ notes }</div>
@@ -108,7 +120,7 @@ createTabsHTML = () => {
             '</div>'
         )
 
-        tabs_html[data.id] = callout
+        tabsHtml[data.id] = callout
     })
 }
 
@@ -129,7 +141,7 @@ createCipherLyricsHTML = () => {
 }
 
 function replaceWholeChordsInLines() {
-    const replacements_chords = chords_music.map(chord => { 
+    const replacements_chords = chordsMusic.map(chord => { 
         return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
     })
 
@@ -149,7 +161,7 @@ createChordColumns = () => {
 
     const cipherColumnsPre = $('#cipher-columns pre')
 
-    complete_cipher_columns.forEach(part => {
+    completeCipherColumns.forEach(part => {
         cipherColumnsPre.append(`<div class="border-column pb-2 pt-2">${ part }</div>`)
     })
 }
@@ -177,20 +189,20 @@ loadCipher = () => {
 
     createCipherLyricsHTML()
 
-    parts_cipher.forEach(part => {
+    partsCipher.forEach(part => {
         switch (part.type) {
             case 'progression':
-                complete_cipher.push(progressions_html[part.id])
+                completeCipher.push(progressionsHtml[part.id])
                 break
             case 'tabs':
-                complete_cipher.push(tabs_html[part.id])
+                completeCipher.push(tabsHtml[part.id])
                 break
             case 'cipherLyrics':
-                complete_cipher.push(cipherLyricsPartsHtml[part.id])
-                complete_cipher_columns.push(cipherLyricsColumnsPartsHtml[part.id])
+                completeCipher.push(cipherLyricsPartsHtml[part.id])
+                completeCipherColumns.push(cipherLyricsColumnsPartsHtml[part.id])
                 break
             case 'alert':
-                complete_cipher.push(alerts_html[part.id])
+                completeCipher.push(alerts_html[part.id])
                 break
         }
     })
@@ -198,7 +210,7 @@ loadCipher = () => {
     cipherContent.append('<div id="cipher"></div>')
     cipher = $('#cipher')
 
-    complete_cipher.forEach(part => {
+    completeCipher.forEach(part => {
         cipher.append(part)
     })
 
