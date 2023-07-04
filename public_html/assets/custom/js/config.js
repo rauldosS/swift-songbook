@@ -14,6 +14,7 @@ let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
+let listGroupAlbum = undefined
 let progressionsHtml = {}
 let tabsHtml = {}
 let cipherLyricsPartsHtml = {}
@@ -362,6 +363,11 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
         }, 500)
         }
     }
+}
+
+updateCurrentContent = (content = undefined, name = undefined) => {
+    currentContent['content'] = content
+    currentContent['name'] = name
 }
 
 getLanguage = () => {

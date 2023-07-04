@@ -501,6 +501,32 @@ article {
     font-size: 78px !important;
 }
 
+.sub-title {
+    font-size: 26px !important;
+}
+
+.music-list ol {
+    margin-top: 20px !important;
+}
+
+.music-list li {
+    height: 44px;
+    cursor: pointer;
+    border: none;
+}
+
+.music-list li:hover {
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.music-list li .number {
+    font-size: 20px;
+    color: #e0e0e0;
+    font-family: Montserrat,sans-serif;
+    font-weight: 600;
+}
+
 .dropdown-menu {
     border-radius: 0 !important;
     padding: 0;

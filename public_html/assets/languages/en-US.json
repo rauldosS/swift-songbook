@@ -47,5 +47,10 @@
         "about": "About",
         "title": "Albums",
         "hide": "Hide Albums"
+    },
+    "cipher": {
+        "tuning": "Tuning",
+        "capo": ["Capotraste na ", "ª casa"],
+        "chordShape": "chord shape in the key of"
     }
 }

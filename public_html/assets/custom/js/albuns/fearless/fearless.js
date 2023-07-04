@@ -1,7 +1,7 @@
 musicId = 'fearless'
 musicTitle = 'Fearless'
 tuning = 'F'
-chordShape = '(Chord shape in the key of D)'
+chordShape = 'D'
 capoFret = '3'
 spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
 chordsMusic = ['D', 'A', 'Em', 'G', 'Cadd9']

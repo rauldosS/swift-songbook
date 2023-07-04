@@ -65,7 +65,7 @@ createCipherHeaderHTML = () => {
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
             <h1 class="title">${ musicTitle }</h1>
-            <span class="cipher-tone">Tuning: <b>${ tuning }</b> ${ chordShape ? chordShape : '' }</span>
+            <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ chordShape ? '(' + language.cipher.chordShape + ' ' + chordShape + ')' : '' }</span>
             <span class="song-capo">
                 ${ capoFret ? 'Capo on the <b>' + capoFret + 'rd fret</b>' : ''}
             </span>

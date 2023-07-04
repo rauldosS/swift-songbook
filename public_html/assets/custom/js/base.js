@@ -42,7 +42,7 @@ loadContent = (path, switchLanguage = false) => {
     content.append('<div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>')
 
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
-        if (!['album', 'author'].includes(currentContent.content)) {
+        if (!['album', 'author', 'music'].includes(currentContent.content)) {
             updateLanguage()
         }
     })
@@ -52,6 +52,8 @@ loadContent = (path, switchLanguage = false) => {
     setTimeout(() => {
         content.show()
     }, 500)
+
+    scrollTop()
 }
 
 loadCopy = () => {
@@ -86,6 +88,8 @@ updateLanguage = () => {
         case 'album':
             loadAlbum(currentContent.name)
             break
+        // case 'music':
+        //     loadMusic(currentContent.name)
         case 'author':
             loadContent('author', true)
             break
@@ -145,6 +149,7 @@ loadMusic = music => {
 
 loadAlbum = album => {
     if (getAlbum(album) != undefined) {
+        if (currentContent.content === undefined) return updateCurrentContent('album', album)
         loadContent(`albuns/${ album }`, true)
         updateCurrentContent('album', album)
     } else {
@@ -175,11 +180,6 @@ changeText = (element) => {
     setTimeout(function() {
         element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
     }, 1000);
-}
-
-updateCurrentContent = (content = undefined, name = undefined) => {
-    currentContent['content'] = content
-    currentContent['name'] = name
 }
 
 changeSidebarTitle = () => {

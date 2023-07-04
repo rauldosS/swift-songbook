@@ -48,5 +48,10 @@
         "about": "Sobre",
         "title": "Álbuns",
         "hide": "Ocultar Álbuns"
+    },
+    "cipher": {
+        "tuning": "Tom",
+        "capo": ["Capotraste na ", "ª casa"],
+        "chordShape": "forma dos acordes no tom de"
     }
 }
