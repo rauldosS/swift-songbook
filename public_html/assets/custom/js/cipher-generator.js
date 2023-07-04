@@ -167,9 +167,9 @@ createCipherLyricsHTML = () => {
 }
 
 function replaceWholeChordsInLines() {
-    const replacements_chords = chordsMusic.map(chord => { 
+    const replacements_chords = chordsMusic.map(chord => {
         return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
-    })
+    }).reverse()
 
     for (const replacement of replacements_chords) {
       const { searchValue, replaceValue } = replacement
