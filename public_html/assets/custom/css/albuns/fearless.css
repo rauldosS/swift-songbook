@@ -48,3 +48,8 @@
     display: inline-block;
     padding: 0 0 0 1rem;
 }
+
+#cipher-columns .fa-arrow-down-long, 
+#cipher-columns .fa-arrow-up-long {
+    color: var(--color-fearless);
+}

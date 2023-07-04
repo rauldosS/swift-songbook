@@ -38,23 +38,23 @@ progressions = [
     {
         id: 'intro',
         title: 'Main Progression | Intro 2x',
-        caption: 'INTRO/VERSE',
+        caption: '',
         notes: ['D', 'A', 'Em', 'G'],
-        progression: 'D - - - D - - - U U D - U D U -'
+        progression: 'DD - UUD - UDU'
     },
     {
         id: 'solo',
         title: 'Solo 2x',
         caption: 'INTRO/VERSE',
         notes: ['Em', 'G', 'D', 'A'],
-        progression: 'D - - - D - - - U U D - U D U -'
+        progression: 'DD - UUD - UDU'
     },
     {
         id: 'bridge',
         title: 'Bridge 2x',
         caption: '2nd time from Em just tap down',
         notes: ['Cadd9', 'D', 'Em', 'D', 'G', 'A'],
-        progression: 'L S - - L S - - L S - - L S - -'
+        progression: 'LS - LS - LS - LS'
     }
 ]
 
@@ -107,42 +107,50 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'firstChorus',
         title: 'Chorus',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'secondChorus',
         title: 'Chorus',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'thirdVerse',
         title: 'Verse 3',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
         id: 'outro',
         title: 'Outro',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'instrumental',
         title: 'Instrumental',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
 ]
 

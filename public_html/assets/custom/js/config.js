@@ -31,7 +31,7 @@ const userLang = navigator.language || navigator.userLanguage
 const languages = ['en-US', 'pt-BR']
 const userContainsLanguage = languages.includes(userLang)
 
-const chords_html = {
+const chordsHtml = {
     C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
     Cadd9: `<chord name="Cadd9" positions="x32030" fingers="-21-3-" size="2" ></chord>`,
     E: `<chord name="E" positions="022100" fingers="-231--" size="2" ></chord>`,
@@ -41,6 +41,11 @@ const chords_html = {
     D: `<chord name="D" positions="xx0232" fingers="---132" size="2" ></chord>`,
     A: `<chord name="A" positions="x02220" fingers="--123-" size="2" ></chord>`,
     Am: `<chord name="Am" positions="x02210" fingers="--231-" size="2" ></chord>`,
+}
+
+const progressionsType = {
+    simple: '1 + 2 + 3 + 4 +',
+    complex: '1 a + e 2 a + e 3 a + e 4 a + e'
 }
 
 const alerts_html = {
@@ -138,7 +143,7 @@ const albuns = [
         musics: [
             { id: "State of Grace", name: "State of Grace", blocked: true },
             { id: "State Of Grace (Acoustic Version)", name: "State Of Grace (Acoustic Version)", blocked: true },
-            { id: "red", name: "Red", blocked: true },
+            { id: "red", name: "Red", blocked: false },
             { id: "Treacherous", name: "Treacherous", blocked: true },
             { id: "I Knew You Were Trouble", name: "I Knew You Were Trouble", blocked: true },
             { id: "All Too Well", name: "All Too Well", blocked: true },
@@ -341,13 +346,13 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
     // Check if the target element and scroll container exist
     if (targetElement.length > 0 && scrollContainer.length > 0) {
         // Get the current scroll position in the container
-        const currentPosition = scrollContainer.scrollTop() - 32
+        const currentPosition = scrollContainer.scrollTop() - 36
     
         // Get the offset of the target element relative to the document
         const targetOffset = targetElement.offset().top
     
         // Adjust the target position based on the scroll container's position
-        const targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 32
+        const targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 36
     
         // Check if the scroll is already at the correct position
         if (currentPosition !== targetPosition) {

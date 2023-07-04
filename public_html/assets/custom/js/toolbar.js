@@ -20,7 +20,6 @@ $(document).ready(function () {
 
     $('.btn-action-full-screen').click(() => {
         if ($('.btn-action-full-screen').hasClass('active')) {
-            $('#sidebar').show()
             $('#shortcuts').show()
             $('#wrapper').css({
                 'position': 'fixed',
@@ -35,9 +34,7 @@ $(document).ready(function () {
                 'border-radius': '10px'
             })
             $('#page-content-wrapper').css({ 'width': 'calc(100% - 260px)' })
-            $('#toolbar').css({ 'bottom': '-8px' })
         } else {
-            $('#sidebar').hide()
             $('#shortcuts').hide()
             $('#wrapper').css({
                 'position': 'fixed',
@@ -49,13 +46,12 @@ $(document).ready(function () {
                 'padding-left': '0',
             })
             $('.content').css({
-                'padding': '1% 1% 2% 1%',
                 'border-radius': '0'
             })
             $('#page-content-wrapper').css({ 'width': '100%' })
-            $('#toolbar').css({ 'bottom': '0' })
         }
 
+        $('#sidebar').toggleClass('d-none')
         $('#hide-albuns-toggle').toggleClass('d-none')
         $('.btn-action-full-screen').toggleClass('active')
     })
@@ -82,7 +78,7 @@ $(document).ready(function () {
         str_columns = $('#cipher-columns pre').css('columns')
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
-        if (columns > 2) {
+        if (columns > 4) {
             $('#cipher').hide()
             $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns - 1).toString())
@@ -100,7 +96,7 @@ $(document).ready(function () {
         str_columns = $('#cipher-columns pre').css('columns')
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
-        if (columns <= 5) {
+        if (columns <= 7) {
             $('#cipher').hide()
             $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns + 1).toString())

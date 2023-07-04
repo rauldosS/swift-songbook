@@ -3,7 +3,8 @@ musicTitle = 'Red'
 tuning = 'E'
 chordShape = null
 capoFret = '4'
-spotify = 'https://open.spotify.com/embed/track/4yBEU0askBZzE2XEVdEwmx?utm_source=generator'
+// spotify = 'https://open.spotify.com/embed/track/4yBEU0askBZzE2XEVdEwmx?utm_source=generator'
+spotify = 'https://open.spotify.com/embed/track/4OAuvHryIVv4kMDNSLuPt6?utm_source=generator'
 chordsMusic = ['F', 'Am', 'G', 'C', 'G/B', 'C/E']
 videoUrl = 'https://www.youtube.com/embed/Zlot0i3Zykw'
 
@@ -11,50 +12,90 @@ partsCipher = [
     { type: 'progression',      id: 'intro' },
     { type: 'tabs',             id: 'intro' },
 
+    { type: 'tabs',             id: 'verse' },
     { type: 'cipherLyrics',     id: 'firstVerse' },
 
-    { type: 'cipherLyrics',     id: 'secondVerse' },
+    { type: 'progression',      id: 'chorus' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
-    { type: 'cipherLyrics',     id: 'instrumental' },
+    { type: 'progression',      id: 'postChorus' },
+    { type: 'cipherLyrics',     id: 'postFirstChorus' },
 
-    { type: 'cipherLyrics',     id: 'thirdVerse' },
+    { type: 'progression',      id: 'secondVerse' },
+    { type: 'cipherLyrics',     id: 'secondVerse' },
 
-    { type: 'cipherLyrics',     id: 'secondChorus' },
-
-    { type: 'progression',      id: 'solo' },
-    { type: 'tabs',             id: 'solo' },
+    { type: 'cipherLyrics',     id: 'firstChorus' },
+    { type: 'cipherLyrics',     id: 'postFirstChorus' },
 
     { type: 'progression',      id: 'bridge' },
     { type: 'cipherLyrics',     id: 'bridge' },
 
-    { type: 'cipherLyrics',     id: 'secondChorus' },
-    { type: 'cipherLyrics',     id: 'secondChorus' },
+    { type: 'progression',      id: 'solo' },
+    { type: 'tabs',             id: 'solo' },
 
+    { type: 'cipherLyrics',     id: 'lastChorus' },
+    { type: 'cipherLyrics',     id: 'postLastChorus' },
+
+    { type: 'progression',      id: 'outro' },
     { type: 'cipherLyrics',     id: 'outro' },
 ]
 
 progressions = [
     {
         id: 'intro',
-        title: 'Main Progression | Intro 2x',
-        caption: 'INTRO/VERSE',
-        notes: ['D', 'A', 'Em', 'G'],
-        progression: 'D - - - D - - - U U D - U D U -'
+        title: 'Intro | Verse',
+        caption: 'Or, single strum each chord',
+        notes: ['F', 'Am', 'G'],
+        progressionCaption: '',
+        progression: 'D - - - - - - -'
+    },
+    {
+        id: 'chorus',
+        title: 'Chorus',
+        caption: '',
+        notes: ['F', 'C', 'G', 'G', 'break', 'F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
+    },
+    {
+        id: 'postChorus',
+        title: 'Post Chorus',
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
+    },
+    {
+        id: 'secondVerse',
+        title: 'Verse 2',
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
     },
     {
         id: 'solo',
         title: 'Solo 2x',
-        caption: 'INTRO/VERSE',
-        notes: ['Em', 'G', 'D', 'A'],
-        progression: 'D - - - D - - - U U D - U D U -'
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
     },
     {
         id: 'bridge',
-        title: 'Bridge 2x',
-        caption: '2nd time from Em just tap down',
-        notes: ['Cadd9', 'D', 'Em', 'D', 'G', 'A'],
-        progression: 'L S - - L S - - L S - - L S - -'
+        title: 'Bridge',
+        caption: '',
+        notes: ['F', 'G', 'Am', 'G/B, C', 'break', 'F', 'C/E', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D - D'
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - - - - - -'
     }
 ]
 
@@ -77,25 +118,35 @@ E|-----------------|-----------------|-----------------|-----------------|
     {
         id: 'verse',
         title: 'Verse',
-        tabs: [
-            `E|------------------------------------------------------|
-            B|-5h6-6-6-6--6-6-6p5-5-3-------------------------------|
-            G|------------------------3h5-3h5-5-3v------------------|
-            D|-------------------------------------5/7-3------------|
-            A|------------------------------------------------------|
-            E|------------------------------------------------------|`,
-            `E|------------------------------------------------------|
-            B|--------------6-8p6-8b10r8p6-8v-8b10r8p6-9v-----------|
-            G|----------5-7-----------------------------------------|
-            D|-3--3/5-7---------------------------------------------|
-            A|------------------------------------------------------|
-            E|--------------------------------------------13/-------|`,
-            `E|------------------------------------------------------|
-            B|------------------------------------------------------|
-            G|-----------------2b3r2-------------3/5-3-2-0--0-2-3v--|
-            D|-----------0-3v--------3-------3v---------------------|
-            A|---0-1v--3---------------3-1-0------------------------|
-            E|-3----------------------------------------------------|`
+        tabs: [`
+   <b>F</b>                 <b>Am</b>                <b>G</b>                 
+E|-----------------|-----------------|-----------------|-----------------|
+B|-----1-----1---1-|-----1-----1---1-|-----0-----0---0-|-----0-----0---0-|
+G|---2---2---------|---2---2---------|---0---0---------|---0---0---------|
+D|-3-------3---3---|-2-------2---2---|-0-------0---0---|-0-------0---0---|
+A|-----------------|-----------------|-----------------|-----------------|
+E|-----------------|-----------------|-----------------|-----------------|
+   <span class="text-muted">1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +</span>     
+        `,
+        ]
+    },
+    {
+        id: 'solo',
+        title: 'Solo',
+        tabs: [`    
+E|----------------------------------------------------------------|
+B|-10/12---12\\10-9------------------------------------------------|
+G|--------------------9\\11---11\\9-8-------------------------------|
+D|-----------------------------------9----------------------------|
+A|----------------------------------------------------------------|
+E|----------------------------------------------------------------|`,
+
+`E|------------12-------12----12\\14--14\\12---12\\11--------17b19----|
+B|-10/12---12-------12----------------------------12--------------|
+G|----------------------------------------------------------------|
+D|----------------------------------------------------------------|
+A|----------------------------------------------------------------|
+E|----------------------------------------------------------------|`,
         ]
     }
 ]
@@ -104,47 +155,147 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        ignoreTitle: false
-    },
-    {
-        id: 'secondVerse',
-        title: 'Verse 2',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'firstChorus',
         title: 'Chorus',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
-        id: 'secondChorus',
-        title: 'Chorus',
-        ignoreTitle: false
+        id: 'postFirstChorus',
+        title: 'Post Chorus',
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'postChorus')
     },
     {
-        id: 'thirdVerse',
-        title: 'Verse 3',
-        ignoreTitle: false
+        id: 'secondVerse',
+        title: 'Verse 2',
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'bridge')
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+    },
+    {
+        id: 'postLastChorus',
+        title: 'Post Chorus',
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'postChorus')
     },
     {
         id: 'outro',
         title: 'Outro',
-        ignoreTitle: false
-    },
-    {
-        id: 'instrumental',
-        title: 'Instrumental',
-        ignoreTitle: false
-    },
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'outro')
+    }
 ]
 
 cipherLyrics = `
-${ divider }
+                    F                 Am
+Lovin' him is like, drivin' a new Maserati
+                G
+Down a dead end street
+F                           Am
+Faster than the wind, passionate as sin
+         G
+Ended so suddenly
+                    F
+Loving him is like, tryin' to change your mind 
+            Am                         G
+Once you're already flying through the free fall
+         F                  Am
+Like the colors in autumn so bright
+                 G
+Just before they lose it all
+${ divider}
+               F                    C
+Losing him was blue, like I'd never known
+                G
+Missing him was dark grey, all alone
+                   F                       Am
+Forgetting him was like trying to know somebody
+          G
+You never met
+${ divider}
+                   F
+But loving him was red
+          Am        G
+Re ee ed, re ee ed, re ee ed
+               F
+Lovin' him was red
+          Am        G
+Re ee ed, re ee ed, re ee ed
+${ divider}
+                       F                      Am
+Touching him was like, realizing all you ever wanted 
+                   G
+Was right there in front of you
+                       F                       Am
+Memorizing him was as, easy as knowin' all the words
+                    G
+To your old favorite song
+                           F
+Fighting with him was like tryin' to solve a 
+              Am                           G
+Crossword and realizing there's no right answer
+                        F                        Am
+Regretting him was like wishing you never found out 
+                       G
+That love could be that strong 
+${ divider}
+                         F               G
+Remembering him comes in flashbacks and echos
+                    Am             G/B
+Tellin' myself it's time now gotta let go 
+     C              F
+But moving on from him is impossible 
+     C/E                       G
+When I still see it all in my, head 
+            F   Am  G
+And burning red
+       F      Am  G
+Burning was reeeeed
+${ divider}
+                   F                    Am
+Oh losing him was blue, like I'd never known
+                G               G
+Missing him was dark grey, all alone
+                   F                       Am
+Forgetting him was like tryin' to know somebody
+          G
+You never met
+${ divider}
+                     F
+Cause loving him was red
+Am          G
+Yeah, yeah, red
+           F   Am  G
+Oh Burning reeeeeeeed
+${ divider}
+           F                  Am              G
+And that's Why he's spinnin' 'round in my head
+                              F
+Comes back to me, burnin' red 
+  Am      G
+Yeah, yeah
+ 
+                   F                 Am
+His love was like, drivin' a new Maserati
+               G
+Down a dead end street.
+
 `
 
 lyrics = `

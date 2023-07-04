@@ -3,7 +3,7 @@
     --color-taylor-swift: #8caa87;
     --color-fearless: #cca965;
     --color-lover: #df6395;
-    --color-red: #b21847;
+    --color-red: #c01838;
     --color-speak-now: #8572a0;
     --color-1989: #667787;
     --color-reputation: #c0b297;
@@ -21,6 +21,10 @@
     --font-folklore: 'IM Fell DW Pica', serif;
     --font-evermore: 'IM Fell DW Pica', serif;
     --font-midnights: 'Roboto', sans-serif;
+}
+
+* {
+    scroll-behavior: smooth !important;
 }
 
 .bd-placeholder-img {
@@ -84,6 +88,7 @@ header {
 
 #content, #cipher-wrapper {    
     display: none;
+    scroll-behavior: smooth;    /* <----- THE SECRET ---- */
 }
 
 #contribution-info .title, #content .title {
@@ -409,11 +414,21 @@ article {
     display: block;
 }
 
+.title-part-cipher {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.tooltip-inner {
+    max-width: 300px;
+}
+
 .tab {
     white-space: break-spaces;
 }
 
-.tab .text-muted {
+.tab .text-muted, .progression-type, .strum {
     color: #cfcfcf !important;
 }
 
@@ -454,8 +469,8 @@ article {
 }
 
 #cipher-columns pre {
-    columns: 1;
-    column-count: 1;
+    columns: 3;
+    column-count: 3;
     line-height: normal;
 }
 

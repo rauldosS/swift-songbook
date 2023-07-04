@@ -24,6 +24,9 @@ selectMusic = (selectedMusicId) => {
     toolbar.show()
     miniPlayer.show()
 
+    toolbar.show()
+    miniPlayer.show()
+
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
     }
@@ -64,7 +67,7 @@ createCipherHeaderHTML = () => {
             <h1 class="title">${ musicTitle }</h1>
             <span class="cipher-tone">Tuning: <b>${ tuning }</b> ${ chordShape ? chordShape : '' }</span>
             <span class="song-capo">
-                Capo on the <b>3rd fret</b>
+                ${ capoFret ? 'Capo on the <b>' + capoFret + 'rd fret</b>' : ''}
             </span>
             <iframe style="border-radius:12px" src="${ spotify }" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
@@ -82,24 +85,40 @@ createChordsHTML = () => {
         </div>`
     )
     chordsMusic.forEach(chord => {
-        cipherContent.find('#chords div').append(chords_html[chord])
+        cipherContent.find('#chords div').append(chordsHtml[chord])
     })
     ChordJS.replace()
 }
 
 createProgressionHTML = () => {
     progressions.forEach(progression => {
-        const notes = progression.notes.map((note) => ` <b>${ note }</b> |`).join('')
+        const notes = progression.notes.map((note) => {
+            if (note === 'break') return `<br>| `
+            if (note === '...') return `<b>...</b>`
+            if (note.includes(',')) {
+                return note.split(',').map((n, i, {length}) => `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `).join('')
+            }
+            return `<b>${ note }</b> | `
+        }).join('')
+        const arrowProgression = progression.progression.split('').map((progression) => {
+            if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i>'
+            if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i>'
+            if (progression === '-') return `<span class="strum">${ progression }</span>`
+            return progression
+        }).join('')
 
         progressionsHtml[progression.id] = `
-            <div class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
+            <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
                 <div class="d-flex justify-content-between">
-                    <div>| ${ notes }</div>
-                    <div class="fw-bold">${ progression.progression }</div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <div class="fw-bold">${ progression.caption }</div>
-                    <div>1 a + e 2 a + e 3 a + e 4 a + e</div>
+                    <div>
+                        <div>| ${ notes }</div>
+                        <div>
+                            <div class="">${ progression.caption }</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="fw-bold">${ arrowProgression }</div>
+                    </div>
                 </div>
                 <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-album">${ progression.title }</span>
             </div>
@@ -131,7 +150,14 @@ createCipherLyricsHTML = () => {
         cipherLyricsPartsHtml[part.id] = part.ignoreTitle ? `<pre type="lyrics">
             ${ cipherLyricsList[index] }
             </pre>` : `<pre type="lyrics">
-[${ part.title }]
+<a
+    onclick="scrollToElement('#progression-${ part.referenceProgression.id }')"
+    data-toggle="tooltip"
+    data-bs-placement="right"
+    data-bs-html="true"
+    title="Progression <i class='fa-solid fa-arrow-right-long ms-2 me-2'></i> ${ part.referenceProgression.title }"
+    class="title-part-cipher"
+>[${ part.title }]</a>
             ${ cipherLyricsList[index] }
             </pre>`
 
@@ -217,6 +243,10 @@ loadCipher = () => {
     createChordColumns()
     createLyrics()
     updateShareLink()
+
+    $('[data-toggle=tooltip]').tooltip({
+        trigger : 'hover'
+    })
 
     $('#mini-player iframe').attr('src', videoUrl)
 }

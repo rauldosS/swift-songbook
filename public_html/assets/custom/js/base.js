@@ -13,9 +13,9 @@ $(document).ready(function () {
     })
 
     getLanguage()
-    checkQueryParams()
 
     window.onload = function() {
+        checkQueryParams()
         updateLanguage()
 
         $('#unpin-shortcuts').click(() => {
