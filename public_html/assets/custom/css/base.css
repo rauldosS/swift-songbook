@@ -203,43 +203,43 @@ header img {
 /* BACKGROUND-COLOR */
 
 .bg-taylor-swift {
-    background-color: var(--color-taylor-swift);
+    background-color: var(--color-taylor-swift) !important;
 }
 
 .bg-fearless {
-    background-color: var(--color-fearless);
+    background-color: var(--color-fearless) !important;
 }
 
 .bg-lover {
-    background-color: var(--color-lover);
+    background-color: var(--color-lover) !important;
 }
 
 .bg-red {
-    background-color: var(--color-red);
+    background-color: var(--color-red) !important;
 }
 
 .bg-speak {
-    background-color: var(--color-speak);
+    background-color: var(--color-speak) !important;
 }
 
 .bg-1989 {
-    background-color: var(--color-1989);
+    background-color: var(--color-1989) !important;
 }
 
 .bg-reputation {
-    background-color: var(--color-reputation);
+    background-color: var(--color-reputation) !important;
 }
 
 .bg-folklore {
-    background-color: var(--color-folklore);
+    background-color: var(--color-folklore) !important;
 }
 
 .bg-evermore {
-    background-color: var(--color-evermore);
+    background-color: var(--color-evermore) !important;
 }
 
 .bg-midnights {
-    background-color: var(--color-midnights);
+    background-color: var(--color-midnights) !important;
 }
 
 /* COLOR */
@@ -430,6 +430,11 @@ article {
 
 .tab .text-muted, .progression-type, .strum {
     color: #cfcfcf !important;
+}
+
+.progression-table td {
+    font-weight: bold;
+    color: #7f7f7f;
 }
 
 .tabs {

@@ -90,33 +90,70 @@ createChordsHTML = () => {
     ChordJS.replace()
 }
 
+createArrowsProgression = (baseProgression) => {
+    return baseProgression.split(' ').map((progression) => {
+        console.log(progression)
+        if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i> '
+        if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i> '
+        if (progression === 'block') return'<i class="fa-solid fa-ban strum"></i> '
+        if (progression === '-') return `<span class="strum">${ progression }</span> `
+        return progression
+    }).join('')
+}
+
+createNotes = (notes) => {
+    return notes.map((note) => {
+        if (note === 'break') return `<br>| `
+        if (note === '...') return `<b>...</b>`
+        if (note.includes(',')) {
+            return note.split(',').map((n, i, {length}) => `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `).join('')
+        }
+        return `<b>${ note }</b> | `
+    }).join('')
+}
+
+getMultipleProgressionsTable = (notes, progressions) => {
+    let notesHTML = ''
+    let progressionsHTML = ''
+    Array(notes.length).fill(0).map((_, i) => {
+        notesHTML = notesHTML.concat(`<th class="color-album" scope="col">${ notes[i] }</th>`)
+        progressionsHTML = progressionsHTML.concat(`<td>${ createArrowsProgression(progressions[i]) }</td>`)
+    })
+
+    return `<table class="table table-bordered progression-table">
+        <thead>
+            <tr>
+                <th class="bg-album text-white" scope="col">CHORD</th>
+                ${ notesHTML }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="bg-album text-white" scope="row">STRUM</th>
+                ${ progressionsHTML }
+            </tr>
+        </tbody>
+    </table>`   
+}
+
 createProgressionHTML = () => {
     progressions.forEach(progression => {
-        const notes = progression.notes.map((note) => {
-            if (note === 'break') return `<br>| `
-            if (note === '...') return `<b>...</b>`
-            if (note.includes(',')) {
-                return note.split(',').map((n, i, {length}) => `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `).join('')
-            }
-            return `<b>${ note }</b> | `
-        }).join('')
-        const arrowProgression = progression.progression.split('').map((progression) => {
-            if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i>'
-            if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i>'
-            if (progression === '-') return `<span class="strum">${ progression }</span>`
-            return progression
-        }).join('')
+        // const multipleProgression = progression.notesMultipleProgression !== undefined
+        const notes = createNotes(progression.notes)
+        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(progression.notesMultipleProgression, progression.multipleProgression) : ''
+        const arrowProgression = createArrowsProgression(progression.progression)
 
         progressionsHtml[progression.id] = `
             <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
-                <div class="d-flex justify-content-between">
+                ${ multipleProgressionTable }
+                <div class="d-flex justify-content-between ps-1 pe-1">
                     <div>
                         <div>| ${ notes }</div>
                         <div>
                             <div class="">${ progression.caption }</div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center text-end">
                         <div class="fw-bold">${ arrowProgression }</div>
                     </div>
                 </div>

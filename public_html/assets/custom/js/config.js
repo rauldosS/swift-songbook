@@ -343,7 +343,7 @@ scrollTop = () => {
 }
 
 scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
-    const targetElement = $(elementSelector)
+    const targetElement = $(elementSelector).last()
     const scrollContainer = $(scrollContainerSelector)
     
     // Check if the target element and scroll container exist

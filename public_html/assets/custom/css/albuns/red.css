@@ -30,6 +30,10 @@
     color: var(--color-red);
 }
 
+#cipher-content .color-album {
+    color: var(--color-red);
+}
+
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {
     background-color: var(--color-red);

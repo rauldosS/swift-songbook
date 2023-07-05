@@ -33,7 +33,10 @@ partsCipher = [
     { type: 'progression',      id: 'solo' },
     { type: 'tabs',             id: 'solo' },
 
+    { type: 'progression',     id: 'lastChorus' },
     { type: 'cipherLyrics',     id: 'lastChorus' },
+
+    { type: 'progression',      id: 'postLastChorus' },
     { type: 'cipherLyrics',     id: 'postLastChorus' },
 
     { type: 'progression',      id: 'outro' },
@@ -74,6 +77,14 @@ progressions = [
         progression: 'D - D - D U D U'
     },
     {
+        id: 'bridge',
+        title: 'Bridge',
+        caption: '',
+        notes: ['F', 'G', 'Am', 'G/B, C', 'break', 'F', 'C/E', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D block D block D block D'
+    },
+    {
         id: 'solo',
         title: 'Solo 2x',
         caption: '',
@@ -82,12 +93,22 @@ progressions = [
         progression: 'D - D - D U D U'
     },
     {
-        id: 'bridge',
-        title: 'Bridge',
+        id: 'lastChorus',
+        title: 'Last Chorus',
         caption: '',
-        notes: ['F', 'G', 'Am', 'G/B, C', 'break', 'F', 'C/E', 'G', 'G'],
         progressionCaption: '',
-        progression: 'D - D - D - D'
+        notes: ['F', 'Am', 'G', 'G'],
+        progression: 'D - D - D U D U',
+        notesMultipleProgression: ['F', 'C', 'G', 'G'],
+        multipleProgression: ['D - D', 'D U D', 'D - D - D - D', 'D U D U D U D U ']
+    },
+    {
+        id: 'postLastChorus',
+        title: 'Post Last Chorus',
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
     },
     {
         id: 'outro',
@@ -168,7 +189,7 @@ cipherParts = [
         id: 'postFirstChorus',
         title: 'Post Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'postChorus')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
         id: 'secondVerse',
@@ -184,15 +205,15 @@ cipherParts = [
     },
     {
         id: 'lastChorus',
-        title: 'Chorus',
+        title: 'Last Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+        referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
     },
     {
         id: 'postLastChorus',
-        title: 'Post Chorus',
+        title: 'Post Last Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'postChorus')
+        referenceProgression: progressions.find(progression => progression.id === 'postLastChorus')
     },
     {
         id: 'outro',
@@ -276,7 +297,6 @@ Missing him was dark grey, all alone
 Forgetting him was like tryin' to know somebody
           G
 You never met
-${ divider}
                      F
 Cause loving him was red
 Am          G
@@ -284,13 +304,13 @@ Yeah, yeah, red
            F   Am  G
 Oh Burning reeeeeeeed
 ${ divider}
-           F                  Am              G
+F                  Am              G
 And that's Why he's spinnin' 'round in my head
                               F
 Comes back to me, burnin' red 
   Am      G
 Yeah, yeah
- 
+${ divider} 
                    F                 Am
 His love was like, drivin' a new Maserati
                G
