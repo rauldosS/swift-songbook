@@ -35,7 +35,7 @@ progressions = [
         caption: '',
         notes: ['D', 'D'],
         progressionCaption: '',
-        progression: 'D - D U D U D - D - D U'
+        progression: 'D - - - D - U D U D U - D - D U'
     },
     {
         id: 'main',
@@ -43,7 +43,7 @@ progressions = [
         caption: '',
         notes: ['D', 'A', 'Bm', 'G'],
         progressionCaption: '',
-        progression: 'D - D U D U D - D - D U'
+        progression: 'D - - - D - D U D U D - D - D U'
     },
     // {
     //     id: 'chorus',
@@ -321,58 +321,79 @@ D                  A  Bm              G
 `
 
 lyrics = `
-[Verse 1]
-Loving him is like driving a new Maserati down a dead-end street
-Faster than the wind, passionate as sin, ending so suddenly
-Loving him is like trying to change your mind once you're already flying through the free fall
-Like the colors in autumn, so bright just before they lose it all
+<b>[Verse 1]</b>
+You said it in a simple way
+4 a.m., the second day
+How strange that I don't know you at all
+Stumbled through the long goodbye
+One last kiss, then catch your flight
+Right when I was just about to fall
 
-[Chorus]
-Losing him was blue like I'd never known
-Missing him was dark gray, all alone (Woah)
-Forgetting him was like tryin' to know somebody you never met
-But loving him was red (Red, red)
-(Red, red)
-But loving him was red (Red, red)
-(Red, red)
+<b>[Pre-Chorus]</b>
+I told myself, "Don't get attached"
+But in my mind, I play it back
+Spinning faster than the plane that took you
 
-[Verse 2]
-Touching him was like realizing all you ever wanted was right there in front of you
-Memorizing him was as easy as knowing all the words to your old favorite song
-Fighting with him was like trying to solve a crossword and realizing there's no right answer
-Regretting him was like wishing you never found out that love could be that strong
+<b>[Chorus]</b>
+And this is when the feeling sinks in
+I don't wanna miss you like this
+Come back, be here
+Come back, be here
+I guess you're in New York today
+I don't wanna need you this way
+Come back, be here
+Come back, be here
 
-[Chorus]
-Losing him was blue like I'd never known
-Missing him was dark gray, all alone (Woah)
-Forgetting him was like tryin' to know somebody you never met
-But loving him was red (Red, red)
-Oh, red (Red, red)
-Burning red (Red, red)
-(Red, red)
+<b>[Verse 2]</b>
+The delicate beginning rush
+The feeling you can know so much
+Without knowing anything at all
+And now that I can put this down
+If I had known what I know now
+I never would've played so nonchalant
+<b>[Pre-Chorus]</b>
+Taxi cabs and busy streets
+That never bring you back to me
+I can't help but wish you took me with you
 
-[Bridge]
-Remembering him comes in flashbacks and echoes
-Tell myself it's time now, gotta let go
-But moving on from him is impossible when I still see it all in my head
-In burning red
-Burning, it was red
+<b>[Chorus]</b>
+And this is when the feeling sinks in
+I don't wanna miss you like this
+Come back, be here
+Come back, be here
+I guess you're in London today
+And I don't wanna need you this way
+Come back, be here
+Come back, be here
 
-[Chorus]
-Oh, losing him was blue like I'd never known
-Missing him was dark gray, all alone (Woah)
-Forgetting him was like tryin' to know somebody you never met
-'Cause loving him was red (Red, red)
-Yeah, yeah, red (Red, red)
-Oh, burning red (Red, red)
-(Red, red)
+<b>[Post-Chorus]</b>
+Oh, oh
+Oh, oh
+Oh, oh
 
-[Post-Chorus]
-And that's why he's spinning 'round in my head (Red, red)
-Comes back to me, burning red (Red, red)
-(Red, red)
-Yeah, yeah (Red, red)
+<b>[Bridge]</b>
+This is falling in love in the cruelest way
+This is falling for you when you are worlds away
 
-[Outro]
-His love was like driving a new Maserati down a dead-end street
+<b>[Breakdown]</b>
+In New York, be here
+But you're in London, and I break down
+'Cause it's not fair that you're not around
+<b>[Chorus]</b>
+This is when the feeling sinks in
+I don't wanna miss you like this
+Come back, be here
+Come back, be here
+I guess you're in New York today
+And I don't wanna need you this way
+Come back, be here
+Come back, be here
+
+<b>[Post-Chorus]</b>
+Oh, oh, I don't wanna miss you like this
+Oh, oh
+
+<b>[Outro]</b>
+Come back, be here
+Come back, be here
 `

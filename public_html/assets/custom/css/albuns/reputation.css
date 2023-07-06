@@ -30,6 +30,7 @@
     color: var(--color-reputation);
 }
 
+.title-part-cipher,
 #cipher-content .color-album {
     color: var(--color-reputation);
 }

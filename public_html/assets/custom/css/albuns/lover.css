@@ -30,8 +30,9 @@
     color: var(--color-lover);
 }
 
-#cipher-content .badge-info-cipher {
-    background-color: var(--color-lover);
+.title-part-cipher,
+#cipher-content .color-album {
+    color: var(--color-lover);
 }
 
 #cipher-content .bg-album,

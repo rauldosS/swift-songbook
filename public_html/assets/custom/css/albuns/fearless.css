@@ -30,9 +30,10 @@
     color: var(--color-fearless);
 }
 
-#cipher-content .badge-info-cipher {
-    background-color: var(--color-fearless);
-}
+/* .title-part-cipher,
+#cipher-content .color-album {
+    color: var(--color-1989);
+} */
 
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {

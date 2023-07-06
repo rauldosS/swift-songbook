@@ -30,13 +30,14 @@
     color: var(--color-folklore);
 }
 
-#cipher-content .badge-info-cipher {
-    background-color: var(--color-folklore);
+.title-part-cipher,
+#cipher-content .color-album {
+    color: var(--color-folklore);
 }
 
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {
-    background-color: var(--color-red);
+    background-color: var(--color-folklore);
 }
 
 #cipher-content .alert {

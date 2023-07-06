@@ -30,6 +30,7 @@
     color: var(--color-midnights);
 }
 
+.title-part-cipher,
 #cipher-content .color-album {
     color: var(--color-midnights);
 }

@@ -30,6 +30,7 @@
     color: var(--color-1989);
 }
 
+.title-part-cipher,
 #cipher-content .color-album {
     color: var(--color-1989);
 }

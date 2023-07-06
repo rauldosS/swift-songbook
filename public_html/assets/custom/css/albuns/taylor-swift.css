@@ -30,8 +30,9 @@
     color: var(--color-taylor-swift);
 }
 
-#cipher-content .badge-info-cipher {
-    background-color: var(--color-taylor-swift);
+.title-part-cipher,
+#cipher-content .color-album {
+    color: var(--color-red);
 }
 
 #cipher-content .bg-album,
