@@ -10,11 +10,11 @@ let videoUrl = undefined
 let versions = undefined
 let cipherParts = undefined
 let cipherLyrics = undefined
-let tabs = undefined
 let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
 let listGroupAlbum = undefined
+let tabs = []
 let progressionsHtml = {}
 let tabsHtml = {}
 let cipherLyricsPartsHtml = {}
@@ -162,7 +162,7 @@ const albuns = [
             { id: "Starlight", name: "Starlight", blocked: true },
             { id: "Begin Again", name: "Begin Again", blocked: true },
             { id: "The Moment I Knew", name: "The Moment I Knew", blocked: true },
-            { id: "Come Back... Be Here", name: "Come Back... Be Here", blocked: true },
+            { id: "come-back-be-here", name: "Come Back... Be Here", blocked: false },
             { id: "Girl At Home", name: "Girl At Home", blocked: true },
             { id: "Better Man (From The Vault)", name: "Better Man (From The Vault)", blocked: true },
             { id: "Nothing New (feat. Phoebe Bridgers) (From The Vault)", name: "Nothing New (feat. Phoebe Bridgers) (From The Vault)", blocked: true },

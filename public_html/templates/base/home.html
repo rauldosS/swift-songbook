@@ -79,9 +79,9 @@
             blocked: true
         },
         {
-            music: { id: '', name: 'Come Back... Be Here' },
+            music: { id: 'come-back-be-here', name: 'Come Back... Be Here' },
             album: { id: 'red', name: 'Red' },
-            blocked: true
+            blocked: false
         },
         {
             music: { id: '', name: 'Blank Space' },
@@ -119,7 +119,7 @@
     })
 
     $('#mostAccessed li').not('[blocked]').on('click', function() {
-        selectMusic($(this).attr('album'), $(this).attr('music'))
+        selectMusic($(this).attr('music'))
     })
 
     $('#mostAccessed li[blocked]').on('click', function() {

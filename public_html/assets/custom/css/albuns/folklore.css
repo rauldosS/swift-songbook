@@ -1,10 +1,10 @@
 #cipher-content .bd-callout-info {
-    border-left-color: var(--color-fearless);
+    border-left-color: var(--color-folklore);
 }
 
 #cipher-content b {
     font-weight: bold;
-    color: var(--color-fearless);
+    color: var(--color-folklore);
     background-color: transparent;
     padding: 0
 }
@@ -23,31 +23,31 @@
     top: 0.2em;
 }
 
-#cipher-content .title, #fearless-album .title {
+#cipher-content .title, #folklore-album .title {
     font-weight: 300;
-    font-family: var(--font-fearless);
+    font-family: var(--font-folklore);
     font-size: 48px;
-    color: var(--color-fearless);
+    color: var(--color-folklore);
 }
 
 #cipher-content .badge-info-cipher {
-    background-color: var(--color-fearless);
+    background-color: var(--color-folklore);
 }
 
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {
-    background-color: var(--color-fearless);
+    background-color: var(--color-red);
 }
 
 #cipher-content .alert {
-    color: var(--color-fearless);
+    color: var(--color-folklore);
     height: 10px;
     border-radius: 50px;
-    border: 1px dashed var(--color-fearless);
+    border: 1px dashed var(--color-folklore);
 }
 
 #cipher-columns .border-column {
-    border-left: 2px dashed var(--color-fearless);
+    border-left: 2px dashed var(--color-folklore);
     margin-bottom: 30px;
     display: inline-block;
     padding: 0 0 0 1rem;

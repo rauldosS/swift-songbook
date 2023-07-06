@@ -3,16 +3,52 @@
 }
 
 #cipher-content b {
-    color: var(--color-lover);
     font-weight: bold;
+    color: var(--color-lover);
+    background-color: transparent;
+    padding: 0
+}
+
+#cipher-content b::after {
+    display: block;
+    background: currentColor;
+    border-radius: 2px;
+    bottom: 0.2em;
+    content: "";
+    display: none;
+    left: 0.25em;
+    opacity: .1;
+    position: absolute;
+    right: 0.25em;
+    top: 0.2em;
 }
 
 #cipher-content .title, #lover-album .title {
+    font-weight: 300;
     font-family: var(--font-lover);
     font-size: 48px;
     color: var(--color-lover);
 }
 
-#cipher-content .bg-album {
+#cipher-content .badge-info-cipher {
     background-color: var(--color-lover);
+}
+
+#cipher-content .bg-album,
+#cipher-content .badge-info-cipher {
+    background-color: var(--color-red);
+}
+
+#cipher-content .alert {
+    color: var(--color-lover);
+    height: 10px;
+    border-radius: 50px;
+    border: 1px dashed var(--color-lover);
+}
+
+#cipher-columns .border-column {
+    border-left: 2px dashed var(--color-lover);
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 0 0 0 1rem;
 }

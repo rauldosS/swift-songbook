@@ -240,7 +240,7 @@ Once you're already flying through the free fall
 Like the colors in autumn so bright
                  G
 Just before they lose it all
-${ divider}
+${ divider }
                F                    C
 Losing him was blue, like I'd never known
                 G
@@ -249,7 +249,7 @@ Missing him was dark grey, all alone
 Forgetting him was like trying to know somebody
           G
 You never met
-${ divider}
+${ divider }
                    F
 But loving him was red
           Am        G
@@ -258,7 +258,7 @@ Re ee ed, re ee ed, re ee ed
 Lovin' him was red
           Am        G
 Re ee ed, re ee ed, re ee ed
-${ divider}
+${ divider }
                        F                      Am
 Touching him was like, realizing all you ever wanted 
                    G
@@ -275,7 +275,7 @@ Crossword and realizing there's no right answer
 Regretting him was like wishing you never found out 
                        G
 That love could be that strong 
-${ divider}
+${ divider }
                          F               G
 Remembering him comes in flashbacks and echos
                     Am             G/B
@@ -288,7 +288,7 @@ When I still see it all in my, head
 And burning red
        F      Am  G
 Burning was reeeeed
-${ divider}
+${ divider }
                    F                    Am
 Oh losing him was blue, like I'd never known
                 G               G
@@ -303,14 +303,14 @@ Am          G
 Yeah, yeah, red
            F   Am  G
 Oh Burning reeeeeeeed
-${ divider}
+${ divider }
 F                  Am              G
 And that's Why he's spinnin' 'round in my head
                               F
 Comes back to me, burnin' red 
   Am      G
 Yeah, yeah
-${ divider} 
+${ divider } 
                    F                 Am
 His love was like, drivin' a new Maserati
                G
@@ -319,5 +319,58 @@ Down a dead end street.
 `
 
 lyrics = `
+[Verse 1]
+Loving him is like driving a new Maserati down a dead-end street
+Faster than the wind, passionate as sin, ending so suddenly
+Loving him is like trying to change your mind once you're already flying through the free fall
+Like the colors in autumn, so bright just before they lose it all
 
+[Chorus]
+Losing him was blue like I'd never known
+Missing him was dark gray, all alone (Woah)
+Forgetting him was like tryin' to know somebody you never met
+But loving him was red (Red, red)
+(Red, red)
+But loving him was red (Red, red)
+(Red, red)
+
+[Verse 2]
+Touching him was like realizing all you ever wanted was right there in front of you
+Memorizing him was as easy as knowing all the words to your old favorite song
+Fighting with him was like trying to solve a crossword and realizing there's no right answer
+Regretting him was like wishing you never found out that love could be that strong
+
+[Chorus]
+Losing him was blue like I'd never known
+Missing him was dark gray, all alone (Woah)
+Forgetting him was like tryin' to know somebody you never met
+But loving him was red (Red, red)
+Oh, red (Red, red)
+Burning red (Red, red)
+(Red, red)
+
+[Bridge]
+Remembering him comes in flashbacks and echoes
+Tell myself it's time now, gotta let go
+But moving on from him is impossible when I still see it all in my head
+In burning red
+Burning, it was red
+
+[Chorus]
+Oh, losing him was blue like I'd never known
+Missing him was dark gray, all alone (Woah)
+Forgetting him was like tryin' to know somebody you never met
+'Cause loving him was red (Red, red)
+Yeah, yeah, red (Red, red)
+Oh, burning red (Red, red)
+(Red, red)
+
+[Post-Chorus]
+And that's why he's spinning 'round in my head (Red, red)
+Comes back to me, burning red (Red, red)
+(Red, red)
+Yeah, yeah (Red, red)
+
+[Outro]
+His love was like driving a new Maserati down a dead-end street
 `

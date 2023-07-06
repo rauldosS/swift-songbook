@@ -79,16 +79,17 @@ $(document).ready(function () {
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns > 4) {
-            $('#cipher').hide()
+            $('#cipher').children().not('.progressions').hide()
             $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns - 1).toString())
             $('#cipher-columns pre').css('column-count', (columns - 1).toString())
             $('#cipher-columns').show()
             scrollToElement('#cipher-columns')
         } else {
-            $('#cipher').show()
+            $('#cipher').children().not('.progressions').show()
             $('.badge-info-cipher').show()
             $('#cipher-columns').hide()
+            scrollToElement('#cipher')
         }
     })
 
@@ -97,7 +98,7 @@ $(document).ready(function () {
         columns = str_columns.includes('auto') ? parseInt(str_columns.split('auto ')[1]) : parseInt(str_columns)
 
         if (columns <= 7) {
-            $('#cipher').hide()
+            $('#cipher').children().not('.progressions').hide()
             $('.badge-info-cipher').hide()
             $('#cipher-columns pre').css('columns', (columns + 1).toString())
             $('#cipher-columns pre').css('column-count', (columns + 1).toString())

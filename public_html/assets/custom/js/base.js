@@ -52,6 +52,10 @@ loadContent = (path, switchLanguage = false) => {
     setTimeout(() => {
         content.show()
     }, 500)
+    
+    if ($(window).width() < 768 && $('#sidebar').width() > 250) {
+        $('#sidebar').toggleClass('toggled')
+    }
 
     scrollTop()
 }

@@ -92,7 +92,6 @@ createChordsHTML = () => {
 
 createArrowsProgression = (baseProgression) => {
     return baseProgression.split(' ').map((progression) => {
-        console.log(progression)
         if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i> '
         if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i> '
         if (progression === 'block') return'<i class="fa-solid fa-ban strum"></i> '
@@ -198,7 +197,15 @@ createCipherLyricsHTML = () => {
             ${ cipherLyricsList[index] }
             </pre>`
 
-        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle ? `${ cipherLyricsList[index] }` : `[${ part.title }]
+        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle ? `${ cipherLyricsList[index] }` : `
+<a
+    onclick="scrollToElement('#progression-${ part.referenceProgression.id }')"
+    data-toggle="tooltip"
+    data-bs-placement="right"
+    data-bs-html="true"
+    title="Progression <i class='fa-solid fa-arrow-right-long ms-2 me-2'></i> ${ part.referenceProgression.title }"
+    class="title-part-cipher"
+>[${ part.title }]</a>
             ${ cipherLyricsList[index] }`
     })
 }
