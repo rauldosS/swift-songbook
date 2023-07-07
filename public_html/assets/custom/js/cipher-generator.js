@@ -15,7 +15,7 @@ selectMusic = (selectedMusicId) => {
     createAlbumCSS(music.album)
     createCipherJS(music.album, music.id)
 
-    loadCipher()
+    loadCipher(music.id, music.album)
 
     cipherContent.show()
 
@@ -40,6 +40,10 @@ resetConfig = () => {
     partsCipher = []
     completeCipher = []
     completeCipherColumns = []
+
+    tabs = []
+
+    basicCipher = false
 }
 
 hideContent = () => {
@@ -61,9 +65,11 @@ createCipherJS = (album, music) => {
     cipherContent.prepend(`<script src="assets/custom/js/albuns/${ album }/${ music }.js"></script>`)
 }
 
-createCipherHeaderHTML = () => {
+createCipherHeaderHTML = (album) => {
+    console.log(album)
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
+            ${ basicCipher ? '<span class="badge bg-' + album + ' mb-3">' + language.cipher.basicCipher + '</span>' : '' } 
             <h1 class="title">${ musicTitle }</h1>
             <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ chordShape ? '(' + language.cipher.chordShape + ' ' + chordShape + ')' : '' }</span>
             <span class="song-capo">
@@ -111,7 +117,7 @@ createNotes = (notes) => {
     }).join('')
 }
 
-getMultipleProgressionsTable = (notes, progressions) => {
+getMultipleProgressionsTable = (notes, progressions, marginNotes) => {
     let notesHTML = ''
     let progressionsHTML = ''
     Array(notes.length).fill(0).map((_, i) => {
@@ -119,7 +125,7 @@ getMultipleProgressionsTable = (notes, progressions) => {
         progressionsHTML = progressionsHTML.concat(`<td>${ createArrowsProgression(progressions[i]) }</td>`)
     })
 
-    return `<table class="table table-bordered progression-table">
+    return `<table class="table table-bordered progression-table ${ marginNotes ? '' : 'mb-0' }">
         <thead>
             <tr>
                 <th class="bg-album text-white" scope="col">CHORD</th>
@@ -138,16 +144,16 @@ getMultipleProgressionsTable = (notes, progressions) => {
 createProgressionHTML = () => {
     progressions.forEach(progression => {
         // const multipleProgression = progression.notesMultipleProgression !== undefined
-        const notes = createNotes(progression.notes)
-        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(progression.notesMultipleProgression, progression.multipleProgression) : ''
-        const arrowProgression = createArrowsProgression(progression.progression)
+        const notes = progression.notes !== undefined ? createNotes(progression.notes) : ''
+        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(progression.notesMultipleProgression, progression.multipleProgression, progression.notes !== undefined) : ''
+        const arrowProgression = progression.progression !== undefined ? createArrowsProgression(progression.progression) : ''
 
         progressionsHtml[progression.id] = `
             <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
                 ${ multipleProgressionTable }
                 <div class="d-flex justify-content-between ps-1 pe-1">
                     <div>
-                        <div>| ${ notes }</div>
+                        <div>${ notes ? '|' : '' } ${ notes }</div>
                         <div>
                             <div class="">${ progression.caption }</div>
                         </div>
@@ -248,8 +254,8 @@ updateShareLink = () => {
     $('#share-cipher').attr('data-clipboard-text', `https://taylorsongbook.com.br?music=${musicId}`)
 }
 
-loadCipher = () => {
-    createCipherHeaderHTML()
+loadCipher = (music, album) => {
+    createCipherHeaderHTML(album)
     createChordsHTML()
 
     createProgressionHTML()
@@ -277,7 +283,7 @@ loadCipher = () => {
         }
     })
 
-    cipherContent.append('<div id="cipher"></div>')
+    cipherContent.append(`<div id="cipher"></div>`)
     cipher = $('#cipher')
 
     completeCipher.forEach(part => {

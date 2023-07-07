@@ -9,7 +9,9 @@
     --color-reputation: #c0b297;
     --color-folklore: #a5a5a5;
     --color-evermore: #cab193;
-    --color-midnights: #9b9dd8;
+    --color-midnights: #49567d;
+    --linear-gradient-midnights: linear-gradient(90deg, rgba(73,86,125,1) 0%, rgba(132,170,189,1) 50%);
+    --webkit-linear-gradient-midnights: -webkit-linear-gradient(0deg, rgba(73,86,125,1) 0%, rgba(132,170,189,1) 50%);
     --color-whatsapp: #73c591;
     --font-taylor-swift: 'Sacramento', cursive;
     --font-fearless: 'Montserrat', sans-serif;
@@ -667,6 +669,10 @@ article {
 
 .initial {
     position: inherit !important;
+}
+
+#google-form {
+    height: 100%;
 }
 
 @media(max-width: 992px) {

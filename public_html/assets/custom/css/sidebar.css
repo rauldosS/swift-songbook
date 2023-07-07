@@ -180,7 +180,7 @@ a:focus {
 
 #sidebar ul li a.album-midnights:hover {
     color: #FFF;
-    background: var(--color-midnights);
+    background: var(--linear-gradient-midnights);
 }
 
 /* Sub-menu style */
@@ -300,7 +300,7 @@ a.album-evermore[aria-expanded="true"] {
 
 a.album-midnights[aria-expanded="true"] {
     color: #FFF;
-    background: var(--color-midnights);
+    background: var(--linear-gradient-midnights);
 }
 
 a[data-toggle="collapse"] {

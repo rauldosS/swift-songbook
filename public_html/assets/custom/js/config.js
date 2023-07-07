@@ -14,6 +14,7 @@ let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
 let listGroupAlbum = undefined
+let basicCipher = false
 let tabs = []
 let progressionsHtml = {}
 let tabsHtml = {}
@@ -39,11 +40,15 @@ const chordsHtml = {
     E: `<chord name="E" positions="022100" fingers="-231--" size="2" ></chord>`,
     Em: `<chord name="Em" positions="022000" fingers="-23---" size="2" ></chord>`,
     F: `<chord name="F" positions="133211" fingers="134211" size="2" ></chord>`,
+    Fsus2: `<chord name="Fsus2" positions="xx3011" fingers="--3-11" size="2" ></chord>`,
     G: `<chord name="G" positions="320033" fingers="21--34" size="2" ></chord>`,
+    Gsus4: `<chord name="Gsus4" positions="300010" fingers="3---1-" size="2" ></chord>`,
     'G/B': `<chord name="G/B" positions="x20003" fingers="-1---2" size="2" ></chord>`,
     D: `<chord name="D" positions="xx0232" fingers="---132" size="2" ></chord>`,
     A: `<chord name="A" positions="x02220" fingers="--123-" size="2" ></chord>`,
     Am: `<chord name="Am" positions="x02210" fingers="--231-" size="2" ></chord>`,
+    Am7: `<chord name="Am7" positions="x02010" fingers="--2-1-" size="2" ></chord>`,
+    Bm: `<chord name="Bm" positions="x24432" fingers="-13421" size="2" ></chord>`,
 }
 
 const progressionsType = {
@@ -294,7 +299,7 @@ const albuns = [
         musics: [
             { id: "Lavender Haze", name: "Lavender Haze", blocked: true },
             { id: "Maroon", name: "Maroon", blocked: true },
-            { id: "Anti-Hero", name: "Anti-Hero", blocked: true },
+            { id: "anti-hero", name: "Anti-Hero", blocked: false },
             { id: "Snow On The Beach (feat. Lana Del Rey)", name: "Snow On The Beach (feat. Lana Del Rey)", blocked: true },
             { id: "You're On Your Own, Kid", name: "You're On Your Own, Kid", blocked: true },
             { id: "Midnight Rain", name: "Midnight Rain", blocked: true },

@@ -6,7 +6,7 @@
     font-weight: bold;
     color: var(--color-midnights);
     background-color: transparent;
-    padding: 0
+    padding: 0;
 }
 
 #cipher-content b::after {
@@ -28,6 +28,9 @@
     font-family: var(--font-midnights);
     font-size: 48px;
     color: var(--color-midnights);
+    background: var(--webkit-linear-gradient-midnights);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .title-part-cipher,
@@ -45,6 +48,9 @@
     height: 10px;
     border-radius: 50px;
     border: 1px dashed var(--color-midnights);
+    background: var(--webkit-linear-gradient-midnights);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #cipher-columns .border-column {

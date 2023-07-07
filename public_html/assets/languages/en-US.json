@@ -1,6 +1,6 @@
 {
     "code": "en-US",
-    "mainAlert": "Only the chord sheets for \"Fearless\", \"Red\" and \"Come Back... Be Here\" are currently available. Our website is in the testing phase. We would appreciate your suggestions and feedback!",
+    "mainAlert": "Only the chord sheets for \"Fearless\", \"Red\", \"Anti-Hero\" and \"Come Back... Be Here\" are currently available. Our website is in the testing phase. We would appreciate your suggestions and feedback!",
     "summary": "<p>Welcome to \"Taylor's Songbook\"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p><p>Browse our catalog organized by albums, where each page is carefully designed with typography and colors that represent the spirit of each of Taylor's musical works. Our goal is to provide an immersive experience for fans and musicians who want to explore, play or sing Taylor Swift's songs.</p><p>In addition to chords and lyrics, we provide detailed rhythm progressions for each song, allowing you to capture the essence of the songs' rhythm and groove. We also offer tablature for guitar and other instruments (in the future), making it possible to recreate the authentic arrangements of the songs.</p><p>In \"Taylor's Songbook\" you will find additional resources such as tutorial videos, technique and performance tips and the possibility to interact with other fans and musicians in the community <a href=\"https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP\" target=\"_blank\">(WhatsApp)</a>. Share your own versions and discover new interpretations of Taylor's songs.</p><p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is \"Taylor's Songbook\". Let's play like Taylor!</p>",
     "whatsapp": "Interact with other fans and musicians in our group",
     "mostAccessTitle": "Most Accessed",
@@ -51,6 +51,7 @@
     "cipher": {
         "tuning": "Tuning",
         "capo": ["Capotraste na ", "ª casa"],
-        "chordShape": "chord shape in the key of"
+        "chordShape": "chord shape in the key of",
+        "basicCipher": "Basic chord chart, with details being developed for a more comprehensive version."
     }
 }
