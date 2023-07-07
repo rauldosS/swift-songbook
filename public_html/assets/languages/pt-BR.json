@@ -51,7 +51,7 @@
     },
     "cipher": {
         "tuning": "Tom",
-        "capo": ["Capotraste na ", "ª casa"],
+        "capo": ["Capotraste na <b>", "ª casa</b>"],
         "chordShape": "forma dos acordes no tom de",
         "basicCipher": "Cifra básica, com detalhes em desenvolvimento para uma versão mais completa."
     }

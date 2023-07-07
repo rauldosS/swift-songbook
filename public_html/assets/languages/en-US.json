@@ -49,8 +49,8 @@
         "hide": "Hide Albums"
     },
     "cipher": {
-        "tuning": "Tuning",
-        "capo": ["Capotraste na ", "ª casa"],
+        "tuning": "Key",
+        "capo": ["0", "st", "nd", "rd", "th"],
         "chordShape": "chord shape in the key of",
         "basicCipher": "Basic chord chart, with details being developed for a more comprehensive version."
     }

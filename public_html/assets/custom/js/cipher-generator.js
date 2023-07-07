@@ -65,15 +65,27 @@ createCipherJS = (album, music) => {
     cipherContent.prepend(`<script src="assets/custom/js/albuns/${ album }/${ music }.js"></script>`)
 }
 
+createCipherCapoHTML = () => {
+    if (capoFret) {
+        if (language.code === 'pt-BR') {
+            return capoFret ? language.cipher.capo[0] + capoFret + language.cipher.capo[1] : ''
+        } else {
+            return `Capo: <b>${ capoFret }` + (capoFret > 3 ? 'th' : language.cipher.capo[capoFret]) + '</b> fret'
+        }
+    } else {
+        return ''
+    }
+}
+
 createCipherHeaderHTML = (album) => {
-    console.log(album)
+    const capo = createCipherCapoHTML()
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
             ${ basicCipher ? '<span class="badge bg-' + album + ' mb-3">' + language.cipher.basicCipher + '</span>' : '' } 
             <h1 class="title">${ musicTitle }</h1>
             <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ chordShape ? '(' + language.cipher.chordShape + ' ' + chordShape + ')' : '' }</span>
             <span class="song-capo">
-                ${ capoFret ? 'Capo on the <b>' + capoFret + 'rd fret</b>' : ''}
+                ${ capo }
             </span>
             <iframe style="border-radius:12px" src="${ spotify }" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
