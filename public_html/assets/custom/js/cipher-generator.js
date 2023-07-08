@@ -110,6 +110,7 @@ createChordsHTML = () => {
 
 createArrowsProgression = (baseProgression) => {
     return baseProgression.split(' ').map((progression) => {
+        if (progression === 'break') return `<br>`
         if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i> '
         if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i> '
         if (progression === 'block') return'<i class="fa-solid fa-ban strum"></i> '
@@ -170,7 +171,7 @@ createProgressionHTML = () => {
                             <div class="">${ progression.caption }</div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center text-end">
+                    <div class="d-flex align-items-center text-start">
                         <div class="fw-bold">${ arrowProgression }</div>
                     </div>
                 </div>

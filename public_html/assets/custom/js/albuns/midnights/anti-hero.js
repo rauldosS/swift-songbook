@@ -31,7 +31,7 @@ partsCipher = [
 progressions = [
     {
         id: 'main',
-        title: 'Intro | Main Strumming',
+        title: 'Intro | Main Progression',
         caption: '',
         progressionCaption: '',
         notesMultipleProgression: ['Fsus2', 'C', 'Gsus4', 'Am7'],

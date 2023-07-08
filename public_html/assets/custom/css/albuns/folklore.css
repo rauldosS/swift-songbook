@@ -1,10 +1,10 @@
 #cipher-content .bd-callout-info {
-    border-left-color: var(--color-folklore);
+    border-left-color: #535353;;
 }
 
 #cipher-content b {
     font-weight: bold;
-    color: var(--color-folklore);
+    color: #535353;
     background-color: transparent;
     padding: 0
 }
@@ -37,7 +37,7 @@
 
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {
-    background-color: var(--color-folklore);
+    background-color: #535353;
 }
 
 #cipher-content .alert {

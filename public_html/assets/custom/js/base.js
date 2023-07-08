@@ -99,7 +99,7 @@ updateLanguage = () => {
             break
     }
 
-    $('#main-alert').text(language.mainAlert)
+    $('#main-alert').html(language.mainAlert)
 
     $('#albuns .title').text(language.albuns.title)
     $('#albuns .hide').text(language.albuns.hide)
