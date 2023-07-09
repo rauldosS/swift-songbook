@@ -7,6 +7,7 @@ spotify = 'https://open.spotify.com/embed/track/7KokYm8cMIXCsGVmUvKtqf?utm_sourc
 chordsMusic = ['C', 'G', 'D', 'Bm', 'F#m', 'A']
 videoUrl = 'https://www.youtube.com/embed/K6hwfI1J1dg'
 basicCipher = true
+palmMute = true
 
 // https://www.youtube.com/watch?v=K6hwfI1J1dg&ab_channel=TunezbyLucz
 // https://drive.google.com/file/d/1EjA6xIeeES1BCYpihfd5ZMk6Y5YoQIrx/view
@@ -14,14 +15,17 @@ basicCipher = true
 partsCipher = [
     { type: 'progression',           id: 'main' },
 
-    { type: 'cipherLyrics',          id: 'secondVerse' },
-    { type: 'progression',           id: 'secondVerse' },
-
     { type: 'cipherLyrics',          id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'preChorus' },
+
+    { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
 
+    { type: 'progression',           id: 'secondVerse' },
+    { type: 'cipherLyrics',          id: 'secondVerse' },
     { type: 'cipherLyrics',          id: 'preChorus' },
+
+    { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
     
     { type: 'progression',           id: 'bridge' },
@@ -30,6 +34,7 @@ partsCipher = [
     { type: 'progression',           id: 'postBridge' },
     { type: 'cipherLyrics',          id: 'postBridge' },
 
+    { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
 
     { type: 'progression',           id: 'outro' },
@@ -41,15 +46,24 @@ progressions = [
         id: 'main',
         title: 'Intro | Main Progression',
         caption: '',
-        notes: ['D', 'C', 'C', 'D'],
+        notes: ['D', 'C²', 'G'],
+        progression: 'D - D - D - - U D U D - D - D U',
+        palmMute: true
+    },
+    {
+        id: 'chorus',
+        title: 'Chorus',
+        caption: '',
+        notes: ['D', 'C²', 'G'],
         progression: 'D - D - D - - U D U D - D - D U'
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
         caption: '',
-        notes: ['D', 'break', 'C', 'C', 'D'],
-        progression: 'D - - - - - - - - - - - - D - D U break D - D - D - - U D U D - D - D U'
+        notes: ['D', 'break', 'C²', 'D'],
+        progression: 'D - - - - - - - - - - - - D - D U break D - D - D - - U D U D - D - D U',
+        palmMute: true
     },
     {
         id: 'bridge',
@@ -64,7 +78,7 @@ progressions = [
         title: 'Post Bridge',
         caption: '',
         progressionCaption: '',
-        notes: ['D', 'C', 'C', 'G'],
+        notes: ['D', 'C²', 'G'],
         progression: 'D - - - - - - - - - - - - - - -',
     },
     {
@@ -72,7 +86,7 @@ progressions = [
         title: 'Outro',
         caption: '',
         progressionCaption: '',
-        notes: ['D', 'C', 'C', 'G'],
+        notes: ['D', 'C²', 'G'],
         progression: 'D - - - - - - - - - - - - - - -',
     }
 ]
@@ -96,7 +110,7 @@ cipherParts = [
         id: 'chorus',
         title: 'Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'secondVerse',
@@ -114,7 +128,7 @@ cipherParts = [
         id: 'chorus',
         title: 'Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'bridge',
@@ -132,7 +146,7 @@ cipherParts = [
         id: 'chorus',
         title: 'Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'outro',
