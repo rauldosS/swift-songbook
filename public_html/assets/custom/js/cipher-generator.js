@@ -44,6 +44,7 @@ resetConfig = () => {
     tabs = []
 
     basicCipher = false
+    palmMute = false
 }
 
 hideContent = () => {
@@ -81,7 +82,7 @@ createCipherHeaderHTML = (album) => {
     const capo = createCipherCapoHTML()
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
-            ${ basicCipher ? '<span class="badge bg-' + album + ' mb-3">' + language.cipher.basicCipher + '</span>' : '' } 
+            ${ basicCipher ? '<span class="badge bg-' + album + ' mb-3">' + language.cipher.basicCipher + '</span>' : '' }
             <h1 class="title">${ musicTitle }</h1>
             <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ chordShape ? '(' + language.cipher.chordShape + ' ' + chordShape + ')' : '' }</span>
             <span class="song-capo">
@@ -108,12 +109,12 @@ createChordsHTML = () => {
     ChordJS.replace()
 }
 
-createArrowsProgression = (baseProgression) => {
+createArrowsProgression = (baseProgression, palmMute = false, blocking = false) => {
     return baseProgression.split(' ').map((progression) => {
         if (progression === 'break') return `<br>`
-        if (progression === 'D') return '<i class="fa-solid fa-arrow-down-long"></i> '
-        if (progression === 'U') return '<i class="fa-solid fa-arrow-up-long"></i> '
-        if (progression === 'block') return'<i class="fa-solid fa-ban strum"></i> '
+        if (progression === 'D') return `<i class="fa-solid fa-arrow-down-long ${ palmMute ? 'palm-mute' : '' } ${ blocking ? 'blocking' : '' }"></i> `
+        if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long ${ palmMute ? 'palm-mute' : '' } ${ blocking ? 'blocking' : '' }"></i> `
+        if (progression === 'block') return '<i class="fa-solid fa-ban strum"></i> '
         if (progression === '-') return `<span class="strum">${ progression }</span> `
         return progression
     }).join('')
@@ -122,6 +123,7 @@ createArrowsProgression = (baseProgression) => {
 createNotes = (notes) => {
     return notes.map((note) => {
         if (note === 'break') return `<br>| `
+        if (note === 'block') return '<i class="fa-solid fa-ban strum"></i> |'
         if (note === '...') return `<b>...</b>`
         if (note.includes(',')) {
             return note.split(',').map((n, i, {length}) => `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `).join('')
@@ -133,6 +135,7 @@ createNotes = (notes) => {
 getMultipleProgressionsTable = (notes, progressions, marginNotes) => {
     let notesHTML = ''
     let progressionsHTML = ''
+
     Array(notes.length).fill(0).map((_, i) => {
         notesHTML = notesHTML.concat(`<th class="color-album" scope="col">${ notes[i] }</th>`)
         progressionsHTML = progressionsHTML.concat(`<td>${ createArrowsProgression(progressions[i]) }</td>`)
@@ -158,8 +161,17 @@ createProgressionHTML = () => {
     progressions.forEach(progression => {
         // const multipleProgression = progression.notesMultipleProgression !== undefined
         const notes = progression.notes !== undefined ? createNotes(progression.notes) : ''
-        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(progression.notesMultipleProgression, progression.multipleProgression, progression.notes !== undefined) : ''
-        const arrowProgression = progression.progression !== undefined ? createArrowsProgression(progression.progression) : ''
+        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(
+            progression.notesMultipleProgression,
+            progression.multipleProgression,
+            progression.notes !== undefined
+        ) : ''
+
+        const arrowProgression = progression.progression !== undefined ? createArrowsProgression(
+            progression.progression,
+            progression.palmMute !== undefined,
+            progression.blocking !== undefined
+        ) : ''
 
         progressionsHtml[progression.id] = `
             <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
@@ -291,7 +303,7 @@ loadCipher = (music, album) => {
                 completeCipherColumns.push(cipherLyricsColumnsPartsHtml[part.id])
                 break
             case 'alert':
-                completeCipher.push(alerts_html[part.id])
+                completeCipher.push(alertsHtml[language.code][part.id])
                 break
         }
     })

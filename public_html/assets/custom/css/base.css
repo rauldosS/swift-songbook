@@ -486,6 +486,10 @@ article {
     margin-bottom: 5px;
 }
 
+.blocking {
+    color: #8c52fe !important;
+}
+
 .cipher-tone {
     margin: 5px 0 5px;
 }
@@ -497,6 +501,16 @@ article {
 .cipher_cnt > span {
     display: block;
     margin-bottom: 5px;
+}
+
+#palm-mute-alert {
+    width: 100%;
+    border: 1px dashed #ddd;
+    color: #212529;
+}
+
+.palm-mute {
+    color: #f07701 !important;
 }
 
 #album {

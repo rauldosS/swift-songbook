@@ -15,6 +15,7 @@ let lyrics = undefined
 let alerts = undefined
 let listGroupAlbum = undefined
 let basicCipher = false
+let palmMute = false
 let tabs = []
 let progressionsHtml = {}
 let tabsHtml = {}
@@ -57,16 +58,29 @@ const progressionsType = {
     complex: '1 a + e 2 a + e 3 a + e 4 a + e'
 }
 
-const alerts_html = {
-    repeatIntro: `
-        <div class="alert d-flex align-items-center mb-3" role="alert">
-            <i class="fa-solid fa-rotate-right me-2"></i>
-            <div>
-                Repeat Intro
+const alertsHtml = {
+    'pt-BR': {
+        palmMute: '<span id="palm-mute-alert" class="badge animate__animated animate__flash animate__delay-1s animate__repeat-2 bg-light mb-3"><b class="palm-mute">Ritmo em laranja</b> deve ser tocado com palm mute</span>',
+        repeatIntro: `
+            <div class="alert d-flex align-items-center mb-3" role="alert">
+                <i class="fa-solid fa-rotate-right me-2"></i>
+                <div>
+                    Repeat Intro
+                </div>
             </div>
-        </div>
-    `,
-    mainProgression: `<span class="badge rounded-pill">Main progression</span>`
+        `
+    },
+    'en-US': {
+        palmMute: '<span id="palm-mute-alert" class="badge animate__animated animate__flash animate__delay-1s animate__repeat-2 bg-light mb-3"><b class="palm-mute">Orange strum</b> should be played with palm mute</span>',
+        repeatIntro: `
+            <div class="alert d-flex align-items-center mb-3" role="alert">
+                <i class="fa-solid fa-rotate-right me-2"></i>
+                <div>
+                    Repeat Intro
+                </div>
+            </div>
+        `
+    }
 }
 
 const divider = '======================================================='
@@ -298,7 +312,7 @@ const albuns = [
         id: 'midnights',
         name: 'Midnights',
         musics: [
-            { id: "Lavender Haze", name: "Lavender Haze", blocked: true },
+            { id: "lavender-haze", name: "Lavender Haze", blocked: false },
             { id: "Maroon", name: "Maroon", blocked: true },
             { id: "anti-hero", name: "Anti-Hero", blocked: false },
             { id: "Snow On The Beach (feat. Lana Del Rey)", name: "Snow On The Beach (feat. Lana Del Rey)", blocked: true },
