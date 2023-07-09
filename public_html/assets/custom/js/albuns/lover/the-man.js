@@ -6,7 +6,6 @@ capoFret = null
 spotify = 'https://open.spotify.com/embed/track/3RauEVgRgj1IuWdJ9fDs70?utm_source=generator'
 chordsMusic = ['F', 'G', 'C', 'Am']
 videoUrl = 'https://www.youtube.com/embed/JH14683wgl0'
-basicCipher = false
 palmMute = true
 
 partsCipher = [

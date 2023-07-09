@@ -6,7 +6,6 @@ capoFret = '1'
 spotify = 'https://open.spotify.com/embed/track/7KokYm8cMIXCsGVmUvKtqf?utm_source=generator'
 chordsMusic = ['C', 'G', 'D', 'Bm', 'F#m', 'A']
 videoUrl = 'https://www.youtube.com/embed/K6hwfI1J1dg'
-basicCipher = true
 palmMute = true
 
 // https://www.youtube.com/watch?v=K6hwfI1J1dg&ab_channel=TunezbyLucz

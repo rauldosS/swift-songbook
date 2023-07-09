@@ -4,7 +4,7 @@ tuning = 'Bb Major'
 chordShape = null
 capoFret = '3'
 spotify = 'https://open.spotify.com/embed/track/5jQI2r1RdgtuT8S3iG8zFC?utm_source=generator'
-chordsMusic = ['Em', 'D', 'G', 'A', 'C', 'D', 'Am']
+chordsMusic = ['C', 'Am', 'D']
 videoUrl = 'https://www.youtube.com/embed/JxM_bJP8G-s'
 palmMute = true
 
