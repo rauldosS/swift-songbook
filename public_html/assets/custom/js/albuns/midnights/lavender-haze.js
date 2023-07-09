@@ -20,7 +20,8 @@ partsCipher = [
     { type: 'progression',           id: 'verse' },
     { type: 'cipherLyrics',          id: 'firstVerse' },
 
-    { type: 'cipherLyrics',          id: 'preChorus' },
+    { type: 'progression',           id: 'firstPreChorus' },
+    { type: 'cipherLyrics',          id: 'firstPreChorus' },
 
     { type: 'progression',           id: 'noChords' },
     { type: 'progression',           id: 'chorus' },
@@ -29,9 +30,11 @@ partsCipher = [
     { type: 'progression',           id: 'instrumental' },
     { type: 'cipherLyrics',          id: 'instrumental' },
 
+    { type: 'progression',           id: 'secondVerse' },
     { type: 'cipherLyrics',          id: 'secondVerse' },
 
-    { type: 'cipherLyrics',          id: 'preChorus' },
+    { type: 'progression',           id: 'secondPreChorus' },
+    { type: 'cipherLyrics',          id: 'secondPreChorus' },
 
     { type: 'progression',           id: 'noChords' },
     { type: 'progression',           id: 'chorus' },
@@ -43,7 +46,13 @@ partsCipher = [
     { type: 'progression',           id: 'bridge' },
     { type: 'cipherLyrics',          id: 'bridge' },
 
+    { type: 'progression',           id: 'noChords' },
+    
+    { type: 'progression',           id: 'lastChorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
+
+    { type: 'progression',           id: 'outro' },
+    { type: 'cipherLyrics',          id: 'outro' },
 ]
 
 progressions = [
@@ -66,12 +75,31 @@ progressions = [
         palmMute: true
     },
     {
+        id: 'firstPreChorus',
+        title: 'Pre-Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['C', 'D', 'Am²'],
+        progression: 'D - - - D - - - D - - - D - - -',
+        palmMute: true
+    },
+    {
+        id: 'secondPreChorus',
+        title: 'Pre-Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['C', 'D', 'Am²'],
+        progression: 'D - - - D - - - D - - - D - - -',
+        palmMute: true
+    },
+    {
         id: 'bridge',
         title: 'Bridge',
         caption: '',
         progressionCaption: '',
         notes: ['C', 'D', 'Am²'],
         progression: 'D - - - D - - - D - - - D - - -',
+        palmMute: true
     },
     {
         id: 'verse',
@@ -80,6 +108,15 @@ progressions = [
         progressionCaption: '',
         notes: ['C', 'D', 'Am²'],
         progression: 'D - D - D - - U - U D - D - D U',
+        palmMute: true
+    },
+    {
+        id: 'secondVerse',
+        title: 'Verse',
+        caption: 'Just the first time',
+        progressionCaption: '',
+        notes: ['C', 'break', 'D', 'Am²'],
+        progression: 'D - - - - - - - - - - - D - D U break D - D - D - - U - U D - D - D U',
         palmMute: true
     },
     {
@@ -98,7 +135,24 @@ progressions = [
         notes: ['block'],
         progression: 'D U - U D - D U - U D - D U D U',
         blocking: true
-    }
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['C', 'D', 'Am²'],
+        progression: 'D - D - D - - U - U D - D - D U',
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        caption: '',
+        progressionCaption: '',
+        notes: ['C', 'D', 'Am²'],
+        progression: 'D - - - D - - - D - - - D - - -',
+        palmMute: true
+    },
 ]
 
 tabs = []
@@ -117,10 +171,10 @@ cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'verse')
     },
     {
-        id: 'preChorus',
+        id: 'firstPreChorus',
         title: 'Pre-Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'verse')
+        referenceProgression: progressions.find(progression => progression.id === 'firstPreChorus')
     },
     {
         id: 'chorus',
@@ -138,13 +192,13 @@ cipherParts = [
         id: 'secondVerse',
         title: 'Verse 2',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'verse')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
-        id: 'preChorus',
+        id: 'secondPreChorus',
         title: 'Pre-Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'verse')
+        referenceProgression: progressions.find(progression => progression.id === 'secondPreChorus')
     },
     {
         id: 'chorus',
@@ -162,7 +216,13 @@ cipherParts = [
         id: 'chorus',
         title: 'Chorus',
         ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'verse')
+        referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        ignoreTitle: false,
+        referenceProgression: progressions.find(progression => progression.id === 'outro')
     },
 ]
 
@@ -234,21 +294,21 @@ The 1950s shit they want for me
 Am
   I just wanna stay in that lavender haze
 ${ divider }
-Em
+C
 Talk your talk and go viral
 D
 I just need this love spiral
-G
+Am
 Get it off your chest
-A
+Am
 Get it off my desk (Off my desk)
-Em
+C
 Talk your talk and go viral
 D
 I just need this love spiral
-G
+Am
 Get it off your chest
-A
+Am                      <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-ban strum"></i> No Chords Strumming</span>
 Get it off my desk
 ${ divider }
 C
@@ -263,8 +323,19 @@ C
  No deal (No deal)
     D
 The 1950s shit they want for me
-Am                                    Em
+Am                                    C         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Start outro strumming</span>
   I just wanna stay in that lavender haze
+${ divider }
+Am
+Get it off your chest
+Am                 C
+Get it off my desk
+             D
+The lavender haze
+             Am
+I just wanna stay
+             Am                    C
+I just wanna stay in that lavender haze
 `
 
 lyrics = `

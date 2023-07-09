@@ -503,6 +503,10 @@ article {
     margin-bottom: 5px;
 }
 
+#cipher-content span.text-white b {
+    color: #FFF !important;
+}
+
 #palm-mute-alert {
     width: 100%;
     border: 1px dashed #ddd;
