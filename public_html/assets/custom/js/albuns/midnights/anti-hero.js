@@ -21,7 +21,7 @@ partsCipher = [
 
     { type: 'cipherLyrics',         id: 'secondVerse' },
 
-    { type: 'cipherLyrics',         id: 'secondPrehorus' },
+    { type: 'cipherLyrics',         id: 'secondPrechorus' },
 
     { type: 'cipherLyrics',         id: 'bridge' },
 
@@ -73,7 +73,7 @@ cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
-        id: 'secondPrehorus',
+        id: 'secondPrechorus',
         title: 'Pre-chorus 2',
         ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')

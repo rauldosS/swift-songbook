@@ -86,6 +86,12 @@
   <priority>0.70</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com.br?music=the-man</loc>
+  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
 <!-- Folklore -->
 
 <url>

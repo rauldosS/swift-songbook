@@ -1,5 +1,5 @@
-musicId = 'the-man'
-musicTitle = 'The Man'
+musicId = 'ready-for-it'
+musicTitle = '...Ready For It?'
 tuning = 'Eb'
 chordShape = null
 capoFret = '1'

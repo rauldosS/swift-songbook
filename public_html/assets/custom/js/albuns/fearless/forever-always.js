@@ -1,5 +1,5 @@
-musicId = 'the-man'
-musicTitle = 'The Man'
+musicId = 'forever-always'
+musicTitle = 'Forever & Always'
 tuning = 'Eb'
 chordShape = null
 capoFret = '1'

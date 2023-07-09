@@ -231,7 +231,7 @@ const albuns = [
             { id: "I Forgot That You Existed", name: "I Forgot That You Existed", blocked: true },
             { id: "Cruel Summer", name: "Cruel Summer", blocked: true },
             { id: "Lover", name: "Lover", blocked: true },
-            { id: "The Man", name: "The Man", blocked: true },
+            { id: "the-man", name: "The Man", blocked: false },
             { id: "The Archer", name: "The Archer", blocked: true },
             { id: "I Think He Knows", name: "I Think He Knows", blocked: true },
             { id: "Miss Americana & The Heartbreak Prince", name: "Miss Americana & The Heartbreak Prince", blocked: true },
