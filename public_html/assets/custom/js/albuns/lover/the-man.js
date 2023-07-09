@@ -7,15 +7,18 @@ spotify = 'https://open.spotify.com/embed/track/3RauEVgRgj1IuWdJ9fDs70?utm_sourc
 chordsMusic = ['F', 'G', 'C', 'Am']
 videoUrl = 'https://www.youtube.com/embed/JH14683wgl0'
 basicCipher = false
+palmMute = true
 
 partsCipher = [
+    { type: 'alert',                id: 'palmMute' },
+
     { type: 'progression',          id: 'main' },
 
     { type: 'cipherLyrics',         id: 'firstVerse' },
 
+    { type: 'progression',          id: 'chorus' },
     { type: 'cipherLyrics',         id: 'firstPreChorus' },
 
-    { type: 'progression',          id: 'chorus' },
     { type: 'cipherLyrics',         id: 'chorus' },
 
     { type: 'cipherLyrics',         id: 'secondVerse' },
@@ -47,7 +50,7 @@ progressions = [
         caption: '',
         progressionCaption: '',
         notes: ['F', 'G', 'C', 'Am'],
-        progression: 'D - U D U - D - U D U - D D U',
+        progression: 'D - U D U D - U D U D - D U',
     },
     {
         id: 'bridge',
@@ -56,6 +59,7 @@ progressions = [
         progressionCaption: '',
         notes: ['F', 'G', 'C', 'Am'],
         progression: 'D D D D D D D D D',
+        palmMute: true
     }
 ]
 
@@ -192,11 +196,11 @@ They'd paint me out to be bad
           Am
 So, it's okay that I'm mad
 ${ divider }
-F                         G
+F                         G                                         <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 I'm so sick of running as fast as I can
-C                                      Am
+C                                      Am                           <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
  Wondering if I'd get there quicker if I was a man (You know that)
-    F                          G
+    F                          G                                    <span class="badge badge-info-cipher rounded-pill">Verse Progression...</span>
 And I'm so sick of them coming at me again (Coming at me again)
           C
 'Cause if I was a man (If I was a man)
