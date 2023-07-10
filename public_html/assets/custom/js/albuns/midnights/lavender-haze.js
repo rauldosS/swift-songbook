@@ -239,11 +239,11 @@ And you don't really read into
            Am
 My melancholia
 ${ divider }
-Em                                   D
+C                                    D
  I've been under scrutiny (Yeah, oh, yeah)
-                                      G
+                                      Am
 You handled it beautifully (Yeah, oh, yeah)
-                                      A
+                                      <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-ban strum"></i> No Chords Strumming</span>
 All this shit is new to me (Yeah, oh, yeah)
 ${ divider }
 C
@@ -272,11 +272,11 @@ The only kinda girl they see (Only kinda girl they see)
                     Am
 Is a one-night or a wife
 ${ divider }
-Em                            D
+C                              D
  I find it dizzying (Yeah, oh, yeah)
-                                          G
+                                          Am
 They're bringin' up my history (Yeah, oh, yeah)
-                                        A
+                                        <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-ban strum"></i> No Chords Strumming</span>
 But you ain't even listening (Yeah, oh, yeah)
 ${ divider }
 C
@@ -308,7 +308,7 @@ D
 I just need this love spiral
 Am
 Get it off your chest
-Am                      <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-ban strum"></i> No Chords Strumming</span>
+<span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-ban strum"></i> No Chords Strumming</span>
 Get it off my desk
 ${ divider }
 C
