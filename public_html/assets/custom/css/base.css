@@ -4,7 +4,7 @@
     --color-fearless: #cca965;
     --color-lover: #df6395;
     --color-red: #c01838;
-    --color-speak-now: #8572a0;
+    --color-speak-now: #5b225b;
     --color-1989: #667787;
     --color-reputation: #c0b297;
     --color-folklore: #a5a5a5;
@@ -247,43 +247,43 @@ header img {
 /* COLOR */
 
 .color-taylor-swift {
-    color: var(--color-taylor-swift);
+    color: var(--color-taylor-swift) !important;
 }
 
 .color-fearless {
-    color: var(--color-fearless);
+    color: var(--color-fearless) !important;
 }
 
 .color-lover {
-    color: var(--color-lover);
+    color: var(--color-lover) !important;
 }
 
 .color-red {
-    color: var(--color-red);
+    color: var(--color-red) !important;
 }
 
 .color-speak-now {
-    color: var(--color-speak-now);
+    color: var(--color-speak-now) !important;
 }
 
 .color-1989 {
-    color: var(--color-1989);
+    color: var(--color-1989) !important;
 }
 
 .color-reputation {
-    color: var(--color-reputation);
+    color: var(--color-reputation) !important;
 }
 
 .color-folklore {
-    color: var(--color-folklore);
+    color: var(--color-folklore) !important;
 }
 
 .color-evermore {
-    color: var(--color-evermore);
+    color: var(--color-evermore) !important;
 }
 
 .color-midnights {
-    color: var(--color-midnights);
+    color: var(--color-midnights) !important;
 }
 
 /* BORDER */
@@ -488,6 +488,34 @@ article {
 
 .blocking {
     color: #8c52fe !important;
+}
+
+.chordChange {
+    color: #54bd36 !important;
+}
+
+.repeatChord {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid var(--color-red);
+    padding-left: 6px;
+    color: var(--color-red);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+i[note] {
+    position: relative !important;
+}
+
+i[note]::after {
+    content: attr(note);
+    position: absolute;
+    left: 1px;
+    bottom: 22px;
+    color: #54bd36;
+    font-size: 14px;
 }
 
 .cipher-tone {

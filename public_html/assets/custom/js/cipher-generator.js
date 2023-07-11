@@ -109,24 +109,52 @@ createChordsHTML = () => {
     ChordJS.replace()
 }
 
-createArrowsProgression = (baseProgression, palmMute = false, blocking = false) => {
-    return baseProgression.split(' ').map((progression) => {
-        if (progression === 'break') return `<br>`
-        if (progression === 'D') return `<i class="fa-solid fa-arrow-down-long ${ palmMute ? 'palm-mute' : '' } ${ blocking ? 'blocking' : '' }"></i> `
-        if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long ${ palmMute ? 'palm-mute' : '' } ${ blocking ? 'blocking' : '' }"></i> `
-        if (progression === 'block') return '<i class="fa-solid fa-ban strum"></i> '
+createArrowsProgression = (baseProgression, changeChord = null, palmMute = false, blocking = false) => {
+    let chordChange = false
+    let chordChangeColor = false
+    return baseProgression.split(' ').map((progression, i, {length}) => {
+        if (progression === 'D') {
+            return `<i class="fa-solid fa-arrow-down-long 
+                ${ palmMute ? 'palm-mute' : '' } 
+                ${ blocking ? 'blocking' : '' } 
+                ${ chordChangeColor ? 'chordChange' : '' }"
+                ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+            ></i> `
+        }
+        chordChange = false
+        if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long 
+            ${ palmMute ? 'palm-mute' : '' } 
+            ${ blocking ? 'blocking' : '' } 
+            ${ chordChangeColor ? 'chordChange' : '' }"
+            ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+        ></i> `
         if (progression === '-') return `<span class="strum">${ progression }</span> `
-        return progression
+        if (progression === 'break') return `<br>`
+        if (progression === 'block') return '<i class="fa-solid fa-ban strum"></i> '
+        chordChange = progression === 'chordChange'
+        chordChangeColor = progression === 'chordChange'
+        return ''
     }).join('')
 }
 
 createNotes = (notes) => {
+    let chordChange = false
+
     return notes.map((note) => {
+        if (note === 'doubleBreak') return `<br><br>| `
         if (note === 'break') return `<br>| `
-        if (note === 'block') return '<i class="fa-solid fa-ban strum"></i> |'
+        if (note === 'block') return '<i class="fa-solid fa-ban strum"></i> '
         if (note === '...') return `<b>...</b>`
+        if (note.includes('x')) return `<b class="color-red">${ note }</b>`
         if (note.includes(',')) {
-            return note.split(',').map((n, i, {length}) => `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `).join('')
+            return note.split(',').map((n, i, {length}) => {
+                if (chordChange) return `<b class="chordChange">${ n }</b> ${ i + 1 === length ? ' | ' : '' } `
+                if (n === ' chordChange') {
+                    chordChange = true
+                    return ''
+                } else chordChange = false
+                return `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `
+            }).join('')
         }
         return `<b>${ note }</b> | `
     }).join('')
@@ -169,9 +197,14 @@ createProgressionHTML = () => {
 
         const arrowProgression = progression.progression !== undefined ? createArrowsProgression(
             progression.progression,
+            progression.chordChange !== undefined ? progression.chordChange : null,
             progression.palmMute !== undefined,
             progression.blocking !== undefined
         ) : ''
+
+        const repeat = progression.repeat !== undefined ? `<div class="repeatChord">
+            ${ progression.repeat }
+        </div>` : ''
 
         progressionsHtml[progression.id] = `
             <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
@@ -183,7 +216,8 @@ createProgressionHTML = () => {
                             <div class="">${ progression.caption }</div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center text-start">
+                    ${ repeat }
+                    <div class="d-flex align-items-center text-start ms-auto">
                         <div class="fw-bold">${ arrowProgression }</div>
                     </div>
                 </div>
@@ -214,7 +248,7 @@ createCipherLyricsHTML = () => {
     const cipherLyricsList = cipherLyrics.split(divider)
 
     cipherParts.forEach((part, index) => {
-        cipherLyricsPartsHtml[part.id] = part.ignoreTitle ? `<pre type="lyrics">
+        cipherLyricsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `<pre type="lyrics">
             ${ cipherLyricsList[index] }
             </pre>` : `<pre type="lyrics">
 <a
@@ -228,7 +262,7 @@ createCipherLyricsHTML = () => {
             ${ cipherLyricsList[index] }
             </pre>`
 
-        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle ? `${ cipherLyricsList[index] }` : `
+        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `${ cipherLyricsList[index] }` : `
 <a
     onclick="scrollToElement('#progression-${ part.referenceProgression.id }')"
     data-toggle="tooltip"

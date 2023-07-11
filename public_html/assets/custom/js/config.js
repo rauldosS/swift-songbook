@@ -149,7 +149,7 @@ const albuns = [
             { id: "Mean", name: "Mean", blocked: true },
             { id: "The Story Of Us", name: "The Story Of Us", blocked: true },
             { id: "Never Grow Up", name: "Never Grow Up", blocked: true },
-            { id: "Enchanted", name: "Enchanted", blocked: true },
+            { id: "enchanted", name: "Enchanted", blocked: false },
             { id: "Better Than Revenge", name: "Better Than Revenge", blocked: true },
             { id: "Innocent", name: "Innocent", blocked: true },
             { id: "Haunted", name: "Haunted", blocked: true },
