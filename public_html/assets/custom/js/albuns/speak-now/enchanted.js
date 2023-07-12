@@ -8,6 +8,12 @@ chordsMusic = ['G', 'C', 'D', 'Em', 'Bm']
 videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
 palmMute = true
 
+// https://www.youtube.com/watch?v=h0Zewndw2u0&ab_channel=TunezbyLucz
+// https://drive.google.com/file/d/1Rs2xPG0A0_Rrd7OGUeoACf4sn6EPeD4U/view
+
+// Variação no Dsus4 no início
+// Com ou sem capotrastes nas tbs
+
 partsCipher = [
     { type: 'alert',                 id: 'palmMute' },
 
@@ -172,7 +178,6 @@ A|--------------------------------------------|
 E|--------------------------------------------|`
         ]
     },
-    
     {
         id: 'bridge',
         title: 'Bridge',

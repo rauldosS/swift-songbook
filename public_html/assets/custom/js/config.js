@@ -37,7 +37,7 @@ const userContainsLanguage = languages.includes(userLang)
 const chordsHtml = {
     C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
     'C/E': `<chord name="C/E" positions="032010" fingers="-32-1-" size="2" ></chord>`,
-    Cadd9: `<chord name="Cadd9" positions="x32030" fingers="-21-3-" size="2" ></chord>`,
+    Cadd9: `<chord name="Cadd9" positions="x32033" fingers="-21-34" size="2" ></chord>`,
     E: `<chord name="E" positions="022100" fingers="-231--" size="2" ></chord>`,
     Em: `<chord name="Em" positions="022000" fingers="-23---" size="2" ></chord>`,
     F: `<chord name="F" positions="133211" fingers="134211" size="2" ></chord>`,
@@ -281,7 +281,7 @@ const albuns = [
             { id: "epiphany", name: "epiphany", blocked: true },
             { id: "betty", name: "betty", blocked: true },
             { id: "​peace", name: "​peace", blocked: true },
-            { id: "hoax", name: "hoax", blocked: true },
+            { id: "hoax", name: "hoax", blocked: false },
             { id: "the lakes", name: "the lakes", blocked: true },
         ]
     },

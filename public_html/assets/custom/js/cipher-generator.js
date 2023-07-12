@@ -143,7 +143,7 @@ createNotes = (notes) => {
     return notes.map((note) => {
         if (note === 'doubleBreak') return `<br><br>| `
         if (note === 'break') return `<br>| `
-        if (note === 'block') return '<i class="fa-solid fa-ban strum"></i> '
+        if (note === 'block') return '<i class="fa-solid fa-ban strum"></i> |'
         if (note === '...') return `<b>...</b>`
         if (note.includes('x')) return `<b class="color-red">${ note }</b>`
         if (note.includes(',')) {
