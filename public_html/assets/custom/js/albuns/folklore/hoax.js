@@ -29,10 +29,10 @@ partsCipher = [
 
     { type: 'tabs',                 id: 'secondPreChorus' },
     { type: 'progression',          id: 'secondPreChorus' },
-    { type: 'cipherLyrics',         id: 'preChorus' },
+    { type: 'cipherLyrics',         id: 'secondPreChorus' },
 
     { type: 'progression',          id: 'secondChorus' },
-    { type: 'cipherLyrics',         id: 'chorus' },
+    { type: 'cipherLyrics',         id: 'secondChorus' },
 
     { type: 'progression',          id: 'bridge' },
     { type: 'cipherLyrics',         id: 'bridge' },
@@ -66,8 +66,16 @@ progressions = [
         title: 'Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['Em', 'G', 'break', 'Cadd9', 'D', 'break', 'G'],
-        progression: 'D - D - D U break D - D U D U break D - D D D U',
+        notes: ['Em', 'G', 'break', 'Cadd9, D'],
+        progression: 'D - D - D U break D - D U D U',
+    },
+    {
+        id: 'secondVerse',
+        title: 'Verse 2',
+        caption: '',
+        progressionCaption: '',
+        notes: ['Am', 'G', 'Cadd9', 'D'],
+        progression: 'D - D D',
     },
     {
         id: 'secondPreChorus',
@@ -82,13 +90,13 @@ progressions = [
         title: 'Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['Em', 'G', 'break', 'Cadd9', 'D', 'break', 'G'],
-        progression: 'D - D - D U break D - D U D U break D - D D D U',
+        notes: ['Em', 'G', 'break', 'Cadd9, D'],
+        progression: 'D - D - D U break D - D U D U',
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        caption: '',
+        caption: 'Play the D chord more freely',
         progressionCaption: '',
         notes: ['Am', 'G', 'Cadd9', 'D'],
         progression: 'D - - D - D U',
@@ -99,8 +107,8 @@ progressions = [
         title: 'Outro',
         caption: '',
         progressionCaption: '',
-        notes: ['G', 'Cadd9', 'D', 'G', 'break', 'G', 'Cadd9', 'D', 'G', 'break', 'Em', 'Cadd9', 'D', 'block', 'x2'],
-        progression: 'D - - - - - - break D - - D - D U break D - D - D - D',
+        notes: ['G', 'Cadd9', 'D', 'break', 'G', 'G', 'Cadd9', 'break', 'D', 'break', 'G', 'break', 'Em', 'Cadd9', 'D', 'block', 'x2'],
+        progression: 'D - - - - - - break D - - D - D U break D - - U D D - break U D - D U D U break D D D - D - U',
         chordChange: 'G'
     },
 ]
@@ -117,7 +125,7 @@ G|------2----0--0-----x--0--------2----0--0--2--2-|
 D|-----------2--2-----0--0-------------0--0--0--0-|
 A|-----------2--x-----2--x-------------3----------|
 E|-----------0--x-----3--x------------------------|
-             D  U     D  D             D  U  D  D`,
+             <b>D</b>  <b>U</b>     <b>D</b>  <b>D</b>             <b>D</b>  <b>U</b>  <b>D</b>  <b>D</b>`,
 `             <b>Em</b>       <b>G</b>                <b>Cadd9</b> <b>D</b>    
 E|-0---------x--x-----x-----------------------2---|
 B|--3-0---0--x--0-----x--------3-----------3--3---|
@@ -125,7 +133,7 @@ G|------2----0--0-----x-----0-----------0-----2---|
 D|-----------2--2-----0--0-----------0--------0---|
 A|-----------2--x-----2-----------3---------------|
 E|-----------0--x-----3---------------------------|
-             D  U     D                       D`
+             <b>D</b>  <b>U</b>     <b>D</b>                       <b>D</b>`
         ]
     },
     {
@@ -152,7 +160,7 @@ G|------2----0--0-----x--0--------2----0--0--2--2-|
 D|-----------2--2-----0--0-------------0--0--0--0-|
 A|-----------2--x-----2--x-------------3----------|
 E|-----------0--x-----3--x------------------------|
-             D  U     D  D             D  U  D  D`,
+             <b>D</b>  <b>U</b>     <b>D</b>  <b>D</b>             <b>D</b>  <b>U</b>  <b>D</b>  <b>D</b>`,
 `             <b>Em</b>       <b>G</b>                <b>Cadd9</b> <b>D</b>    
 E|-0---------x--x-----x-----------------------2---|
 B|--3-0---0--x--0-----x--------3-----------3--3---|
@@ -160,7 +168,7 @@ G|------2----0--0-----x-----0-----------0-----2---|
 D|-----------2--2-----0--0-----------0--------0---|
 A|-----------2--x-----2-----------3---------------|
 E|-----------0--x-----3---------------------------|
-             D  U     D                       D`
+             <b>D</b>  <b>U</b>     <b>D</b>                       <b>D</b>`
         ]
     },
     {
@@ -181,27 +189,26 @@ E|---------|`
         title: 'Final',
         tabs: [
 `
-            <b>G</b>       <b>Cadd9</b>                <b>D</b>      <b>G</b>                  <b>G</b>   <b>Cadd9</b>  
-E|-------------2-------x--x----------------------------------------2----------|
-B|-1-0---------2-------x--3-----1-0----------0----------1-0--------2----------|
-G|-----2-0-----0-------0--0---------2-0----2--------0-------2-0----0---0------|
-D|-------------0-------0--0--------------0--------0----------------0---0--0---|
-A|------------------3--3--x----------------------------------------x---3------|
-E|----------3-----------------------------------3----------------3-x----------|
-               <b>D</b>       <b>D</b>  <b>D</b>                                `,
+   <b>Em</b>       <b>G</b>       <b>Cadd9</b>                <b>D</b>      <b>G</b>
+E|-------------2-------x--x---------------------------|
+B|-1-0---------2-------x--3-----1-0----------0--------|
+G|-----2-0-----0-------0--0---------2-0----2--------0-|
+D|-------------0-------0--0--------------0--------0---|
+A|------------------3--3--x---------------------------|
+E|----------3-----------------------------------3-----|
+               <b>D</b>       <b>D</b>  <b>D</b>`,
                `
-   <b>Cadd9</b>       <b>D</b>         <b>D4</b>  <b>G</b>
-E|-3---3-3-3---2--2-2-2--3---3---|
-B|-3---3-3-3---3--3-3-3--3---3---|
-G|-0---0-0-0---2--2-2-2--2---0---|
-D|-2---2-2-2-----------------0---|
-A|-3---3-3-3-----------------2---|
-E|---------------------------3---|
-   <b>D</b>   <b>D</b> <b>D</b> <b>U</b>   <b>D</b>  <b>D</b> <b>U</b> <b>D</b>  <b>D</b>   <b>D</b>`
+   <b>Em</b>       <b>G</b>      <b>Cadd9</b>  <b>Cadd9</b>   <b>D</b>         <b>D4</b>  <b>G</b>
+E|-------------2----------3-3-3---2--2-2-2--3---3-|
+B|-1-0---------2----------3-3-3---3--3-3-3--3---3-|
+G|-----2-0-----0------0---0-0-0---2--2-2-2--2---0-|
+D|-------------0------2---2-2-2-----------------0-|
+A|-------------x---3------3-3-3-----------------2-|
+E|----------3--x--------------------------------3-|
+                          <b>D</b> <b>D</b> <b>U</b>   <b>D</b>  <b>D</b> <b>U</b> <b>D</b>  <b>D</b>   <b>D</b>`
         ]
     },
 ]
-
 
 cipherParts = [
     {
@@ -212,32 +219,42 @@ cipherParts = [
     {
         id: 'preChorus',
         title: 'Pre-chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'preChorus')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
+    },
+    {
+        id: 'secondPreChorus',
+        title: 'Pre-chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'secondPreChorus')
+    },
+    {
+        id: 'secondChorus',
+        title: 'Chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
         id: 'outro',
         title: 'Outro',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'outro')
     },
     {
         id: 'final',
         title: 'Final',
-        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'outro')
     }
 ]
 
@@ -278,6 +295,16 @@ My barren land
      Cadd9             D
 I am ash from your fire
 ${ divider }
+Em            Cadd9              D         G
+ Stood on the cliffside screaming, "Give me a reason"
+Em              Cadd9        D        G
+ Your faithless love's the only hoax I believe in
+${ divider }
+Am              G             Cadd9     D
+ Don't want no other shade of blue but you
+Am        G              Cadd9       D
+ No other sadness in the world would do
+${ divider }
 Am          G                            Cadd9
  You know I left a part of me back in New York
               D                            Am
@@ -296,7 +323,7 @@ Am            G                           Cadd9
  From when they pulled me apart
                             Am
  But what you did was just as dark
-G     C   D
+G     Cadd9  D
  (Ah, ah, ah)
                     Am
  Darling, this was just as hard
