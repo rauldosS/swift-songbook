@@ -109,6 +109,10 @@ updateLanguage = () => {
 
     $('#mostAccessed h4').text(language.mostAccessTitle)
 
+    $('#influencers-title').text(language.influencers.title)
+    $('#influencers-data').html(language.influencers.data)
+    $('#influencers-luca').text(language.influencers.luca)
+
     $('#contribution-info h4').text(language.contribution.title)
     $('#contribution-info .info-data').html(language.contribution.info)
     $('#qr-data h3').text(language.contribution.paymant.title)

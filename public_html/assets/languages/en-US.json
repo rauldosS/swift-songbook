@@ -1,6 +1,6 @@
 {
     "code": "en-US",
-    "mainAlert": "Only the chord sheets for <b>\"Fearless\"</b>, <b>\"Lavender Haze\"</b>, <b>\"Red\"</b>, <b>\"Cardigan\"</b>, <b>\"Anti-Hero\"</b>, <b>\"Karma\"</b>, <b>\"The Man\"</b> and <b>\"Come Back... Be Here\"</b> are currently available. Our website is in the testing phase. We would appreciate your suggestions and feedback!",
+    "mainAlert": "Our website is in the testing phase. We would appreciate your suggestions and feedback! Check out the 10 songs available below.",
     "summary": "<p>Welcome to \"Taylor's Songbook\"! Our site is a real treasure trove of chords for the songs of the talented Taylor Swift. Here you'll find a comprehensive collection of chords, lyrics and interactive features for each of her songs.</p><p>Browse our catalog organized by albums, where each page is carefully designed with typography and colors that represent the spirit of each of Taylor's musical works. Our goal is to provide an immersive experience for fans and musicians who want to explore, play or sing Taylor Swift's songs.</p><p>In addition to chords and lyrics, we provide detailed rhythm progressions for each song, allowing you to capture the essence of the songs' rhythm and groove. We also offer tablature for guitar and other instruments (in the future), making it possible to recreate the authentic arrangements of the songs.</p><p>In \"Taylor's Songbook\" you will find additional resources such as tutorial videos, technique and performance tips and the possibility to interact with other fans and musicians in the community <a href=\"https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP\" target=\"_blank\">(WhatsApp)</a>. Share your own versions and discover new interpretations of Taylor's songs.</p><p>Get ready to explore Taylor Swift's musical world in a comprehensive and inspiring way. Embrace the magic of your songwriting, refine your performance and enjoy the incredible musical journey that is \"Taylor's Songbook\". Let's play like Taylor!</p>",
     "whatsapp": "Interact with other fans and musicians in our group",
     "mostAccessTitle": "Most Accessed",
@@ -53,5 +53,10 @@
         "capo": ["0", "st", "nd", "rd", "th"],
         "chordShape": "chord shape in the key of",
         "basicCipher": "Basic chord chart, with details being developed for a more comprehensive version."
+    },
+    "influencers": {
+        "title": "Influencers",
+        "data": "<p>\"Taylor's Songbook\" is a website that aims to <b class='color-red'>bring together influencers and talented musicians</b> to offer Taylor Swift fans a unique experience playing charts.</p><p>In addition to the traditional versions, we are highlighting influencers who bring their own approaches and alternative versions of the ciphers. Thanks to all these influencers for being sources of inspiration and for being part of this exciting journey of creating an environment where fans find the figures they've always dreamed of playing.</p><p>We will continue to add more influencers and inspiring figures over time. Together, we're creating a space where Taylor Swift's music comes to life in unique and exciting ways.</p>",
+        "luca": "On his channel he posts guitar covers of many different songs, with tabs, chords and strums on screen."
     }
 }

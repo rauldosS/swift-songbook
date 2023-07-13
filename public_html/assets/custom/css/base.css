@@ -13,6 +13,7 @@
     --linear-gradient-midnights: linear-gradient(90deg, rgba(73,86,125,1) 0%, rgba(132,170,189,1) 50%);
     --webkit-linear-gradient-midnights: -webkit-linear-gradient(0deg, rgba(73,86,125,1) 0%, rgba(132,170,189,1) 50%);
     --color-whatsapp: #73c591;
+    --color-youtube: #f00;
     --font-taylor-swift: 'Sacramento', cursive;
     --font-fearless: 'Montserrat', sans-serif;
     --font-speak-now: 'Rochester', cursive;
@@ -708,6 +709,18 @@ i[note]::after {
     background-color: #FFF;
 }
 
+.btn-youtube {
+    background-color: var(--color-youtube);
+    color: #FFF;
+    gap: 5px;
+}
+
+.btn-youtube:hover {
+    background-color: #FFF !important;
+    color: var(--color-youtube);
+    border: 1px solid var(--color-youtube);
+}
+
 .btn-whatsapp i {
     font-size: 32px;
 }
@@ -718,6 +731,25 @@ i[note]::after {
 
 #google-form {
     height: 100%;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
 }
 
 @media(max-width: 992px) {
