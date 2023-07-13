@@ -109,7 +109,7 @@ const albuns = [
         id: 'fearless',
         name: 'Fearless',
         musics: [
-            { id: 'fearless', name: 'Fearless', blocked: false },
+            { id: 'fearless', name: 'Fearless', blocked: false, by: "Nena Shelby" },
             { id: 'Fifteen', name: 'Fifteen', blocked: true },
             { id: 'Love Story', name: 'Love Story', blocked: true },
             { id: 'Hey Stephen', name: 'Hey Stephen', blocked: true },

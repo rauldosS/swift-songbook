@@ -60,31 +60,72 @@
                 <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="assets/images/influencers/luca.jpg" >
 
                 <h2>Luca</h2>
-                <p id="influencers-luca">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p>
-                    <a class="btn btn-secondary mb-2" href="#">Details and Chords <i class="fa-solid fa-guitar"></i></a>
+                <p id="influencers-luca"></p>
+                <div>
                     <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@tunezbylucz7752" target="_blank">Youtube <i class="fa-brands fa-youtube"></i></a>
-                </p>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-guitar"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-speak-now" music="enchanted" album="speak-now">Enchanted</button>
+                            <button class="dropdown-item color-midnights" music="anti-hero" album="midnights">Anti-Hero</button>
+                            <button class="dropdown-item color-midnights" music="karma" album="midnights">Karma</button>
+                            <button class="dropdown-item color-midnights" music="lavender-haze" album="midnights">Lavender Haze</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
                 <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="assets/images/influencers/nena.jpg" >
 
                 <h2>Nena Shelby</h2>
-                <p id="influencers-nena">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p>
-                    <a class="btn btn-secondary mb-2" href="#">Details and Chords <i class="fa-solid fa-guitar"></i></a>
+                <p id="influencers-nena"></p>
+                <div>
                     <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@NenaShelby" target="_blank">Youtube <i class="fa-brands fa-youtube"></i></a>
-                </p>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-guitar"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-fearless" music="fearless" album="fearless">Fearless</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
                 <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="assets/images/influencers/mike.jpg" >
 
                 <h2>Mike Garcia</h2>
-                <p id="influencers-mike">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p>
-                    <a class="btn btn-secondary mb-2" href="#">Details and Chords <i class="fa-solid fa-guitar"></i></a>
+                <p id="influencers-mike"></p>
+                <div>
                     <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@MikeLive1285" target="_blank">Youtube <i class="fa-brands fa-youtube"></i></a>
-                </p>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-guitar"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-folklore" music="hoax" album="folklore">Hoax</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="assets/images/influencers/goddess.jpg" >
+
+                <h2>Guitar Goddess</h2>
+                <p id="influencers-goddess"></p>
+                <div>
+                    <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@GuitarGoddess" target="_blank">Youtube <i class="fa-brands fa-youtube"></i></a>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-guitar"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-lover" music="the-man" album="lover">The Man</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -190,7 +231,7 @@
         `)
     })
 
-    $('#mostAccessed li').not('[blocked]').on('click', function() {
+    $('[music]').not('[blocked]').on('click', function() {
         selectMusic($(this).attr('music'))
     })
 

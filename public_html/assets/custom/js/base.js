@@ -115,6 +115,7 @@ updateLanguage = () => {
     $('#influencers-luca').text(language.influencers.luca)
     $('#influencers-nena').text(language.influencers.nena)
     $('#influencers-mike').text(language.influencers.mike)
+    $('#influencers-goddess').text(language.influencers.goddess)
 
     $('#contribution-info h4').text(language.contribution.title)
     $('#contribution-info .info-data').html(language.contribution.info)

@@ -423,9 +423,9 @@ article {
     cursor: pointer;
 }
 
-.tooltip-inner {
+/* .tooltip-inner {
     max-width: 300px;
-}
+} */
 
 .tab {
     white-space: break-spaces;
@@ -580,9 +580,9 @@ i[note]::after {
     font-weight: 600;
 }
 
-.dropdown-menu {
-    border-radius: 0 !important;
-    padding: 0;
+.dropdown-menu.show {
+    /* padding: 0; */
+    top: 2px !important;
 }
 
 .dropdown-menu li {
