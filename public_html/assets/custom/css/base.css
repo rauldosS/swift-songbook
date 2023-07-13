@@ -423,9 +423,9 @@ article {
     cursor: pointer;
 }
 
-/* .tooltip-inner {
+.tooltip-inner {
     max-width: 300px;
-} */
+}
 
 .tab {
     white-space: break-spaces;
