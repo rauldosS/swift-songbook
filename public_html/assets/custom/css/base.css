@@ -733,6 +733,10 @@ i[note]::after {
     height: 100%;
 }
 
+[data-adtest="on"] {
+    background-color: rgb(200, 200, 200);
+}
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
