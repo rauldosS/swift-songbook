@@ -582,7 +582,7 @@ i[note]::after {
 
 .dropdown-menu.show {
     /* padding: 0; */
-    top: 2px !important;
+    /* top: 2px !important; */
 }
 
 .dropdown-menu li {
