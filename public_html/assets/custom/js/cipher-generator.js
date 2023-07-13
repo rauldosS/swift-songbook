@@ -218,7 +218,7 @@ createProgressionHTML = () => {
                     </div>
                     ${ repeat }
                     <div class="d-flex align-items-center text-start ms-auto">
-                        <div class="fw-bold">${ arrowProgression }</div>
+                        <div class="fw-bold strumming">${ arrowProgression }</div>
                     </div>
                 </div>
                 <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-album">${ progression.title }</span>

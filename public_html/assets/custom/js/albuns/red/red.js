@@ -9,23 +9,26 @@ chordsMusic = ['F', 'Am', 'G', 'C', 'G/B', 'C/E']
 videoUrl = 'https://www.youtube.com/embed/Zlot0i3Zykw'
 
 partsCipher = [
-    { type: 'progression',      id: 'intro' },
     { type: 'tabs',             id: 'intro' },
 
+    { type: 'progression',      id: 'intro' },
     { type: 'tabs',             id: 'verse' },
     { type: 'cipherLyrics',     id: 'firstVerse' },
 
-    { type: 'progression',      id: 'chorus' },
+    { type: 'progression',      id: 'firstChorus' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
     { type: 'progression',      id: 'postChorus' },
-    { type: 'cipherLyrics',     id: 'postFirstChorus' },
+    { type: 'cipherLyrics',     id: 'firstPostChorus' },
 
     { type: 'progression',      id: 'secondVerse' },
     { type: 'cipherLyrics',     id: 'secondVerse' },
 
-    { type: 'cipherLyrics',     id: 'firstChorus' },
-    { type: 'cipherLyrics',     id: 'postFirstChorus' },
+    { type: 'progression',      id: 'secondChorus' },
+    { type: 'cipherLyrics',     id: 'secondChorus' },
+
+    { type: 'progression',      id: 'secondPostChorus' },
+    { type: 'cipherLyrics',     id: 'secondPostChorus' },
 
     { type: 'progression',      id: 'bridge' },
     { type: 'cipherLyrics',     id: 'bridge' },
@@ -53,7 +56,7 @@ progressions = [
         progression: 'D - - - - - - -'
     },
     {
-        id: 'chorus',
+        id: 'firstChorus',
         title: 'Chorus',
         caption: '',
         notes: ['F', 'C', 'G', 'G', 'break', 'F', 'Am', 'G', 'G'],
@@ -61,7 +64,7 @@ progressions = [
         progression: 'D - D - D U D U'
     },
     {
-        id: 'postChorus',
+        id: 'firstPostChorus',
         title: 'Post Chorus',
         caption: '',
         notes: ['F', 'Am', 'G', 'G'],
@@ -71,6 +74,22 @@ progressions = [
     {
         id: 'secondVerse',
         title: 'Verse 2',
+        caption: '',
+        notes: ['F', 'Am', 'G', 'G', 'x2', 'break', 'F', 'Am', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - - - - - - - break block block D block block D block D'
+    },
+    {
+        id: 'secondChorus',
+        title: 'Chorus',
+        caption: '',
+        notes: ['F', 'C', 'G', 'G'],
+        progressionCaption: '',
+        progression: 'D - D - D U D U'
+    },
+    {
+        id: 'secondPostChorus',
+        title: 'Post Chorus',
         caption: '',
         notes: ['F', 'Am', 'G', 'G'],
         progressionCaption: '',
@@ -176,49 +195,51 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'intro')
     },
     {
         id: 'firstChorus',
         title: 'Chorus',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+        referenceProgression: progressions.find(progression => progression.id === 'firstChorus')
     },
     {
-        id: 'postFirstChorus',
+        id: 'firstPostChorus',
         title: 'Post Chorus',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
+        referenceProgression: progressions.find(progression => progression.id === 'firstPostChorus')
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
+    },
+    {
+        id: 'secondChorus',
+        title: 'Chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
+    },
+    {
+        id: 'secondPostChorus',
+        title: 'Post Chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'secondPostChorus')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
         id: 'lastChorus',
         title: 'Last Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
     },
     {
         id: 'postLastChorus',
         title: 'Post Last Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'postLastChorus')
     },
     {
         id: 'outro',
         title: 'Outro',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'outro')
     }
 ]
@@ -274,7 +295,25 @@ Crossword and realizing there's no right answer
                         F                        Am
 Regretting him was like wishing you never found out 
                        G
-That love could be that strong 
+That love could be that strong
+${ divider }
+               F                    C
+Losing him was blue, like I'd never known
+                G
+Missing him was dark grey, all alone
+                   F                       Am
+Forgetting him was like trying to know somebody
+          G
+You never met
+${ divider }
+                   F
+But loving him was red
+          Am        G
+Re ee ed, re ee ed, re ee ed
+               F
+Lovin' him was red
+          Am        G
+Re ee ed, re ee ed, re ee ed
 ${ divider }
                          F               G
 Remembering him comes in flashbacks and echos

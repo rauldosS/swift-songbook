@@ -99,6 +99,10 @@ header {
     font-weight: 800;
 }
 
+.strumming {
+    text-align-last: justify;
+}
+
 .loading {
     display: flex !important;
     justify-content: center !important;
