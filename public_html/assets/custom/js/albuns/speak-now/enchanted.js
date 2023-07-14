@@ -4,7 +4,7 @@ tuning = 'Ab Major'
 chordShape = null
 capoFret = '1'
 spotify = 'https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm_source=generator'
-chordsMusic = ['G', 'C', 'D', 'Em', 'Bm']
+chordsMusic = ['G', 'C', 'D', 'Em', 'Bm', 'Dsus4']
 videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
 palmMute = true
 
@@ -65,7 +65,7 @@ progressions = [
         title: 'Verse 1',
         caption: '',
         progressionCaption: '',
-        notes: ['G', 'Bm', 'C', 'G', 'x2', 'break', 'C', 'Em', 'D', 'D'],
+        notes: ['G', 'Bm', 'C', 'G', 'x2', 'break', 'C', 'Em', 'D', 'Dsus4 D'],
         progression: 'D - D - D - D - D - D - D - D -',
         palmMute: true
     },
@@ -251,7 +251,7 @@ Same old tired lonely place.
 Walls of insincerity, shifting eyes and vacancy
     C                      G
 Vanished when I saw your face;
-                    C                 Em       D
+                    C                 Em       D        Dsus4 D
 All I can say is it was enchanting to meet you.
 ${ divider }
   G                                   Bm
