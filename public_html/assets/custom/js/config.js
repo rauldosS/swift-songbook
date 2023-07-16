@@ -388,6 +388,12 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
     }
 }
 
+setLoading = (loading, timeout = 0) => {
+    setTimeout(() => {
+        $('#loading').modal(loading ? 'show' : 'hide')
+    }, timeout)
+}
+
 updateCurrentContent = (content = undefined, name = undefined) => {
     currentContent['content'] = content
     currentContent['name'] = name

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    setLoading(true)
+
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
     })
@@ -13,7 +15,6 @@ $(document).ready(function () {
     })
 
     getLanguage()
-    setLoading(true)
 
     window.onload = function() {
         checkQueryParams()
@@ -37,12 +38,6 @@ const btnHome = $('#btn-home')
 
 const homePath = 'base/home'
 
-setLoading = (loading, timeout = 0) => {
-    setTimeout(() => {
-        $('#loading').modal(loading ? 'show' : 'hide')
-    }, timeout)
-}
-
 loadContent = (path, switchLanguage = false) => {
     setLoading(true)
     hideCipherWrapper()
@@ -57,16 +52,14 @@ loadContent = (path, switchLanguage = false) => {
 
     updateCurrentContent(path)
 
-    setTimeout(() => {
-        content.show()
-    }, 500)
-    
+    content.show()
+
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
     }
 
     scrollTop()
-    setLoading(false, 800)
+    setLoading(false, 500)
 }
 
 loadCopy = () => {
