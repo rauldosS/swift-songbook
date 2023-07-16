@@ -37,11 +37,14 @@ const btnHome = $('#btn-home')
 
 const homePath = 'base/home'
 
-setLoading = (loading) => {
-    $('#loading').modal(loading ? 'show' : 'hide')
+setLoading = (loading, timeout = 0) => {
+    setTimeout(() => {
+        $('#loading').modal(loading ? 'show' : 'hide')
+    }, timeout)
 }
 
 loadContent = (path, switchLanguage = false) => {
+    setLoading(true)
     hideCipherWrapper()
 
     content.append('<div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>')
@@ -63,7 +66,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false)
+    setLoading(false, 800)
 }
 
 loadCopy = () => {
