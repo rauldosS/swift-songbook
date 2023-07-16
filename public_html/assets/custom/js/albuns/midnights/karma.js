@@ -12,8 +12,7 @@ palmMute = true
 // https://drive.google.com/file/d/1EjA6xIeeES1BCYpihfd5ZMk6Y5YoQIrx/view
 
 partsCipher = [
-    { type: 'progression',           id: 'main' },
-
+    { type: 'progression',           id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'preChorus' },
 
@@ -22,7 +21,7 @@ partsCipher = [
 
     { type: 'progression',           id: 'secondVerse' },
     { type: 'cipherLyrics',          id: 'secondVerse' },
-    { type: 'cipherLyrics',          id: 'preChorus' },
+    { type: 'cipherLyrics',          id: 'secondPreChorus' },
 
     { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
@@ -42,8 +41,8 @@ partsCipher = [
 
 progressions = [
     {
-        id: 'main',
-        title: 'Intro | Main Progression',
+        id: 'firstVerse',
+        title: 'Verse | Pre-Chorus',
         caption: '',
         notes: ['D', 'C²', 'G'],
         progression: 'D - D - D - - U D U D - D - D U',
@@ -60,16 +59,23 @@ progressions = [
         id: 'secondVerse',
         title: 'Verse 2',
         caption: '',
-        notes: ['D', 'break', 'C²', 'D'],
+        notes: ['D', 'break', 'D', 'C²', 'D'],
         progression: 'D - - - - - - - - - - - - D - D U break D - D - D - - U D U D - D - D U',
         palmMute: true
+    },
+    {
+        id: 'secondChorus',
+        title: 'Chorus',
+        caption: '',
+        notes: ['D', 'C²', 'G'],
+        progression: 'D - D - D - - U D U D - D - D U'
     },
     {
         id: 'bridge',
         title: 'Bridge',
         caption: '',
         progressionCaption: '',
-        notes: ['Bm', 'G', 'F#m', 'A'],
+        notes: ['Bm', 'G', 'F#m', 'A²'],
         progression: 'D - D - D - - U D U D - D - D U',
     },
     {
@@ -96,12 +102,12 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse',
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
         id: 'preChorus',
         title: 'Pre-Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
         id: 'chorus',
@@ -114,14 +120,14 @@ cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
-        id: 'preChorus',
+        id: 'secondPreChorus',
         title: 'Pre-Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
-        id: 'chorus',
+        id: 'secondChorus',
         title: 'Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+        referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
     },
     {
         id: 'bridge',
@@ -220,7 +226,7 @@ Bm                                  G
 Ask me what I learned from all those years
                                    F#m
 Ask me what I earned from all those tears
-                             A²
+                             A                  A
 Ask me why so many fade, but I'm still here
 (I'm still here, I'm still here)
 ${ divider }
