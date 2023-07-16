@@ -44,6 +44,9 @@ partsCipher = [
     { type: 'cipherLyrics',          id: 'bridge' },
     { type: 'tabs',                  id: 'bridge' },
 
+    { type: 'progression',           id: 'breakdown' },
+    { type: 'cipherLyrics',          id: 'breakdown' },
+
     { type: 'progression',           id: 'secondChorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
 
@@ -84,8 +87,10 @@ progressions = [
         title: 'Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['G', 'G, D', 'x3', 'break', 'C', 'doubleBreak', 'Em, chordChange, D'],
-        progression: 'D - D - D - D U D - D - D - D U break break break D - D - D - D U chordChange D - D - D - D U',
+        // notes: ['C', 'G, D', 'x3', 'break', 'C', 'doubleBreak', 'Em, chordChange, D'],
+        notes: ['C', 'G, D', 'x3', 'break', 'C', 'Em, D'],
+        // progression: 'D - D - D - D U D - D - D - D U break break break D - D - D - D U chordChange D - D - D - D U',
+        progression: 'D - D - D - D U d-highlight - D - D - D U break D - D - D - D U d-highlight - D - D - D U',
         chordChange: 'D'
     },
     {
@@ -112,7 +117,7 @@ progressions = [
         caption: '',
         progressionCaption: '',
         notes: ['C', 'G, D', 'x3', 'break', 'C', 'break', 'Em, D'],
-        progression: 'D - D - D - D - D - D - D - D -',
+        progression: 'D - D - D - D U d-highlight - D - D - D U',
         repeat: 'x2'
     },
     {
@@ -360,7 +365,7 @@ I was enchanted to meet you
 ${ divider }
    G                           Bm
 Please don't be in love with someone else,
-  C                          G
+  C                          <span class="badge badge-info-cipher rounded-pill"><span class="text-white">G</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 Please don't have somebody waiting on you.
 `
 

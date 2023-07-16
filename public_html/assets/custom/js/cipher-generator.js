@@ -121,6 +121,14 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
                 ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
             ></i> `
         }
+        if (progression === 'd-highlight') {
+            return `<b class="highlight"><i class="fa-solid fa-arrow-down-long 
+                ${ palmMute ? 'palm-mute' : '' } 
+                ${ blocking ? 'blocking' : '' } 
+                ${ chordChangeColor ? 'chordChange' : '' }"
+                ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+            ></i></b> `
+        }
         chordChange = false
         if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long 
             ${ palmMute ? 'palm-mute' : '' } 
@@ -359,5 +367,5 @@ loadCipher = (music, album) => {
 
     $('#mini-player iframe').attr('src', videoUrl)
 
-    setLoading(false)
+    setLoading(false, 500)
 }
