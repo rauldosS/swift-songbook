@@ -13,6 +13,7 @@ $(document).ready(function () {
     })
 
     getLanguage()
+    setLoading(true)
 
     window.onload = function() {
         checkQueryParams()
@@ -36,6 +37,10 @@ const btnHome = $('#btn-home')
 
 const homePath = 'base/home'
 
+setLoading = (loading) => {
+    $('#loading').modal(loading ? 'show' : 'hide')
+}
+
 loadContent = (path, switchLanguage = false) => {
     hideCipherWrapper()
 
@@ -58,6 +63,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
+    setLoading(false)
 }
 
 loadCopy = () => {
@@ -79,7 +85,11 @@ checkQueryParams = () => {
     })
 
     if (params.music === null && params.album === null) {
-        loadContent(homePath, false)
+        if (params.help === '') {
+            loadContent('help', true)
+        } else {
+            loadContent(homePath, false)
+        }
     } else if (params.music != null) {
         loadMusic(params.music)
     } else if (params.album != null) {

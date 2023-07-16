@@ -358,4 +358,6 @@ loadCipher = (music, album) => {
     })
 
     $('#mini-player iframe').attr('src', videoUrl)
+
+    setLoading(false)
 }

@@ -690,9 +690,23 @@ i[note]::after {
     color: #212121;
 }
 
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path%20fill-rule='evenodd'%20d='M1.646%204.646a.5.5%200%200%201%20.708%200L8%2010.293l5.646-5.647a.5.5%200%200%201%20.708.708l-6%206a.5.5%200%200%201-.708%200l-6-6a.5.5%200%200%201%200-.708z'/></svg>");
+    transform: rotate(-180deg);
+}
+
+.accordion-body {
+    text-align: justify;
+}
+
 #collapseSummary {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FFF;
+    background-color: var(--color-midnights);
 }
 
 .btn-whatsapp {
@@ -735,6 +749,13 @@ i[note]::after {
 
 #google-form {
     height: 100%;
+}
+
+#loading .modal-content {
+    background-color: transparent;
+    color: #FFF;
+    text-align: center;
+    border: none;
 }
 
 [data-adtest="on"] {

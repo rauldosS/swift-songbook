@@ -51,13 +51,12 @@
         <div id="page-content-wrapper" class="animate__animated animate__fadeInRightBig">
 
             <div class="content shadow bg-white scrolling">
-
                 <div id="shortcuts">
                     <a id="btn-home" class="btn" href="https://taylorsongbook.com.br">
                         <i class="fa-solid fa-house"></i> <span>Início</span>
                     </a>
                     <button type="button" id="hide-albuns-toggle" class="btn">
-                        <i class="fa-solid fa-compact-disc"></i> <span></span>
+                        <span></span> <i class="fa-solid fa-compact-disc"></i>
                     </button>
                     <button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" title="Alterar língua">
                         <i class="fa-solid fa-language"></i>
@@ -66,8 +65,8 @@
                         <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')"></a></li>
                         <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')"></a></li>
                     </ul>
-                    <button id="btn-instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Instruções">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                    <button id="btn-instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Ajuda" onclick="loadContent('help', true)">
+                        <i class="fa-solid fa-question"></i>
                     </button>
                     <button id="unpin-shortcuts" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Desafixar atalhos">
                         <i class="fa-solid fa-thumbtack"></i>
@@ -75,13 +74,10 @@
                 </div>
 
                 <section id="content" class="animate__animated animate__fadeIn">
-                    <div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>
                 </section>
 
                 <div id="cipher-wrapper">
-                    <section id="cipher-content" class="my-3 cipher fearless-album-content">
-                        <div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>
-                    </section>
+                    <section id="cipher-content" class="my-3 cipher fearless-album-content"></section>
                     <section id="toolbar"></section>
                 </div>
 
@@ -102,13 +98,22 @@
 
                 <section id="contribution" class="mt-5"></section>
 
-                <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSeAj3f1djxqSKdEwXI4h333g7P26cngRMhUgrq_vJu8aERxgg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+                <iframe id="google-form" class="animate__animated animate__fadeInDown animate__delay-3s" src="https://docs.google.com/forms/d/e/1FAIpQLSeAj3f1djxqSKdEwXI4h333g7P26cngRMhUgrq_vJu8aERxgg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Loading -->
+    <div class="modal fade" id="loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i>
+                </div>
             </div>
         </div>
     </div>
 </body>
-
-
 
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
