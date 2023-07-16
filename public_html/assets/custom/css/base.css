@@ -495,7 +495,7 @@ article {
     color: #8c52fe !important;
 }
 
-.chordChange, .highlight {
+.chordChange, .highlight, #cipher-content b.highlight i {
     color: #54bd36 !important;
 }
 

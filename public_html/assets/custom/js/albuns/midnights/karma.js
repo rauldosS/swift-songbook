@@ -96,61 +96,51 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
         id: 'preChorus',
         title: 'Pre-Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
         id: 'preChorus',
         title: 'Pre-Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
         id: 'postBridge',
         title: 'Post-Bridge',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'postBridge')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'outro',
         title: 'Outro',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'outro')
     }
 ]

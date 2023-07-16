@@ -4,38 +4,99 @@ tuning = 'E'
 chordShape = null
 capoFret = '4'
 spotify = 'https://open.spotify.com/embed/track/0V3wPSX9ygBnCm8psDIegu?utm_source=generator'
-chordsMusic = ['Fsus2', 'C', 'Gsus4', 'Am7']
+chordsMusic = ['Fmaj7', 'C', 'Gadd11', 'Am7']
 videoUrl = 'https://www.youtube.com/embed/DufVVyUI_NA'
-basicCipher = true
+palmMute = true
 
 partsCipher = [
-    { type: 'progression',          id: 'main' },
-
+    { type: 'progression',          id: 'firstVerse' },
     { type: 'cipherLyrics',         id: 'firstVerse' },
 
     { type: 'cipherLyrics',         id: 'firstPreChorus' },
 
+    { type: 'progression',          id: 'chorus' },
     { type: 'cipherLyrics',         id: 'chorus' },
 
     { type: 'cipherLyrics',         id: 'instrumental' },
 
+    { type: 'progression',          id: 'secondVerse' },
     { type: 'cipherLyrics',         id: 'secondVerse' },
 
     { type: 'cipherLyrics',         id: 'secondPrechorus' },
 
+    { type: 'progression',          id: 'bridge' },
     { type: 'cipherLyrics',         id: 'bridge' },
 
-    { type: 'cipherLyrics',         id: 'outro' },
+    { type: 'progression',          id: 'lastChorus' },
+    { type: 'cipherLyrics',         id: 'lastChorus' },
+
+    { type: 'progression',          id: 'outro' },
 ]
 
 progressions = [
     {
-        id: 'main',
-        title: 'Intro | Main Progression',
+        id: 'firstVerse',
+        title: 'Verse | Pre-Chorus',
         caption: '',
         progressionCaption: '',
-        notesMultipleProgression: ['Fsus2', 'C', 'Gsus4', 'Am7'],
-        multipleProgression: ['D - U D U', 'D - U D U D D U', 'D - U D U', 'D - U D U D D U']
+        // notesMultipleProgression: ['Fmaj7', 'C', 'Gadd11', 'Am7'],
+        // multipleProgression: ['D - U D U', 'D - U D U D D U', 'D - U D U', 'D - U D U D D U']
+        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        progression: 'D - D - D - D u-highlight - U D - D - D U',
+        palmMute: true
+    },
+    {
+        id: 'secondVerse',
+        title: 'Verse | Pre-Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        progression: 'D - D - D - D u-highlight - U D - D - D U',
+        palmMute: true
+    },
+    {
+        id: 'chorus',
+        title: 'Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        progression: 'D - D - D - D u-highlight - U D - D - D U'
+    },
+    {
+        id: 'instrumental',
+        title: 'Instrumental',
+        caption: '',
+        progressionCaption: '',
+        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        progression: 'D - D - D - D u-highlight - U D - D - D U'
+    },
+    {
+        id: 'bridge',
+        title: 'Bridge',
+        caption: 'Only the first line with palm mute (x3)',
+        progressionCaption: '',
+        notes: [
+            'Fmaj7, C', 'Gadd11, Am7', 'x3', 'break',
+            'Fmaj7, C', 'Gadd11, Am7', 'break',
+            'Fmaj7, C', 'Gadd11, Am7', 'x4'
+        ],
+        progression: 'D - D - D - D u-highlight - U D - D - D U break D - D - D - D u-highlight - U D - D - D U break D - - - - - - - d-highlight - - - - - - - break'
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['-', 'C', 'Gadd11, Am7', 'break', 'Fmaj7, C', 'Gadd11, Am7', 'x3'],
+        progression: '- - - - - - - - - - - - D - D - break D - D - D - D u-highlight - U D - D - D U x'
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        caption: '',
+        progressionCaption: '',
+        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        progression: 'D - - - - - - - d-highlight - - - - - - -'
     }
 ]
 
@@ -45,135 +106,134 @@ cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
         id: 'firstPreChorus',
         title: 'Pre-chorus 1',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
-    {
-        id: 'instrumental',
-        title: 'Instrumental',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
-    },
+    // {
+    //     id: 'instrumental',
+    //     title: 'Instrumental',
+    //     referenceProgression: progressions.find(progression => progression.id === 'main')
+    // },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
         id: 'secondPrechorus',
         title: 'Pre-chorus 2',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
-        id: 'outro',
-        title: 'Outro',
-        ignoreTitle: false,
-        referenceProgression: progressions.find(progression => progression.id === 'main')
+        id: 'lastChorus',
+        title: 'Chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
     }
 ]
 
 cipherLyrics = `
-Fsus2       C                Gsus4      Am7
+Fmaj7       C                Gadd11      Am7
 I have this thing where I get older but just never wiser
-Fsus2     C              Gsus4
+Fmaj7     C              Gadd11
 Midnights become my afternoons
-Fsus2    C                    Gsus4           Am7           
+Fmaj7    C                    Gadd11           Am7           
 When my depression works the graveyard shift, all of the people
-Fsus2      C                    Gsus4
+Fmaj7      C                    Gadd11
 I’ve ghosted stand there in the room
 ${ divider }
-  Fsus2         C                Gsus4
+  Fmaj7         C                Gadd11
 I should not be left to my own devices
-     Am7                  Fsus2
+     Am7                  Fmaj7
 They come with prices and vices
-  C                 Gsus4           Am7
+  C                 Gadd11           Am7
 I end up in crisis (Tale as old as time)
-Fsus2       C             Gsus4
+Fmaj7       C             Gadd11
   I wake up screaming from dreaming
-        Am7                     Fsus2
+        Am7                     Fmaj7
 One day I’ll watch as you’re leaving
-          C                 Gsus4
+          C                 Gadd11
 Cause you got tired of my scheming
          Am7
 (For the last time)
 ${ divider }
-Fsus2  C
+Fmaj7  C
 It’s me, hi
-Gsus4                Am7
+Gadd11                Am7
 I’m the problem, it’s me
-Fsus2  C     Gsus4       Am7
+Fmaj7  C     Gadd11       Am7
 At tea time, everybody agrees
-Fsus2      C               Gsus4                  Am7
+Fmaj7      C               Gadd11                  Am7
 I’ll stare directly at the sun, but never in the mirror
-Fsus2      C         Gsus4         Am7
+Fmaj7      C         Gadd11         Am7
 It must be exhausting Always rooting for the anti-hero
 ${ divider }
-Fsus2   C   Gsus4   Am7
-${ divider }
-Fsus2    C                 Gsus4     Am7
+Fmaj7    C                 Gadd11     Am7
 Sometimes I feel like everybody is a sexy baby
-Fsus2     C               Gsus4
+Fmaj7     C               Gadd11
 And I’m a monster on the hill
-Fsus2      C                Gsus4           Am7
+Fmaj7      C                Gadd11           Am7
 Too big to hang out, slowly lurching toward your favorite city
-Fsus2          C                  Gsus4    Am7
+Fmaj7          C                  Gadd11    Am7
 Pierced through the heart, but never killed
 ${ divider }
-Fsus2      C                 Gsus4   Am7           Fsus2
+Fmaj7      C                 Gadd11   Am7           Fmaj7
   Did you hear my covert narcissism I disguise as altruism
-      C           Gsus4                    Am7
+      C           Gadd11                    Am7
 Like some kind of congressman (Tale as old as time)
-Fsus2       C                Gsus4
+Fmaj7       C                Gadd11
   I wake up screaming from dreaming
-       Am7                     Fsus2
+       Am7                     Fmaj7
 One day I’ll watch as you’re leaving
-      C                Gsus4
+      C                Gadd11
 And life will lose all its meaning
          Am7
 (For the last time)
 ${ divider }
-Fsus2      C                   Gsus4           Am7
+Fmaj7      C                   Gadd11           Am7
  I have this dream my daughter-in-law kills me for the money
-Fsus2      C              Gsus4    Am7
+Fmaj7      C              Gadd11    Am7
 She thinks I left them in the will
-Fsus2     C                   Gsus4       Am7
+Fmaj7     C                   Gadd11       Am7
  The family gathers around and reads it and then someone screams out
-Fsus2       C                  Gsus4      Am7
+Fmaj7       C                  Gadd11      Am7
  “She’s laughing up at us from hell!”
-Fsus2     C
+Fmaj7     C
 It’s me, hi,
-Gsus4                Am7
+Gadd11                Am7
 I’m the problem, it’s me
-Fsus2     C
+Fmaj7     C
 It’s me, hi
-Gsus4               Am7
+Gadd11               Am7
 I’m the problem, it’s me
-Fsus2    C      
+Fmaj7    C      
 It’s me, hi,    
-Gsus4     Am7      Fsus2  C     Gsus4     Am7
+Gadd11     Am7      Fmaj7  C     Gadd11     Am7
 everybody agrees, everybody agrees…
 ${ divider }
-Fsus2   C   Gsus4   Am7
+ <b>-</b>      C
+It’s me, hi
+Gadd11                Am7
+I’m the problem, it’s me
+Fmaj7  C     Gadd11       Am7
+At tea time, everybody agrees
+Fmaj7      C               Gadd11                  Am7
+I’ll stare directly at the sun, but never in the mirror
+Fmaj7      C         Gadd11         Am7
+It must be exhausting Always rooting for the anti-hero
 `
 
 lyrics = `

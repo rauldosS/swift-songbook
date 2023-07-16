@@ -1,5 +1,10 @@
 const mostAccessedMusics = [
     {
+        music: { id: 'enchanted', name: 'Enchanted' },
+        album: { id: 'speak-now', name: 'Speak Now' },
+        blocked: false
+    },
+    {
         music: { id: 'fearless', name: 'Fearless' },
         album: { id: 'fearless', name: 'Fearless' },
         blocked: false
@@ -53,11 +58,6 @@ const mostAccessedMusics = [
         music: { id: '', name: 'Maroon' },
         album: { id: 'midnights', name: 'Midnights' },
         blocked: true
-    },
-    {
-        music: { id: 'enchanted', name: 'Enchanted' },
-        album: { id: 'speak-now', name: 'Speak Now' },
-        blocked: false
     },
     {
         music: { id: 'the-man', name: 'The Man' },

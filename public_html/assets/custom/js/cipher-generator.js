@@ -136,6 +136,12 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
             ${ chordChangeColor ? 'chordChange' : '' }"
             ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
         ></i> `
+        if (progression === 'u-highlight') return `<b class="highlight"><i class="fa-solid fa-arrow-up-long 
+            ${ palmMute ? 'palm-mute' : '' } 
+            ${ blocking ? 'blocking' : '' } 
+            ${ chordChangeColor ? 'chordChange' : '' }"
+            ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+        ></i></b> `
         if (progression === '-') return `<span class="strum">${ progression }</span> `
         if (progression === 'break') return `<br>`
         if (progression === 'block') return '<i class="fa-solid fa-ban strum"></i> '
