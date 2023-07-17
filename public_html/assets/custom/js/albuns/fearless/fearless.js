@@ -251,7 +251,7 @@ D A Em G            <span class="badge badge-info-cipher rounded-pill"><i class=
 `
 
 lyrics = `
-[Verse 1]
+<b>[Verse 1]</b>
 There's something 'bout the way
 The street looks when it's just rained
 There's a glow off the pavement, you walk me to the car
@@ -259,32 +259,32 @@ And you know I wanna ask you to dance right there
 In the middle of the parking lot, yeah
 Oh, yeah
 
-[Verse 2]
+<b>[Verse 2]</b>
 We're driving down the road, I wonder if you know
 I'm trying so hard not to get caught up now
 But you're just so cool, run your hands through your hair
 Absent-mindedly making me want you
 
-[Chorus]
+<b>[Chorus]</b>
 And I don't know how it gets better than this
 You take my hand and drag me head first, fearless
 And I don't know why but with you I'd dance
 In a storm in my best dress, fеarless
 
-[Verse 3]
+<b>[Verse 3]</b>
 So, baby, drive slow 'til we run out of road in this onе-horse town
 I wanna stay right here, in this passenger's seat
 You put your eyes on me
 In this moment now, capture it, remember it
 
-[Chorus]
+<b>[Chorus]</b>
 'Cause I don't know how it gets better than this
 You take my hand and drag me head first, fearless
 And I don't know why but with you I'd dance
 In a storm in my best dress, fearless
 Oh, oh
 
-[Bridge]
+<b>[Bridge]</b>
 Well, you stood there with me in the doorway
 My hands shake, I'm not usually this way but
 You pull me in and I'm a little more brave
@@ -292,7 +292,7 @@ It's the first kiss, it's flawless, really something
 It's fearless
 Oh, yeah
 
-[Chorus]
+<b>[Chorus]</b>
 'Cause I don't know how it gets better than this
 You take my hand and drag me head first, fearless
 And I don't know why but with you I'd dance
@@ -302,7 +302,7 @@ You take my hand and drag me head first, fearless
 And I don't know why but with you I'd dance
 In a storm in my best dress, fearless
 
-[Outro]
+<b>[Outro]</b>
 Oh, oh
 Oh-oh, yeah
 `

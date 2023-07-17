@@ -24,10 +24,6 @@
     justify-content: space-between !important;
 }
 
-#toolbar .dropdown-menu li i {
-    color: var(--color-taylor-swift);
-}
-
 #toolbar .change-auto-scroll-speed {
     display: none !important;
 }

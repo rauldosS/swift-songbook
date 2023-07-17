@@ -739,6 +739,10 @@ i[note]::after {
     border: 1px solid var(--color-youtube);
 }
 
+.color-youtube {
+    color: var(--color-youtube);
+}
+
 .btn-whatsapp i {
     font-size: 32px;
 }
