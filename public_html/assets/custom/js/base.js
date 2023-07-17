@@ -59,7 +59,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false, 500)
+    setLoading(false, 1300)
 }
 
 loadCopy = () => {
