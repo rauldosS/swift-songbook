@@ -755,11 +755,27 @@ i[note]::after {
     height: 100%;
 }
 
+#loading .modal-dialog {
+    min-width: -webkit-fill-available !important;
+    margin: 0 !important;
+    height: 100% !important;
+}
+
 #loading .modal-content {
+    height: 100%;
     background-color: transparent;
     color: #FFF;
     text-align: center;
     border: none;
+}
+
+#loading .modal-body {
+    padding-bottom: 0;
+}
+
+#load-img {
+    width: 65%;
+    max-width: 700px;
 }
 
 [data-adtest="on"] {
