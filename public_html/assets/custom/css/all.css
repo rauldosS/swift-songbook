@@ -26,72 +26,6 @@
     --font-midnights: 'Roboto', sans-serif;
 }
 
-@font-face {
-    font-family: Anton;
-    src: url('fonts/Anton/Anton-Regular.ttf')
-}
-
-@font-face {
-    font-family: Cinzel;
-    src: url('fonts/Cinzel/Cinzel-VariableFont_wght.ttf')
-}
-
-@font-face {
-    font-family: IM Fell DW Pica;
-    src: url('fonts/IM_Fell_DW_Pica/IMFellDWPica-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: IM Fell DW Pica;
-    src: url('fonts/IM_Fell_DW_Pica/IMFellDWPica-Italic.ttf');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url('fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Permanent Marker;
-    src: url('fonts/Permanent_Marker/PermanentMarker-Regular.ttf')
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url('fonts/Roboto/Roboto-Medium.ttf')
-}
-
-@font-face {
-    font-family: Rochester;
-    src: url('fonts/Rochester/Rochester-Regular.ttf')
-}
-
-@font-face {
-    font-family: Sacramento;
-    src: url('fonts/Sacramento/Sacramento-Regular.ttf')
-}
-
-@font-face {
-    font-family: Satisfy;
-    src: url('fonts/Satisfy/Satisfy-Regular.ttf')
-}
-
-@font-face {
-    font-family: UnifrakturMaguntia;
-    src: url('fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf')
-}
-
 * {
     scroll-behavior: smooth !important;
 }
@@ -945,3 +879,4 @@ i[note]::after {
         zoom: 70%;
     }
 }
+

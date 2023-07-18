@@ -382,3 +382,384 @@ a.article:hover {
         display: none;
     }
 }
+
+/* SIDEBAR */
+
+
+body {
+    /* font-family: 'Cinzel', serif; */
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#albuns {
+    cursor: pointer;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #FFF;
+    color: #000;
+    transition: all 0.3s;
+    border-radius: 10px !important;
+    overflow-y: auto;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #FFF;
+    border-radius: 10px;
+}
+
+#sidebar ul.components li a {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    align-items: center;
+    padding: 10px 16px 10px 22px;
+}
+
+#sidebar ul.components li a i.fa-ban {
+    color: #dfdfdf;
+}
+
+#sidebar ul p {
+    color: #CCC;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #000;
+    background: #e7e8ed;
+}
+
+/* Menu */
+
+#sidebar ul li a.album-taylor-swift:hover {
+    color: #FFF;
+    background: var(--color-taylor-swift);
+}
+
+#sidebar ul li a.album-fearless:hover {
+    color: #FFF;
+    background: var(--color-fearless);
+}
+
+#sidebar ul li a.album-speak-now:hover {
+    color: #FFF;
+    background: var(--color-speak-now);
+}
+
+#sidebar ul li a.album-red:hover {
+    color: #FFF;
+    background: var(--color-red);
+}
+
+#sidebar ul li a.album-1989:hover {
+    color: #FFF;
+    background: var(--color-1989);
+}
+
+#sidebar ul li a.album-reputation:hover {
+    color: #FFF;
+    background: var(--color-reputation);
+}
+
+#sidebar ul li a.album-lover:hover {
+    color: #FFF;
+    background: var(--color-lover);
+}
+
+#sidebar ul li a.album-folklore:hover {
+    color: #FFF;
+    background: var(--color-folklore);
+}
+
+#sidebar ul li a.album-evermore:hover {
+    color: #FFF;
+    background: var(--color-evermore);
+}
+
+#sidebar ul li a.album-midnights:hover {
+    color: #FFF;
+    background: var(--linear-gradient-midnights);
+}
+
+/* Sub-menu style */
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: none;
+}
+
+.list-unstyled a {
+    cursor: pointer;
+}
+
+#album-taylor-swift-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-taylor-swift);
+}
+
+#album-fearless-list-unstyled a {
+    font-family: var(--font-fearless);
+    color: var(--color-fearless);
+}
+
+#album-speak-now-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-speak-now);
+}
+
+#album-red-list-unstyled a {
+    font-family: var(--font-red);
+    color: var(--color-red);
+}
+
+#album-1989-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-1989);
+}
+
+#album-reputation-list-unstyled a {
+    font-family: var(--font-taylor);
+    color: var(--color-reputation);
+}
+
+#album-lover-list-unstyled a {
+    font-family: var(--font-lover);
+    color: var(--color-lover);
+}
+
+#album-folklore-list-unstyled a {
+    font-family: var(--font-folklore);
+    color: var(--color-folklore);
+}
+
+#album-evermore-list-unstyled a {
+    font-family: var(--font-evermore);
+    color: var(--color-evermore);
+}
+
+#album-midnights-list-unstyled a {
+    font-family: var(--font-midnights);
+    color: var(--color-midnights);
+}
+
+/* end */
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #000;
+    background: #e7e8ed;
+}
+
+a.album-taylor-swift[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-taylor-swift);
+}
+
+a.album-fearless[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-fearless);
+}
+
+a.album-speak-now[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-speak-now);
+}
+
+a.album-red[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-red);
+}
+
+a.album-1989[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-1989);
+}
+
+a.album-reputation[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-reputation);
+}
+
+a.album-lover[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-lover);
+}
+
+a.album-folklore[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-folklore);
+}
+
+a.album-evermore[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--color-evermore);
+}
+
+a.album-midnights[aria-expanded="true"] {
+    color: #FFF;
+    background: var(--linear-gradient-midnights);
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #FFF;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs {
+    text-align: center;
+    font-size: 0.8em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #CCC;
+}
+
+a.article,
+a.article:hover {
+    background: #e7e8ed !important;
+    color: #000 !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+/* #content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+} */
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (min-width: 768px) {
+    #sidebar #albuns .hide {
+        display: none;
+    }
+
+    #sidebar #albuns .title {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    #sidebar #albuns .hide {
+        display: block;
+    }
+
+    #sidebar #albuns .title {
+        display: none;
+    }
+}
