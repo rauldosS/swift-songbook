@@ -42,8 +42,6 @@ loadContent = (path, switchLanguage = false) => {
     setLoading(true)
     hideCipherWrapper()
 
-    content.append('<div class="loading"> <i class="fa-solid fa-circle-notch fa-spin fa-2xl"></i> </div>')
-
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
         if (!['album', 'author', 'music'].includes(currentContent.content)) {
             updateLanguage()

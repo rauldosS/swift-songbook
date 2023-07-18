@@ -773,10 +773,6 @@ i[note]::after {
     padding-bottom: 0;
 }
 
-#load-img {
-    width: auto;
-}
-
 [data-adtest="on"] {
     background-color: rgb(200, 200, 200);
 }
