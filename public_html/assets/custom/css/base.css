@@ -774,8 +774,7 @@ i[note]::after {
 }
 
 #load-img {
-    width: 65%;
-    max-width: 700px;
+    width: auto;
 }
 
 [data-adtest="on"] {
