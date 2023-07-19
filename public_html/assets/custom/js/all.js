@@ -640,7 +640,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false, 1300)
+    setLoading(false, 2000)
 }
 
 loadCopy = () => {
@@ -1645,6 +1645,7 @@ updateShareLink = () => {
 }
 
 loadCipher = (music, album) => {
+    setLoading(true)
     createCipherHeaderHTML(album)
     createChordsHTML()
 
@@ -1690,7 +1691,7 @@ loadCipher = (music, album) => {
 
     $('#mini-player iframe').attr('src', videoUrl)
 
-    setLoading(false, 1300)
+    setLoading(false, 2000)
 }
 
 // TOOLBAR
