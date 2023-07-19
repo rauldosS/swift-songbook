@@ -143,6 +143,11 @@ header {
     margin-bottom: 6px;
 }
 
+#shortcuts svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #shortcuts #btn-home {
     display: none;
 }
