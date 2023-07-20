@@ -156,8 +156,7 @@ header {
     cursor: pointer;
 }
 
-#content, #cipher-wrapper {    
-    display: none;
+#content, #cipher-wrapper {
     scroll-behavior: smooth;    /* <----- THE SECRET ---- */
 }
 

@@ -435,10 +435,10 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active')
     })
 
-    $("#sidebar").load("templates/base/sidebar.html")
-    $("#toolbar").load("templates/base/toolbar.html")
-    $("#mini-player").load("templates/base/mini-player.html")
-    $("#contribution").load("templates/base/contribution.html")
+    // $("#sidebar").load("templates/base/sidebar.html")
+    // $("#toolbar").load("templates/base/toolbar.html")
+    // $("#mini-player").load("templates/base/mini-player.html")
+    // $("#contribution").load("templates/base/contribution.html")
 
     $('[data-toggle=tooltip]').tooltip({
         trigger : 'hover'
@@ -616,10 +616,10 @@ const toolbar = $('#toolbar')
 const miniPlayer = $('#mini-player')
 const btnHome = $('#btn-home')
 
-const homePath = 'base/home'
+// const homePath = 'base/home'
 
 loadContent = (path, switchLanguage = false) => {
-    if (path != homePath) setLoading(true)
+    setLoading(true)
     hideCipherWrapper()
 
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
@@ -661,8 +661,6 @@ checkQueryParams = () => {
     if (params.music === null && params.album === null) {
         if (params.help === '') {
             loadContent('help', true)
-        } else {
-            loadContent(homePath, false)
         }
     } else if (params.music != null) {
         loadMusic(params.music)
@@ -739,7 +737,7 @@ loadMusic = music => {
         musics[music]
         selectMusic(music)
     } catch (e) {
-        loadContent(homePath, false)
+        console.log('deu ruim')
     }
 }
 
@@ -749,7 +747,7 @@ loadAlbum = album => {
         loadContent(`albuns/${ album }`, true)
         updateCurrentContent('album', album)
     } else {
-        loadContent(homePath, false)
+        console.log('deu ruim')
     }
 }
 
