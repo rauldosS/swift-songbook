@@ -85,7 +85,7 @@
 
         .modal-backdrop {
             --bs-backdrop-zindex: 1050;
-            --bs-backdrop-bg: #000;
+            --bs-backdrop-bg: #000 !important;
             --bs-backdrop-opacity: 0.5;
             position: fixed;
             top: 0;
@@ -98,7 +98,7 @@
     </style>
 
     <script>
-        $(window).on('load', function() {
+        $(document).ready(function() {
             $('.modal-backdrop').remove()
             $('#loading').modal('show')
             $('body').children().removeClass('hide')
@@ -110,7 +110,7 @@
 </head>
 
 <body class="bg-light">
-    <header class="bd-header bg-white py-3 d-flex align-items-stretch border-bottom animate__animated animate__slideInDown animate__delay-2s hide">
+    <header class="bd-header bg-white py-3 d-flex align-items-stretch border-bottom animate__animated animate__fadeIn hide">
         <div class="container-fluid d-flex align-items-center justify-content-center">
             <h1 class="d-flex align-items-center fs-4 text-white mb-0">
                 <img src="assets/images/header.webp" class="me-3" alt="Bootstrap">
@@ -119,9 +119,9 @@
     </header>
     <div id="wrapper" class="wrapper container-fluid hide">
         <!-- Sidebar  -->
-        <nav id="sidebar" class="d-flex flex-column shadow animate__animated animate__slideInLeft animate__delay-1s"></nav>
+        <nav id="sidebar" class="d-flex flex-column shadow animate__animated animate__slideInLeft"></nav>
         <!-- Page Content  -->
-        <div id="page-content-wrapper" class="animate__animated animate__fadeInRight animate__delay-1s">
+        <div id="page-content-wrapper" class="animate__animated animate__fadeInRight">
 
             <div class="content shadow bg-white scrolling">
                 <div id="shortcuts">
@@ -136,7 +136,7 @@
                             <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
                             <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
                             <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
-                        </svg> <span>Ocultar álbuns</span>
+                        </svg> <span></span>
                     </button>
                     <button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Alterar língua">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
@@ -207,9 +207,9 @@
                     <h1 class="font-taylor-swift-base text-center mt-4 title-home w-100 text-dark" style="font-size: 5rem;">Taylor's Songbook</h1>
                 </div> -->
                 <div class="modal-body d-flex align-items-end justify-content-center">
-                    <img id="load-img" class="me-3" alt="Bootstrap" style="position: relative; top: 1px;">
+                    <img id="load-img" class="me-3" style="position: relative; top: 1px;" src="https://i.ibb.co/dcmZFg2/13-min.gif" alt="Welcome from Taylor ❤️">
                     <script>
-                        document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+                        // document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
                     </script>
                 </div>
             </div>
@@ -243,8 +243,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Base JS -->
-    <script src="assets/custom/js/all.min.js"></script>
-    <!-- <script src="assets/custom/js/all.js"></script> -->
+    <!-- <script src="assets/custom/js/all.min.js"></script> -->
+    <script src="assets/custom/js/all.js"></script>
 
     <!-- <script src="assets/custom/js/config.js"></script> -->
     <!-- <script src="assets/custom/js/base.js"></script> -->

@@ -401,7 +401,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
-    if (loading) document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+    // if (loading) document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
