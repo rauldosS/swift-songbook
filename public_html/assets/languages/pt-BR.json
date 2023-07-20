@@ -7,13 +7,13 @@
     "contribution": {
         "title": "Ajude a manter Taylor's Songbook!",
         "info": "<p>Taylor's Songbook é um projeto dedicado a fornecer <strong class=\"color-red\">acesso ilimitado</strong> e <strong class=\"color-red\">gratuito</strong> às cifras da incrível Taylor Swift. Nosso objetivo é compartilhar a paixão pela música e tornar mais fácil para todos tocarem as canções que amam.</p><p>Agora, temos o prazer de anunciar que você pode contribuir através de doações via PIX! Sua contribuição ajudará a manter o site funcionando sem interrupções, permitindo que continuemos a adicionar mais cifras, recursos e atender suas solicitações. Além disso, <strong class=\"color-red\">encorajamos você a enviar músicas específicas que gostaria de ver priorizadas</strong> e outras sugestões para melhorar ainda mais a sua experiência.</p>",
-        "copy": "Copiado",
+        "copy": "Copiado ✅",
         "paymant": {
             "title": "Use o QR Code do Pix para pagar",
             "info": "Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code",
-            "qrCode": "Copiar código do QR Code <i class=\"fa-solid fa-key ms-2\"></i>",
+            "qrCode": "Copiar código do QR Code 🔑",
             "pixKeyTitle": "Ou use a <strong>chave Pix</strong>",
-            "pixKey": "Copiar Chave Aleatória <i class=\"fa-solid fa-key ms-2\"></i>"
+            "pixKey": "Copiar Chave Aleatória 🔑"
         }
     },
     "shortcuts": {
@@ -56,7 +56,7 @@
         "basicCipher": "Cifra básica, com detalhes em desenvolvimento para uma versão mais completa."
     },
     "influencers": {
-        "title": "Influênciadores",
+        "title": "⭐ Influênciadores",
         "data": "<p>O \"Taylor's Songbook\" é um site que tem como objetivo <b class='color-red'>unir influenciadores e músicos talentosos</b> para oferecer aos fãs da Taylor Swift uma experiência única ao tocar cifras.</p><p>Além das versões tradicionais, estamos destacando influenciadores que trazem suas próprias abordagens e versões alternativas das cifras. Agradeço a todos esses influenciadores por serem fontes de inspiração e por fazerem parte dessa jornada emocionante de criar um ambiente onde os fãs encontram as cifras que sempre sonharam em tocar.</p><p>Continuaremos adicionando mais influenciadores e cifras inspiradoras ao longo do tempo. Juntos, estamos criando um espaço onde a música da Taylor Swift ganha vida de maneiras únicas e emocionantes.</p>",
         "luca": "🎶 Covers de violão de várias músicas diferentes, com tablaturas, acordes e dedilhados na tela.",
         "nena": "⭐ ~ Violão, Taylor Swift, lifestyle, covers e tutoriais com tablaturas, acordes e dedilhados na tela ~",

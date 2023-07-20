@@ -580,7 +580,6 @@ $(document).ready(function () {
         $(actionElement).toggleClass('active')
 
         if (targetElementToScroll != null) {
-            console.log(targetElementToScroll)
             scrollToElement(targetElementToScroll)
         }
     }
@@ -592,7 +591,6 @@ $(document).ready(function () {
             $(targetElement).hide()
         }
 
-        console.log(targetElement)
         scrollToElement(targetElement)
     }
 
@@ -640,7 +638,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false, 1300)
+    setLoading(false, 2500)
 }
 
 loadCopy = () => {
@@ -774,10 +772,10 @@ headShake = (el) => {
 changeText = (element) => {
     const text = element.text()
     
-    element.html(`${ language.contribution.copy } <i class="fa-regular fa-circle-check ms-1"></i>`)
+    element.html(`${ language.contribution.copy } ✅`)
 
     setTimeout(function() {
-        element.html(`${ text } <i class="fa-solid fa-key ms-2"></i>`)
+        element.html(`${ text }`)
     }, 1000);
 }
 
@@ -1691,7 +1689,7 @@ loadCipher = (music, album) => {
 
     $('#mini-player iframe').attr('src', videoUrl)
 
-    setLoading(false, 1300)
+    setLoading(false, 2500)
 }
 
 // TOOLBAR

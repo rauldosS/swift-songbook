@@ -258,17 +258,17 @@ header img {
     color: var(--color-red);
 }
 
-#author i.fa-whatsapp, a.whatsapp {
+#author i.bi-whatsapp, a.whatsapp {
     color: var(--color-whatsapp);
     font-weight: 500;
 }
 
-#author i.fa-instagram, a.instagram {
+#author i.bi-instagram, a.instagram {
     color: var(--color-lover);
     font-weight: 500;
 }
 
-#author i.fa-github, a.github {
+#author i.bi-github, a.github {
     color: var(--color-1989);
     font-weight: 500;
 }
@@ -741,17 +741,17 @@ i[note]::after {
 }
 
 #summary a.action.collapsed:after  {
-    font-family: "Font Awesome 5 Free";
+    font-family: "bootstrap-icons";
     font-weight: 900;
-    content: "\f107";
+    content: "\F282 ";
     background-color: #FFF;
     color: #212121;
 }
 
 #summary a.action:not(.collapsed):after {
-    font-family: "Font Awesome 5 Free";
+    font-family: "bootstrap-icons";
     font-weight: 900;
-    content: "\f106";
+    content: "\F286";
     background-color: #FFF;
     color: #212121;
 }
@@ -810,7 +810,7 @@ i[note]::after {
 }
 
 .btn-whatsapp i {
-    font-size: 32px;
+    font-size: 22px;
 }
 
 .initial {
