@@ -76,7 +76,7 @@ const alertsHtml = {
         palmMute: '<span id="palm-mute-alert" class="badge animate__animated animate__flash animate__delay-1s animate__repeat-2 bg-light mb-3"><b class="palm-mute">Ritmo em laranja</b> deve ser tocado com palm mute</span>',
         repeatIntro: `
             <div class="alert d-flex align-items-center mb-3" role="alert">
-                <i class="fa-solid fa-rotate-right me-2"></i>
+                <i class="bi bi-arrow-clockwis me-2"></i>
                 <div>
                     Repeat Intro
                 </div>
@@ -87,7 +87,7 @@ const alertsHtml = {
         palmMute: '<span id="palm-mute-alert" class="badge animate__animated animate__flash animate__delay-1s animate__repeat-2 bg-light mb-3"><b class="palm-mute">Orange strum</b> should be played with palm mute</span>',
         repeatIntro: `
             <div class="alert d-flex align-items-center mb-3" role="alert">
-                <i class="fa-solid fa-rotate-right me-2"></i>
+                <i class="bi bi-arrow-clockwis me-2"></i>
                 <div>
                     Repeat Intro
                 </div>
@@ -1428,7 +1428,7 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
     let chordChangeColor = false
     return baseProgression.split(' ').map((progression, i, {length}) => {
         if (progression === 'D') {
-            return `<i class="fa-solid fa-arrow-down-long 
+            return `<i class="fa-solid bi bi-arrow-down 
                 ${ palmMute ? 'palm-mute' : '' } 
                 ${ blocking ? 'blocking' : '' } 
                 ${ chordChangeColor ? 'chordChange' : '' }"
@@ -1436,7 +1436,7 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
             ></i> `
         }
         if (progression === 'd-highlight') {
-            return `<b class="highlight"><i class="fa-solid fa-arrow-down-long 
+            return `<b class="highlight"><i class="fa-solid bi bi-arrow-down 
                 ${ palmMute ? 'palm-mute' : '' } 
                 ${ blocking ? 'blocking' : '' } 
                 ${ chordChangeColor ? 'chordChange' : '' }"
@@ -1444,13 +1444,13 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
             ></i></b> `
         }
         chordChange = false
-        if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long 
+        if (progression === 'U') return `<i class="bi bi-arrow-up 
             ${ palmMute ? 'palm-mute' : '' } 
             ${ blocking ? 'blocking' : '' } 
             ${ chordChangeColor ? 'chordChange' : '' }"
             ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
         ></i> `
-        if (progression === 'u-highlight') return `<b class="highlight"><i class="fa-solid fa-arrow-up-long 
+        if (progression === 'u-highlight') return `<b class="highlight"><i class="bi bi-arrow-up 
             ${ palmMute ? 'palm-mute' : '' } 
             ${ blocking ? 'blocking' : '' } 
             ${ chordChangeColor ? 'chordChange' : '' }"
