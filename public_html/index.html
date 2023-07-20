@@ -17,10 +17,14 @@
     <link rel="icon" type="image/png" href="assets/images/favicon-min.webp" />
     <title>Taylor's Songbook</title>
 
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" rel="preload"></script>
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.7.0.min.js"></script> -->
+
     <!-- Bootstrap core CSS -->
     <!-- <link href="assets/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet" rel="preload"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" rel="preload">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" rel="preload"></script>
 
     <!-- <link href="assets/custom/css/all.min.css" rel="stylesheet"> -->
     <!-- <link href="assets/custom/css/all.css" rel="stylesheet"> -->
@@ -52,13 +56,61 @@
         body > .hide {
             display: none !important;
         }
+
+        #loading .modal-dialog {
+            min-width: -webkit-fill-available !important;
+            margin: 0 !important;
+            height: 100% !important;
+        }
+
+        #loading .modal-content {
+            height: 100%;
+            background-color: transparent;
+            color: #FFF;
+            text-align: center;
+            border: none;
+        }
+
+        #loading .modal-body {
+            padding-bottom: 0;
+        }
+
+        #load-img {
+            width: auto;
+        }
+
+        .modal-backdrop.show {
+            opacity: var(--bs-backdrop-opacity);
+        }
+
+        .modal-backdrop {
+            --bs-backdrop-zindex: 1050;
+            --bs-backdrop-bg: #000;
+            --bs-backdrop-opacity: 0.5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: var(--bs-backdrop-zindex);
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bs-backdrop-bg);
+        }
     </style>
-    
-    <!-- <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1050632933702759" crossorigin="anonymous"></script> -->
+
+    <script>
+        $(window).on('load', function() {
+            $('.modal-backdrop').remove()
+            $('#loading').modal('show')
+            $('body').children().removeClass('hide')
+        })
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1050632933702759" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-light">
-    <header class="bd-header bg-white py-3 d-flex align-items-stretch border-bottom animate__animated animate__slideInDown hide">
+    <header class="bd-header bg-white py-3 d-flex align-items-stretch border-bottom animate__animated animate__slideInDown animate__delay-2s hide">
         <div class="container-fluid d-flex align-items-center justify-content-center">
             <h1 class="d-flex align-items-center fs-4 text-white mb-0">
                 <img src="assets/images/header.webp" class="me-3" alt="Bootstrap">
@@ -67,9 +119,9 @@
     </header>
     <div id="wrapper" class="wrapper container-fluid hide">
         <!-- Sidebar  -->
-        <nav id="sidebar" class="d-flex flex-column shadow animate__animated animate__slideInLeft"></nav>
+        <nav id="sidebar" class="d-flex flex-column shadow animate__animated animate__slideInLeft animate__delay-1s"></nav>
         <!-- Page Content  -->
-        <div id="page-content-wrapper" class="animate__animated animate__fadeInRightBig">
+        <div id="page-content-wrapper" class="animate__animated animate__fadeInRight animate__delay-1s">
 
             <div class="content shadow bg-white scrolling">
                 <div id="shortcuts">
@@ -121,7 +173,7 @@
                 <div class="line"></div>
 
                 <!-- Anúncios -->
-                <!-- <ins class="adsbygoogle"
+                <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-1050632933702759"
                     data-ad-slot="4839789058"
@@ -129,7 +181,7 @@
                     data-full-width-responsive="true"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script> -->
+                </script>
 
                 <section id="contribution" class="mt-5"></section>
 
@@ -139,35 +191,37 @@
     </div>
 
     <!-- Modal Loading -->
-    <div class="modal animate__animated animate__fadeIn" id="loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loadingLabel" aria-hidden="true">
+    <div
+        class="modal show animate__animated animate__fadeIn"
+        id="loading"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="loadingLabel"
+        aria-hidden="true"
+        style="display: block;padding-left: 0px;"
+    >
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header d-flex align-items-end" style="height: 40%; border: none;">
-                    <!-- <h1 class="font-taylor-swift-base text-center mt-4 title-home w-100 text-dark" style="font-size: 5rem;">Taylor's Songbook</h1> -->
-                </div>
+                <!-- <div class="modal-header d-flex align-items-end" style="height: 40%; border: none;">
+                    <h1 class="font-taylor-swift-base text-center mt-4 title-home w-100 text-dark" style="font-size: 5rem;">Taylor's Songbook</h1>
+                </div> -->
                 <div class="modal-body d-flex align-items-end justify-content-center">
                     <img id="load-img" class="me-3" alt="Bootstrap" style="position: relative; top: 1px;">
+                    <script>
+                        document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <div class="modal-backdrop show"></div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+
     <!-- <script src="assets/custom/js/libs/jquery-3.7.0.min.js"></script> -->
-
-    <script>
-        $(window).on('ready', function() {
-            document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
-            $('#loading').modal('show')
-        })
-
-        $(window).on('load', function() {
-            $('body').children().removeClass('hide');
-        })
-    </script>
 
     <!-- Popper.JS -->
     <!-- <script src="assets/custom/js/libs/popper.min.js"></script> -->
@@ -182,11 +236,10 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
     <!-- <script src="assets/custom/js/libs/clipboard.min.js"></script> -->
     <!-- <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link href="assets/custom/css/all.min.css" rel="stylesheet">
-    <!-- <link href="assets/custom/css/all.css" rel="stylesheet"> -->
+    <!-- <link href="assets/custom/css/all.min.css" rel="stylesheet"> -->
+    <link href="assets/custom/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Base JS -->

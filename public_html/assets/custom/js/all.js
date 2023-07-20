@@ -401,7 +401,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
-    document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+    if (loading) document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
@@ -619,7 +619,7 @@ const btnHome = $('#btn-home')
 const homePath = 'base/home'
 
 loadContent = (path, switchLanguage = false) => {
-    setLoading(true)
+    if (path != homePath) setLoading(true)
     hideCipherWrapper()
 
     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
@@ -1690,5 +1690,3 @@ loadCipher = (music, album) => {
 
     setLoading(false, 2500)
 }
-
-// TOOLBAR
