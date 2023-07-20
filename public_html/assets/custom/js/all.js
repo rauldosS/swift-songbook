@@ -401,6 +401,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
+    document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
@@ -430,8 +431,6 @@ function setLanguage(lang) {
 
 // BASE
 $(document).ready(function () {
-    setLoading(true)
-
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
     })
@@ -638,7 +637,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false, 2000)
+    setLoading(false, 2500)
 }
 
 loadCopy = () => {
@@ -1689,7 +1688,7 @@ loadCipher = (music, album) => {
 
     $('#mini-player iframe').attr('src', videoUrl)
 
-    setLoading(false, 2000)
+    setLoading(false, 2500)
 }
 
 // TOOLBAR
