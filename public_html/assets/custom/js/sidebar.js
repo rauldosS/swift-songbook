@@ -17,7 +17,7 @@ $(document).ready(function () {
     $.each(albuns, function(i, album) {
         list_unstyled.append(
             `<li>
-                <a href="#album-${ album.id }-list-unstyled" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle album-${ album.id } font-${ album.id }">${ album.name }</a>
+                <a href="#album-${ album.id }-list-unstyled" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle album-${ album.id } font-${ album.id }">${ album.name }</a>
                 <ul class="collapse list-unstyled" id="album-${ album.id }-list-unstyled"></ul>
             </li>`
         )
@@ -28,13 +28,13 @@ $(document).ready(function () {
             music_list.append(`
                 <a ${ music.blocked ? 'onclick="headShake(this)"' : `onclick="selectMusic('${ music.id }')"`}>
                     ${music.name}
-                    ${ music.blocked ? '<i class="fa-solid fa-ban color-danger"></i>' : '' }
+                    ${ music.blocked ? '<i class="bi bi-slash-circle color-danger"></i>' : '' }
                 </a>
             `)
         })
 
         music_list.prepend(`
-            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentContent('album', '${ album.id }')"><span class="about"></span> <i class="fa-regular fa-circle-question"></i></a>
+            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentContent('album', '${ album.id }')"><span class="about"></span> <i class="bi bi-question-circle"></i></a>
         `)
     })
 

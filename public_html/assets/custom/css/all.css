@@ -141,6 +141,7 @@ header {
     border: 1px dashed #DDD;
     transition: all .1s ease 0s;
     margin-bottom: 6px;
+    height: 39px;
 }
 
 #shortcuts #btn-home {
@@ -791,6 +792,7 @@ i[note]::after {
 .btn-whatsapp:hover {
     color: var(--color-whatsapp);
     background-color: #FFF;
+    border: 1px solid;
 }
 
 .btn-youtube {

@@ -638,7 +638,7 @@ loadContent = (path, switchLanguage = false) => {
     }
 
     scrollTop()
-    setLoading(false, 2500)
+    setLoading(false, 2000)
 }
 
 loadCopy = () => {
@@ -772,7 +772,7 @@ headShake = (el) => {
 changeText = (element) => {
     const text = element.text()
     
-    element.html(`${ language.contribution.copy } ✅`)
+    element.html(`${ language.contribution.copy }`)
 
     setTimeout(function() {
         element.html(`${ text }`)
@@ -1689,7 +1689,7 @@ loadCipher = (music, album) => {
 
     $('#mini-player iframe').attr('src', videoUrl)
 
-    setLoading(false, 2500)
+    setLoading(false, 2000)
 }
 
 // TOOLBAR
