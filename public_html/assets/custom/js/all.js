@@ -401,7 +401,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
-    // if (loading) document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+    if (loading) document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
@@ -435,7 +435,7 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active')
     })
 
-    // $("#sidebar").load("templates/base/sidebar.html")
+    $("#sidebar").load("templates/base/sidebar.html")
     // $("#toolbar").load("templates/base/toolbar.html")
     // $("#mini-player").load("templates/base/mini-player.html")
     // $("#contribution").load("templates/base/contribution.html")

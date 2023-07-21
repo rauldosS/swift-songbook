@@ -105,21 +105,9 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <!-- Custom fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?
-        family=Anton&
-        family=Cinzel:wght@500&
-        family=IM+Fell+DW+Pica:ital@0;1&
-        family=Montserrat:wght@100&
-        family=Permanent+Marker&
-        family=Roboto:wght@500&
-        family=Rochester&
-        family=Sacramento&
-        family=Satisfy&
-        family=UnifrakturMaguntia&display=swap"
-        rel="stylesheet"
-    > -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap&family=Montserrat:wght@300;400;600&display=swap&family=Anton&family=Cinzel:wght@500&family=IM+Fell+DW+Pica:ital@0;1&family=Montserrat:wght@100&family=Permanent+Marker&family=Roboto:wght@500&family=Rochester&family=Sacramento&family=Satisfy&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1050632933702759" crossorigin="anonymous"></script>
@@ -201,7 +189,7 @@
                     
                     <div class="line"></div>
                     
-                    <div id="mostAccessed" class="music-list animate__animated animate__fadeInDown animate__delay-3s">
+                    <div id="mostAccessed" class="music-list animate__animated animate__fadeInDown animate__delay-2s">
                         <h4 class="font-taylor-swift-base"></h4>
                     
                         <ol class="list-group">
@@ -211,11 +199,11 @@
                                 <div class="p-2 number bd-highlight">1</div>
                                 <div class="p-2 bd-highlight">
                                     Enchanted
-                                    <i class="bi bi-question-circle color-fearless"></i>
-                                    <!-- <i class="bi bi-check-circle color-taylor-swift"></i> -->
+                                    <!-- <i class="bi bi-question-circle color-fearless"></i> -->
+                                    <i class="bi bi-check-circle color-taylor-swift"></i>
                                 </div>
                                 <div class="ms-auto p-2 bd-highlight">
-                                    <span class="badge color-speak-now border-speak-now rounded-pill">Enchanted</span>
+                                    <span class="badge color-speak-now border-speak-now rounded-pill">Speak Now</span>
                                 </div>
                             </li>
                             <li
@@ -224,11 +212,11 @@
                                 <div class="p-2 number bd-highlight">1</div>
                                 <div class="p-2 bd-highlight">
                                     Cruel Summer
-                                    <i class="bi bi-question-circle color-fearless"></i>
+                                    <i class="bi bi-question-circle color-midnights"></i>
                                     <!-- <i class="bi bi-check-circle color-taylor-swift"></i> -->
                                 </div>
                                 <div class="ms-auto p-2 bd-highlight">
-                                    <span class="badge color-lover border-lover rounded-pill">Cruel Summer</span>
+                                    <span class="badge color-lover border-lover rounded-pill">Lover</span>
                                 </div>
                             </li>
                         </ol>
@@ -236,7 +224,7 @@
                     
                     <div class="line"></div>
                     
-                    <div id="influencers" class="music-list animate__animated animate__fadeInDown animate__delay-3s">
+                    <div id="influencers" class="music-list animate__animated animate__fadeIn">
                     
                         <div class="container marketing">
                             <h4 id="influencers-title" class="font-taylor-swift-base">Contribuições</h4>
@@ -364,10 +352,7 @@
                     <h1 class="font-taylor-swift-base text-center mt-4 title-home w-100 text-dark" style="font-size: 5rem;">Taylor's Songbook</h1>
                 </div> -->
                 <div class="modal-body d-flex align-items-end justify-content-center">
-                    <img id="load-img" class="me-3" style="position: relative; top: 1px;" src="assets/images/taylor-swift/13-min.gif" alt="Welcome from Taylor ❤️">
-                    <script>
-                        // document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
-                    </script>
+                    <img id="load-img" class="me-3" style="position: relative; top: 1px;" alt="Welcome from Taylor ❤️">
                 </div>
             </div>
         </div>
@@ -400,7 +385,9 @@
             $('body').children().removeClass('hide')
         }
 
-        document.addEventListener("DOMContentLoaded", function(event) { })
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById('load-img').src = `assets/images/taylor-swift/${ Math.floor(Math.random() * (17 - 1 + 1)) + 1 }-min.gif`
+        })
 
         window.addEventListener("load", function() {
             afterPageLoad()

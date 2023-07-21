@@ -26,6 +26,15 @@
     --font-midnights: 'Roboto', sans-serif;
 }
 
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
+/* @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap'; */
+
+/* @font-face {
+    font-family: Poppins;
+    src: url('fonts/Poppins/Poppins-Light.ttf')
+}
+
+
 @font-face {
     font-family: Anton;
     src: url('fonts/Anton/Anton-Regular.ttf')
@@ -90,7 +99,7 @@
 @font-face {
     font-family: UnifrakturMaguntia;
     src: url('fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf')
-}
+} */
 
 * {
     scroll-behavior: smooth !important;
@@ -940,12 +949,6 @@ i[note]::after {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-@font-face {
-    font-family: Poppins;
-    src: url('fonts/Poppins/Poppins-Light.ttf')
-}
-/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
-/* @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap'; */
 
 body {
     /* font-family: 'Cinzel', serif; */
@@ -955,7 +958,7 @@ body {
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.7em;
     color: #999;
 }
