@@ -11,3 +11,8 @@ ErrorDocument 404 /errors/not_found.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+# Redirecionamento para "fearless.html" quando "fearless" é acessado diretamente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^fearless$ /chord/fearless/fearless.html [L]
