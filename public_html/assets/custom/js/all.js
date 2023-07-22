@@ -3,7 +3,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-2BZ30CLHS1');
+gtag('config', 'G-WY91TRHM4D');
 
 // AUTOSCROLL
 
