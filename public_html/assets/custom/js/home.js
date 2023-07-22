@@ -75,14 +75,13 @@ const mostAccessedMusics = [
         blocked: true
     }
 ]
-const mostAccessed = $('#mostAccessed ol')
+const mostAccessed = $('#mostAccessed .list-group')
 
 mostAccessedMusics.forEach((data, index) => {
     mostAccessed.append(`
-        <li
+        <a
             class="list-group-item d-flex justify-content-between align-items-center"
-            music="${ data.music.id }"
-            album="${ data.album.id }"
+            href="${ data.blocked ? '#' : '/song/' + data.music.id } "
             ${ data.blocked ? 'blocked': '' }
         >
             <div class="p-2 number bd-highlight">${ index + 1 }</div>
@@ -93,14 +92,10 @@ mostAccessedMusics.forEach((data, index) => {
             <div class="ms-auto p-2 bd-highlight">
                 <span class="badge color-${ data.album.id } border-${ data.album.id } rounded-pill">${ data.album.name }</span>
             </div>
-        </li>
+        </a>
     `)
 })
 
-$('[music]').not('[blocked]').on('click', function() {
-    selectMusic($(this).attr('music'))
-})
-
-$('#mostAccessed li[blocked]').on('click', function() {
+$('#mostAccessed .list-group-item[blocked]').on('click', function() {
     $(this).toggleClass('animate__animated animate__hinge z-index')
 })

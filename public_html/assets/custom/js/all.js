@@ -436,9 +436,9 @@ $(document).ready(function () {
     })
 
     $("#sidebar").load("templates/base/sidebar.html")
-    $("#toolbar").load("templates/base/toolbar.html")
-    $("#mini-player").load("templates/base/mini-player.html")
-    $("#contribution").load("templates/base/contribution.html")
+    // $("#toolbar").load("templates/base/toolbar.html")
+    // $("#mini-player").load("templates/base/mini-player.html")
+    // $("#contribution").load("templates/base/contribution.html")
 
     $('[data-toggle=tooltip]').tooltip({
         trigger : 'hover'
