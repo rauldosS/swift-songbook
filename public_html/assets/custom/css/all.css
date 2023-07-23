@@ -793,12 +793,13 @@ i[note]::after {
     background-color: var(--color-whatsapp);
     border: 2px solid var(--color-whatsapp);
     gap: 5px;
+    border: 1px solid var(--color-whatsapp);
 }
 
 .btn-whatsapp:hover {
     color: var(--color-whatsapp);
     background-color: #FFF;
-    border: 1px solid;
+    border: 1px solid var(--color-whatsapp);
 }
 
 .btn-youtube {
