@@ -559,10 +559,6 @@ const cipherContent = $('#cipher-content')
 const toolbar = $('#toolbar')
 const miniPlayer = $('#mini-player')
 
-const userLang = navigator.language || navigator.userLanguage
-const languages = ['en-US', 'pt-BR']
-const userContainsLanguage = languages.includes(userLang)
-
 const chordsHtml = {
     C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
     'C/E': `<chord name="C/E" positions="032010" fingers="-32-1-" size="2" ></chord>`,

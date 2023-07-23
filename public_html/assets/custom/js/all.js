@@ -250,6 +250,10 @@ const albuns = [
     },
 ]
 
+const userLang = navigator.language || navigator.userLanguage
+const languages = ['en-US', 'pt-BR']
+const userContainsLanguage = languages.includes(userLang)
+
 let musics = {}
 
 $(document).ready(function () {
