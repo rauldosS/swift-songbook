@@ -119,7 +119,6 @@ $(document).ready(function () {
         $(actionElement).toggleClass('active')
 
         if (targetElementToScroll != null) {
-            console.log(targetElementToScroll)
             scrollToElement(targetElementToScroll)
         }
     }
@@ -131,7 +130,6 @@ $(document).ready(function () {
             $(targetElement).hide()
         }
 
-        console.log(targetElement)
         scrollToElement(targetElement)
     }
 
