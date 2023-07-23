@@ -1,13 +1,16 @@
-musicId = 'fearless'
-musicTitle = 'Fearless'
-tuning = 'F'
-chordShape = 'D'
-capoFret = '3'
-spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
-chordsMusic = ['D', 'A', 'Em', 'G', 'Cadd9']
-videoUrl = 'https://www.youtube.com/embed/D8fuCW9-vOc'
+const musicId = 'fearless'
+const albumId = 'fearless'
+const musicTitle = 'Fearless'
+const tuning = 'F'
+const chordShape = 'D'
+const capoFret = '3'
+const spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
+const chordsMusic = ['D', 'A', 'Em', 'G', 'Cadd9']
+const videoUrl = 'https://www.youtube.com/embed/D8fuCW9-vOc'
+const basicCipher = false
+const palmMute = false
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',      id: 'intro' },
     { type: 'tabs',             id: 'intro' },
 
@@ -35,7 +38,7 @@ partsCipher = [
     { type: 'cipherLyrics',     id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'intro',
         title: 'Intro',
@@ -66,7 +69,7 @@ progressions = [
     }
 ]
 
-tabs = [
+const tabs = [
     {
         id: 'intro',
         title: 'Intro',
@@ -127,7 +130,7 @@ E|------------------------------------------------6------------|
     }
 ]
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -170,7 +173,7 @@ cipherParts = [
     },
 ]
 
-cipherLyrics = `
+const cipherLyrics = `
 D
   There's something 'bout the way
 A                                 Em
@@ -250,7 +253,7 @@ ${ divider }
 D A Em G            <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-rotate-right"></i> Repeat second tab intro</span>
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 There's something 'bout the way
 The street looks when it's just rained

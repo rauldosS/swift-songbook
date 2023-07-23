@@ -1,4 +1,4 @@
-amusicId = 'hoax'
+musicId = 'hoax'
 musicTitle = 'Hoax'
 tuning = 'Eb'
 chordShape = null
