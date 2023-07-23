@@ -7,156 +7,35 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://taylorsongbook.com.br/</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
+  <loc>https://taylorsongbook.com/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?help</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
 </url>
 
 <!-- Taylor Swift -->
 
-<url>
-  <loc>https://taylorsongbook.com.br?album=taylor-swift</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 <!-- Fearless -->
 
 <url>
-  <loc>https://taylorsongbook.com.br?album=fearless</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=fearless</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
+  <loc>https://taylorsongbook.com/song/fearless</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 
 <!-- Speak Now -->
 
-<url>
-  <loc>https://taylorsongbook.com.br?album=speak-now</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=enchanted</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
 <!-- Red -->
-
-<url>
-  <loc>https://taylorsongbook.com.br?album=red</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=red</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=come-back-be-here</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
 
 <!-- 1989 -->
 
-<url>
-  <loc>https://taylorsongbook.com.br?album=1989</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 <!-- Reputation -->
-
-<url>
-  <loc>https://taylorsongbook.com.br?album=reputation</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
 
 <!-- Lover -->
 
-<url>
-  <loc>https://taylorsongbook.com.br?album=lover</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=the-man</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
 <!-- Folklore -->
-
-<url>
-  <loc>https://taylorsongbook.com.br?album=folklore</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=hoax</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=cardigan</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
 
 <!-- Evermore -->
 
-<url>
-  <loc>https://taylorsongbook.com.br?album=evermore</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 <!-- Midnights -->
-
-<url>
-  <loc>https://taylorsongbook.com.br?album=midnights</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=anti-hero</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=karma</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-
-<url>
-  <loc>https://taylorsongbook.com.br?music=lavender-haze</loc>
-  <lastmod>2023-06-30T04:21:28+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
 
 </urlset>
