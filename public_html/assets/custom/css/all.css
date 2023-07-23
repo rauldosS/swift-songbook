@@ -853,95 +853,6 @@ i[note]::after {
     margin-left: .75rem;
 }
 
-@media(max-width: 992px) {
-    #navbarSupportedContent {
-        padding-top: 1rem !important;
-    }
-
-    #toolbar {
-        position: fixed !important;
-        bottom: 0px !important;
-        width: 100%;
-        right: 0;
-    }
-
-    .column-action {
-        display: none !important;
-    }
-}
-
-@media(max-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-
-    #wrapper {
-        padding: 0;
-        width: 100%;
-        gap: 0;
-        bottom: 0;
-        top: 8%;
-    }
-
-    #page-content-wrapper {
-        padding: 0;
-        width: 100% !important;
-        margin: 0;
-    }
-
-    .btn-whatsapp {
-        min-width: auto !important;
-    }
-
-    .scrolling {
-        margin: 0 !important;
-    }
-
-    #close-miniplayer {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #sidebar.toggled {
-        margin-left: 0px !important;
-        display: block;
-        min-width: 100%;
-    }
-
-    .tabs,
-    .progressions {
-        font-size: 10px;
-    }
-    
-    pre[type="lyrics"] {
-        font-size: 12px;
-    }
-
-    .btn-whatsapp {
-        zoom: 85%;
-    }
-}
-
-
-@media(max-width: 450px) {
-    #wrapper {
-        top: 6%;
-    }
-
-    .btn-whatsapp {
-        zoom: 70%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 /* ---------------------------------------------------
     TOOLBAR STYLE
@@ -1540,10 +1451,6 @@ a.article:hover {
     transition: all 0.3s;
 } */
 
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-
 /* CONTRIBUTION */
 
 #logo img {
@@ -1671,6 +1578,10 @@ a.article:hover {
     color: #FFF;
 }
 
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
 @media(max-width: 1094px) {
     #contribution .main {
         align-items: center!important;
@@ -1683,6 +1594,15 @@ a.article:hover {
 
     #contribution-info {
         padding: 0rem;
+    }
+
+    .tabs,
+    .progressions {
+        font-size: 10px;
+    }
+    
+    pre[type="lyrics"] {
+        font-size: 12px;
     }
 }
 
@@ -1708,7 +1628,24 @@ a.article:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media(max-width: 992px) {
+    #navbarSupportedContent {
+        padding-top: 1rem !important;
+    }
+
+    #toolbar {
+        position: fixed !important;
+        bottom: 0px !important;
+        width: 100%;
+        right: 0;
+    }
+
+    .column-action {
+        display: none !important;
+    }
+}
+
+@media(max-width: 768px) {
     #sidebar {
         margin-left: -250px;
     }
@@ -1727,5 +1664,57 @@ a.article:hover {
 
     #sidebar #albuns .title {
         display: none;
+    }
+
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+    #wrapper {
+        padding: 0;
+        width: 100%;
+        gap: 0;
+        bottom: 0;
+        top: 8%;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+        width: 100% !important;
+        margin: 0;
+    }
+
+    .btn-whatsapp {
+        min-width: auto !important;
+    }
+
+    .scrolling {
+        margin: 0 !important;
+    }
+
+    #close-miniplayer {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #sidebar.toggled {
+        margin-left: 0px !important;
+        display: block;
+        min-width: 100%;
+    }
+
+    .btn-whatsapp {
+        zoom: 85%;
+    }
+}
+
+
+@media(max-width: 450px) {
+    #wrapper {
+        top: 6%;
+    }
+
+    .btn-whatsapp {
+        zoom: 70%;
     }
 }

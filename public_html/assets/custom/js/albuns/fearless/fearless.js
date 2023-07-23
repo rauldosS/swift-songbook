@@ -173,7 +173,7 @@ const cipherParts = [
     },
 ]
 
-const cipherLyrics = `
+let cipherLyrics = `
 D
   There's something 'bout the way
 A                                 Em

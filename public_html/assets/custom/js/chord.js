@@ -621,8 +621,8 @@ loadMusic = (music, album) => {
     resertToolbar()
     // cipherContent.hide()
 
-    createAlbumCSS(album)
-    createCipherJS(album, music)
+    // createAlbumCSS(album)
+    // createCipherJS(album, music)
 
     loadCipher(music, album)
 
@@ -884,17 +884,17 @@ createCipherLyricsHTML = () => {
 }
 
 function replaceWholeChordsInLines() {
-    // const replacements_chords = chordsMusic.map(chord => {
-    //     return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
-    // }).reverse()
+    const replacements_chords = chordsMusic.map(chord => {
+        return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
+    }).reverse()
 
-    // for (const replacement of replacements_chords) {
-    //   const { searchValue, replaceValue } = replacement
-    //   const regex = new RegExp(`\\b${searchValue}\\b`, 'g')
-    //   cipherLyrics = cipherLyrics.replaceAll(regex, replaceValue)
-    // }
+    for (const replacement of replacements_chords) {
+      const { searchValue, replaceValue } = replacement
+      const regex = new RegExp(`\\b${searchValue}\\b`, 'g')
+      cipherLyrics = cipherLyrics.replaceAll(regex, replaceValue)
+    }
 
-    // return cipherLyrics
+    return cipherLyrics
 }
 
 createChordColumns = () => {
