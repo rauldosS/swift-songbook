@@ -1582,12 +1582,14 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media(max-width: 1094px) {
+@media(max-width: 1319px) {
     #contribution .main {
         align-items: center!important;
         flex-direction: column!important;
     }
+}
 
+@media(max-width: 1094px) {
     #qr-data {
         min-width: none;
     }

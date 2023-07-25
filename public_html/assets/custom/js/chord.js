@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $("#mini-player").load("/templates/base/mini-player.html")
-    $("#toolbar").load("/templates/base/toolbar.html")
+    $("#mini-player").load("/public_html/templates/base/mini-player.html")
+    $("#toolbar").load("/public_html/templates/base/toolbar.html")
 })
 
 // CHORDS
@@ -542,11 +542,6 @@ let tabsHtml = {}
 let cipherLyricsPartsHtml = {}
 let cipherLyricsColumnsPartsHtml = {}
 
-let currentContent = {
-    content: undefined,
-    name: undefined
-}
-
 let completeCipher = []
 let completeCipherColumns = []
 
@@ -653,11 +648,11 @@ hideCipherWrapper = () => {
 }
 
 createAlbumCSS = (album) => {
-    cipherContent.prepend(`<link href="/assets/custom/css/albuns/${ album }.css" rel="stylesheet">`)
+    cipherContent.prepend(`<link href="/public_html/assets/custom/css/albuns/${ album }.css" rel="stylesheet">`)
 }
 
 createCipherJS = (album, music) => {
-    cipherContent.prepend(`<script src="/assets/custom/js/albuns/${ album }/${ music }.js"></script>`)
+    cipherContent.prepend(`<script src="/public_html/assets/custom/js/albuns/${ album }/${ music }.js"></script>`)
 }
 
 createCipherCapoHTML = () => {

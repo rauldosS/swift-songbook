@@ -12,6 +12,19 @@
   <priority>1.00</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com/about</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/help</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+
 <!-- Taylor Swift -->
 
 <!-- Fearless -->

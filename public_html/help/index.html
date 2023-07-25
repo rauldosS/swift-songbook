@@ -6,16 +6,15 @@
     <meta name="google-site-verification" content="F97SF6gvcrY8w-JGs-RqTu5GHLrnt6F1u3VOmqjSxAI" />
     <meta name="classification" content="Internet">
     <meta name="distribution" content="Global">
-    <meta name="keywords" content="Fearless, Fearless Taylor Swift, Fearless cifra, Taylor's Songbook, cifras, letra cifrada, chords">
-    <meta property="og:title" content="Fearless - Taylor's Songbook">
+    <meta name="keywords" content="Ajuda, Taylor Swift, Taylor's Songbook, Funcionalidades, Personalização, Exibir acordes, Tamanho da fonte, Letras, Música, Cifras / Help, Taylor Swift, Taylor's Songbook, Features, Personalization, Show Chords, Font Size, Lyrics, music, chords">
+    <meta property="og:title" content="Help / Ajuda - Taylor's Songbook">
     <meta name="rating" content="General">
     <meta property="og:type" content="website">
     <meta http-equiv="Content-Language" content="en-us,pt-BR">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="
-        Aprenda a tocar a cifra de Fearless (Taylor Swift) no Taylor's Songbook. 
-        Learn to play the Fearless (Taylor Swift) chords in Taylor's Songbook. 
-        And I don't know how it gets better than this / You take my hand and drag me headfirst / Fearless / And I don't know why when with you I'd dance / In a storm in my best dress / Fearless"
+    Welcome to the Help page! Discover the customization features available in Taylor's Songbook. Enhance your music experience, explore our intuitive interface designed to give you the best playing experience.
+        Bem-vindo à página de Ajuda! Descubra as funcionalidades de personalização disponíveis no Taylor's Songbook. Aprimore sua experiência musical, explore nossa interface intuitiva projetada para oferecer a melhor experiência de tocar. / "
     >
     <meta name="author" content="Raul dos Santos Moraes">
 
@@ -130,14 +129,8 @@
             <div class="content shadow bg-white scrolling">
                 <div id="shortcuts"></div>
 
-                <!-- CIPHER -->
-                <div id="cipher-wrapper">
-                    <section id="cipher-content" class="my-3 cipher fearless-album-content">
-                    </section>
-                    <section id="toolbar"></section>
-                </div>
-
-                <section id="mini-player" class="player player--music player--init player--min"></section>
+                <!-- CONTENT -->
+                <section id="content" class="animate__animated animate__fadeIn"></section>
 
                 <div class="line"></div>
 
@@ -208,7 +201,7 @@
         ]
 
         function afterPageLoad() {
-            loadMusic('fearless', 'fearless')
+            loadContent('help', switchLanguage = true)
             $('.modal-backdrop').remove()
             $('#loading').modal('show')
             $('body').children().removeClass('hide')
@@ -228,8 +221,6 @@
 
     <!-- Base JS -->
     <script src="/public_html/assets/custom/js/all.js"></script>
-    <script src="/public_html/assets/custom/js/chord.js"></script>
-    <script src="/public_html/assets/custom/js/albuns/fearless/fearless.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-2BZ30CLHS1"></script>

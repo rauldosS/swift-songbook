@@ -254,9 +254,18 @@ const userLang = navigator.language || navigator.userLanguage
 const languages = ['en-US', 'pt-BR']
 const userContainsLanguage = languages.includes(userLang)
 
+let currentContent = {
+    content: undefined,
+    name: undefined
+}
+
 let musics = {}
 
 $(document).ready(function () {
+    $("#sidebar").load("/public_html/templates/base/sidebar.html")
+    $("#shortcuts").load("/public_html/templates/base/shortcuts.html")
+    $("#contribution").load("/public_html/templates/base/contribution.html")
+
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
     })
@@ -278,63 +287,6 @@ $(document).ready(function () {
 
         loadCopy()
     }
-
-    const list_unstyled = $('#list-unstyled')
-
-    $("#hide-albuns-toggle, #albuns").on('click', function (e) {
-        e.preventDefault()
-        $("#sidebar").toggleClass("toggled")
-
-        if ($("#sidebar").hasClass("toggled")) {
-            $("#page-content-wrapper").css({ 'width': 'calc(100% - 10px)' })
-            $('button#hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
-        } else {
-            $("#page-content-wrapper").css({ 'width': 'calc(100% - 260px)' })
-            $('button#hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
-        }
-    })
-
-    $.each(albuns, function(i, album) {
-        list_unstyled.append(
-            `<li>
-                <a href="#album-${ album.id }-list-unstyled" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle album-${ album.id } font-${ album.id }">${ album.name }</a>
-                <ul class="collapse list-unstyled" id="album-${ album.id }-list-unstyled"></ul>
-            </li>`
-        )
-
-        const music_list = $(`#album-${ album.id }-list-unstyled`)
-
-        album.musics.forEach(music => {
-            music_list.append(`
-                <a ${ music.blocked ? 'onclick="headShake(this)"' : `href="/song/${ music.id }"`}>
-                    ${music.name}
-                    ${ music.blocked ? '<i class="bi bi-slash-circle color-danger"></i>' : '' }
-                </a>
-            `)
-        })
-
-        music_list.prepend(`
-            <a onclick="loadContent('albuns/${ album.id }', true); updateCurrentContent('album', '${ album.id }')"><span class="about"></span> <i class="bi bi-question-circle"></i></a>
-        `)
-    })
-
-    $(window).resize(function() {
-        if ($(window).width() < 768) {
-            $('#shortcuts #hide-albuns-toggle span').text(
-                $('#sidebar').hasClass('toggled') ? language.shortcuts.albumToggle.hide : language.shortcuts.albumToggle.show
-            )
-        } else {
-            $('#shortcuts #hide-albuns-toggle span').text(
-                $('#sidebar').hasClass('toggled') ? language.shortcuts.albumToggle.show : language.shortcuts.albumToggle.hide
-            )
-       }
-    })
-
-    // TOOLBAR
-
-    // SIDEBAR
-
-    
 })
 
 albuns.forEach(album => {
@@ -392,15 +344,15 @@ setLoading = (loading, timeout = 0) => {
     }, timeout)
 }
 
-// updateCurrentContent = (content = undefined, name = undefined) => {
-//     currentContent['content'] = content
-//     currentContent['name'] = name
-// }
+updateCurrentContent = (content = undefined, name = undefined) => {
+    currentContent['content'] = content
+    currentContent['name'] = name
+}
 
 getLanguage = () => {
     (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
     $.ajax({
-        url:  '/assets/languages/' +  localStorage.getItem('language') + '.json',
+        url:  '/public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
@@ -430,27 +382,20 @@ const btnHome = $('#btn-home')
 
 // const homePath = 'base/home'
 
-// loadContent = (path, switchLanguage = false) => {
-//     setLoading(true)
-//     hideCipherWrapper()
+loadContent = (path, switchLanguage = false) => {
+    content.load(`/public_html/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+        if (!['album', 'about', 'music', 'help'].includes(currentContent.content)) {
+            updateLanguage()
+        }
+    })
 
-//     content.load(`templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
-//         if (!['album', 'author', 'music'].includes(currentContent.content)) {
-//             updateLanguage()
-//         }
-//     })
+    updateCurrentContent(path)
 
-//     updateCurrentContent(path)
+    if ($(window).width() < 768 && $('#sidebar').width() > 250) {
+        $('#sidebar').toggleClass('toggled')
+    }
 
-//     content.show()
-
-//     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
-//         $('#sidebar').toggleClass('toggled')
-//     }
-
-//     scrollTop()
-//     setLoading(false, 2500)
-// }
+}
 
 loadCopy = () => {
     $('[data-clipboard-text]').on('click', function() {
@@ -482,16 +427,19 @@ loadCopy = () => {
 // }
 
 updateLanguage = () => {
-    // switch (currentContent.content) {
-    //     case 'album':
-    //         loadAlbum(currentContent.name)
-    //         break
-    //     // case 'music':
-    //     //     loadMusic(currentContent.name)
-    //     case 'author':
-    //         loadContent('author', true)
-    //         break
-    // }
+    switch (currentContent.content) {
+        // case 'album':
+        //     loadAlbum(currentContent.name)
+        //     break
+        // case 'music':
+        //     loadMusic(currentContent.name)
+        case 'help':
+            loadContent('help', true)
+            break
+        case 'about':
+            loadContent('about', true)
+            break
+    }
 
     $('#main-alert').html(language.mainAlert)
 
