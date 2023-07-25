@@ -26,7 +26,7 @@ $(document).ready(function () {
 
         album.musics.forEach(music => {
             music_list.append(`
-                <a ${ music.blocked ? 'onclick="headShake(this)"' : `onclick="selectMusic('${ music.id }')"`}>
+                <a ${ music.blocked ? 'onclick="headShake(this)"' : `href="song/${ music.id }"`}>
                     ${music.name}
                     ${ music.blocked ? '<i class="bi bi-slash-circle color-danger"></i>' : '' }
                 </a>

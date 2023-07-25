@@ -1,14 +1,16 @@
-musicId = 'the-man'
-musicTitle = 'The Man'
-tuning = 'C'
-chordShape = null
-capoFret = null
-spotify = 'https://open.spotify.com/embed/track/3RauEVgRgj1IuWdJ9fDs70?utm_source=generator'
-chordsMusic = ['F', 'G', 'C', 'Am']
-videoUrl = 'https://www.youtube.com/embed/JH14683wgl0'
-palmMute = true
+const musicId = 'the-man'
+const albumId = 'lover'
+const musicTitle = 'The Man'
+const tuning = 'C'
+const chordShape = null
+const capoFret = null
+const spotify = 'https://open.spotify.com/embed/track/3RauEVgRgj1IuWdJ9fDs70?utm_source=generator'
+const chordsMusic = ['F', 'G', 'C', 'Am']
+const videoUrl = 'https://www.youtube.com/embed/JH14683wgl0'
+const basicCipher = false
+const palmMute = true
 
-partsCipher = [
+const partsCipher = [
     { type: 'alert',                id: 'palmMute' },
 
     { type: 'progression',          id: 'main' },
@@ -34,7 +36,7 @@ partsCipher = [
     { type: 'cipherLyrics',         id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'main',
         title: 'Intro | Verse Progression',
@@ -62,9 +64,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -121,7 +123,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
            F                   G
 I would be complex, I would be cool
              C                                   Am
@@ -225,7 +227,7 @@ ${ divider }
 If I was a man, then I'd be the man
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 I would be complex, I would be cool
 They'd say I played the field before I found someone to commit to

@@ -1,12 +1,14 @@
-musicId = 'enchanted'
-musicTitle = 'Enchanted'
-tuning = 'Ab Major'
-chordShape = null
-capoFret = '1'
-spotify = 'https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm_source=generator'
-chordsMusic = ['G', 'C', 'D', 'Em', 'Bm', 'Dsus4', 'Cadd9']
-videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
-palmMute = true
+const musicId = 'enchanted'
+const albumId = 'speak-now'
+const musicTitle = 'Enchanted'
+const tuning = 'Ab Major'
+const chordShape = null
+const capoFret = '1'
+const spotify = 'https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm_source=generator'
+const chordsMusic = ['G', 'C', 'D', 'Em', 'Bm', 'Dsus4', 'Cadd9']
+const videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
+const basicCipher = false
+const palmMute = true
 
 // https://www.youtube.com/watch?v=h0Zewndw2u0&ab_channel=TunezbyLucz
 // https://drive.google.com/file/d/1Rs2xPG0A0_Rrd7OGUeoACf4sn6EPeD4U/view
@@ -14,7 +16,7 @@ palmMute = true
 // Variação no Dsus4 no início
 // Com ou sem capotrastes nas tbs
 
-partsCipher = [
+const partsCipher = [
     { type: 'alert',                 id: 'palmMute' },
 
     { type: 'progression',           id: 'intro' },
@@ -54,7 +56,7 @@ partsCipher = [
     { type: 'cipherLyrics',          id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'intro',
         title: 'Intro',
@@ -159,7 +161,7 @@ progressions = [
     },
 ]
 
-tabs = [
+const tabs = [
     {
         id: 'secondVerse',
         title: 'Verse 2 | Last two times',
@@ -217,7 +219,7 @@ E|-0------------------|`
     }
 ]
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -265,7 +267,7 @@ cipherParts = [
     },
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
    G                        Bm
 There I was again tonight, forcing laughter, faking smiles,
    C                    G
@@ -369,7 +371,7 @@ Please don't be in love with someone else,
 Please don't have somebody waiting on you.
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 There I was again tonight
 Forcing laughter, faking smiles
