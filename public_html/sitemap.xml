@@ -30,6 +30,12 @@
 <!-- Fearless -->
 
 <url>
+  <loc>https://taylorsongbook.com/album/fearless</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
   <loc>https://taylorsongbook.com/song/fearless</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
@@ -37,17 +43,59 @@
 
 <!-- Speak Now -->
 
+<url>
+  <loc>https://taylorsongbook.com/album/speak-now</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Red -->
+
+<url>
+  <loc>https://taylorsongbook.com/album/red</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 
 <!-- 1989 -->
 
+<url>
+  <loc>https://taylorsongbook.com/album/1989</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Reputation -->
+
+<url>
+  <loc>https://taylorsongbook.com/album/reputation</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 
 <!-- Lover -->
 
+<url>
+  <loc>https://taylorsongbook.com/album/lover</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Folklore -->
 
+<url>
+  <loc>https://taylorsongbook.com/album/folklore</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Evermore -->
+
+<url>
+  <loc>https://taylorsongbook.com/album/evermore</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 
 <!-- Midnights -->
 

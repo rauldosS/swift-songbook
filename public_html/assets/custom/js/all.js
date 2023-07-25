@@ -255,16 +255,14 @@ const languages = ['en-US', 'pt-BR']
 const userContainsLanguage = languages.includes(userLang)
 
 let currentContent = {
-    content: undefined,
-    name: undefined
+    contentType: undefined,
+    path: undefined
 }
 
-let musics = {}
-
 $(document).ready(function () {
-    $("#sidebar").load("/public_html/templates/base/sidebar.html")
-    $("#shortcuts").load("/public_html/templates/base/shortcuts.html")
-    $("#contribution").load("/public_html/templates/base/contribution.html")
+    $("#sidebar").load("/templates/base/sidebar.html")
+    $("#shortcuts").load("/templates/base/shortcuts.html")
+    $("#contribution").load("/templates/base/contribution.html")
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
@@ -277,7 +275,6 @@ $(document).ready(function () {
     getLanguage()
 
     window.onload = function() {
-        // checkQueryParams()
         updateLanguage()
 
         $('#unpin-shortcuts').click(() => {
@@ -288,6 +285,8 @@ $(document).ready(function () {
         loadCopy()
     }
 })
+
+let musics = {}
 
 albuns.forEach(album => {
     album.musics.forEach(music => {    
@@ -344,15 +343,15 @@ setLoading = (loading, timeout = 0) => {
     }, timeout)
 }
 
-updateCurrentContent = (content = undefined, name = undefined) => {
-    currentContent['content'] = content
-    currentContent['name'] = name
+updateCurrentContent = (path = undefined, contentType = undefined) => {
+    currentContent['path'] = path
+    currentContent['contentType'] = contentType
 }
 
 getLanguage = () => {
     (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
     $.ajax({
-        url:  '/public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
+        url:  '/assets/languages/' +  localStorage.getItem('language') + '.json',
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
@@ -382,14 +381,14 @@ const btnHome = $('#btn-home')
 
 // const homePath = 'base/home'
 
-loadContent = (path, switchLanguage = false) => {
-    content.load(`/public_html/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
-        if (!['album', 'about', 'music', 'help'].includes(currentContent.content)) {
+loadContent = (path, contentType = undefined, switchLanguage = false) => {
+    content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+        if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
             updateLanguage()
         }
     })
 
-    updateCurrentContent(path)
+    updateCurrentContent(path, contentType)
 
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
@@ -427,17 +426,20 @@ loadCopy = () => {
 // }
 
 updateLanguage = () => {
-    switch (currentContent.content) {
+    switch (currentContent.contentType) {
         // case 'album':
         //     loadAlbum(currentContent.name)
         //     break
         // case 'music':
         //     loadMusic(currentContent.name)
+        case 'album':
+            loadContent(currentContent.path, currentContent.contentType, true)
+            break
         case 'help':
-            loadContent('help', true)
+            loadContent('help', 'help', true)
             break
         case 'about':
-            loadContent('about', true)
+            loadContent('about', 'about', true)
             break
     }
 
