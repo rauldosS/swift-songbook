@@ -1,14 +1,15 @@
-musicId = 'red'
-musicTitle = 'Red'
-tuning = 'E'
-chordShape = null
-capoFret = '4'
-// spotify = 'https://open.spotify.com/embed/track/4yBEU0askBZzE2XEVdEwmx?utm_source=generator'
-spotify = 'https://open.spotify.com/embed/track/4OAuvHryIVv4kMDNSLuPt6?utm_source=generator'
-chordsMusic = ['F', 'Am', 'G', 'C', 'G/B', 'C/E']
-videoUrl = 'https://www.youtube.com/embed/Zlot0i3Zykw'
+const musicId = 'red'
+const musicTitle = 'Red'
+const tuning = 'E'
+const chordShape = null
+const capoFret = '4'
+// const spotify = 'https://open.spotify.com/embed/track/4yBEU0askBZzE2XEVdEwmx?utm_source=generator'
+const spotify = 'https://open.spotify.com/embed/track/4OAuvHryIVv4kMDNSLuPt6?utm_source=generator'
+const chordsMusic = ['F', 'Am', 'G', 'C', 'G/B', 'C/E']
+const videoUrl = 'https://www.youtube.com/embed/Zlot0i3Zykw'
+const basicCipher = false
 
-partsCipher = [
+const partsCipher = [
     { type: 'tabs',             id: 'intro' },
 
     { type: 'progression',      id: 'intro' },
@@ -46,7 +47,7 @@ partsCipher = [
     { type: 'cipherLyrics',     id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'intro',
         title: 'Intro | Verse',
@@ -139,7 +140,7 @@ progressions = [
     }
 ]
 
-tabs = [
+const tabs = [
     {
         id: 'intro',
         title: 'Intro',
@@ -191,7 +192,7 @@ E|----------------------------------------------------------------|`,
     }
 ]
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -244,7 +245,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
                     F                 Am
 Lovin' him is like, drivin' a new Maserati
                 G
@@ -357,7 +358,7 @@ Down a dead end street.
 
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 Loving him is like driving a new Maserati down a dead-end street
 Faster than the wind, passionate as sin, ending so suddenly

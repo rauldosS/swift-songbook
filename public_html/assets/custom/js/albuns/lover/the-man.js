@@ -8,7 +8,6 @@ const spotify = 'https://open.spotify.com/embed/track/3RauEVgRgj1IuWdJ9fDs70?utm
 const chordsMusic = ['F', 'G', 'C', 'Am']
 const videoUrl = 'https://www.youtube.com/embed/JH14683wgl0'
 const basicCipher = false
-const palmMute = true
 
 const partsCipher = [
     { type: 'alert',                id: 'palmMute' },

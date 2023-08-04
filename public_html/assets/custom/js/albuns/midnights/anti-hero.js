@@ -1,14 +1,14 @@
-musicId = 'anti-hero'
-musicTitle = 'Anti-Hero'
-tuning = 'E'
-chordShape = null
-capoFret = '4'
-spotify = 'https://open.spotify.com/embed/track/0V3wPSX9ygBnCm8psDIegu?utm_source=generator'
-chordsMusic = ['Fmaj7', 'C', 'Gadd11', 'Am7']
-videoUrl = 'https://www.youtube.com/embed/DufVVyUI_NA'
-palmMute = true
+const musicId = 'anti-hero'
+const musicTitle = 'Anti-Hero'
+const tuning = 'E'
+const chordShape = null
+const capoFret = '4'
+const spotify = 'https://open.spotify.com/embed/track/0V3wPSX9ygBnCm8psDIegu?utm_source=generator'
+const chordsMusic = ['Fmaj7', 'C', 'Gadd11', 'Am7']
+const videoUrl = 'https://www.youtube.com/embed/DufVVyUI_NA'
+const basicCipher = false
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',          id: 'firstVerse' },
     { type: 'cipherLyrics',         id: 'firstVerse' },
 
@@ -33,7 +33,7 @@ partsCipher = [
     { type: 'progression',          id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'firstVerse',
         title: 'Verse | Pre-Chorus',
@@ -100,9 +100,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -145,7 +145,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
 Fmaj7       C                Gadd11      Am7
 I have this thing where I get older but just never wiser
 Fmaj7     C              Gadd11
@@ -236,7 +236,7 @@ Fmaj7      C         Gadd11         Am7
 It must be exhausting Always rooting for the anti-hero
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 I have this thing where I get older, but just never wiser
 Midnights become my afternoons

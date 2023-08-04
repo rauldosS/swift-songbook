@@ -59,14 +59,14 @@ $(document).ready(function () {
     // FONT
 
     $('.font-action-button.increase').click(() => {
-        const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
+        currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
         if (currentFontSize >= 7) {
             $('.tabs, .progressions, pre[type="lyrics"]').css({ 'font-size': parseInt(currentFontSize) - 2 + 'px' })
         }
     })
 
     $('.font-action-button.decrease').click(() => {
-        const currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
+        currentFontSize = $('pre[type="lyrics"]').css('font-size').split('px')[0]
         if (currentFontSize <= 25) {
             $('.tabs, .progressions, pre[type="lyrics"]').css({ 'font-size': parseInt(currentFontSize) + 2 + 'px' })
         }

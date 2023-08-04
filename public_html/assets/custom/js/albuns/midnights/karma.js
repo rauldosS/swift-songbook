@@ -1,17 +1,19 @@
-musicId = 'karma'
-musicTitle = 'Karma'
-tuning = 'G#/Ab Major'
-chordShape = null
-capoFret = '1'
-spotify = 'https://open.spotify.com/embed/track/7KokYm8cMIXCsGVmUvKtqf?utm_source=generator'
-chordsMusic = ['C', 'G', 'D', 'Bm', 'F#m', 'A']
-videoUrl = 'https://www.youtube.com/embed/K6hwfI1J1dg'
-palmMute = true
+const musicId = 'karma'
+const musicTitle = 'Karma'
+const tuning = 'G#/Ab Major'
+const chordShape = null
+const capoFret = '1'
+const spotify = 'https://open.spotify.com/embed/track/7KokYm8cMIXCsGVmUvKtqf?utm_source=generator'
+const chordsMusic = ['C', 'G', 'D', 'Bm', 'F#m', 'A']
+const videoUrl = 'https://www.youtube.com/embed/K6hwfI1J1dg'
+const basicCipher = false
 
 // https://www.youtube.com/watch?v=K6hwfI1J1dg&ab_channel=TunezbyLucz
 // https://drive.google.com/file/d/1EjA6xIeeES1BCYpihfd5ZMk6Y5YoQIrx/view
 
-partsCipher = [
+const partsCipher = [
+    { type: 'alert',                 id: 'palmMute' },
+
     { type: 'progression',           id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'preChorus' },
@@ -39,7 +41,7 @@ partsCipher = [
     { type: 'cipherLyrics',          id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'firstVerse',
         title: 'Verse | Pre-Chorus',
@@ -96,9 +98,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse',
@@ -151,7 +153,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
 D
 You're talking shit for the hell of it
 C
@@ -274,7 +276,7 @@ C
 Karma's a relaxing thought
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 You're talking shit for the hell of it
 Addicted to betrayal, but you're relevant

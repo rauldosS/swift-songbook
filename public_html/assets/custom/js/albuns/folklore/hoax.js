@@ -1,15 +1,15 @@
-musicId = 'hoax'
-musicTitle = 'Hoax'
-tuning = 'Ab'
-chordShape = 'G'
-capoFret = '1'
-spotify = 'https://open.spotify.com/embed/track/6MWoRt97mnSTXZhu3ggi9C?utm_source=generator'
-chordsMusic = ['Am', 'G', 'D', 'Em', 'D4', 'Am7', 'Cadd9']
-videoUrl = 'https://www.youtube.com/embed/GGyY_kfvwak'
-basicCipher = false
+const musicId = 'hoax'
+const musicTitle = 'Hoax'
+const tuning = 'Ab'
+const chordShape = 'G'
+const capoFret = '1'
+const spotify = 'https://open.spotify.com/embed/track/6MWoRt97mnSTXZhu3ggi9C?utm_source=generator'
+const chordsMusic = ['Am', 'G', 'D', 'Em', 'D4', 'Am7', 'Cadd9']
+const videoUrl = 'https://www.youtube.com/embed/GGyY_kfvwak'
+const basicCipher = false
 
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',          id: 'firstVerse' },
 
     { type: 'tabs',                 id: 'firstVerse' },
@@ -44,7 +44,7 @@ partsCipher = [
     { type: 'tabs',                 id: 'final' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -113,7 +113,7 @@ progressions = [
     },
 ]
 
-tabs = [
+const tabs = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -210,7 +210,7 @@ E|----------3--x--------------------------------3-|
     },
 ]
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -258,7 +258,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
    Am       G
 My only one
    Cadd9      D
@@ -347,7 +347,7 @@ Em Cadd9 D G
 Em Cadd9 D G
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 My only one
 My smoking gun

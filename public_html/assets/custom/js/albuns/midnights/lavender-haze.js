@@ -1,17 +1,17 @@
-musicId = 'lavender-haze'
-musicTitle = 'Lavender Haze'
-tuning = 'Bb Major'
-chordShape = null
-capoFret = '3'
-spotify = 'https://open.spotify.com/embed/track/5jQI2r1RdgtuT8S3iG8zFC?utm_source=generator'
-chordsMusic = ['C', 'Am', 'D']
-videoUrl = 'https://www.youtube.com/embed/JxM_bJP8G-s'
-palmMute = true
+const musicId = 'lavender-haze'
+const musicTitle = 'Lavender Haze'
+const tuning = 'Bb Major'
+const chordShape = null
+const capoFret = '3'
+const spotify = 'https://open.spotify.com/embed/track/5jQI2r1RdgtuT8S3iG8zFC?utm_source=generator'
+const chordsMusic = ['C', 'Am', 'D']
+const videoUrl = 'https://www.youtube.com/embed/JxM_bJP8G-s'
+const basicCipher = false
 
 // https://drive.google.com/file/d/11_H5JxJ_ZZDxE6QCcwehXQSD2278ErEF/view
 // https://www.youtube.com/watch?v=JxM_bJP8G-s&ab_channel=TunezbyLucz
 
-partsCipher = [
+const partsCipher = [
     { type: 'alert',                 id: 'palmMute' },
 
     { type: 'progression',           id: 'intro' },
@@ -55,7 +55,7 @@ partsCipher = [
     { type: 'cipherLyrics',          id: 'outro' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'intro',
         title: 'Intro',
@@ -155,9 +155,9 @@ progressions = [
     },
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'intro',
         title: 'Intro',
@@ -215,7 +215,7 @@ cipherParts = [
     },
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
 C    D                 Am   Am 
         Meet me at midnight
 ${ divider }
@@ -327,7 +327,7 @@ I just wanna stay
 I just wanna stay in that lavender haze
 `
 
-lyrics = `
+const lyrics = `
 <b>[Intro]</b>
 Meet me at midnight
 

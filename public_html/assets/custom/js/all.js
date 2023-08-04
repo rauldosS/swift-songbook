@@ -1,4 +1,4 @@
-const albuns = [
+albuns = [
     {
         id: 'taylor-swift',
         name: 'Taylor Swift',
@@ -62,7 +62,7 @@ const albuns = [
             { id: "Mean", name: "Mean", blocked: true },
             { id: "The Story Of Us", name: "The Story Of Us", blocked: true },
             { id: "Never Grow Up", name: "Never Grow Up", blocked: true },
-            { id: "enchanted", name: "Enchanted", blocked: true },
+            { id: "enchanted", name: "Enchanted", blocked: false },
             { id: "Better Than Revenge", name: "Better Than Revenge", blocked: true },
             { id: "Innocent", name: "Innocent", blocked: true },
             { id: "Haunted", name: "Haunted", blocked: true },
@@ -79,7 +79,7 @@ const albuns = [
         musics: [
             { id: "State of Grace", name: "State of Grace", blocked: true },
             { id: "State Of Grace (Acoustic Version)", name: "State Of Grace (Acoustic Version)", blocked: true },
-            { id: "red", name: "Red", blocked: true },
+            { id: "red", name: "Red", blocked: false },
             { id: "Treacherous", name: "Treacherous", blocked: true },
             { id: "I Knew You Were Trouble", name: "I Knew You Were Trouble", blocked: true },
             { id: "All Too Well", name: "All Too Well", blocked: true },
@@ -95,7 +95,7 @@ const albuns = [
             { id: "Starlight", name: "Starlight", blocked: true },
             { id: "Begin Again", name: "Begin Again", blocked: true },
             { id: "The Moment I Knew", name: "The Moment I Knew", blocked: true },
-            { id: "come-back-be-here", name: "Come Back... Be Here", blocked: true },
+            { id: "come-back-be-here", name: "Come Back... Be Here", blocked: false },
             { id: "Girl At Home", name: "Girl At Home", blocked: true },
             { id: "Better Man (From The Vault)", name: "Better Man (From The Vault)", blocked: true },
             { id: "Nothing New (feat. Phoebe Bridgers) (From The Vault)", name: "Nothing New (feat. Phoebe Bridgers) (From The Vault)", blocked: true },
@@ -158,7 +158,7 @@ const albuns = [
             { id: "I Forgot That You Existed", name: "I Forgot That You Existed", blocked: true },
             { id: "Cruel Summer", name: "Cruel Summer", blocked: true },
             { id: "Lover", name: "Lover", blocked: true },
-            { id: "the-man", name: "The Man", blocked: true },
+            { id: "the-man", name: "The Man", blocked: false },
             { id: "The Archer", name: "The Archer", blocked: true },
             { id: "I Think He Knows", name: "I Think He Knows", blocked: true },
             { id: "Miss Americana & The Heartbreak Prince", name: "Miss Americana & The Heartbreak Prince", blocked: true },
@@ -180,7 +180,7 @@ const albuns = [
         name: 'Folklore',
         musics: [
             { id: "​the 1", name: "​the 1", blocked: true },
-            { id: "cardigan", name: "cardigan", blocked: true },
+            { id: "cardigan", name: "cardigan", blocked: false },
             { id: "the last great american dynasty", name: "the last great american dynasty", blocked: true },
             { id: "exile", name: "exile", blocked: true },
             { id: "​my tears ricochet", name: "​my tears ricochet", blocked: true },
@@ -194,7 +194,7 @@ const albuns = [
             { id: "epiphany", name: "epiphany", blocked: true },
             { id: "betty", name: "betty", blocked: true },
             { id: "​peace", name: "​peace", blocked: true },
-            { id: "hoax", name: "hoax", blocked: true },
+            { id: "hoax", name: "hoax", blocked: false },
             { id: "the lakes", name: "the lakes", blocked: true },
         ]
     },
@@ -225,9 +225,9 @@ const albuns = [
         id: 'midnights',
         name: 'Midnights',
         musics: [
-            { id: "lavender-haze", name: "Lavender Haze", blocked: true },
+            { id: "lavender-haze", name: "Lavender Haze", blocked: false },
             { id: "Maroon", name: "Maroon", blocked: true },
-            { id: "anti-hero", name: "Anti-Hero", blocked: true },
+            { id: "anti-hero", name: "Anti-Hero", blocked: false },
             { id: "Snow On The Beach (feat. Lana Del Rey)", name: "Snow On The Beach (feat. Lana Del Rey)", blocked: true },
             { id: "You're On Your Own, Kid", name: "You're On Your Own, Kid", blocked: true },
             { id: "Midnight Rain", name: "Midnight Rain", blocked: true },
@@ -235,7 +235,7 @@ const albuns = [
             { id: "Vigilante Shit", name: "Vigilante Shit", blocked: true },
             { id: "Bejeweled", name: "Bejeweled", blocked: true },
             { id: "Labyrinth", name: "Labyrinth", blocked: true },
-            { id: "karma", name: "Karma", blocked: true },
+            { id: "karma", name: "Karma", blocked: false },
             { id: "Sweet Nothing", name: "Sweet Nothing", blocked: true },
             { id: "Mastermind", name: "Mastermind", blocked: true },
             { id: "The Great War", name: "The Great War", blocked: true },
@@ -250,9 +250,9 @@ const albuns = [
     },
 ]
 
-const userLang = navigator.language || navigator.userLanguage
-const languages = ['en-US', 'pt-BR']
-const userContainsLanguage = languages.includes(userLang)
+userLang = navigator.language || navigator.userLanguage
+languages = ['en-US', 'pt-BR']
+userContainsLanguage = languages.includes(userLang)
 
 let currentContent = {
     contentType: undefined,
@@ -312,19 +312,19 @@ scrollTop = () => {
 }
 
 scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
-    const targetElement = $(elementSelector).last()
-    const scrollContainer = $(scrollContainerSelector)
+    targetElement = $(elementSelector).last()
+    scrollContainer = $(scrollContainerSelector)
     
     // Check if the target element and scroll container exist
     if (targetElement.length > 0 && scrollContainer.length > 0) {
         // Get the current scroll position in the container
-        const currentPosition = scrollContainer.scrollTop() - 36
+        currentPosition = scrollContainer.scrollTop() - 36
     
         // Get the offset of the target element relative to the document
-        const targetOffset = targetElement.offset().top
+        targetOffset = targetElement.offset().top
     
         // Adjust the target position based on the scroll container's position
-        const targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 36
+        targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 36
     
         // Check if the scroll is already at the correct position
         if (currentPosition !== targetPosition) {
@@ -376,10 +376,10 @@ function setLanguage(lang) {
 
 // BASE
 
-const content =  $('#content')
-const btnHome = $('#btn-home')
+content =  $('#content')
+btnHome = $('#btn-home')
 
-// const homePath = 'base/home'
+// homePath = 'base/home'
 
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
     content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
@@ -400,7 +400,7 @@ loadCopy = () => {
     $('[data-clipboard-text]').on('click', function() {
         textToCopy = $(this).attr('data-clipboard-text')
 
-        const clipboard = new ClipboardJS('[data-clipboard-text]', {
+        clipboard = new ClipboardJS('[data-clipboard-text]', {
             text: function() { return textToCopy }
         })
     
@@ -410,7 +410,7 @@ loadCopy = () => {
 }
 
 // checkQueryParams = () => {
-//     const params = new Proxy(new URLSearchParams(window.location.search), {
+//     params = new Proxy(new URLSearchParams(window.location.search), {
 //         get: (searchParams, prop) => searchParams.get(prop),
 //     })
 
@@ -529,7 +529,7 @@ headShake = (el) => {
 }
 
 changeText = (element) => {
-    const text = element.text()
+    text = element.text()
     
     element.html(`${ language.contribution.copy }`)
 

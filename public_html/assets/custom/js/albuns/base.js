@@ -1,20 +1,20 @@
-musicId = 'hoax'
-musicTitle = 'Hoax'
-tuning = 'Eb'
-chordShape = null
-capoFret = '1'
-spotify = 'https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator'
-chordsMusic = ['Em', 'A', 'G', 'D', 'Bm']
-videoUrl = 'https://www.youtube.com/embed/K-a8s8OLBSE'
-basicCipher = true
+const musicId = 'hoax'
+const musicTitle = 'Hoax'
+const tuning = 'Eb'
+const chordShape = null
+const capoFret = '1'
+const spotify = 'https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator'
+const chordsMusic = ['Em', 'A', 'G', 'D', 'Bm']
+const videoUrl = 'https://www.youtube.com/embed/K-a8s8OLBSE'
+const basicCipher = true
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',          id: 'main' },
 
     { type: 'cipherLyrics',          id: 'firstVerse' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'main',
         title: 'Progression',
@@ -25,9 +25,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -36,9 +36,9 @@ cipherParts = [
     },
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
 ${ divider }
 `
 
-lyrics = `
+const lyrics = `
 `

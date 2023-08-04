@@ -4,11 +4,10 @@ const musicTitle = 'Fearless'
 const tuning = 'F'
 const chordShape = 'D'
 const capoFret = '3'
-const spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator&theme=1'
+const spotify = 'https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator'
 const chordsMusic = ['D', 'A', 'Em', 'G', 'Cadd9']
 const videoUrl = 'https://www.youtube.com/embed/D8fuCW9-vOc'
 const basicCipher = false
-const palmMute = false
 
 const partsCipher = [
     { type: 'progression',      id: 'intro' },

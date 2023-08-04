@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const list_unstyled = $('#list-unstyled')
+    list_unstyled = $('#list-unstyled')
 
     $("#hide-albuns-toggle, #albuns").on('click', function (e) {
         e.preventDefault()
@@ -22,7 +22,7 @@ $(document).ready(function () {
             </li>`
         )
 
-        const music_list = $(`#album-${ album.id }-list-unstyled`)
+        music_list = $(`#album-${ album.id }-list-unstyled`)
 
         album.musics.forEach(music => {
             music_list.append(`

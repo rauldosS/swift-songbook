@@ -1,18 +1,18 @@
-musicId = 'cardigan'
-musicTitle = 'Cardigan'
-tuning = 'Eb'
-chordShape = null
-capoFret = '1'
-spotify = 'https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator'
-chordsMusic = ['Em', 'A', 'G', 'D', 'Bm']
-videoUrl = 'https://www.youtube.com/embed/K-a8s8OLBSE'
-basicCipher = true
+const musicId = 'cardigan'
+const musicTitle = 'Cardigan'
+const tuning = 'Eb'
+const chordShape = null
+const capoFret = '1'
+const spotify = 'https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator'
+const chordsMusic = ['Em', 'A', 'G', 'D', 'Bm']
+const videoUrl = 'https://www.youtube.com/embed/K-a8s8OLBSE'
+const basicCipher = true
 
 // https://tabs.ultimate-guitar.com/tab/taylor-swift/cardigan-chords-3261305
 // https://www.cifraclub.com.br/taylor-swift/cardigan/
 // https://www.youtube.com/watch?v=Cp06ZbQbH9Y&t=56s&ab_channel=NenaShelbyMusic
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',          id: 'main' },
 
     { type: 'cipherLyrics',          id: 'firstVerse' },
@@ -27,7 +27,7 @@ partsCipher = [
     { type: 'cipherLyrics',          id: 'thirdChorus' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'main',
         title: 'Progression',
@@ -38,9 +38,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -93,7 +93,7 @@ cipherParts = [
     },
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
 Em                          A
    Vintage tee, brand new phone
                          G
@@ -211,7 +211,7 @@ G                                    Bm
    You put me on and said I was your favorite
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 Vintage tee, brand new phone
 High heels on cobblestones

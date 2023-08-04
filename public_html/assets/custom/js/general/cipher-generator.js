@@ -5,7 +5,7 @@ selectMusic = (selectedMusicId) => {
 
     btnHome.css({ 'display': 'inline-block' })
     cipherWrapper.show()
-    const music = musics[selectedMusicId]
+    music = musics[selectedMusicId]
     cipherContent.empty()
 
     hideContent()
@@ -37,14 +37,13 @@ resetConfig = () => {
     tabsHtml = {}
     cipherLyricsPartsHtml = {}
     cipherLyricsColumnsPartsHtml = {}
-    partsCipher = []
+    const partsCipher = []
     completeCipher = []
     completeCipherColumns = []
 
-    tabs = []
+    const tabs = []
 
-    basicCipher = false
-    palmMute = false
+    const basicCipher = false
 }
 
 hideContent = () => {
@@ -79,16 +78,16 @@ createCipherCapoHTML = () => {
 }
 
 createCipherHeaderHTML = (album) => {
-    const capo = createCipherCapoHTML()
+    capo = createCipherCapoHTML()
     cipherContent.append(
         `<div id="cipher-header" class="animate__animated animate__fadeIn">
             ${ basicCipher ? '<span class="badge bg-' + album + ' mb-3">' + language.cipher.basicCipher + '</span>' : '' }
             <h1 class="title">${ musicTitle }</h1>
-            <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ chordShape ? '(' + language.cipher.chordShape + ' ' + chordShape + ')' : '' }</span>
+            <span class="cipher-tone">${ language.cipher.tuning }: <b>${ tuning }</b> ${ const chordShape ? '(' + language.cipher.const chordShape + ' ' + const chordShape + ')' : '' }</span>
             <span class="song-capo">
                 ${ capo }
             </span>
-            <iframe style="border-radius:12px" src="${ spotify }" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="${ const spotify }" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     `)
 }
@@ -109,7 +108,7 @@ createChordsHTML = () => {
     ChordJS.replace()
 }
 
-createArrowsProgression = (baseProgression, changeChord = null, palmMute = false, blocking = false) => {
+createArrowsProgression = (baseProgression, changeChord = null, const palmMute = false, blocking = false) => {
     let chordChange = false
     let chordChangeColor = false
     return baseProgression.split(' ').map((progression, i, {length}) => {
@@ -201,22 +200,22 @@ getMultipleProgressionsTable = (notes, progressions, marginNotes) => {
 
 createProgressionHTML = () => {
     progressions.forEach(progression => {
-        // const multipleProgression = progression.notesMultipleProgression !== undefined
-        const notes = progression.notes !== undefined ? createNotes(progression.notes) : ''
-        const multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(
+        // multipleProgression = progression.notesMultipleProgression !== undefined
+        notes = progression.notes !== undefined ? createNotes(progression.notes) : ''
+        multipleProgressionTable = progression.notesMultipleProgression !== undefined ? getMultipleProgressionsTable(
             progression.notesMultipleProgression,
             progression.multipleProgression,
             progression.notes !== undefined
         ) : ''
 
-        const arrowProgression = progression.progression !== undefined ? createArrowsProgression(
+        arrowProgression = progression.progression !== undefined ? createArrowsProgression(
             progression.progression,
             progression.chordChange !== undefined ? progression.chordChange : null,
             progression.palmMute !== undefined,
             progression.blocking !== undefined
         ) : ''
 
-        const repeat = progression.repeat !== undefined ? `<div class="repeatChord">
+        repeat = progression.repeat !== undefined ? `<div class="repeatChord">
             ${ progression.repeat }
         </div>` : ''
 
@@ -259,7 +258,7 @@ createTabsHTML = () => {
 }
 
 createCipherLyricsHTML = () => {
-    const cipherLyricsList = cipherLyrics.split(divider)
+    cipherLyricsList = cipherLyrics.split(divider)
 
     cipherParts.forEach((part, index) => {
         cipherLyricsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `<pre type="lyrics">
@@ -290,13 +289,13 @@ createCipherLyricsHTML = () => {
 }
 
 function replaceWholeChordsInLines() {
-    const replacements_chords = chordsMusic.map(chord => {
+    replacements_chords = chordsMusic.map(chord => {
         return { searchValue: chord, replaceValue: `<b>${ chord }</b>` }
     }).reverse()
 
-    for (const replacement of replacements_chords) {
-      const { searchValue, replaceValue } = replacement
-      const regex = new RegExp(`\\b${searchValue}\\b`, 'g')
+    for (replacement of replacements_chords) {
+      { searchValue, replaceValue } = replacement
+      regex = new RegExp(`\\b${searchValue}\\b`, 'g')
       cipherLyrics = cipherLyrics.replaceAll(regex, replaceValue)
     }
 
@@ -308,7 +307,7 @@ createChordColumns = () => {
         <pre type="lyrics"></pre>
     </div>`)
 
-    const cipherColumnsPre = $('#cipher-columns pre')
+    cipherColumnsPre = $('#cipher-columns pre')
 
     completeCipherColumns.forEach(part => {
         cipherColumnsPre.append(`<div class="border-column pb-2 pt-2">${ part }</div>`)

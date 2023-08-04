@@ -1,14 +1,14 @@
-musicId = 'come-back-be-here'
-musicTitle = 'Come Back... Be Here'
-tuning = 'E'
-chordShape = null
-capoFret = '2'
-spotify = 'https://open.spotify.com/embed/track/4pNApnaUWAL2J4KO2eqokq?utm_source=generator'
-chordsMusic = ['D', 'A', 'Bm', 'G']
-videoUrl = 'https://www.youtube.com/embed/hHWOAUjnmjQ'
-basicCipher = true
+const musicId = 'come-back-be-here'
+const musicTitle = 'Come Back... Be Here'
+const tuning = 'E'
+const chordShape = null
+const capoFret = '2'
+const spotify = 'https://open.spotify.com/embed/track/4pNApnaUWAL2J4KO2eqokq?utm_source=generator'
+const chordsMusic = ['D', 'A', 'Bm', 'G']
+const videoUrl = 'https://www.youtube.com/embed/hHWOAUjnmjQ'
+const basicCipher = true
 
-partsCipher = [
+const partsCipher = [
     { type: 'progression',      id: 'intro' },
 
     { type: 'progression',      id: 'main' },
@@ -29,7 +29,7 @@ partsCipher = [
     { type: 'cipherLyrics',     id: 'lastChorus' },
 ]
 
-progressions = [
+const progressions = [
     {
         id: 'intro',
         title: 'Intro',
@@ -48,9 +48,9 @@ progressions = [
     }
 ]
 
-tabs = []
+const tabs = []
 
-cipherParts = [
+const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -93,7 +93,7 @@ cipherParts = [
     }
 ]
 
-cipherLyrics = `
+let cipherLyrics = `
     D
 You said it in a simple way
 A
@@ -197,7 +197,7 @@ D                  A  Bm              G
  Come back, be here,    come back, be here
 `
 
-lyrics = `
+const lyrics = `
 <b>[Verse 1]</b>
 You said it in a simple way
 4 a.m., the second day

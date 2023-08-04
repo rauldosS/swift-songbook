@@ -8,7 +8,6 @@ const spotify = 'https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm
 const chordsMusic = ['G', 'C', 'D', 'Em', 'Bm', 'Dsus4', 'Cadd9']
 const videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
 const basicCipher = false
-const palmMute = true
 
 // https://www.youtube.com/watch?v=h0Zewndw2u0&ab_channel=TunezbyLucz
 // https://drive.google.com/file/d/1Rs2xPG0A0_Rrd7OGUeoACf4sn6EPeD4U/view

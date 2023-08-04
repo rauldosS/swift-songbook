@@ -1,4 +1,4 @@
-const mostAccessedMusics = [
+mostAccessedMusics = [
     {
         music: { id: 'enchanted', name: 'Enchanted' },
         album: { id: 'speak-now', name: 'Speak Now' },
@@ -75,7 +75,7 @@ const mostAccessedMusics = [
         blocked: true
     }
 ]
-const mostAccessed = $('#mostAccessed .list-group')
+mostAccessed = $('#mostAccessed .list-group')
 
 mostAccessedMusics.forEach((data, index) => {
     mostAccessed.append(`

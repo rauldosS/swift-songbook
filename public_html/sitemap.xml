@@ -49,10 +49,22 @@
   <priority>0.90</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com/song/enchanted</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Red -->
 
 <url>
   <loc>https://taylorsongbook.com/album/red</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/come-back-be-here</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
@@ -81,10 +93,28 @@
   <priority>0.90</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com/song/the-man</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Folklore -->
 
 <url>
   <loc>https://taylorsongbook.com/album/folklore</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/hoax</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/cardigan</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
@@ -98,5 +128,29 @@
 </url>
 
 <!-- Midnights -->
+
+<url>
+  <loc>https://taylorsongbook.com/album/midnights</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/lavender-haze</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/karma</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/anti-hero</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 
 </urlset>

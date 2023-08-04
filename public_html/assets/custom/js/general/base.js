@@ -29,14 +29,14 @@ $(document).ready(function () {
     }
 })
 
-const content =  $('#content')
-const cipherWrapper = $('#cipher-wrapper')
-const cipherContent = $('#cipher-content')
-const toolbar = $('#toolbar')
-const miniPlayer = $('#mini-player')
-const btnHome = $('#btn-home')
+content =  $('#content')
+cipherWrapper = $('#cipher-wrapper')
+cipherContent = $('#cipher-content')
+toolbar = $('#toolbar')
+miniPlayer = $('#mini-player')
+btnHome = $('#btn-home')
 
-const homePath = 'base/home'
+homePath = 'base/home'
 
 loadContent = (path, switchLanguage = false) => {
     setLoading(true)
@@ -64,7 +64,7 @@ loadCopy = () => {
     $('[data-clipboard-text]').on('click', function() {
         textToCopy = $(this).attr('data-clipboard-text')
 
-        const clipboard = new ClipboardJS('[data-clipboard-text]', {
+        clipboard = new ClipboardJS('[data-clipboard-text]', {
             text: function() { return textToCopy }
         })
     
@@ -74,7 +74,7 @@ loadCopy = () => {
 }
 
 checkQueryParams = () => {
-    const params = new Proxy(new URLSearchParams(window.location.search), {
+    params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     })
 
@@ -189,7 +189,7 @@ headShake = (el) => {
 }
 
 changeText = (element) => {
-    const text = element.text()
+    text = element.text()
     
     element.html(`${ language.contribution.copy } <i class="fa-regular fa-circle-check ms-1"></i>`)
 

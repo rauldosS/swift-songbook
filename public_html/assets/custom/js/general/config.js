@@ -1,12 +1,12 @@
-let musicId = undefined
-let musicTitle = undefined
+const musicId = undefined
+const musicTitle = undefined
 let blocked = undefined
-let tuning = undefined
-let chordShape = undefined
-let capoFret = undefined
-let spotify = undefined
-let chordsMusic = undefined
-let videoUrl = undefined
+const tuning = undefined
+const chordShape = undefined
+const capoFret = undefined
+const spotify = undefined
+const chordsMusic = undefined
+const videoUrl = undefined
 let versions = undefined
 let cipherParts = undefined
 let cipherLyrics = undefined
@@ -14,9 +14,9 @@ let progressions = undefined
 let lyrics = undefined
 let alerts = undefined
 let listGroupAlbum = undefined
-let basicCipher = false
-let palmMute = false
-let tabs = []
+const basicCipher = false
+const palmMute = false
+const tabs = []
 let progressionsHtml = {}
 let tabsHtml = {}
 let cipherLyricsPartsHtml = {}
@@ -26,15 +26,15 @@ let currentContent = {
     name: undefined
 }
 
-let partsCipher = []
+const partsCipher = []
 let completeCipher = []
 let completeCipherColumns = []
 
-const userLang = navigator.language || navigator.userLanguage
-const languages = ['en-US', 'pt-BR']
-const userContainsLanguage = languages.includes(userLang)
+userLang = navigator.language || navigator.userLanguage
+languages = ['en-US', 'pt-BR']
+userContainsLanguage = languages.includes(userLang)
 
-const chordsHtml = {
+chordsHtml = {
     C: `<chord name="C" positions="x32010" fingers="-32-1-" size="2" ></chord>`,
     'C/E': `<chord name="C/E" positions="032010" fingers="-32-1-" size="2" ></chord>`,
     Cadd9: `<chord name="Cadd9" positions="x32033" fingers="-21-34" size="2" ></chord>`,
@@ -56,12 +56,12 @@ const chordsHtml = {
     Bm: `<chord name="Bm" positions="x24432" fingers="-13421" size="2" ></chord>`,
 }
 
-const progressionsType = {
+progressionsType = {
     simple: '1 + 2 + 3 + 4 +',
     complex: '1 a + e 2 a + e 3 a + e 4 a + e'
 }
 
-const alertsHtml = {
+alertsHtml = {
     'pt-BR': {
         palmMute: '<span id="palm-mute-alert" class="badge animate__animated animate__flash animate__delay-1s animate__repeat-2 bg-light mb-3"><b class="palm-mute">Ritmo em laranja</b> deve ser tocado com palm mute</span>',
         repeatIntro: `
@@ -86,9 +86,9 @@ const alertsHtml = {
     }
 }
 
-const divider = '======================================================='
+divider = '======================================================='
 
-const albuns = [
+albuns = [
     {
         id: 'taylor-swift',
         name: 'Taylor Swift',
@@ -366,19 +366,19 @@ scrollTop = () => {
 }
 
 scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
-    const targetElement = $(elementSelector).last()
-    const scrollContainer = $(scrollContainerSelector)
+    targetElement = $(elementSelector).last()
+    scrollContainer = $(scrollContainerSelector)
     
     // Check if the target element and scroll container exist
     if (targetElement.length > 0 && scrollContainer.length > 0) {
         // Get the current scroll position in the container
-        const currentPosition = scrollContainer.scrollTop() - 36
+        currentPosition = scrollContainer.scrollTop() - 36
     
         // Get the offset of the target element relative to the document
-        const targetOffset = targetElement.offset().top
+        targetOffset = targetElement.offset().top
     
         // Adjust the target position based on the scroll container's position
-        const targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 36
+        targetPosition = targetOffset - scrollContainer.offset().top + currentPosition - 36
     
         // Check if the scroll is already at the correct position
         if (currentPosition !== targetPosition) {
