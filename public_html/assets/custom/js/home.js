@@ -40,6 +40,11 @@ mostAccessedMusics = [
         blocked: true
     },
     {
+        music: { id: 'the-way-i-loved-you', name: 'The Way I Loved You' },
+        album: { id: 'fearless', name: 'Fearless' },
+        blocked: false
+    },
+    {
         music: { id: 'karma', name: 'Karma' },
         album: { id: 'midnights', name: 'Midnights' },
         blocked: false
@@ -67,11 +72,6 @@ mostAccessedMusics = [
     {
         music: { id: '', name: 'Exile' },
         album: { id: 'folklore', name: 'Folklore' },
-        blocked: true
-    },
-    {
-        music: { id: '', name: 'Forever & Always' },
-        album: { id: 'fearless', name: 'Fearless' },
         blocked: true
     }
 ]

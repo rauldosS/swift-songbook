@@ -24,8 +24,13 @@
   <priority>0.90</priority>
 </url>
 
-
 <!-- Taylor Swift -->
+
+<url>
+  <loc>https://taylorsongbook.com/album/taylor-swift/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 
 <!-- Fearless -->
 
@@ -38,6 +43,12 @@
 <url>
   <loc>https://taylorsongbook.com/song/fearless/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/the-way-i-loved-you/</loc>
+  <lastmod>2023-08-12T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 

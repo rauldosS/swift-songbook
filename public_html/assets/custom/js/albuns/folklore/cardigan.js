@@ -215,10 +215,10 @@ const lyrics = `
 <b>[Verse 1]</b>
 Vintage tee, brand new phone
 High heels on cobblestones
-When you are young, they assume you know nothing
-Sequin smile, black lipstick
-Sensual politics
-When you are young, they assume you know nothing
+When you are young, they assume you know nothing
+Sequin smile, black lipstick
+Sensual politics
+When you are young, they assume you know nothing
 
 <b>[Chorus]</b>
 But I knew you

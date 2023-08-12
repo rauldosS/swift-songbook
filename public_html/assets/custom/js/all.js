@@ -31,7 +31,7 @@ albuns = [
             { id: 'Breathe (feat. Colbie Caillat)', name: 'Breathe (feat. Colbie Caillat)', blocked: true },
             { id: 'Tell Me Why', name: 'Tell Me Why', blocked: true },
             { id: "You're Not Sorry", name: "You're Not Sorry", blocked: true },
-            { id: 'The Way I Loved You', name: 'The Way I Loved You', blocked: true },
+            { id: 'the-way-i-loved-you', name: 'The Way I Loved You', blocked: false },
             { id: 'Forever & Always', name: 'Forever & Always', blocked: true },
             { id: 'The Best Day', name: 'The Best Day', blocked: true },
             { id: 'Change', name: 'Change', blocked: true },
