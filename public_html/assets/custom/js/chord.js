@@ -718,6 +718,14 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
                 ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
             ></i></b> `
         }
+        if (progression === 'd-accented') {
+            return `<i class="fa-solid fa-arrow-down-long border-bottom pb-1 border-2 border-secondary
+                ${ palmMute ? 'palm-mute' : '' } 
+                ${ blocking ? 'blocking' : '' } 
+                ${ chordChangeColor ? 'chordChange' : '' }"
+                ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+            ></i> `
+        }
         chordChange = false
         if (progression === 'U') return `<i class="fa-solid fa-arrow-up-long 
             ${ palmMute ? 'palm-mute' : '' } 
@@ -731,6 +739,7 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
             ${ chordChangeColor ? 'chordChange' : '' }"
             ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
         ></i></b> `
+        if (progression === 'X') return '<i class="fa-solid fa-x"></i> '
         if (progression === '-') return `<span class="strum">${ progression }</span> `
         if (progression === 'break') return `<br>`
         if (progression === 'block') return '<i class="fa-solid fa-ban strum"></i> '

@@ -25,6 +25,11 @@ mostAccessedMusics = [
         blocked: false
     },
     {
+        music: { id: 'speak-now', name: 'Speak Now' },
+        album: { id: 'speak-now', name: 'Speak Now' },
+        blocked: false
+    },
+    {
         music: { id: 'cardigan', name: 'Cardigan' },
         album: { id: 'folklore', name: 'Folklore' },
         blocked: false
@@ -50,6 +55,11 @@ mostAccessedMusics = [
         blocked: false
     },
     {
+        music: { id: 'mean', name: 'Mean' },
+        album: { id: 'speak-now', name: 'Speak Now' },
+        blocked: false
+    },
+    {
         music: { id: 'come-back-be-here', name: 'Come Back... Be Here' },
         album: { id: 'red', name: 'Red' },
         blocked: false
@@ -60,9 +70,14 @@ mostAccessedMusics = [
         blocked: true
     },
     {
-        music: { id: '', name: 'Maroon' },
-        album: { id: 'midnights', name: 'Midnights' },
-        blocked: true
+        music: { id: 'this-is-me-trying', name: 'This Is Me Trying' },
+        album: { id: 'folklore', name: 'Folklore' },
+        blocked: false
+    },
+    {
+        music: { id: 'you-belong-with-me', name: 'You Belong With Me' },
+        album: { id: 'fearless', name: 'Fearless' },
+        blocked: false
     },
     {
         music: { id: 'the-man', name: 'The Man' },
@@ -73,7 +88,17 @@ mostAccessedMusics = [
         music: { id: '', name: 'Exile' },
         album: { id: 'folklore', name: 'Folklore' },
         blocked: true
-    }
+    },
+    {
+        music: { id: 'mirrorball', name: 'Mirrorball' },
+        album: { id: 'folklore', name: 'Folklore' },
+        blocked: false
+    },
+    {
+        music: { id: '', name: 'Champagne Problems' },
+        album: { id: 'evermore', name: 'Evermore' },
+        blocked: true
+    },
 ]
 mostAccessed = $('#mostAccessed .list-group')
 
