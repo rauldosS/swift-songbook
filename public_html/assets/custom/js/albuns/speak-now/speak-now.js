@@ -276,7 +276,7 @@ Thi--is i---is surely not
 What you thought it would be
 Am   C                  D
 E|---| i  lose myself in a daydream
-D
+<span class="badge badge-info-cipher rounded-pill"><span class="text-white">D</span> <i class="fa-solid fa-arrow-right-long"></i> Tap down</span>
 Where I stand and say
 ${ divider }
 G               D
@@ -289,7 +289,7 @@ Of the church at the back door
 Don't wait or say a single vow
 Am
 You need to hear me out
-         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Tap down</span>
+         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 And they said "speak no-ow"
 ${ divider }
 G                   D

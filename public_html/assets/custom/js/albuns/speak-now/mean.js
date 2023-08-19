@@ -117,8 +117,8 @@ const progressions = [
         id: 'firstBridge',
         title: 'Bridge 1',
         caption: '',
-        notes: ['Gadd11', 'Gadd11', 'C', 'Fmaj7', 'x2', 'break', 'Gadd11', 'Gadd11', 'break', 'Am', 'Gadd11', 'break', 'Fmaj7', 'Fmaj7', 'break', 'Fmaj7', 'doubleBreak', 'Gadd11', 'Gadd11', 'break', 'Am, Gadd11', 'Fmaj7', '-'],
-        progression: 'D - D - - U D U break break D - - - - - - - break D - D - - U D U break D - - - - - - - break break D - D - - U D U break D - - - - - - -',
+        notes: ['Gadd11', 'Gadd11', 'C', 'Fmaj7', 'x2', 'break', 'Gadd11', 'Gadd11', 'doubleBreak', 'Am', 'Gadd11', 'doubleBreak', 'Fmaj7', 'Fmaj7', 'break', 'Gadd11', 'Gadd11', 'doubleBreak', 'Am, Gadd11', 'Fmaj7', '-'],
+        progression: 'D - D - - U D U break break break D - - - - - - - break break D - D - - U D U break break break break D - - - - - - -',
     },
     {
         id: 'secondBridge',
@@ -206,7 +206,7 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
     },
     {
-        id: 'Outro',
+        id: 'outro',
         title: 'outro',
         referenceProgression: progressions.find(progression => progression.id === 'outro')
     }
@@ -234,12 +234,12 @@ C               F      G
  With just one single blow
       (F)
 But you don't know, what you don't know
-C       G      F
+${ divider }
+C       G      A                   F
 Someday I'll be livin' in a big ol' city
     C          G            F
 And all you're ever gonna be is mean
-${ divider }
-C       G   F
+C       G      A                   F
 Someday I'll be big enough so you can't hit me
     C          G            F......
 And all you're ever gonna be is mean
@@ -252,7 +252,7 @@ You, with your switching sides and
 Your wildfire lies and your humiliation
 Am        G              F
 You, have pointed out my flaws again
-
+        <span class="badge badge-info-cipher rounded-pill"><span class="text-white">F</span> <i class="fa-solid fa-arrow-right-long"></i> Tap down</span>
 As if I don't already see them
 Am          G
 I walk with my head down
@@ -263,45 +263,45 @@ Tryin' to block you out
 Am     G           F
 I just wanna feel okay again
 ${ divider }
-G
+G             G
 I bet you got pushed around
 C           F        G
 Somebody made you cold
-G
+G                  G
 But the cycle ends right now 'cause
-F                     G
+F                     F
 You can't lead me down that road
-       (F)
+        F                   <span class="badge badge-info-cipher rounded-pill"><span class="text-white">F</span> <i class="fa-solid fa-arrow-right-long"></i> Tap down</span>
 And you don't know what you don't know
 ${ divider }
-C       G      F
+C       G      A                   F
 Someday I'll be livin' in a big ol' city
     C          G            F
 And all you're ever gonna be is mean
-C       G   F
+C       G      A                   F
 Someday I'll be big enough so you can't hit me
     C          G            F
 And all you're ever gonna be is mean
-                   D       D -once  A4   G
+                    C
 Why you gotta be so mean?
 ${ divider }
-          G
+          G                  G
 And I can see you years from now in a bar
 C               F            G
  Talkin' over a football game
-G
+G              G
 With that same big loud opinion
 C            F        G
 But nobody´s listening
-G
+G             G
 Washed up and ranting about the
 C          G        F
 Same old   bitter   things
-G                                 C  G     F
+G                   G             C  G     F
 Drunk and grumblin' all about how I  can't sing
-                  C    G  Am
-But all you are is mean
 ${ divider }
+C    G  Am
+But all you are is mean
 F              C            G          Am
 All you are is mean...and a liar...and pathetic
     F                 C         G         Am        F
@@ -311,21 +311,21 @@ But someday I'll be livin' in a big ol' city
                                         F
 And all you're ever gonna be is mean,  yeah--ah
 ${ divider }
-C       G   F
+C       G      A                   F
 Someday I'll be big enough so you can't hit me
     C          G            F
 And all you're ever gonna be is mean
 F                   C
 Why you gotta be so...Someday
-G      F
+G      A           F
 I'll be livin' in a big ol' city (why ya gotta be so mean)
     C          G            F
 And all you're ever gonna be is mean (why ya gotta be so mean)
-C       G   F
-Someday I'll be big enough so you can't hit me (why ya gotta be so mean)
-    C     G            F
-And all you're ever gonna be is mean
 ${ divider }
+C       G       Am                      F
+Someday I'll be big enough so you can't hit me (why ya gotta be so mean)
+    C     G                 F
+And all you're ever gonna be is mean
                    C
 Why you gotta be so  mean?
 `

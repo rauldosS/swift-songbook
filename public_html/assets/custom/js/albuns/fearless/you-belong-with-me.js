@@ -12,6 +12,7 @@ const basicCipher = false
 const partsCipher = [
     { type: 'alert',            id: 'palmMute' },
 
+    { type: 'tabs',             id: 'intro' },
     { type: 'progression',      id: 'intro' },
 
     { type: 'progression',      id: 'firstVerse' },
@@ -70,16 +71,16 @@ const progressions = [
         id: 'firstPreChorus',
         title: 'Pre-Chorus',
         caption: '',
-        notes: ['Em, G', 'D, A', 'Em, G', 'A'],
-        progression: 'd-accented D D d-accented D D d-accented D',
+        notes: ['Em, G', 'D, A', 'Em, G', 'doubleBreak', 'A'],
+        progression: 'd-accented D D d-accented D D d-accented D break break D - - - - - - -',
         palmMute: true
     },
     {
         id: 'firstChorus',
         title: 'Chorus',
         caption: '',
-        notes: ['D²', 'A²', 'Em²', 'G²'],
-        progression: 'D - D U - U D U'
+        notes: ['D²', 'A²', 'Em²', 'break', 'G'],
+        progression: 'D - D U - U D U break D - - - - - - -'
     },
     {
         id: 'instrumental',
@@ -92,6 +93,7 @@ const progressions = [
     {
         id: 'secondVerse',
         title: 'Verse 2',
+        caption: '',
         notes: ['D²', 'A²', 'Em²', 'G²'],
         progression: 'd-accented D D d-accented D D d-accented D',
         palmMute: true
@@ -100,8 +102,8 @@ const progressions = [
         id: 'secondPreChorus',
         title: 'Pre-Chorus',
         caption: '',
-        notes: ['Em, G', 'D, A', 'Em, G', 'A'],
-        progression: 'd-accented D D d-accented D D d-accented D',
+        notes: ['Em, G', 'D, A', 'Em, G', 'doubleBreak', 'A'],
+        progression: 'd-accented D D d-accented D D d-accented D break break D - - - - - - -', 
         palmMute: true
     },
     {
@@ -137,20 +139,43 @@ const progressions = [
         id: 'outro',
         title: 'Outro',
         caption: '',
-        notes: ['D²', 'A²', 'Em²', 'G', 'break', 'D'],
+        notes: ['D²', 'A²', 'Em²', 'G²', 'break', 'D'],
         progression: 'D - D U - U D U break D - - - - - - -',
     },
 ]
 
 const tabs = [
     {
+        id: 'intro',
+        title: 'Intro',
+        tabs: [
+`
+E|-----------------------------------|
+B|-----------------------------------|
+G|-----2-2---2-2---0-0---0---0-------| 2x
+D|-2/4-----4-----4-----4---4---4-2-0-| 
+A|-----------------------------------|
+E|-----------------------------------|
+`,
+        ]
+    },
+    {
         id: 'solo',
         title: 'Solo | No capo',
         tabs: [
 `
+1st guitar
 E|-----------------------------|
 B|-7-7-7-9-9-9--11-------------|
 G|-4-4-4-6-6-6--8----8-9-8-6---| 2x
+D|---------------------------9-|
+A|-----------------------------|
+E|-----------------------------|`
+,`
+2nd guitar
+E|-----------------------------|
+B|-7-X-X-9-7-9-11--------------|
+G|-------------------8-9-8-6---| 2x
 D|---------------------------9-|
 A|-----------------------------|
 E|-----------------------------|
@@ -251,7 +276,7 @@ But she wears short skirts, I wear T-shirts
 She's cheer captain and I'm on the bleachers
   Em                             G
 Dreaming about the day when you wake up and find
-                 A  <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+                 <span class="badge badge-info-cipher rounded-pill"><span class="text-white">A</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 That what you're
 
 Looking for has been here the whole time
@@ -260,7 +285,7 @@ ${ divider }
 If you could see that I'm the one who understands you
  A                                     Em
 Been here all along, so why can't you see?
-                 G  <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+                 <span class="badge badge-info-cipher rounded-pill"><span class="text-white">G</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 You belong with me, you belong with me
 ${ divider }
 D²
@@ -324,7 +349,7 @@ And I know your favorite songs
 And you tell me about your dreams
           D
 Think I know where you belong
-          A  <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+          <span class="badge badge-info-cipher rounded-pill"><span class="text-white">A</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 Think I know it's with me
 ${ divider }
            D

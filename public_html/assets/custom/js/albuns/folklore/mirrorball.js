@@ -3,7 +3,7 @@ const albumId = 'folklore'
 const musicTitle = 'Mirrorball'
 const tuning = 'D'
 const chordShape = ''
-const capoFret = '1'
+const capoFret = '2'
 const spotify = 'https://open.spotify.com/embed/track/0ZNU020wNYvgW84iljPkPP?utm_source=generator'
 const chordsMusic = ['C', 'Am', 'Fmaj7']
 const videoUrl = 'https://www.youtube.com/embed/faOiOUOOTWM'
@@ -92,75 +92,73 @@ Shimmering beautiful
            Fmaj7
 And when I break, it's in a million pieces
 ${ divider }
-C                                 C
+C                                 Fmaj7
  Hush, when no one is around, my dear
                       Am
 You'll find me on my tallest tip-toes
-                 C
+                 Fmaj7
 Spinning in my highest heels, love
-                     C
 Shining just for you
-C                                       C
+C                                       Fmaj7
  Hush, I know they said the end is near
                      Am
 But I'm still on my tallest tip-toes
-                C
+                Fmaj7
 Spinning in my highest heels, love
  
 Shining just for you
 ${ divider }
-C        C
+C        Fmaj7
  I want you to know
        Am
 I'm a mirrorball
-              C
+              Fmaj7
 I can change everything about me to fit in
-C                       C
+C                       Fmaj7
  You are not like the regulars
                 Am
 The masquerade revelers
-               C
+               Fmaj7
 Drunk as they watch my shattered edges glisten
 ${ divider }
-C                                 C
+C                                 Fmaj7
  Hush, when no one is around, my dear
                       Am
 You'll find me on my tallest tip-toes
-                 C
+                 Fmaj7
 Spinning in my highest heels, love
-                     C
 Shining just for you
-C                                       C
+C                                       Fmaj7
  Hush, I know they said the end is near
                      Am
 But I'm still on my tallest tip-toes
-                C
+                Fmaj7
 Spinning in my highest heels, love
  
 Shining just for you
 ${ divider }
-C
+Fmaj7
  And they called off the circus, burned the disco down
 C
  When they sent home the horses and the rodeo clowns
 Am
  I'm still on that tightrope
-                 C
+                 Fmaj7
 I'm still trying everything to get you laughing at me
 C
  I'm still a believer, but I don't know why
-C                                             Am
+ Fmaj7                                             Am
  I've never been a natural, all I do is try, try, try
 Am
  I'm still on that trapeze
-                  C
+                  Fmaj7
 I'm still trying everything to keep you looking at me
 ${ divider }
-C               C
+C               Fmaj7
  Because I'm a mirrorball
        Am
 I'm a mirrorball
-                   C                           C
+                   Fmaj7                     C
 And I'll show you every version of yourself tonight
 `
 

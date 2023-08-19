@@ -5,7 +5,7 @@ const tuning = 'G'
 const chordShape = ''
 const capoFret = '2'
 const spotify = 'https://open.spotify.com/embed/track/0ZNU020wNYvgW84iljPkPP?utm_source=generator'
-const chordsMusic = ['C', 'Cadd9', 'Em7', 'D']
+const chordsMusic = ['C', 'Cadd9', 'Em7', 'D', 'G']
 const videoUrl = 'https://www.youtube.com/embed/DCkB-5okmJQ'
 const basicCipher = false
 
@@ -26,7 +26,7 @@ const partsCipher = [
     { type: 'progression',      id: 'secondChorus' },
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
-    { type: 'progression',      id: 'break' },
+    { type: 'progression',      id: 'secondBreak' },
 
     { type: 'progression',      id: 'bridge' },
     { type: 'cipherLyrics',     id: 'bridge' },
@@ -43,7 +43,7 @@ const progressions = [
         id: 'intro',
         title: 'Intro',
         caption: '',
-        notes: ['G', 'Cadd9', 'x2'],
+        notes: ['G', 'Cadd9', 'x4'],
         progression: 'D - - - D - - U - U D - - U D U'
     },
     {
@@ -64,8 +64,8 @@ const progressions = [
         id: 'break',
         title: 'Break',
         caption: '',
-        notes: ['G', 'Cadd9', 'x2'],
-        progression: 'D - - - D - - u-highlight - U D - - U D U'
+        notes: ['G', 'G', 'Cadd9', 'Cadd9'],
+        progression: 'D - - - D - - U - U D - - U D U'
     },
     {
         id: 'secondVerse',
@@ -78,15 +78,22 @@ const progressions = [
         id: 'secondChorus',
         title: 'Chorus',
         caption: '',
-        notes: ['Em7, Cadd9', 'G', 'break', 'Em7, Cadd9', 'D'],
+        notes: ['Em7, Cadd9', 'G', 'break', 'Em7, Cadd9', 'D', 'break', 'G'],
         progression: 'D - - - D - - u-highlight - U D - - U D U'
+    },
+    {
+        id: 'secondBreak',
+        title: 'Break',
+        caption: '',
+        notes: ['Cadd9', 'G', 'D'],
+        progression: 'D - - - D - - U - U D - - U D U'
     },
     {
         id: 'bridge',
         title: 'Bridge',
         caption: '',
-        notes: ['Em7, Cadd9', 'D', 'D'],
-        progression: 'D - - - D - - u-highlight - U D - - U D U'
+        notes: ['Em7', 'Cadd9', 'D', 'D'],
+        progression: 'D - - - D - - U - U D - - U D U'
     },
     {
         id: 'lastChorus',
@@ -94,6 +101,13 @@ const progressions = [
         caption: '',
         notes: ['Em7, Cadd9', 'G', 'break', 'Em7, Cadd9', 'D'],
         progression: 'D - - - D - - u-highlight - U D - - U D U'
+    },
+    {
+        id: 'lastBreak',
+        title: 'Break',
+        caption: '',
+        notes: ['G', 'G', 'G', 'G'],
+        progression: 'D - - - D - - U - U D - - U D U'
     },
     {
         id: 'outro',
@@ -195,7 +209,7 @@ ${ divider }
 And I just wanted you to know that this is me trying
                          D
 (And maybe I don't quite know what to say)
-              Em7               Cadd9               Dsus4  D
+              Em7               Cadd9               D
 I just wanted you to know that this is me trying
              G
 At least I'm trying
