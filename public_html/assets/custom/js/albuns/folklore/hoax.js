@@ -288,7 +288,7 @@ Am        G              Cadd9       D
 ${ divider }
    Am            G
 My best laid plan
-     Cadd9          D7
+     Cadd9          D
 Your sleight of hand
    Am           G
 My barren land
@@ -355,13 +355,13 @@ My eclipsed sun
 This has broken me down
 My twisted knife
 My sleepless night
-My winless fight
-This has frozen my ground
+My winless fight
+This has frozen my ground
 
 <b>[Chorus]</b>
-Stood on the cliffside screaming, "Give me a reason"
-Your faithless love's the only hoax I believe in
-Don't want no other shade of blue but you
+Stood on the cliffside screaming, "Give me a reason"
+Your faithless love's the only hoax I believe in
+Don't want no other shade of blue but you
 No other sadness in the world would do
 
 <b>[Verse 2]</b>

@@ -1,6 +1,6 @@
 const musicId = 'karma'
 const musicTitle = 'Karma'
-const tuning = 'G#/Ab Major'
+const tuning = 'G#/Ab'
 const chordShape = null
 const capoFret = '1'
 const spotify = 'https://open.spotify.com/embed/track/7KokYm8cMIXCsGVmUvKtqf?utm_source=generator'
@@ -18,15 +18,15 @@ const partsCipher = [
     { type: 'cipherLyrics',          id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'preChorus' },
 
-    { type: 'progression',           id: 'chorus' },
-    { type: 'cipherLyrics',          id: 'chorus' },
+    { type: 'progression',           id: 'firstChorus' },
+    { type: 'cipherLyrics',          id: 'firstChorus' },
 
     { type: 'progression',           id: 'secondVerse' },
     { type: 'cipherLyrics',          id: 'secondVerse' },
     { type: 'cipherLyrics',          id: 'secondPreChorus' },
 
-    { type: 'progression',           id: 'chorus' },
-    { type: 'cipherLyrics',          id: 'chorus' },
+    { type: 'progression',           id: 'secondChorus' },
+    { type: 'cipherLyrics',          id: 'secondChorus' },
     
     { type: 'progression',           id: 'bridge' },
     { type: 'cipherLyrics',          id: 'bridge' },
@@ -34,8 +34,8 @@ const partsCipher = [
     { type: 'progression',           id: 'postBridge' },
     { type: 'cipherLyrics',          id: 'postBridge' },
 
-    { type: 'progression',           id: 'chorus' },
-    { type: 'cipherLyrics',          id: 'chorus' },
+    { type: 'progression',           id: 'lastChorus' },
+    { type: 'cipherLyrics',          id: 'lastChorus' },
 
     { type: 'progression',           id: 'outro' },
     { type: 'cipherLyrics',          id: 'outro' },
@@ -46,22 +46,22 @@ const progressions = [
         id: 'firstVerse',
         title: 'Verse | Pre-Chorus',
         caption: '',
-        notes: ['D', 'C²', 'G'],
+        notes: ['D', 'C²', 'G', 'x3'],
         progression: 'D - D - D - - U D U D - D - D U',
         palmMute: true
     },
     {
-        id: 'chorus',
+        id: 'firstChorus',
         title: 'Chorus',
         caption: '',
-        notes: ['D', 'C²', 'G'],
+        notes: ['D', 'C²', 'G', 'x2'],
         progression: 'D - D - D - - U D U D - D - D U'
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
         caption: '',
-        notes: ['D', 'break', 'D', 'C²', 'D'],
+        notes: ['D', 'break', 'C²', 'G', 'break', 'D', 'C²', 'G', 'x2'],
         progression: 'D - - - - - - - - - - - - D - D U break D - D - D - - U D U D - D - D U',
         palmMute: true
     },
@@ -69,7 +69,7 @@ const progressions = [
         id: 'secondChorus',
         title: 'Chorus',
         caption: '',
-        notes: ['D', 'C²', 'G'],
+        notes: ['D', 'C²', 'G', 'x2'],
         progression: 'D - D - D - - U D U D - D - D U'
     },
     {
@@ -85,15 +85,22 @@ const progressions = [
         title: 'Post Bridge',
         caption: '',
         progressionCaption: '',
-        notes: ['D', 'C²', 'G'],
+        notes: ['D', 'C²', 'G', 'x2'],
         progression: 'D - - - - - - - - - - - - - - -',
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
+        caption: '',
+        notes: ['D', 'C²', 'G', 'x2'],
+        progression: 'D - D - D - - U D U D - D - D U'
     },
     {
         id: 'outro',
         title: 'Outro',
         caption: '',
         progressionCaption: '',
-        notes: ['D', 'C²', 'G'],
+        notes: ['D', 'C²', 'G', 'x2'],
         progression: 'D - - - - - - - - - - - - - - -',
     }
 ]
@@ -112,9 +119,9 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
-        id: 'chorus',
+        id: 'firstChorus',
         title: 'Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+        referenceProgression: progressions.find(progression => progression.id === 'firstChorus')
     },
     {
         id: 'secondVerse',
@@ -142,9 +149,9 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'postBridge')
     },
     {
-        id: 'chorus',
+        id: 'lastChorus',
         title: 'Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+        referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
     },
     {
         id: 'outro',
@@ -186,7 +193,7 @@ Sweet like honey, karma is a cat
 Purring in my lap 'cause it loves me
                              G
 Flexing like a goddamn acrobat
- 
+                         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">D</span> <i class="fa-solid fa-arrow-right-long"></i> Start next strumming</span>
 Me and karma vibe like that
 ${ divider }
 D
@@ -221,7 +228,7 @@ Sweet like honey, karma is a cat
 Purring in my lap 'cause it loves me
                              G
 Flexing like a goddamn acrobat
- 
+                         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">Bm</span> <i class="fa-solid fa-arrow-right-long"></i> Start next strumming</span>
 Me and karma vibe like that
 ${ divider }
 Bm                                  G
@@ -246,7 +253,7 @@ Sweet like justice, karma is a queen
 Karma takes all my friends to the summit
                          G
 Karma is the guy on the screen
- 
+
 Coming straight home to me
 ${ divider }
 D                                         C
@@ -272,7 +279,7 @@ Karma is my boyfriend
 Karma is a god (Ah)
 G        D
 Uh-huh, mm
-C
+C                   C       G
 Karma's a relaxing thought
 `
 

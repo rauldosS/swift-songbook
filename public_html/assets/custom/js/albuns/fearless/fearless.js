@@ -25,6 +25,7 @@ const partsCipher = [
 
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
+    { type: 'cipherLyrics',     id: 'solo' },
     { type: 'progression',      id: 'solo' },
     { type: 'tabs',             id: 'solo' },
 
@@ -170,6 +171,12 @@ const cipherParts = [
         title: 'Instrumental',
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
+    {
+        id: 'solo',
+        title: 'Solo',
+        referenceProgression: progressions.find(progression => progression.id === 'main'),
+        onlyCipherColumns: true
+    },
 ]
 
 let cipherLyrics = `
@@ -250,6 +257,9 @@ D    A
  Oh-oh, yeah
 ${ divider }
 D A Em G            <span class="badge badge-info-cipher rounded-pill"><i class="fa-solid fa-rotate-right"></i> Repeat second tab intro</span>
+${ divider }
+Em G D A
+Em G D A
 `
 
 const lyrics = `

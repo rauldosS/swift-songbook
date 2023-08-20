@@ -137,9 +137,9 @@ Spinning in my highest heels, love
  
 Shining just for you
 ${ divider }
-Fmaj7
- And they called off the circus, burned the disco down
 C
+ And they called off the circus, burned the disco down
+Fmaj7
  When they sent home the horses and the rodeo clowns
 Am
  I'm still on that tightrope
@@ -147,7 +147,7 @@ Am
 I'm still trying everything to get you laughing at me
 C
  I'm still a believer, but I don't know why
- Fmaj7                                             Am
+Fmaj7                                           
  I've never been a natural, all I do is try, try, try
 Am
  I'm still on that trapeze

@@ -1,7 +1,7 @@
 const musicId = 'enchanted'
 const albumId = 'speak-now'
 const musicTitle = 'Enchanted'
-const tuning = 'Ab Major'
+const tuning = 'Ab'
 const chordShape = null
 const capoFret = '1'
 const spotify = 'https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm_source=generator'
@@ -30,7 +30,8 @@ const partsCipher = [
     { type: 'progression',           id: 'firstChorus' },
     { type: 'cipherLyrics',          id: 'firstChorus' },
 
-    { type: 'progression',           id: 'firstInstrumental' },
+    { type: 'cipherLyrics',          id: 'instrumental' },
+    { type: 'progression',           id: 'instrumental' },
 
     { type: 'progression',           id: 'thirdVerse' },
     { type: 'cipherLyrics',          id: 'thirdVerse' },
@@ -38,6 +39,7 @@ const partsCipher = [
     { type: 'progression',           id: 'secondChorus' },
     { type: 'cipherLyrics',          id: 'secondChorus' },
 
+    { type: 'cipherLyrics',          id: 'solo' },
     { type: 'progression',           id: 'solo' },
     { type: 'tabs',                  id: 'solo' },
 
@@ -80,7 +82,7 @@ const progressions = [
         caption: '',
         progressionCaption: '',
         notes: ['G', 'Bm', 'C', 'G', 'x2', 'break', 'C', 'Em', 'D', 'D', 'x2'],
-        progression: 'D - D - D - D - D - D - D - D -',
+        progression: 'D - - - - - - - - - - - - - - - break D - D - D - D - D - D - D - D -',
         palmMute: true
     },
     {
@@ -95,8 +97,8 @@ const progressions = [
         chordChange: 'D'
     },
     {
-        id: 'firstInstrumental',
-        title: 'Instrumental 1',
+        id: 'instrumental',
+        title: 'Instrumental',
         caption: '',
         progressionCaption: '',
         notes: ['G', 'G'],
@@ -126,18 +128,16 @@ const progressions = [
         title: 'solo',
         caption: '',
         progressionCaption: '',
-        notes: ['G', 'Bm', 'C', 'G'],
-        progression: 'D - D - D - D - D - D - D - D U',
-        repeat: 'x2'
+        notes: ['G', 'Bm', 'C', 'G', 'break', 'G', 'Bm', 'C', 'D'],
+        progression: 'D - D - D - D - D - D - D - D U'
     },
     {
         id: 'bridge',
         title: 'Bridge',
         caption: '',
         progressionCaption: '',
-        notes: ['C', 'Em, D'],
-        progression: 'D - - - D - - - D - - - D - - -',
-        repeat: 'x4'
+        notes: ['C', 'Em, D', 'x2', 'break', 'C', 'break', 'Em, D', 'break', 'C'],
+        progression: 'D - - - D - - - d-highlight - - - D - - - break break D - - - - - - - d-highlight - - - - - - - break D - - - - - - - - - - - - - - -'
     },
     {
         id: 'breakdown',
@@ -168,11 +168,19 @@ const tabs = [
 `
    <b>Cadd9</b>             <b>Em7</b>                 <b>D</b>                 <b>D</b>
 E|-----------------|-------------------|-----------------|-----------------|
-B|-----3-----3-----|-----3-----3-----3-|-----3-----3-----|-----3-----3-----|
-G|---0-----0-----0-|---0-----0-----0---|---2-----2-----2-|---2-----2-----2-|
+B|-----3-----3-----|-----3-----3-------|-----3-----3-----|-----3-----3-----|
+G|---0-----0-----0-|---0-----0-----0---|---2-----2-----2-|---2-----2-----2-| x2
 D|-----------------|-------------------|-0-----0-----0---|-0-----0-----0---|
 A|-3-----3-----3---|-------------------|-----------------|-----------------|
 E|-----------------|-0-----0-----0-----|-----------------|-----------------|`,
+`
+   <b>Cadd9</b>             <b>Em7</b>                 <b>D</b>                 <b>D</b>
+E|-----------------|-------------------|-----------------|-----------------|
+B|-----3-----3-----|-----3-----3/8-----|-7~--------------|-8-10--7\\0-------|
+G|---0-----0-----0-|---0-----0---------|-----------------|-----------------| x2
+D|-----------------|-------------------|-----------------|-----------------|
+A|-3-----3-----3---|-------------------|-----------------|-----------------|
+E|-----------------|-0-----0-----------|-----------------|-----------------|`,
         ]
     },
     {
@@ -245,6 +253,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
     },
     {
+        id: 'solo',
+        title: 'Solo',
+        referenceProgression: progressions.find(progression => progression.id === 'solo'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'bridge',
         title: 'Bridge',
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
@@ -263,6 +277,12 @@ const cipherParts = [
         id: 'outro',
         title: 'Outro',
         referenceProgression: progressions.find(progression => progression.id === 'outro')
+    },
+    {
+        id: 'instrumental',
+        title: 'Instrumental',
+        referenceProgression: progressions.find(progression => progression.id === 'instrumental'),
+        onlyCipherColumns: true
     },
 ]
 
@@ -328,16 +348,19 @@ I'll spend forever wondering if you knew
                     Em   D
 I was enchanted to meet you
 ${ divider }
+G Bm C G
+G Bm C D
+${ divider }
       D
-And this is me praying that
+This is me praying that
  
-   C                      G                    D       C
+   C                      Em                   D       
 This was the very first page, not where the storyline ends
-  C                         G           D         C
+  C                         Em          D         
 My thoughts will echo your name until I see you again
-  C                          G              D         C
+  C                          Em             D         C
 These are the words I held back as I was leaving too soon
-   C                Em     D
+                    Em     D
 I was enchanted to meet you
 ${ divider }
    G                           Bm
@@ -368,6 +391,8 @@ ${ divider }
 Please don't be in love with someone else,
   C                          <span class="badge badge-info-cipher rounded-pill"><span class="text-white">G</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 Please don't have somebody waiting on you.
+${ divider }
+G G
 `
 
 const lyrics = `

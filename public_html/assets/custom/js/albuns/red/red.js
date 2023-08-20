@@ -10,6 +10,7 @@ const videoUrl = 'https://www.youtube.com/embed/Zlot0i3Zykw'
 const basicCipher = false
 
 const partsCipher = [
+    { type: 'cipherLyrics',     id: 'intro' },
     { type: 'tabs',             id: 'intro' },
 
     { type: 'progression',      id: 'intro' },
@@ -34,10 +35,11 @@ const partsCipher = [
     { type: 'progression',      id: 'bridge' },
     { type: 'cipherLyrics',     id: 'bridge' },
 
+    { type: 'cipherLyrics',     id: 'solo' },
     { type: 'progression',      id: 'solo' },
     { type: 'tabs',             id: 'solo' },
 
-    { type: 'progression',     id: 'lastChorus' },
+    { type: 'progression',      id: 'lastChorus' },
     { type: 'cipherLyrics',     id: 'lastChorus' },
 
     { type: 'progression',      id: 'postLastChorus' },
@@ -106,9 +108,9 @@ const progressions = [
     },
     {
         id: 'solo',
-        title: 'Solo 2x',
+        title: 'Solo',
         caption: '',
-        notes: ['F', 'Am', 'G', 'G'],
+        notes: ['F', 'Am', 'G', 'G', 'x2'],
         progressionCaption: '',
         progression: 'D - D - D U D U'
     },
@@ -134,7 +136,7 @@ const progressions = [
         id: 'outro',
         title: 'Outro',
         caption: '',
-        notes: ['F', 'Am', 'G', 'G'],
+        notes: ['F', 'Am', 'G'],
         progressionCaption: '',
         progression: 'D - - - - - -'
     }
@@ -173,7 +175,7 @@ E|-----------------|-----------------|-----------------|-----------------|
     },
     {
         id: 'solo',
-        title: 'Solo',
+        title: 'Solo | No capo',
         tabs: [`    
 E|----------------------------------------------------------------|
 B|-10/12---12\\10-9------------------------------------------------|
@@ -193,6 +195,12 @@ E|----------------------------------------------------------------|`,
 ]
 
 const cipherParts = [
+    {
+        id: 'intro',
+        title: 'Intro',
+        referenceProgression: progressions.find(progression => progression.id === 'intro'),
+        onlyCipherColumns: true
+    },
     {
         id: 'firstVerse',
         title: 'Verse 1',
@@ -229,6 +237,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
+        id: 'solo',
+        title: 'Solo',
+        referenceProgression: progressions.find(progression => progression.id === 'solo'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'lastChorus',
         title: 'Last Chorus',
         referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
@@ -246,6 +260,8 @@ const cipherParts = [
 ]
 
 let cipherLyrics = `
+F Am G
+${ divider }
                     F                 Am
 Lovin' him is like, drivin' a new Maserati
                 G
@@ -265,7 +281,7 @@ Just before they lose it all
 ${ divider }
                F                    C
 Losing him was blue, like I'd never known
-                G
+                G               G
 Missing him was dark grey, all alone
                    F                       Am
 Forgetting him was like trying to know somebody
@@ -300,7 +316,7 @@ That love could be that strong
 ${ divider }
                F                    C
 Losing him was blue, like I'd never known
-                G
+                G               G
 Missing him was dark grey, all alone
                    F                       Am
 Forgetting him was like trying to know somebody
@@ -328,6 +344,9 @@ When I still see it all in my, head
 And burning red
        F      Am  G
 Burning was reeeeed
+${ divider }
+F Am G G
+F Am G G
 ${ divider }
                    F                    Am
 Oh losing him was blue, like I'd never known

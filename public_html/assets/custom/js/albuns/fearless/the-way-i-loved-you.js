@@ -10,7 +10,7 @@ const videoUrl = 'https://www.youtube.com/embed/Vse44B_ASGE'
 const basicCipher = false
 
 const partsCipher = [
-    { type: 'alert',                 id: 'palmMute' },
+    { type: 'alert',            id: 'palmMute' },
 
     { type: 'progression',      id: 'intro' },
 
@@ -22,6 +22,9 @@ const partsCipher = [
     { type: 'progression',      id: 'firstChorus' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
+    { type: 'progression',      id: 'instrumental' },
+    { type: 'cipherLyrics',     id: 'instrumental' },
+
     { type: 'progression',      id: 'secondVerse' },
     { type: 'cipherLyrics',     id: 'secondVerse' },
 
@@ -29,13 +32,14 @@ const partsCipher = [
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
     { type: 'progression',      id: 'solo' },
+    { type: 'cipherLyrics',     id: 'solo' },
     // { type: 'tabs',             id: 'solo' },
-
-    { type: 'progression',      id: 'thirdChorus' },
-    { type: 'cipherLyrics',     id: 'thirdChorus' },
 
     { type: 'progression',      id: 'bridge' },
     { type: 'cipherLyrics',     id: 'bridge' },
+
+    { type: 'progression',      id: 'thirdChorus' },
+    { type: 'cipherLyrics',     id: 'thirdChorus' },
 
     { type: 'progression',      id: 'fourthChorus' },
     { type: 'cipherLyrics',     id: 'fourthChorus' },
@@ -67,6 +71,13 @@ const progressions = [
         caption: '',
         notes: ['D', 'A', 'Em', 'break','G, A'],
         progression: 'D - D - U U D D D U break D - D D U - d-highlight - D D U - '
+    },
+    {
+        id: 'instrumental',
+        title: 'Instrumental',
+        caption: '',
+        notes: ['D', 'A', 'Em', 'G'],
+        progression: 'D - D - U U D D D U'
     },
     {
         id: 'secondVerse',
@@ -101,17 +112,17 @@ const progressions = [
     {
         id: 'thirdChorus',
         title: 'Chorus',
-        caption: '',
-        notes: ['Em', 'G', 'D', 'A'],
-        progression: 'D block D block D block D block'
+        caption: '',        
+        notes: ['D', 'A', 'Em', 'G, A'],
+        progression: 'D D D D D D D D',
+        palmMute: true
     },
     {
         id: 'bridge',
         title: 'Bridge',
         caption: '',
-        notes: ['D', 'A', 'Em', 'G, A'],
-        progression: 'D D D D D D D D',
-        palmMute: true
+        notes: ['Em', 'G', 'D', 'A', 'x2'],
+        progression: 'D block D block D block D block'
     },
     {
         id: 'fourthChorus',
@@ -124,8 +135,8 @@ const progressions = [
         id: 'outro',
         title: 'Outro',
         caption: '',
-        notes: ['D', 'A', 'Em', 'break', 'G, A', 'break', 'D', 'A', 'Em', 'break', 'G', 'Gm', 'D'],
-        progression: 'D D D - U U D D D U break D - D D U - d-highlight - D D U - break D D D - U U D D D U break D - - - - - - - - -'
+        notes: ['D', 'A', 'Em', 'doubleBreak', 'G, A', 'doubleBreak', 'D', 'A', 'Em', 'break', 'G', 'Gm', 'D'],
+        progression: 'D D D - U U D D D U break break D - D D U - d-highlight - D D U - break break D D D - U U D D D U break D - - - - - - - - -'
     }
 ]
 
@@ -228,6 +239,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'firstChorus')
     },
     {
+        id: 'instrumental',
+        title: 'Instrumental',
+        referenceProgression: progressions.find(progression => progression.id === 'instrumental'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'secondVerse',
         title: 'Verse 2',
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
@@ -238,14 +255,20 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
     },
     {
-        id: 'thirdChorus',
-        title: 'Chorus',
-        referenceProgression: progressions.find(progression => progression.id === 'thirdChorus')
+        id: 'solo',
+        title: 'Solo',
+        referenceProgression: progressions.find(progression => progression.id === 'solo'),
+        onlyCipherColumns: true
     },
     {
         id: 'bridge',
         title: 'Bridge',
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
+    },
+    {
+        id: 'thirdChorus',
+        title: 'Chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'thirdChorus')
     },
     {
         id: 'fourthChorus',
@@ -289,8 +312,10 @@ Breakin' down and coming undone
 It's a roller coaster kinda rush
      Em
 And I never knew I could feel that much
-    G              A        D A Em G A
+    G              A        D
 And that's the way I loved you
+${ divider }
+D A Em G
 ${ divider }
 D
 He respects my space
@@ -324,6 +349,8 @@ And I never knew I could feel that much
     G              A        D A Em G
 And that's the way I loved you
 ${ divider }
+D A Em G
+${ divider }
 Em                         G
 He can't see the smile I'm faking
                    D
@@ -337,8 +364,8 @@ Just so frustrating, intoxicating, complicated
 A                            G      <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 Got away by some mistake and now
 ${ divider }
-           D
-But I miss screaming and fighting and kissing in the rain
+       D
+I miss screaming and fighting and kissing in the rain
          A
 And it's 2am and I'm cursing your name
     Em

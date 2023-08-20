@@ -1,6 +1,6 @@
 const musicId = 'lavender-haze'
 const musicTitle = 'Lavender Haze'
-const tuning = 'Bb Major'
+const tuning = 'Bb'
 const chordShape = null
 const capoFret = '3'
 const spotify = 'https://open.spotify.com/embed/track/5jQI2r1RdgtuT8S3iG8zFC?utm_source=generator'
@@ -17,13 +17,13 @@ const partsCipher = [
     { type: 'progression',           id: 'intro' },
     { type: 'cipherLyrics',          id: 'intro' },
 
-    { type: 'progression',           id: 'verse' },
+    { type: 'progression',           id: 'firstVerse' },
     { type: 'cipherLyrics',          id: 'firstVerse' },
 
     { type: 'progression',           id: 'firstPreChorus' },
+    { type: 'progression',           id: 'noChords' },
     { type: 'cipherLyrics',          id: 'firstPreChorus' },
 
-    { type: 'progression',           id: 'noChords' },
     { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
 
@@ -34,9 +34,9 @@ const partsCipher = [
     { type: 'cipherLyrics',          id: 'secondVerse' },
 
     { type: 'progression',           id: 'secondPreChorus' },
+    { type: 'progression',           id: 'noChords' },
     { type: 'cipherLyrics',          id: 'secondPreChorus' },
 
-    { type: 'progression',           id: 'noChords' },
     { type: 'progression',           id: 'chorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
 
@@ -44,9 +44,8 @@ const partsCipher = [
     { type: 'cipherLyrics',          id: 'instrumental' },
 
     { type: 'progression',           id: 'bridge' },
-    { type: 'cipherLyrics',          id: 'bridge' },
-
     { type: 'progression',           id: 'noChords' },
+    { type: 'cipherLyrics',          id: 'bridge' },
     
     { type: 'progression',           id: 'lastChorus' },
     { type: 'cipherLyrics',          id: 'chorus' },
@@ -97,25 +96,25 @@ const progressions = [
         title: 'Bridge',
         caption: '',
         progressionCaption: '',
-        notes: ['C', 'D', 'Am²'],
+        notes: ['C', 'D', 'Am²', 'x2'],
         progression: 'D - - - D - - - D - - - D - - -',
         palmMute: true
     },
     {
-        id: 'verse',
-        title: 'Verse',
+        id: 'firstVerse',
+        title: 'firstVerse',
         caption: '',
         progressionCaption: '',
-        notes: ['C', 'D', 'Am²'],
+        notes: ['C', 'D', 'Am²', 'x2'],
         progression: 'D - D - D - - U - U D - D - D U',
         palmMute: true
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        caption: 'Just the first time',
+        caption: '',
         progressionCaption: '',
-        notes: ['C', 'break', 'D', 'Am²'],
+        notes: ['C', 'break', 'D', 'Am²', 'break', 'C', 'D', 'Am²'],
         progression: 'D - - - - - - - - - - - D - D U break D - D - D - - U - U D - D - D U',
         palmMute: true
     },
@@ -124,7 +123,7 @@ const progressions = [
         title: 'Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['C', 'D', 'Am²'],
+        notes: ['C', 'D', 'Am²', 'x2'],
         progression: 'D - D - D - - U - U D - D - D U',
     },
     {
@@ -149,8 +148,8 @@ const progressions = [
         title: 'Outro',
         caption: '',
         progressionCaption: '',
-        notes: ['C', 'D', 'Am²'],
-        progression: 'D - - - D - - - D - - - D - - -',
+        notes: ['C', 'D', 'Am²', 'x2', 'break', 'C'],
+        progression: 'D - - - D - - - D - - - D - - - break D - - - - - - - - - - - - - - -',
         palmMute: true
     },
 ]
@@ -166,7 +165,7 @@ const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        referenceProgression: progressions.find(progression => progression.id === 'verse')
+        referenceProgression: progressions.find(progression => progression.id === 'firstVerse')
     },
     {
         id: 'firstPreChorus',
@@ -181,7 +180,8 @@ const cipherParts = [
     {
         id: 'instrumental',
         title: 'Instrumental',
-        referenceProgression: progressions.find(progression => progression.id === 'instrumental')
+        referenceProgression: progressions.find(progression => progression.id === 'instrumental'),
+        onlyCipherColumns: true
     },
     {
         id: 'secondVerse',
@@ -218,6 +218,7 @@ const cipherParts = [
 let cipherLyrics = `
 C    D                 Am   Am 
         Meet me at midnight
+C D Am Am  
 ${ divider }
 C                               D
 Staring at the ceiling with you
@@ -312,7 +313,7 @@ C
  No deal (No deal)
     D
 The 1950s shit they want for me
-Am                                    C         <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Start outro strumming</span>
+Am                                    <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Start next strumming</span>
   I just wanna stay in that lavender haze
 ${ divider }
 Am

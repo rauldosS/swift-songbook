@@ -18,6 +18,7 @@ const partsCipher = [
     { type: 'progression',      id: 'firstChorus' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
+    { type: 'cipherLyrics',     id: 'break' },
     { type: 'progression',      id: 'break' },
 
     { type: 'progression',      id: 'secondVerse' },
@@ -26,6 +27,7 @@ const partsCipher = [
     { type: 'progression',      id: 'secondChorus' },
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
+    { type: 'cipherLyrics',     id: 'secondBreak' },
     { type: 'progression',      id: 'secondBreak' },
 
     { type: 'progression',      id: 'bridge' },
@@ -34,7 +36,9 @@ const partsCipher = [
     { type: 'progression',      id: 'lastChorus' },
     { type: 'cipherLyrics',     id: 'lastChorus' },
 
-    { type: 'progression',      id: 'break' },
+    { type: 'cipherLyrics',     id: 'lastBreak' },
+    { type: 'progression',      id: 'lastBreak' },
+    { type: 'cipherLyrics',     id: 'outro' },
     { type: 'progression',      id: 'outro' },
 ]
 
@@ -43,7 +47,7 @@ const progressions = [
         id: 'intro',
         title: 'Intro',
         caption: '',
-        notes: ['G', 'Cadd9', 'x4'],
+        notes: ['G', 'G', 'Cadd9', 'Cadd9', 'x2'],
         progression: 'D - - - D - - U - U D - - U D U'
     },
     {
@@ -99,7 +103,7 @@ const progressions = [
         id: 'lastChorus',
         title: 'Chorus',
         caption: '',
-        notes: ['Em7, Cadd9', 'G', 'break', 'Em7, Cadd9', 'D'],
+        notes: ['Em7, Cadd9', 'G', 'break', 'Em7, Cadd9', 'D', 'break', 'G'],
         progression: 'D - - - D - - u-highlight - U D - - U D U'
     },
     {
@@ -132,6 +136,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'firstChorus')
     },
     {
+        id: 'break',
+        title: 'Break',
+        referenceProgression: progressions.find(progression => progression.id === 'break'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'secondVerse',
         title: 'Verse 2',
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
@@ -142,6 +152,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'secondChorus')
     },
     {
+        id: 'secondBreak',
+        title: 'Break',
+        referenceProgression: progressions.find(progression => progression.id === 'secondBreak'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'bridge',
         title: 'Bridge',
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
@@ -150,6 +166,18 @@ const cipherParts = [
         id: 'lastChorus',
         title: 'Chorus',
         referenceProgression: progressions.find(progression => progression.id === 'lastChorus')
+    },
+    {
+        id: 'lastBreak',
+        title: 'Break',
+        referenceProgression: progressions.find(progression => progression.id === 'lastBreak'),
+        onlyCipherColumns: true
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        referenceProgression: progressions.find(progression => progression.id === 'outro'),
+        onlyCipherColumns: true
     }
 ]
 
@@ -176,6 +204,8 @@ I just wanted you to know that this is me trying
               Em7               Cadd9               D
 I just wanted you to know that this is me trying
 ${ divider }
+G G Cadd9 Cadd9
+${ divider }
 G
 They told me all of my cages were mental
 Cadd9
@@ -198,6 +228,8 @@ I just wanted you to know that this is me trying
               G
 At least I'm trying
 ${ divider }
+Cadd9 G D
+${ divider }
          Em7                                             Cadd9
 And it's hard to be at a party when I feel like an open wound
                                                        D
@@ -213,6 +245,10 @@ And I just wanted you to know that this is me trying
 I just wanted you to know that this is me trying
              G
 At least I'm trying
+${ divider }
+G G G G
+${ divider }
+G
 `
 
 const lyrics = `

@@ -860,6 +860,19 @@ createCipherLyricsHTML = () => {
     const cipherLyricsList = cipherLyrics.split(divider)
 
     cipherParts.forEach((part, index) => {
+        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `${ cipherLyricsList[index] }` : `
+<a
+    onclick="scrollToElement('#progression-${ part.referenceProgression.id }')"
+    data-toggle="tooltip"
+    data-bs-placement="right"
+    data-bs-html="true"
+    title="Progression <i class='fa-solid fa-arrow-right-long ms-2 me-2'></i> ${ part.referenceProgression.title }"
+    class="title-part-cipher"
+>[${ part.title }]</a>
+            ${ cipherLyricsList[index] }`
+
+        if (part.onlyCipherColumns) return
+
         cipherLyricsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `<pre type="lyrics">
             ${ cipherLyricsList[index] }
             </pre>` : `<pre type="lyrics">
@@ -873,17 +886,6 @@ createCipherLyricsHTML = () => {
 >[${ part.title }]</a>
             ${ cipherLyricsList[index] }
             </pre>`
-
-        cipherLyricsColumnsPartsHtml[part.id] = part.ignoreTitle !== undefined ? `${ cipherLyricsList[index] }` : `
-<a
-    onclick="scrollToElement('#progression-${ part.referenceProgression.id }')"
-    data-toggle="tooltip"
-    data-bs-placement="right"
-    data-bs-html="true"
-    title="Progression <i class='fa-solid fa-arrow-right-long ms-2 me-2'></i> ${ part.referenceProgression.title }"
-    class="title-part-cipher"
->[${ part.title }]</a>
-            ${ cipherLyricsList[index] }`
     })
 }
 

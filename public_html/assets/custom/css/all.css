@@ -141,6 +141,8 @@ header {
     z-index: 999;
     background: #FFF;
     padding-top: 12px;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 #shortcuts .btn {

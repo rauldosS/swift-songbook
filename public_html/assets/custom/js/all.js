@@ -292,6 +292,9 @@ albuns.forEach(album => {
     album.musics.forEach(music => {    
         music['album'] = album.id
         musics[music.id] = music
+        musics[music.id]['type'] = 'music'
+        musics[music.id]['keywords'] = `${ music.id } ${ music.name } ${ album.name }`.toLowerCase()
+        musics[music.id]['link'] = `/song/${ music.id }`
     })
 })
 
@@ -305,7 +308,7 @@ getMusic = (album, music) => {
     return getAlbum(album).musics.find(obj => {
         return obj.id === music
     })
-} 
+}
 
 scrollTop = () => {
     $('.scrolling').animate({ scrollTop: 0 }, 500)

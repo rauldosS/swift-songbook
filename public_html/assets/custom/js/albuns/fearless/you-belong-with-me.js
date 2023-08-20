@@ -25,7 +25,7 @@ const partsCipher = [
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
     { type: 'progression',      id: 'instrumental' },
-    // { type: 'cipherLyrics',     id: 'instrumental' },
+    { type: 'cipherLyrics',     id: 'instrumental' },
 
     { type: 'progression',      id: 'secondVerse' },
     { type: 'cipherLyrics',     id: 'secondVerse' },
@@ -37,7 +37,7 @@ const partsCipher = [
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
     { type: 'progression',      id: 'solo' },
-    // { type: 'cipherLyrics',     id: 'solo' },
+    { type: 'cipherLyrics',     id: 'solo' },
     { type: 'tabs',             id: 'solo' },
 
     { type: 'progression',      id: 'bridge' },
@@ -63,7 +63,7 @@ const progressions = [
         id: 'firstVerse',
         title: 'Verse 1',
         caption: '',
-        notes: ['D²', 'A²', 'Em²', 'G²'],
+        notes: ['D²', 'A²', 'Em²', 'G²', 'x2'],
         progression: 'd-accented D D d-accented D D d-accented D',
         palmMute: true
     },
@@ -215,7 +215,8 @@ const cipherParts = [
     {
         id: 'instrumental',
         title: 'Instrumental',
-        referenceProgression: progressions.find(progression => progression.id === 'instrumental')
+        referenceProgression: progressions.find(progression => progression.id === 'instrumental'),
+        onlyCipherColumns: true
     },
     {
         id: 'secondVerse',
@@ -235,7 +236,8 @@ const cipherParts = [
     {
         id: 'solo',
         title: 'Solo',
-        referenceProgression: progressions.find(progression => progression.id === 'solo')
+        referenceProgression: progressions.find(progression => progression.id === 'solo'),
+        onlyCipherColumns: true
     },
     {
         id: 'bridge',
@@ -290,8 +292,8 @@ You belong with me, you belong with me
 ${ divider }
 D²
 ${ divider }
-                                                A
-Walkin' the streets with you and your worn out jeans
+D                                                A
+ Walkin' the streets with you and your worn out jeans
                                                Em
 I can't help thinking this is how it ought to be
                                          G
@@ -362,8 +364,8 @@ D
 Standing by and waiting at your back door
 A                                        Em
 All this time how could you not know, baby
-                 G                   A
-You belong with me, , you belong with me
+                 G                   
+You belong with me, you belong with me
 ${ divider }
                  D
 You belong with me
@@ -389,9 +391,9 @@ Dreaming 'bout the day when you wake up and find
 That what you're looking for has been here the whole time
 
 <b>[Chorus]</b>
-If you could see that I'm the onе who understands you
+If you could see that I'm the one who understands you
 Been here all along, so why can't you see?
-You bеlong with me, you belong with me
+You belong with me, you belong with me
 
 <b>[Verse 2]</b>
 Walking the streets with you and your worn-out jeans

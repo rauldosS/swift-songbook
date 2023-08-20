@@ -1,20 +1,92 @@
-<a id="btn-home" class="btn" href="/">
-    <i class="bi bi-house"></i> <span>Início</span>
-</a>
-<button type="button" id="hide-albuns-toggle" class="btn">
-    <i class="bi bi-music-note-list"></i> <span></span>
-</button>
-<button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Alterar língua">
-    <!-- <i class="bi bi-translate"></i> -->
-    <i class="fa-solid fa-language"></i>
-</button>
-<ul class="dropdown-menu" aria-labelledby="dropdown-menu-languages">
-    <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')"></a></li>
-    <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')"></a></li>
-</ul>
-<button id="btn-instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Ajuda">
-    <a href="/help" style="color: #6c757d!important"><i class="fa-solid fa-question"></i></a>
-</button>
-<button id="unpin-shortcuts" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom" title="Desafixar atalhos">
-    <i class="fa-solid fa-thumbtack"></i>
-</button>
+<div class="shortcuts">
+    <a id="btn-home" class="btn" href="/">
+        <i class="bi bi-house"></i> <span>Início</span>
+    </a>
+    <button type="button" id="hide-albuns-toggle" class="btn">
+        <i class="bi bi-music-note-list"></i> <span></span>
+    </button>
+    <button id="dropdown-menu-languages" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" title="Alterar língua">
+        <!-- <i class="bi bi-translate"></i> -->
+        <i class="fa-solid fa-language"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-menu-languages">
+        <li><a id="en-US" class="dropdown-item" onclick="setLanguage('en-US')"></a></li>
+        <li><a id="pt-BR" class="dropdown-item" onclick="setLanguage('pt-BR')"></a></li>
+    </ul>
+    <button id="btn-instructions" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom"
+        title="Ajuda">
+        <a href="/help" style="color: #6c757d!important"><i class="fa-solid fa-question"></i></a>
+    </button>
+    <button id="unpin-shortcuts" type="button" class="btn" data-toggle="tooltip" data-bs-placement="bottom"
+        title="Desafixar atalhos">
+        <i class="fa-solid fa-thumbtack"></i>
+    </button>
+</div>
+
+<style>
+    .form {
+        position: relative;
+    }
+
+    .form .fa-search {
+        position: absolute;
+        top: 12px;
+        left: 18px;
+        color: #9ca3af;
+    }
+
+    .form span {
+        position: absolute;
+        right: 17px;
+        top: 13px;
+        padding: 2px;
+        border-left: 1px solid #d1d5db;
+    }
+
+    .left-pan {
+        padding-left: 7px;
+    }
+
+    .left-pan i {
+        padding-left: 10px;
+    }
+
+    .form-input {
+        height: 39px;
+        text-indent: 33px;
+        border-radius: 10px;
+    }
+
+    .form-input:focus {
+        box-shadow: none;
+    }
+</style>
+
+<!-- <div id="search" class="search">
+    <div class="form">
+        <i class="fa fa-search"></i>
+        <input type="text" class="form-control form-input" id="search" placeholder="Search anything...">
+    </div>
+</div>
+
+<script>
+    const searchResults = [
+        {
+            type: 'page',
+            name: 'Sobre / About',
+            link: '/about',
+            keywords: 'about, sobre, creator, criador, songbook'
+        }
+    ].concat(Object.values(musics))
+
+    document.getElementById('search').addEventListener("keyup", (event) => {
+        const term = event.target.value
+
+        if (term.length >= 2) {
+            const result = searchResults.find(obj => {
+                return obj.keywords.includes(event.target.value.toLowerCase())
+            })
+        }
+    })
+</script> -->

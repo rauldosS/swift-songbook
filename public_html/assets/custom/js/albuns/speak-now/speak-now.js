@@ -21,6 +21,7 @@ const partsCipher = [
     { type: 'progression',      id: 'firstChorus' },
     { type: 'cipherLyrics',     id: 'firstChorus' },
 
+    { type: 'cipherLyrics',     id: 'firstInstrumental' },
     { type: 'progression',      id: 'firstInstrumental' },
     { type: 'tabs',             id: 'firstInstrumental' },
 
@@ -33,6 +34,7 @@ const partsCipher = [
     { type: 'progression',      id: 'secondChorus' },
     { type: 'cipherLyrics',     id: 'secondChorus' },
 
+    { type: 'cipherLyrics',     id: 'solo' },
     { type: 'progression',      id: 'solo' },
     { type: 'tabs',             id: 'solo' },
 
@@ -204,6 +206,12 @@ const cipherParts = [
         referenceProgression: progressions.find(progression => progression.id === 'firstChorus')
     },
     {
+        id: 'firstInstrumental',
+        title: 'Instrumental',
+        referenceProgression: progressions.find(progression => progression.id === 'firstInstrumental'),
+        onlyCipherColumns: true
+    },
+    {
         id: 'secondVerse',
         title: 'Verse 2',
         referenceProgression: progressions.find(progression => progression.id === 'secondVerse')
@@ -221,7 +229,8 @@ const cipherParts = [
     {
         id: 'solo',
         title: 'Solo',
-        referenceProgression: progressions.find(progression => progression.id === 'solo')
+        referenceProgression: progressions.find(progression => progression.id === 'solo'),
+        onlyCipherColumns: true
     },
     {
         id: 'firstBridge',
@@ -283,7 +292,7 @@ G               D
 Don't say "yes" run away now
 Am
 I'll meet you when you're out
-       C         C             G
+       C                       G
 Of the church at the back door
               D
 Don't wait or say a single vow
@@ -291,6 +300,8 @@ Am
 You need to hear me out
          <span class="badge badge-info-cipher rounded-pill"><span class="text-white">C</span> <i class="fa-solid fa-arrow-right-long"></i> Down</span>
 And they said "speak no-ow"
+${ divider }
+G D Am C
 ${ divider }
 G                   D
 Fond gestures are exchanged

@@ -13,7 +13,6 @@ const partsCipher = [
     { type: 'alert',                id: 'palmMute' },
 
     { type: 'progression',          id: 'main' },
-
     { type: 'cipherLyrics',         id: 'firstVerse' },
 
     { type: 'progression',          id: 'chorus' },
@@ -21,17 +20,23 @@ const partsCipher = [
 
     { type: 'cipherLyrics',         id: 'chorus' },
 
+    { type: 'progression',          id: 'main' },
     { type: 'cipherLyrics',         id: 'secondVerse' },
 
+    { type: 'progression',          id: 'chorus' },
     { type: 'cipherLyrics',         id: 'secondPrechorus' },
-
     { type: 'cipherLyrics',         id: 'secondChorus' },
 
     { type: 'progression',          id: 'bridge' },
     { type: 'cipherLyrics',         id: 'bridge' },
 
-    { type: 'cipherLyrics',         id: 'thidhorus' },
+    { type: 'progression',          id: 'lastPreChorus' },
+    { type: 'cipherLyrics',         id: 'lastPreChorus' },
 
+    { type: 'progression',          id: 'lastChorus' },
+    { type: 'cipherLyrics',         id: 'lastChorus' },
+
+    { type: 'progression',          id: 'outro' },
     { type: 'cipherLyrics',         id: 'outro' },
 ]
 
@@ -41,26 +46,50 @@ const progressions = [
         title: 'Intro | Verse Progression',
         caption: '',
         progressionCaption: '',
-        notes: ['F', 'G', 'C', 'Am'],
-        progression: 'D - U D U - D',
+        notes: ['F', 'G', 'C', 'Am', 'x2'],
+        progression: 'D - U D U D',
     },
     {
         id: 'chorus',
         title: 'Pre-chorus | Chorus Progression',
         caption: '',
         progressionCaption: '',
-        notes: ['F', 'G', 'C', 'Am'],
+        notes: ['F', 'G', 'C', 'Am', 'x5'],
         progression: 'D - U D U D - U D U D - D U',
     },
     {
         id: 'bridge',
         title: 'Bridge',
+        caption: 'ACCENTED STRUMS UNDERLINED',
+        progressionCaption: '',
+        notes: ['F', 'G', 'C', 'Am'],
+        progression: 'd-accented D D d-accented D D d-accented D',
+        palmMute: true
+    },
+    {
+        id: 'lastPreChorus',
+        title: 'Pre-chorus',
         caption: '',
         progressionCaption: '',
         notes: ['F', 'G', 'C', 'Am'],
-        progression: 'D D D D D D D D D',
-        palmMute: true
-    }
+        progression: 'D - - - - - - -',
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
+        caption: '',
+        progressionCaption: '',
+        notes: ['F', 'G', 'C', 'Am', 'x5'],
+        progression: 'D - U D U D - U D U D - D U',
+    },
+    {
+        id: 'outro',
+        title: 'Outro',
+        caption: '',
+        progressionCaption: '',
+        notes: ['F', 'G', 'C', 'Am'],
+        progression: 'D - - - - - - -',
+    },
 ]
 
 const tabs = []
@@ -69,55 +98,51 @@ const cipherParts = [
     {
         id: 'firstVerse',
         title: 'Verse 1',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
         id: 'firstPreChorus',
         title: 'Pre-chorus 1',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'chorus',
         title: 'Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'secondVerse',
         title: 'Verse 2',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     },
     {
         id: 'secondPrechorus',
         title: 'Pre-chorus 2',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'secondChorus',
         title: 'Chorus',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'bridge',
         title: 'Bridge',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'bridge')
     },
     {
-        id: 'thidhorus',
-        title: 'Pre-chorus 2',
-        ignoreTitle: false,
+        id: 'lastPreChorus',
+        title: 'Pre-chorus',
+        referenceProgression: progressions.find(progression => progression.id === 'chorus')
+    },
+    {
+        id: 'lastChorus',
+        title: 'Chorus',
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
     {
         id: 'outro',
         title: 'Outro',
-        ignoreTitle: false,
         referenceProgression: progressions.find(progression => progression.id === 'main')
     }
 ]
@@ -196,11 +221,12 @@ They'd paint me out to be bad
           Am
 So, it's okay that I'm mad
 ${ divider }
-F                         G                                         <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+F                         G
 I'm so sick of running as fast as I can
-C                                      Am                           <span class="badge badge-info-cipher rounded-pill">Progression <i class="fa-solid fa-arrow-right-long"></i> Down</span>
+C                                      Am
  Wondering if I'd get there quicker if I was a man (You know that)
-    F                          G                                    <span class="badge badge-info-cipher rounded-pill">Verse Progression...</span>
+${ divider }
+    F                          G
 And I'm so sick of them coming at me again (Coming at me again)
           C
 'Cause if I was a man (If I was a man)
@@ -223,7 +249,10 @@ I'd be the man (Yeah)
            C   Am
 I'd be the man (I'd be the man)
 ${ divider }
-If I was a man, then I'd be the man
+F            G   
+  If I was a man
+C     Am
+  Then I'd be the man
 `
 
 const lyrics = `
@@ -234,31 +263,31 @@ And that would be okay for me to do
 Every conquest I had made would make me more of a boss to you
 
 <b>[Pre-Chorus]</b>
-I’d be a fearless leader, I'd be an alpha type
+I'd be a fearless leader, I'd be an alpha type
 When everyone believes ya, what's that like?
 
 <b>[Chorus]</b>
-I’m so sick of running as fast as I can
+I'm so sick of running as fast as I can
 Wonderin' if I'd get there quicker if I was a man
 And I'm so sick of them comin' at me again
 'Cause if I was a man, then I'd be the man
 I'd be the man (Man)
-I’d be the man (Man)
+I'd be the man (Man)
 
 <b>[Verse 2]</b>
-They’d say I hustled, put in the work
+They'd say I hustled, put in the work
 They wouldn't shake their heads and question how much of this I deserve
 What I was wearing, if I was rude
 Could all be separated from my good ideas and power moves
 
 <b>[Pre-Chorus]</b>
 And they would toast to me, oh (Ayy), let the players play
-I’d be just like Leo in Saint-Tropez
+I'd be just like Leo in Saint-Tropez
 
 <b>[Chorus]</b>
 I'm so sick of running as fast as I can
 Wonderin' if I'd get there quicker if I was a man
-And I’m so sick of them comin' at me again
+And I'm so sick of them comin' at me again
 'Cause if I was a man, then I'd be the man
 I'd be the man (Man)
 I'd be the man (Man)

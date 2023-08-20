@@ -5,7 +5,7 @@ const chordShape = null
 const capoFret = '4'
 const spotify = 'https://open.spotify.com/embed/track/0V3wPSX9ygBnCm8psDIegu?utm_source=generator'
 const chordsMusic = ['Fmaj7', 'C', 'Gadd11', 'Am7']
-const videoUrl = 'https://www.youtube.com/embed/DufVVyUI_NA'
+const videoUrl = 'https://www.youtube.com/embed/uNpMtfbTtII'
 const basicCipher = false
 
 const partsCipher = [
@@ -17,12 +17,19 @@ const partsCipher = [
     { type: 'progression',          id: 'chorus' },
     { type: 'cipherLyrics',         id: 'chorus' },
 
+    { type: 'progression',          id: 'instrumental' },
     { type: 'cipherLyrics',         id: 'instrumental' },
 
     { type: 'progression',          id: 'secondVerse' },
     { type: 'cipherLyrics',         id: 'secondVerse' },
 
     { type: 'cipherLyrics',         id: 'secondPrechorus' },
+
+    { type: 'progression',          id: 'chorus' },
+    { type: 'cipherLyrics',         id: 'chorus' },
+
+    { type: 'progression',          id: 'instrumental' },
+    { type: 'cipherLyrics',         id: 'instrumental' },
 
     { type: 'progression',          id: 'bridge' },
     { type: 'cipherLyrics',         id: 'bridge' },
@@ -41,7 +48,7 @@ const progressions = [
         progressionCaption: '',
         // notesMultipleProgression: ['Fmaj7', 'C', 'Gadd11', 'Am7'],
         // multipleProgression: ['D - U D U', 'D - U D U D D U', 'D - U D U', 'D - U D U D D U']
-        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        notes: ['Fmaj7, C', 'Gadd11, Am7', 'x8'],
         progression: 'D - D - D - D u-highlight - U D - D - D U',
         palmMute: true
     },
@@ -50,7 +57,7 @@ const progressions = [
         title: 'Verse | Pre-Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        notes: ['Fmaj7, C', 'Gadd11, Am7', 'x8'],
         progression: 'D - D - D - D u-highlight - U D - D - D U',
         palmMute: true
     },
@@ -59,7 +66,7 @@ const progressions = [
         title: 'Chorus',
         caption: '',
         progressionCaption: '',
-        notes: ['Fmaj7, C', 'Gadd11, Am7'],
+        notes: ['Fmaj7, C', 'Gadd11, Am7', 'x4'],
         progression: 'D - D - D - D u-highlight - U D - D - D U'
     },
     {
@@ -118,11 +125,12 @@ const cipherParts = [
         title: 'Chorus',
         referenceProgression: progressions.find(progression => progression.id === 'chorus')
     },
-    // {
-    //     id: 'instrumental',
-    //     title: 'Instrumental',
-    //     referenceProgression: progressions.find(progression => progression.id === 'main')
-    // },
+    {
+        id: 'instrumental',
+        title: 'Instrumental',
+        referenceProgression: progressions.find(progression => progression.id === 'instrumental'),
+        onlyCipherColumns: true
+    },
     {
         id: 'secondVerse',
         title: 'Verse 2',
@@ -153,7 +161,7 @@ Midnights become my afternoons
 Fmaj7    C                    Gadd11           Am7           
 When my depression works the graveyard shift, all of the people
 Fmaj7      C                    Gadd11
-I’ve ghosted stand there in the room
+I've ghosted stand there in the room
 ${ divider }
   Fmaj7         C                Gadd11
 I should not be left to my own devices
@@ -164,27 +172,29 @@ I end up in crisis (Tale as old as time)
 Fmaj7       C             Gadd11
   I wake up screaming from dreaming
         Am7                     Fmaj7
-One day I’ll watch as you’re leaving
+One day I'll watch as you're leaving
           C                 Gadd11
 Cause you got tired of my scheming
          Am7
 (For the last time)
 ${ divider }
 Fmaj7  C
-It’s me, hi
+It's me, hi
 Gadd11                Am7
-I’m the problem, it’s me
+I'm the problem, it's me
 Fmaj7  C     Gadd11       Am7
 At tea time, everybody agrees
 Fmaj7      C               Gadd11                  Am7
-I’ll stare directly at the sun, but never in the mirror
+I'll stare directly at the sun, but never in the mirror
 Fmaj7      C         Gadd11         Am7
 It must be exhausting Always rooting for the anti-hero
+${ divider }
+Fmaj7 C Gadd11 Am7
 ${ divider }
 Fmaj7    C                 Gadd11     Am7
 Sometimes I feel like everybody is a sexy baby
 Fmaj7     C               Gadd11
-And I’m a monster on the hill
+And I'm a monster on the hill
 Fmaj7      C                Gadd11           Am7
 Too big to hang out, slowly lurching toward your favorite city
 Fmaj7          C                  Gadd11    Am7
@@ -197,7 +207,7 @@ Like some kind of congressman (Tale as old as time)
 Fmaj7       C                Gadd11
   I wake up screaming from dreaming
        Am7                     Fmaj7
-One day I’ll watch as you’re leaving
+One day I'll watch as you're leaving
       C                Gadd11
 And life will lose all its meaning
          Am7
@@ -210,28 +220,28 @@ She thinks I left them in the will
 Fmaj7     C                   Gadd11       Am7
  The family gathers around and reads it and then someone screams out
 Fmaj7       C                  Gadd11      Am7
- “She’s laughing up at us from hell!”
+ “She's laughing up at us from hell!”
 Fmaj7     C
-It’s me, hi,
+It's me, hi,
 Gadd11                Am7
-I’m the problem, it’s me
+I'm the problem, it's me
 Fmaj7     C
-It’s me, hi
+It's me, hi
 Gadd11               Am7
-I’m the problem, it’s me
+I'm the problem, it's me
 Fmaj7    C      
-It’s me, hi,    
+It's me, hi,    
 Gadd11     Am7      Fmaj7  C     Gadd11     Am7
 everybody agrees, everybody agrees…
 ${ divider }
  <b>-</b>      C
-It’s me, hi
+It's me, hi
 Gadd11                Am7
-I’m the problem, it’s me
+I'm the problem, it's me
 Fmaj7  C     Gadd11       Am7
 At tea time, everybody agrees
 Fmaj7      C               Gadd11                  Am7
-I’ll stare directly at the sun, but never in the mirror
+I'll stare directly at the sun, but never in the mirror
 Fmaj7      C         Gadd11         Am7
 It must be exhausting Always rooting for the anti-hero
 `
