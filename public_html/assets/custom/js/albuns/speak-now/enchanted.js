@@ -9,12 +9,6 @@ const chordsMusic = ['G', 'C', 'D', 'Em', 'Bm', 'Dsus4', 'Cadd9']
 const videoUrl = 'https://www.youtube.com/embed/h0Zewndw2u0'
 const basicCipher = false
 
-// https://www.youtube.com/watch?v=h0Zewndw2u0&ab_channel=TunezbyLucz
-// https://drive.google.com/file/d/1Rs2xPG0A0_Rrd7OGUeoACf4sn6EPeD4U/view
-
-// Variação no Dsus4 no início
-// Com ou sem capotrastes nas tbs
-
 const partsCipher = [
     { type: 'alert',                 id: 'palmMute' },
 
@@ -418,7 +412,7 @@ All I can say is I was enchanted to meet you
 <b>[Chorus]</b>
 This night is sparklin', don't you let it go
 I'm wonderstruck, blushin' all the way home
-I'll spеnd forever wonderin' if you knеw
+I'll spend forever wonderin' if you knew
 I was enchanted to meet you
 
 <b>[Verse 3]</b>

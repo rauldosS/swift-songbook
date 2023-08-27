@@ -1,4 +1,5 @@
 const musicId = 'karma'
+const albumId = 'midnights'
 const musicTitle = 'Karma'
 const tuning = 'G#/Ab'
 const chordShape = null

@@ -544,6 +544,7 @@ let cipherLyricsColumnsPartsHtml = {}
 
 let completeCipher = []
 let completeCipherColumns = []
+let suggestedBy = null
 
 const divider = '======================================================='
 
@@ -574,6 +575,7 @@ const chordsHtml = {
     Am: `<chord name="Am" positions="x02210" fingers="--231-" size="2" ></chord>`,
     Am7: `<chord name="Am7" positions="x02010" fingers="--2-1-" size="2" ></chord>`,
     Bm: `<chord name="Bm" positions="x24432" fingers="-13421" size="2" ></chord>`,
+    B7: `<chord name="B7" positions="x21202" fingers="-213-4" size="2" ></chord>`,
 }
 
 const progressionsType = {
@@ -739,6 +741,14 @@ createArrowsProgression = (baseProgression, changeChord = null, palmMute = false
             ${ chordChangeColor ? 'chordChange' : '' }"
             ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
         ></i></b> `
+        if (progression === 'u-accented') {
+            return `<i class="fa-solid fa-arrow-up-long border-bottom pb-1 border-2 border-secondary
+                ${ palmMute ? 'palm-mute' : '' } 
+                ${ blocking ? 'blocking' : '' } 
+                ${ chordChangeColor ? 'chordChange' : '' }"
+                ${ chordChange ? 'note=" ' + changeChord + ' "' : ''}
+            ></i> `
+        }
         if (progression === 'X') return '<i class="fa-solid fa-x"></i> '
         if (progression === '-') return `<span class="strum">${ progression }</span> `
         if (progression === 'break') return `<br>`
@@ -768,7 +778,8 @@ createNotes = (notes) => {
                 return `<b>${ n }</b> ${ i + 1 === length ? ' | ' : '' } `
             }).join('')
         }
-        return `<b>${ note }</b> | `
+        if (chordsMusic.includes(note)) return `<b>${ note }</b> | `
+        return `${ note } | `
     }).join('')
 }
 
@@ -797,6 +808,28 @@ getMultipleProgressionsTable = (notes, progressions, marginNotes) => {
     </table>`   
 }
 
+createRepeats = (progression, repeats) => {
+    const count = (progression.match(/break/g) || []).length + 1
+
+    let blocks = ''
+    for (let line = 1; line <= count; line++) {
+        const repeat_line = repeats.find(obj => {
+            return obj.data.start === line
+        })
+
+        if (repeat_line) {
+            blocks += `<div class="repeatChord">${ repeat_line.repeat } ${ new Array(repeat_line.data.size).fill('<br>').join('') }</div>`
+            line += repeat_line.data.size - 1
+        } else {
+            blocks += `<div class="">Tay</div>`
+        }
+    }
+
+    return `<div class="row repeatsChord text-white" style="width: 44px; line-height: 1.5rem;">
+        ${ blocks }
+    </div>`
+}
+
 createProgressionHTML = () => {
     progressions.forEach(progression => {
         // const multipleProgression = progression.notesMultipleProgression !== undefined
@@ -814,9 +847,12 @@ createProgressionHTML = () => {
             progression.blocking !== undefined
         ) : ''
 
+        
         const repeat = progression.repeat !== undefined ? `<div class="repeatChord">
             ${ progression.repeat }
         </div>` : ''
+
+        const repeats = progression.repeats !== undefined ? createRepeats(progression.progression, progression.repeats) : ''
 
         progressionsHtml[progression.id] = `
             <div id="progression-${ progression.id }" class="bd-callout bd-callout-info text-black-50 fw-normal position-relative progressions">
@@ -828,6 +864,7 @@ createProgressionHTML = () => {
                             <div class="">${ progression.caption }</div>
                         </div>
                     </div>
+                    ${ repeats }
                     ${ repeat }
                     <div class="d-flex align-items-center text-start ms-auto">
                         <div class="fw-bold strumming">${ arrowProgression }</div>
@@ -967,6 +1004,11 @@ loadCipher = (music, album) => {
     createChordColumns()
     createLyrics()
     updateShareLink()
+
+    if (suggestedBy) {
+        cipherContent.append('<div class="line"></div>')
+        cipherContent.append(`<b>Suggested by: </b> ${ suggestedBy }`)
+    }
 
     $('[data-toggle=tooltip]').tooltip({
         trigger : 'hover'

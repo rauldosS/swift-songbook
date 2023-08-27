@@ -106,6 +106,18 @@
   <priority>0.90</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com/song/shake-it-off/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/ready-for-it/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Reputation -->
 
 <url>
@@ -168,6 +180,24 @@
   <priority>0.90</priority>
 </url>
 
+<url>
+  <loc>https://taylorsongbook.com/song/right-where-you-left-me/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/no-body-no-crime/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/champagne-problems/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
 <!-- Midnights -->
 
 <url>
@@ -190,6 +220,12 @@
 
 <url>
   <loc>https://taylorsongbook.com/song/anti-hero/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/maroon/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>

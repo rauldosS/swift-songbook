@@ -1,4 +1,5 @@
 const musicId = 'anti-hero'
+const albumId = 'midnights'
 const musicTitle = 'Anti-Hero'
 const tuning = 'E'
 const chordShape = null

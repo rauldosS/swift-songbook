@@ -1608,6 +1608,10 @@ a.article:hover {
     pre[type="lyrics"] {
         font-size: 12px;
     }
+
+    .repeatsChord {
+        line-height: initial !important;
+    }
 }
 
 @media(max-width: 700px) {
