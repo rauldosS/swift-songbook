@@ -1,3 +1,7 @@
+::-webkit-scrollbar-thumb {
+    background: var(--color-red) !important;
+}
+
 #cipher-content .bd-callout-info {
     border-left-color: var(--color-red);
 }

@@ -522,13 +522,20 @@ article {
 }
 
 .tabs {
-    white-space: pre-line;
     padding: 20px;
 }
 
-.tabs .tab:not(:last-of-type) {
-    padding-bottom: 30px !important;
+.tabs .tab {
+    padding: 0;
+    white-space: pre;
+    max-width: 100%;
+    overflow: auto;
+    padding-bottom: 6px;
 }
+
+/* .tabs .tab:not(:last-of-type) {
+    padding-bottom: 30px !important;
+} */
 
 #chords {
     justify-content: center!important;
@@ -1162,6 +1169,7 @@ a:focus {
 /* width */
 ::-webkit-scrollbar {
     width: 2px !important;
+    height: 2px;
 }
 
 /* Track */

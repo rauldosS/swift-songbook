@@ -6,7 +6,7 @@ const capoFret = '1'
 const spotify = 'https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator'
 const chordsMusic = ['Em', 'A', 'G', 'D', 'Bm']
 const videoUrl = 'https://www.youtube.com/embed/K-a8s8OLBSE'
-const basicCipher = true
+const basicCipher = false
 
 // https://tabs.ultimate-guitar.com/tab/taylor-swift/cardigan-chords-3261305
 // https://www.cifraclub.com.br/taylor-swift/cardigan/

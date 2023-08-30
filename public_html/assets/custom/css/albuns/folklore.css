@@ -1,5 +1,9 @@
+::-webkit-scrollbar-thumb {
+    background: #535353 !important;
+}
+
 #cipher-content .bd-callout-info {
-    border-left-color: #535353;;
+    border-left-color: #535353;
 }
 
 #cipher-content b {
