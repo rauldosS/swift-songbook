@@ -6,7 +6,7 @@ const chordShape = ''
 const capoFret = ''
 const spotify = 'https://open.spotify.com/embed/track/0cqRj7pUJDkTCEsJkx8snD?utm_source=generator'
 const chordsMusic = ['Am', 'C', 'G']
-const videoUrl = 'https://www.youtube.com/embed/aYWW8gkp58k'
+const videoUrl = 'https://www.youtube.com/embed/fk0KKX6-Gzk'
 const basicCipher = false
 
 // https://drive.google.com/file/d/1inOMJWh99M8Gk7z1ZZGAMtLoJbftyEC9/view

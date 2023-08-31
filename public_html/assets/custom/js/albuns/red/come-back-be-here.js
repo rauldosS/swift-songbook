@@ -117,7 +117,7 @@ const progressions = [
     },
     {
         id: 'bridge',
-        title: 'Gridge',
+        title: 'Bridge',
         caption: '',
         notes: ['C#m', 'B', 'x2', 'doubleBreak', 'C#m', 'B', 'break', 'A', 'doubleBreak', 'C#m', 'B', 'break', 'A',],
         progressionCaption: '',
