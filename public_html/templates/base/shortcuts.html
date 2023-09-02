@@ -63,7 +63,7 @@
     }
 </style>
 
-<!-- <div id="search" class="search">
+<div id="search" class="search">
     <div class="form">
         <i class="fa fa-search"></i>
         <input type="text" class="form-control form-input" id="search" placeholder="Search anything...">
@@ -78,15 +78,17 @@
             link: '/about',
             keywords: 'about, sobre, creator, criador, songbook'
         }
-    ].concat(Object.values(musics))
+    ].concat(Object.values(musics), albuns)
 
     document.getElementById('search').addEventListener("keyup", (event) => {
         const term = event.target.value
 
         if (term.length >= 2) {
-            const result = searchResults.find(obj => {
+            const result = searchResults.filter(obj => {
                 return obj.keywords.includes(event.target.value.toLowerCase())
             })
+
+            console.log('result', result)
         }
     })
-</script> -->
+</script>

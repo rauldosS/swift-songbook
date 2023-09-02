@@ -2,6 +2,8 @@ albuns = [
     {
         id: 'taylor-swift',
         name: 'Taylor Swift',
+        keywords: 'taylor swift',
+        type: 'album',
         musics: [
             { id: "Picture To Burn", name: "Picture To Burn", blocked: true },
             { id: "Teardrops On My Guitar", name: "Teardrops On My Guitar", blocked: true },
@@ -21,6 +23,8 @@ albuns = [
     {
         id: 'fearless',
         name: 'Fearless',
+        keywords: 'fearless',
+        type: 'album',
         musics: [
             { id: 'fearless', name: 'Fearless', blocked: false, by: "Nena Shelby" },
             { id: 'Fifteen', name: 'Fifteen', blocked: true },
@@ -53,6 +57,8 @@ albuns = [
     {
         id: 'speak-now',
         name: 'Speak Now',
+        keywords: 'speak now',
+        type: 'album',
         musics: [
             { id: "Mine", name: "Mine", blocked: true },
             { id: "Sparks Fly", name: "Sparks Fly", blocked: true },
@@ -76,6 +82,8 @@ albuns = [
     {
         id: 'red',
         name: 'RED',
+        keywords: 'red',
+        type: 'album',
         musics: [
             { id: "State of Grace", name: "State of Grace", blocked: true },
             { id: "State Of Grace (Acoustic Version)", name: "State Of Grace (Acoustic Version)", blocked: true },
@@ -111,6 +119,8 @@ albuns = [
     {
         id: '1989',
         name: '1989',
+        keywords: '1989',
+        type: 'album',
         musics: [
             { id: "Welcome To New York", name: "Welcome To New York", blocked: true },
             { id: "Blank Space", name: "Blank Space", blocked: true },
@@ -133,6 +143,8 @@ albuns = [
     {
         id: 'reputation',
         name: 'Reputation',
+        keywords: 'reputation',
+        type: 'album',
         musics: [
             { id: "ready-for-it", name: "...Ready For It?", blocked: false },
             { id: "End Game (feat. Ed Sheeran & Future)", name: "End Game (feat. Ed Sheeran & Future)", blocked: true },
@@ -154,6 +166,8 @@ albuns = [
     {
         id: 'lover',
         name: 'Lover',
+        keywords: 'lover',
+        type: 'album',
         musics: [
             { id: "I Forgot That You Existed", name: "I Forgot That You Existed", blocked: true },
             { id: "Cruel Summer", name: "Cruel Summer", blocked: true },
@@ -178,6 +192,8 @@ albuns = [
     {
         id: 'folklore',
         name: 'Folklore',
+        keywords: 'folklore',
+        type: 'album',
         musics: [
             { id: "the 1", name: "the 1", blocked: true },
             { id: "cardigan", name: "cardigan", blocked: false },
@@ -201,6 +217,8 @@ albuns = [
     {
         id: 'evermore',
         name: 'Evermore',
+        keywords: 'evermore',
+        type: 'album',
         musics: [
             { id: "willow", name: "willow", blocked: true },
             { id: "champagne-problems", name: "champagne problems", blocked: false },
@@ -224,6 +242,8 @@ albuns = [
     {
         id: 'midnights',
         name: 'Midnights',
+        keywords: 'midnights',
+        type: 'album',
         musics: [
             { id: "lavender-haze", name: "Lavender Haze", blocked: false },
             { id: "maroon", name: "Maroon", blocked: false },
@@ -260,9 +280,9 @@ let currentContent = {
 }
 
 $(document).ready(function () {
-    $("#sidebar").load("/templates/base/sidebar.html")
-    $("#shortcuts").load("/templates/base/shortcuts.html")
-    $("#contribution").load("/templates/base/contribution.html")
+    $("#sidebar").load("/public_html/templates/base/sidebar.html")
+    $("#shortcuts").load("/public_html/templates/base/shortcuts.html")
+    $("#contribution").load("/public_html/templates/base/contribution.html")
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
@@ -293,7 +313,7 @@ albuns.forEach(album => {
         music['album'] = album.id
         musics[music.id] = music
         musics[music.id]['type'] = 'music'
-        musics[music.id]['keywords'] = `${ music.id } ${ music.name } ${ album.name }`.toLowerCase()
+        musics[music.id]['keywords'] = `${ music.id } ${ music.name }`.toLowerCase()
         musics[music.id]['link'] = `/song/${ music.id }`
     })
 })
@@ -354,7 +374,7 @@ updateCurrentContent = (path = undefined, contentType = undefined) => {
 getLanguage = () => {
     (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
     $.ajax({
-        url:  '/assets/languages/' +  localStorage.getItem('language') + '.json',
+        url:  '/public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
@@ -385,7 +405,7 @@ btnHome = $('#btn-home')
 // homePath = 'base/home'
 
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
-    content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+    content.load(`/public_html/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
         if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
             updateLanguage()
         }
