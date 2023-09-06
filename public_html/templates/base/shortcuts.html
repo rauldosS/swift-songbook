@@ -71,6 +71,8 @@
 </div>
 
 <script>
+    const resultContent = document.getElementById('results')
+    const resultListContent = resultContent.querySelector('ul')
     const searchResults = [
         {
             type: 'page',
@@ -80,15 +82,33 @@
         }
     ].concat(Object.values(musics), albuns)
 
+    // manter o content de busca (#results) oculto enquanto o usuário não pesquisar nada
+    // exibir o results quando tiver algum resultado
+
     document.getElementById('search').addEventListener("keyup", (event) => {
         const term = event.target.value
 
         if (term.length >= 2) {
-            const result = searchResults.filter(obj => {
+            const results = searchResults.filter(obj => {
                 return obj.keywords.includes(event.target.value.toLowerCase())
             })
 
-            console.log('result', result)
+            resultListContent.innerHTML = ''
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    // <li class="list-group-item">An item</li>
+                    console.log(result)
+                    const li = document.createElement('li')
+                    li.classList.add('list-group-item')
+                    li.innerHTML = `${ results.name }`
+                    resultListContent.append(li)
+                })
+
+                resultContent.classList.remove('d-none')
+            } else {
+                resultContent.classList.add('d-none')
+            }
         }
     })
 </script>
