@@ -61,5 +61,13 @@
         "nena": "⭐ ~ Guitar, Taylor Swift, lifestyle, covers and tutorials with tabs, chords and fingerings on screen ~",
         "mike": "🎸Covers, acoustic, electric, gaming music, classical music, and zombies challenges, what?",
         "goddess": "Michelle, you might also like to be called a “Shell” like a shell 🐚 For living by the sea 🌊 It's soooo close to being one."
+    },
+    "search": {
+        "searchNotFound": "🫤 We didn't find any results for your search...",
+        "searchTypes": {
+            "album": "🗃️ Albuns",
+            "music": "🎤 Musics",
+            "page": "📱 Pages"
+        }
     }
 }

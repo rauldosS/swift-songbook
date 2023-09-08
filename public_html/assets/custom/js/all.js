@@ -1,7 +1,24 @@
+const coverAlbuns = {
+    'taylor-swift': 'https://upload.wikimedia.org/wikipedia/pt/thumb/3/3e/Taylor_Swift_%C3%81lbum.jpg/220px-Taylor_Swift_%C3%81lbum.jpg',
+    'fearless': 'https://upload.wikimedia.org/wikipedia/pt/thumb/e/ee/Fearless_%28Taylor%27s_Version%29.png/220px-Fearless_%28Taylor%27s_Version%29.png',
+    'speak-now': 'https://upload.wikimedia.org/wikipedia/pt/thumb/2/2e/Speak_Now_%28Taylor%27s_Version%29.png/220px-Speak_Now_%28Taylor%27s_Version%29.png',
+    'red': 'https://upload.wikimedia.org/wikipedia/pt/thumb/8/8e/Red_%28Taylor%27s_Version%29.png/220px-Red_%28Taylor%27s_Version%29.png',
+    '1989': 'https://upload.wikimedia.org/wikipedia/pt/thumb/2/2f/1989_%28Taylor%27s_Version%29.png/220px-1989_%28Taylor%27s_Version%29.png',
+    'reputation': 'https://upload.wikimedia.org/wikipedia/pt/thumb/f/f2/Taylor_Swift_-_Reputation.png/220px-Taylor_Swift_-_Reputation.png',
+    'lover': 'https://upload.wikimedia.org/wikipedia/pt/thumb/3/3c/Capa_de_Lover.png/220px-Capa_de_Lover.png',
+    'folklore': 'https://upload.wikimedia.org/wikipedia/pt/thumb/f/f8/Taylor_Swift_-_Folklore.png/220px-Taylor_Swift_-_Folklore.png',
+    'evermore': 'https://upload.wikimedia.org/wikipedia/pt/thumb/4/4f/Evermore_-_Taylor_Swift.png/220px-Evermore_-_Taylor_Swift.png',
+    'midnights': 'https://upload.wikimedia.org/wikipedia/pt/thumb/2/2b/Taylor_Swift_-_Midnights.png/220px-Taylor_Swift_-_Midnights.png',
+}
+
 albuns = [
     {
         id: 'taylor-swift',
+        link: '/album/taylor-swift',
+        cover: coverAlbuns['taylor-swift'],
         name: 'Taylor Swift',
+        keywords: 'taylor swift',
+        type: 'album',
         musics: [
             { id: "Picture To Burn", name: "Picture To Burn", blocked: true },
             { id: "Teardrops On My Guitar", name: "Teardrops On My Guitar", blocked: true },
@@ -20,7 +37,11 @@ albuns = [
     },
     {
         id: 'fearless',
+        link: '/album/fearless',
+        cover: coverAlbuns['fearless'],
         name: 'Fearless',
+        keywords: 'fearless',
+        type: 'album',
         musics: [
             { id: 'fearless', name: 'Fearless', blocked: false, by: "Nena Shelby" },
             { id: 'Fifteen', name: 'Fifteen', blocked: true },
@@ -52,7 +73,11 @@ albuns = [
     },
     {
         id: 'speak-now',
+        link: '/album/speak-now',
+        cover: coverAlbuns['speak-now'],
         name: 'Speak Now',
+        keywords: 'speak now',
+        type: 'album',
         musics: [
             { id: "Mine", name: "Mine", blocked: true },
             { id: "Sparks Fly", name: "Sparks Fly", blocked: true },
@@ -75,7 +100,11 @@ albuns = [
     },
     {
         id: 'red',
+        link: '/album/red',
+        cover: coverAlbuns['red'],
         name: 'RED',
+        keywords: 'red',
+        type: 'album',
         musics: [
             { id: "State of Grace", name: "State of Grace", blocked: true },
             { id: "State Of Grace (Acoustic Version)", name: "State Of Grace (Acoustic Version)", blocked: true },
@@ -110,7 +139,11 @@ albuns = [
     },
     {
         id: '1989',
+        link: '/album/1989',
+        cover: coverAlbuns['1989'],
         name: '1989',
+        keywords: '1989',
+        type: 'album',
         musics: [
             { id: "Welcome To New York", name: "Welcome To New York", blocked: true },
             { id: "Blank Space", name: "Blank Space", blocked: true },
@@ -132,7 +165,11 @@ albuns = [
     },
     {
         id: 'reputation',
+        link: '/album/reputation',
+        cover: coverAlbuns['reputation'],
         name: 'Reputation',
+        keywords: 'reputation',
+        type: 'album',
         musics: [
             { id: "ready-for-it", name: "...Ready For It?", blocked: false },
             { id: "End Game (feat. Ed Sheeran & Future)", name: "End Game (feat. Ed Sheeran & Future)", blocked: true },
@@ -153,7 +190,11 @@ albuns = [
     },
     {
         id: 'lover',
+        link: '/album/lover',
+        cover: coverAlbuns['lover'],
         name: 'Lover',
+        keywords: 'lover',
+        type: 'album',
         musics: [
             { id: "I Forgot That You Existed", name: "I Forgot That You Existed", blocked: true },
             { id: "Cruel Summer", name: "Cruel Summer", blocked: true },
@@ -177,7 +218,11 @@ albuns = [
     },
     {
         id: 'folklore',
+        link: '/album/folklore',
+        cover: coverAlbuns['folklore'],
         name: 'Folklore',
+        keywords: 'folklore',
+        type: 'album',
         musics: [
             { id: "the 1", name: "the 1", blocked: true },
             { id: "cardigan", name: "cardigan", blocked: false },
@@ -200,7 +245,11 @@ albuns = [
     },
     {
         id: 'evermore',
+        link: '/album/evermore',
+        cover: coverAlbuns['evermore'],
         name: 'Evermore',
+        keywords: 'evermore',
+        type: 'album',
         musics: [
             { id: "willow", name: "willow", blocked: true },
             { id: "champagne-problems", name: "champagne problems", blocked: false },
@@ -223,10 +272,14 @@ albuns = [
     },
     {
         id: 'midnights',
+        link: '/album/midnights',
+        cover: coverAlbuns['midnights'],
         name: 'Midnights',
+        keywords: 'midnights',
+        type: 'album',
         musics: [
             { id: "lavender-haze", name: "Lavender Haze", blocked: false },
-            { id: "maroon", name: "Maroon", blocked: false },
+            { id: "maroon", name: "Maroon", keywords: 'cris', blocked: false },
             { id: "anti-hero", name: "Anti-Hero", blocked: false },
             { id: "Snow On The Beach (feat. Lana Del Rey)", name: "Snow On The Beach (feat. Lana Del Rey)", blocked: true },
             { id: "You're On Your Own, Kid", name: "You're On Your Own, Kid", blocked: true },
@@ -292,8 +345,10 @@ albuns.forEach(album => {
     album.musics.forEach(music => {    
         music['album'] = album.id
         musics[music.id] = music
+        musics[music.id]['album'] = album
         musics[music.id]['type'] = 'music'
-        musics[music.id]['keywords'] = `${ music.id } ${ music.name } ${ album.name }`.toLowerCase()
+        musics[music.id]['keywords'] = `${ music.id } ${ music.name } ${ album.id } ${ music.keywords ? music.keywords : '' }`.toLowerCase()
+        musics[music.id]['cover'] = coverAlbuns[album.id]
         musics[music.id]['link'] = `/song/${ music.id }`
     })
 })
@@ -493,6 +548,8 @@ updateLanguage = () => {
     $('#shortcuts #en-US').text(language.shortcuts.languages.enUs)
 
     $('.list-unstyled .about').text(language.albuns.about)
+
+    $('#search-not-found').text(language.search.searchNotFound)
 
     changeSidebarTitle()
 }

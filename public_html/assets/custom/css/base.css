@@ -633,22 +633,22 @@ i[note]::after {
     font-size: 26px !important;
 }
 
-.music-list ol {
+.list-group-flush ol {
     margin-top: 20px !important;
 }
 
-.music-list li {
+.list-group-flush li {
     height: 44px;
     cursor: pointer;
     border: none;
 }
 
-.music-list li:hover {
+.list-group-flush li:hover {
     border-radius: 8px;
     background: #f5f5f5;
 }
 
-.music-list li .number {
+.list-group-flush li .number {
     font-size: 20px;
     color: #e0e0e0;
     font-family: Montserrat,sans-serif;
@@ -850,6 +850,11 @@ i[note]::after {
 
 [data-adtest="on"] {
     background-color: rgb(200, 200, 200);
+}
+
+#results {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ddd;
 }
 
 /* MARKETING CONTENT

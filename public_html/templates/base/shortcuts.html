@@ -63,30 +63,100 @@
     }
 </style>
 
-<!-- <div id="search" class="search">
+<div id="search" class="search">
     <div class="form">
         <i class="fa fa-search"></i>
         <input type="text" class="form-control form-input" id="search" placeholder="Search anything...">
     </div>
 </div>
 
+
 <script>
+    const resultContent = document.getElementById('results')
+    const listGroupContent = resultContent.querySelector('.list-group')
+    const searchNotFound = document.getElementById('search-not-found')
+
     const searchResults = [
         {
             type: 'page',
             name: 'Sobre / About',
             link: '/about',
+            cover: 'https://centralmichigan211.org/wp-content/uploads/2021/01/About-Icon.png',
             keywords: 'about, sobre, creator, criador, songbook'
         }
-    ].concat(Object.values(musics))
+    ].concat(albuns, Object.values(musics))
 
     document.getElementById('search').addEventListener("keyup", (event) => {
         const term = event.target.value
 
+        resultContent.classList.remove('animate__fadeInDown')
+
         if (term.length >= 2) {
-            const result = searchResults.find(obj => {
-                return obj.keywords.includes(event.target.value.toLowerCase())
-            })
-        }
+            cleanResults()
+
+            const results = searchResults.filter(obj => {
+                return obj.keywords.includes(term.toLowerCase())
+            }).slice(0, 10)
+
+            const groups = {}
+
+            for (const item of results) {
+                const key = item.type
+
+                if (!groups[key]) groups[key] = []
+
+                groups[key].push(item)
+            }
+
+            const groupKeys = Object.keys(groups).sort()
+
+            console.log(groupKeys)
+
+            if (results.length > 0) {
+                for (const key of groupKeys) {
+                    listGroupContent.innerHTML += `<h5 class="mt-2">${ language.search['searchTypes'][key] }</h5>`
+
+                    for (const item of groups[key]) {
+                        // console.log(item)
+
+                        let content = `
+                            <a class="list-group-item d-flex justify-content-between align-items-center" onclick="headShake(this)" ${ item.blocked ? '' : 'href="' + item.link + '"'}>
+                                <div class="p-2 number bd-highlight">
+                                    <img src="${ item.cover }" width="28" style="border-radius: 14px;"/>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    ${ item.name }
+                                    ${ item.blocked === false ? '<i class="fa-regular fa-circle-check color-taylor-swift"></i>' : '' }
+                                </div>
+                                <div class="ms-auto p-2 bd-highlight">
+                        `
+
+                        if (item.type === 'music') {
+                            content += `<span class="badge color-${ item.album.id } border-${ item.album.id } rounded-pill">${ item.album.name }</span>`
+                        }
+
+                        content += '</div></a>'
+
+                        listGroupContent.innerHTML += content
+                    }
+                }
+
+                toggleClass(resultContent, 'animate__fadeInDown')
+
+                searchNotFound.classList.add('d-none')
+                resultContent.classList.remove('d-none')
+            } else {
+                searchNotFound.classList.remove('d-none')
+            }
+        } else resultContent.classList.add('d-none')
     })
-</script> -->
+
+    cleanResults = () => listGroupContent.innerHTML = ''
+    toggleClass = (el, toggleClass, timming=1000) => {
+        el.classList.add(toggleClass)
+
+        setTimeout(() => {
+            el.classList.remove(toggleClass)
+        }, timming)
+    }
+</script>
