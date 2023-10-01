@@ -149,7 +149,7 @@ albuns = [
             { id: "Blank Space", name: "Blank Space", blocked: true },
             { id: "Style", name: "Style", blocked: true },
             { id: "Out Of The Woods", name: "Out Of The Woods", blocked: true },
-            { id: "All You Had To do Was Stay", name: "All You Had To do Was Stay", blocked: true },
+            { id: "all-you-had-to-do-was-stay", name: "All You Had To Do Was Stay", blocked: true },
             { id: "shake-it-off", name: "Shake It Off", blocked: false },
             { id: "I Wish You Would", name: "I Wish You Would", blocked: true },
             { id: "Bad Blood", name: "Bad Blood", blocked: true },
