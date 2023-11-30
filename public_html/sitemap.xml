@@ -15,13 +15,13 @@
 <url>
   <loc>https://taylorsongbook.com/about/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/help/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Taylor Swift -->
@@ -29,7 +29,7 @@
 <url>
   <loc>https://taylorsongbook.com/album/taylor-swift/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Fearless -->
@@ -37,25 +37,25 @@
 <url>
   <loc>https://taylorsongbook.com/album/fearless/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/fearless/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/you-belong-with-me/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/the-way-i-loved-you/</loc>
   <lastmod>2023-08-12T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Speak Now -->
@@ -63,25 +63,25 @@
 <url>
   <loc>https://taylorsongbook.com/album/speak-now/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/enchanted/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/mean/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/speak-now/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Red -->
@@ -89,13 +89,19 @@
 <url>
   <loc>https://taylorsongbook.com/album/red/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://taylorsongbook.com/song/red/</loc>
+  <lastmod>2023-07-23T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/come-back-be-here/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- 1989 -->
@@ -103,19 +109,19 @@
 <url>
   <loc>https://taylorsongbook.com/album/1989/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/shake-it-off/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/ready-for-it/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Reputation -->
@@ -123,7 +129,7 @@
 <url>
   <loc>https://taylorsongbook.com/album/reputation/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Lover -->
@@ -131,13 +137,13 @@
 <url>
   <loc>https://taylorsongbook.com/album/lover/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/the-man/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Folklore -->
@@ -145,31 +151,31 @@
 <url>
   <loc>https://taylorsongbook.com/album/folklore/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/hoax/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/cardigan/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/mirrorball/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/this-is-me-trying/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Evermore -->
@@ -177,25 +183,25 @@
 <url>
   <loc>https://taylorsongbook.com/album/evermore/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/right-where-you-left-me/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/no-body-no-crime/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/champagne-problems/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <!-- Midnights -->
@@ -203,31 +209,31 @@
 <url>
   <loc>https://taylorsongbook.com/album/midnights/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/lavender-haze/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/karma/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/anti-hero/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://taylorsongbook.com/song/maroon/</loc>
   <lastmod>2023-07-23T00:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <priority>1.00</priority>
 </url>
 
 </urlset>
