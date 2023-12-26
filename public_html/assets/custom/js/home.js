@@ -15,8 +15,8 @@ mostAccessedMusics = [
         blocked: false
     },
     {
-        music: { id: 'hoax', name: 'Hoax' },
-        album: { id: 'folklore', name: 'Folklore' },
+        music: { id: 'shake-it-off', name: 'Shake It Off' },
+        album: { id: '1989', name: '1989' },
         blocked: false
     },
     {
@@ -35,14 +35,34 @@ mostAccessedMusics = [
         blocked: false
     },
     {
+        music: { id: 'ready-for-it', name: '...Ready For It?' },
+        album: { id: 'reputation', name: 'Reputation' },
+        blocked: false
+    },
+    {
+        music: { id: 'maroon', name: 'Maroon' },
+        album: { id: 'midnights', name: 'Midnights' },
+        blocked: false
+    },
+    {
+        music: { id: 'champagne-problems', name: 'Champagne Problems' },
+        album: { id: 'evermore', name: 'Evermore' },
+        blocked: false
+    },
+    {
         music: { id: 'anti-hero', name: 'Anti-Hero' },
         album: { id: 'midnights', name: 'Midnights' },
         blocked: false
     },
     {
-        music: { id: '', name: 'Cruel Summer' },
-        album: { id: 'lover', name: 'Lover' },
-        blocked: true
+        music: { id: 'no-body-no-crime', name: 'No Body, No Crime (feat. HAIM)' },
+        album: { id: 'evermore', name: 'Evermore' },
+        blocked: false
+    },
+    {
+        music: { id: 'right-where-you-left-me', name: 'Right Where You Left Me' },
+        album: { id: 'evermore', name: 'Evermore' },
+        blocked: false
     },
     {
         music: { id: 'the-way-i-loved-you', name: 'The Way I Loved You' },
@@ -65,11 +85,6 @@ mostAccessedMusics = [
         blocked: false
     },
     {
-        music: { id: '', name: '...Ready For It?' },
-        album: { id: 'reputation', name: 'Reputation' },
-        blocked: true
-    },
-    {
         music: { id: 'this-is-me-trying', name: 'This Is Me Trying' },
         album: { id: 'folklore', name: 'Folklore' },
         blocked: false
@@ -84,20 +99,20 @@ mostAccessedMusics = [
         album: { id: 'lover', name: 'Lover' },
         blocked: false
     },
+    // {
+    //     music: { id: 'exile', name: 'Exile' },
+    //     album: { id: 'folklore', name: 'Folklore' },
+    //     blocked: true
+    // },
     {
-        music: { id: '', name: 'Exile' },
+        music: { id: 'hoax', name: 'Hoax' },
         album: { id: 'folklore', name: 'Folklore' },
-        blocked: true
+        blocked: false
     },
     {
         music: { id: 'mirrorball', name: 'Mirrorball' },
         album: { id: 'folklore', name: 'Folklore' },
         blocked: false
-    },
-    {
-        music: { id: '', name: 'Champagne Problems' },
-        album: { id: 'evermore', name: 'Evermore' },
-        blocked: true
     },
 ]
 mostAccessed = $('#mostAccessed .list-group')

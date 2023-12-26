@@ -1,4 +1,5 @@
 const musicId = 'lavender-haze'
+const albumId = 'midnights'
 const musicTitle = 'Lavender Haze'
 const tuning = 'Bb'
 const chordShape = null

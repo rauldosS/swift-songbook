@@ -62,5 +62,13 @@
         "nena": "⭐ ~ Violão, Taylor Swift, lifestyle, covers e tutoriais com tablaturas, acordes e dedilhados na tela ~",
         "mike": "🎸 Covers, acústico, eletrônico, música para jogos, música clássica e desafios de zumbis, o quê?",
         "goddess": "Michelle, também pode gosta de ser chamada de “Shell” como uma concha 🐚 Por morar perto do mar 🌊 Está muuuuito perto de ser uma."
+    },
+    "search": {
+        "searchNotFound": "🫤 Não encontramos nenhum resultado para a sua pesquisa...",
+        "searchTypes": {
+            "album": "🗃️ Álbuns",
+            "music": "🎤 Músicas",
+            "page": "📱 Páginas"
+        }
     }
 }

@@ -6,7 +6,7 @@ const capoFret = ''
 const spotify = 'https://open.spotify.com/embed/track/4pNApnaUWAL2J4KO2eqokq?utm_source=generator'
 const chordsMusic = ['E', 'B', 'C#m', 'A']
 const videoUrl = 'https://www.youtube.com/embed/hHWOAUjnmjQ'
-const basicCipher = true
+const basicCipher = false
 
 const partsCipher = [
     { type: 'progression',      id: 'intro' },
@@ -117,7 +117,7 @@ const progressions = [
     },
     {
         id: 'bridge',
-        title: 'Gridge',
+        title: 'Bridge',
         caption: '',
         notes: ['C#m', 'B', 'x2', 'doubleBreak', 'C#m', 'B', 'break', 'A', 'doubleBreak', 'C#m', 'B', 'break', 'A',],
         progressionCaption: '',

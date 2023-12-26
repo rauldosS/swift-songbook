@@ -1,3 +1,7 @@
+::-webkit-scrollbar-thumb {
+    background: var(--color-evermore) !important;
+}
+
 #cipher-content .bd-callout-info {
     border-left-color: var(--color-evermore);
 }
@@ -37,7 +41,7 @@
 
 #cipher-content .bg-album,
 #cipher-content .badge-info-cipher {
-    background-color: var(--color-red);
+    background-color: var(--color-evermore);
 }
 
 #cipher-content .alert {
