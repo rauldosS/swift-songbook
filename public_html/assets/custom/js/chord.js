@@ -636,6 +636,37 @@ loadMusic = (music, album) => {
     }
 }
 
+
+loadCompactMusic = (music, album) => {
+    btnHome.css({ 'display': 'inline-block' })
+    // cipherWrapper.show()
+    // const music = musics[music_id]
+    // cipherContent.empty()
+
+    // hideContent()
+    resertToolbar()
+    // cipherContent.hide()
+
+    // createAlbumCSS(album)
+    // createCipherJS(album, music)
+
+    loadCompactCipher(music, album)
+
+    // cipherContent.show()
+
+    scrollTop()
+
+    toolbar.show()
+    miniPlayer.show()
+
+    toolbar.show()
+    miniPlayer.show()
+
+    if ($(window).width() < 768 && $('#sidebar').width() > 250) {
+        $('#sidebar').toggleClass('toggled')
+    }
+}
+
 // hideContent = () => {
 //     $('#content').hide()
 // }
@@ -964,6 +995,23 @@ loadCipher = (music, album) => {
         cipher.append(part)
     })
 
+    createChordColumns()
+    createLyrics()
+    updateShareLink()
+
+    $('[data-toggle=tooltip]').tooltip({
+        trigger : 'hover'
+    })
+
+    $('#mini-player iframe').attr('src', videoUrl)
+
+    setLoading(false, 2500)
+}
+
+loadCompactCipher = () => {
+    setLoading(true)
+
+    createChordsHTML()
     createChordColumns()
     createLyrics()
     updateShareLink()
