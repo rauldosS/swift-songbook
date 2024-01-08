@@ -725,7 +725,7 @@ createChordsHTML = () => {
             </span>
         </div>`
     )
-    chordsMusic.forEach(chord => {
+    chordsMusic.filter((c) => !c.includes('²')).forEach(chord => {
         cipherContent.find('#chords div').append(chordsHtml[chord])
     })
     ChordJS.replace()

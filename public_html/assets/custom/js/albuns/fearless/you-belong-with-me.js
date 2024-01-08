@@ -5,7 +5,7 @@ const tuning = 'F#'
 const chordShape = 'D'
 const capoFret = '4'
 const spotify = 'https://open.spotify.com/embed/track/1qrpoAMXodY6895hGKoUpA?utm_source=generator'
-const chordsMusic = ['D', 'A', 'Em', 'G']
+const chordsMusic = ['D', 'A', 'Em', 'G', 'D²', 'A²', 'Em²', 'G²']
 const videoUrl = 'https://www.youtube.com/embed/EgM8mDXrecs'
 const basicCipher = false
 
