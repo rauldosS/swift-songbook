@@ -719,48 +719,6 @@ class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-a
 
     <div class="modal-backdrop show"></div>
 
-    <script>
-        const taylors = [
-            'https://media.tenor.com/xNcRxJCm5C8AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/x8GcrEwUv0AAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/wulosAyQ60gAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/4WZ34muN9FMAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/AUM6s6Nu4TAAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/chuOhNjprmsAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/GoueKp_19I8AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/ehnYxLxKU10AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/kh_XvCdWbSkAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
-            'https://media.tenor.com/dyQlFbIpt-IAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/mVFHo2j01V0AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/ESVbz9s7rc4AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/45rtnGyVtQ0AAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/BvBceGqz4CwAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
-            'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
-            'https://media.tenor.com/Go6zC_2xFXMAAAAi/taylor-swift-yes.gif',
-            'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
-        ]
-
-        function afterPageLoad() {
-            loadCompactMusic('fearless', 'fearless')
-            $('.modal-backdrop').remove()
-            $('#loading').modal('show')
-            $('body').children().removeClass('hide')
-        }
-
-        document.addEventListener("DOMContentLoaded", function (event) {
-            document.getElementById('load-img').src = taylors[Math.floor(Math.random() * (17 - 1 + 1)) + 1]
-        })
-
-        window.addEventListener("load", function () {
-            afterPageLoad()
-            setLoading(false, 2500)
-        })
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"
         integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

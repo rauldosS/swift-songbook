@@ -358,9 +358,7 @@ if (showGifs === 'true') {
 }
 
 function afterPageLoad() {
-    let fullPath = window.location.pathname
-
-    fullPath.replace('public_html/', '')
+    let fullPath = window.location.pathname.replace('public_html/', '')
 
     if (fullPath.charAt(0) === '/') {
         fullPath = fullPath.slice(1)
@@ -372,12 +370,10 @@ function afterPageLoad() {
 
     let pathParts = fullPath.split('/')
 
-    const completeString = '/' + pathParts.slice(1).join('/')
+    if (pathParts[0] !== 'song' && fullPath !== '/') {
+        const resourceType = pathParts[0]
 
-    if (completeString !== '/') {
-        const resourceType = pathParts[1]
-
-        loadContent(completeString, resourceType, switchLanguage = true)
+        loadContent(fullPath, resourceType, switchLanguage = true)
     }
 
     $('.modal-backdrop').remove()
@@ -522,7 +518,7 @@ btnHome = $('#btn-home')
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
     updateCurrentContent(path, contentType)
 
-    content.load(`/templates/${ switchLanguage ? language.code : '' }${ path }.html`, function() {
+    content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
         // if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
         updateLanguage()
         // }
