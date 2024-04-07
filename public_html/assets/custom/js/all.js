@@ -312,10 +312,9 @@ userContainsLanguage = languages.includes(userLang)
 let showGifs = localStorage.getItem('showGifs')
 
 if (showGifs === null) {
-    localStorage.setItem('showGifs', true)
+    showGifs = 'true'
+    localStorage.setItem('showGifs', 'true')
 }
-
-console.log(showGifs)
 
 if (showGifs === 'true') {
     const taylors = [
@@ -360,6 +359,8 @@ if (showGifs === 'true') {
 
 function afterPageLoad() {
     let fullPath = window.location.pathname
+
+    fullPath.replace('public_html/', '')
 
     if (fullPath.charAt(0) === '/') {
         fullPath = fullPath.slice(1)
