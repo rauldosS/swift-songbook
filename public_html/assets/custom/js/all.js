@@ -307,6 +307,85 @@ userLang = navigator.language || navigator.userLanguage
 languages = ['en-US', 'pt-BR']
 userContainsLanguage = languages.includes(userLang)
 
+// LOAD PAGE
+
+let showGifs = localStorage.getItem('showGifs')
+
+if (showGifs === null) {
+    localStorage.setItem('showGifs', true)
+}
+
+console.log(showGifs)
+
+if (showGifs === 'true') {
+    const taylors = [
+        '/assets/gifs/01.gif'
+        // 'https://media.tenor.com/xNcRxJCm5C8AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/x8GcrEwUv0AAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/wulosAyQ60gAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/4WZ34muN9FMAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/AUM6s6Nu4TAAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/chuOhNjprmsAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/GoueKp_19I8AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/ehnYxLxKU10AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/kh_XvCdWbSkAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
+        // 'https://media.tenor.com/dyQlFbIpt-IAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/mVFHo2j01V0AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/ESVbz9s7rc4AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/45rtnGyVtQ0AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BvBceGqz4CwAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
+        // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/Go6zC_2xFXMAAAAi/taylor-swift-yes.gif',
+        // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
+    ]
+    
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('load-img').src = taylors[0] // [Math.floor(Math.random() * (17 - 1 + 1)) + 1]
+    }) 
+
+    window.addEventListener("load", function() {
+        afterPageLoad()
+        setLoading(false, 2500)
+    })
+} else {
+    window.addEventListener("load", function() {
+        afterPageLoad()
+        setLoading(false, 0)
+    })
+}
+
+function afterPageLoad() {
+    let fullPath = window.location.pathname
+
+    if (fullPath.charAt(0) === '/') {
+        fullPath = fullPath.slice(1)
+    }
+
+    if (fullPath.charAt(fullPath.length - 1) === '/') {
+        fullPath = fullPath.slice(0, -1);
+    }
+
+    let pathParts = fullPath.split('/')
+
+    const completeString = '/' + pathParts.slice(1).join('/')
+
+    if (completeString !== '/') {
+        const resourceType = pathParts[1]
+
+        loadContent(completeString, resourceType, switchLanguage = true)
+    }
+
+    $('.modal-backdrop').remove()
+    $('#loading').modal('show')
+    $('body').children().removeClass('hide')
+}
+
+// LOAD MUSICS
+
 let currentContent = {
     contentType: undefined,
     path: undefined
@@ -440,18 +519,17 @@ btnHome = $('#btn-home')
 // homePath = 'base/home'
 
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
-    content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
-        if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
-            updateLanguage()
-        }
-    })
-
     updateCurrentContent(path, contentType)
+
+    content.load(`/templates/${ switchLanguage ? language.code : '' }${ path }.html`, function() {
+        // if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
+        updateLanguage()
+        // }
+    })
 
     if ($(window).width() < 768 && $('#sidebar').width() > 250) {
         $('#sidebar').toggleClass('toggled')
     }
-
 }
 
 loadCopy = () => {
@@ -484,23 +562,6 @@ loadCopy = () => {
 // }
 
 updateLanguage = () => {
-    switch (currentContent.contentType) {
-        // case 'album':
-        //     loadAlbum(currentContent.name)
-        //     break
-        // case 'music':
-        //     loadMusic(currentContent.name)
-        case 'album':
-            loadContent(currentContent.path, currentContent.contentType, true)
-            break
-        case 'help':
-            loadContent('help', 'help', true)
-            break
-        case 'about':
-            loadContent('about', 'about', true)
-            break
-    }
-
     $('#main-alert').html(language.mainAlert)
 
     $('#albuns .title').text(language.albuns.title)

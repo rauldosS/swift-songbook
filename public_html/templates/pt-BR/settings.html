@@ -1,0 +1,20 @@
+<h1 class="font-taylor-swift-base text-center mt-4 title-home my-5">Configurações</h1>
+
+<div class="container mt-5">
+    <p>As configurações são aplicadas exclusivamente neste navegador. Ao acessar de outro navegador, será necessário configurá-las novamente.</p>
+
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="showGifs">
+        <label class="form-check-label" for="showGifs">Exibição de GIFs (animações) ao carregar páginas?</label>
+    </div>    
+</div>
+
+<script>
+    const showGifsElement = document.getElementById('showGifs')
+
+    showGifsElement.checked = Boolean(showGifs)
+
+    showGifsElement.addEventListener('change', function() {
+        localStorage.setItem('showGifs', this.checked)
+    })
+</script>

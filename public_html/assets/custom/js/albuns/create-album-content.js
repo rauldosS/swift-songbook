@@ -1,6 +1,6 @@
 $(document).ready(function () {
     listGroupAlbum = $('ol.list-group')
-    album = getAlbum(currentContent.path.replace('albuns/', ''))
+    album = getAlbum(currentContent.path.replace('/album/', ''))
 
     album.musics.forEach((music, index) => {
         listGroupAlbum.append(`
