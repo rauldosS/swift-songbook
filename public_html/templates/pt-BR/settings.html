@@ -12,7 +12,7 @@
 <script>
     const showGifsElement = document.getElementById('showGifs')
 
-    showGifsElement.checked = Boolean(showGifs)
+    showGifsElement.checked = showGifs === 'true'
 
     showGifsElement.addEventListener('change', function() {
         localStorage.setItem('showGifs', this.checked)
