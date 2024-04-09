@@ -309,14 +309,17 @@ userContainsLanguage = languages.includes(userLang)
 
 // LOAD PAGE
 
-let showGifs = localStorage.getItem('showGifs')
+let settings = {
+    showGifs: localStorage.getItem('showGifs'),
+    showLyricsOnly: localStorage.getItem('showLyricsOnly'),
+}
 
-if (showGifs === null) {
-    showGifs = 'true'
+if (settings.showGifs === null) {
+    settings.showGifs = 'true'
     localStorage.setItem('showGifs', 'true')
 }
 
-if (showGifs === 'true') {
+if (settings.showGifs === 'true') {
     const taylors = [
         '/assets/gifs/01.gif'
         // 'https://media.tenor.com/xNcRxJCm5C8AAAAi/taylor-swift-reactions-taylor-swift.gif',

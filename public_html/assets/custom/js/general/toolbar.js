@@ -133,6 +133,11 @@ $(document).ready(function () {
         scrollToElement(targetElement)
     }
 
+    if (settings.showLyricsOnly === 'true') {
+        hide('#only-lyrics', '#cipher')
+        show('#only-lyrics', '#lyrics')
+    }
+
     $('#unpin-toolbar').click(() => {
         $('#toolbar').toggleClass('initial')
         $('#unpin-toolbar').toggleClass('active')

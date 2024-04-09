@@ -3,18 +3,47 @@
 <div class="container mt-5">
     <p>As configurações são aplicadas exclusivamente neste navegador. Ao acessar de outro navegador, será necessário configurá-las novamente.</p>
 
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="showGifs">
-        <label class="form-check-label" for="showGifs">Exibição de GIFs (animações) ao carregar páginas?</label>
-    </div>    
+    <div class="mb-4">
+        <h5>Gerais</h5>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="showGifs">
+            <label class="form-check-label" for="showGifs">Exibição de GIFs (animações) ao carregar páginas?</label>
+        </div>
+    </div>
+
+    <div>
+        <h5>Cifra</h5>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="showLyricsOnly">
+            <label class="form-check-label" for="showLyricsOnly">Exibir apenas Letra</label>
+        </div>
+
+        <!--
+            Sempre exibir Acordes (tablatura no topo)
+            Exibir apenas Letra
+
+            Menu de opções fixo
+            
+            Ocultar Progressões
+            Ocultar Tablaturas
+            Ocultar miniplayer
+            Ocultar Letra
+
+            Tamanho da Fonte
+        -->
+    </div>
 </div>
 
 <script>
-    const showGifsElement = document.getElementById('showGifs')
+    // const showGifsElement = document.getElementById('showGifs')
 
-    showGifsElement.checked = showGifs === 'true'
+    document.querySelectorAll('[type=checkbox]').forEach(checkbox => {
+        checkbox.checked = settings[checkbox.id] === 'true'
 
-    showGifsElement.addEventListener('change', function() {
-        localStorage.setItem('showGifs', this.checked)
+        checkbox.addEventListener('change', function() {
+            localStorage.setItem(checkbox.id, this.checked)
+        })
     })
 </script>
