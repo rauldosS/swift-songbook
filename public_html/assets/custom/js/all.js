@@ -389,27 +389,21 @@ $(document).ready(function () {
 
         document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (3 - 0) + 1) }.gif`
     
-        window.addEventListener("load", function() {
-            afterPageLoad()
-            setLoading(false, 2500)
-        })
+        afterPageLoad()
+        setLoading(false, 2500)
     } else {
-        window.addEventListener("load", function() {
-            afterPageLoad()
-            setLoading(false, 0)
-        })
+        afterPageLoad()
+        setLoading(false, 0)
     }
 
-    window.onload = function() {
-        updateLanguage()
+    updateLanguage()
 
-        $('#unpin-shortcuts').click(() => {
-            $('#shortcuts').toggleClass('initial')
-            $('#unpin-shortcuts').toggleClass('active')
-        })
+    $('#unpin-shortcuts').click(() => {
+        $('#shortcuts').toggleClass('initial')
+        $('#unpin-shortcuts').toggleClass('active')
+    })
 
-        loadCopy()
-    }
+    loadCopy()
 })
 
 // MUSICS
