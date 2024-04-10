@@ -1,1 +1,49 @@
-teste
+<h1 class="font-taylor-swift-base text-center mt-4 title-home my-5">Settings</h1>
+
+<div class="container mt-5">
+    <p>Settings are applied exclusively to this browser. When accessing from another browser, they will need to be configured again.</p>
+
+    <div class="mb-4">
+        <h5>General</h5>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="showGifs">
+            <label class="form-check-label" for="showGifs">Display GIFs (animations) when loading pages?</label>
+        </div>
+    </div>
+
+    <div>
+        <h5>Chords</h5>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="showLyricsOnly">
+            <label class="form-check-label" for="showLyricsOnly">Display lyrics only</label>
+        </div>
+
+        <!--
+            Always show Chords (tablature at the top)
+            Display lyrics only
+
+            Fixed options menu
+            
+            Hide Progressions
+            Hide Tablatures
+            Hide miniplayer
+            Hide Lyrics
+
+            Font Size
+        -->
+    </div>
+</div>
+
+<script>
+    // const showGifsElement = document.getElementById('showGifs')
+
+    document.querySelectorAll('[type=checkbox]').forEach(checkbox => {
+        checkbox.checked = settings[checkbox.id] === 'true'
+
+        checkbox.addEventListener('change', function() {
+            localStorage.setItem(checkbox.id, this.checked)
+        })
+    })
+</script>

@@ -373,7 +373,7 @@ function afterPageLoad() {
 
     let pathParts = fullPath.split('/')
 
-    if (pathParts[0] !== 'song' && fullPath !== '/') {
+    if (pathParts[0] !== 'song' && fullPath !== '') {
         const resourceType = pathParts[0]
 
         loadContent(fullPath, resourceType, switchLanguage = true)
