@@ -307,58 +307,12 @@ userLang = navigator.language || navigator.userLanguage
 languages = ['en-US', 'pt-BR']
 userContainsLanguage = languages.includes(userLang)
 
-// LOAD PAGE
-
 let settings = {
     showGifs: localStorage.getItem('showGifs'),
     showLyricsOnly: localStorage.getItem('showLyricsOnly'),
 }
 
-if (settings.showGifs === null) {
-    settings.showGifs = 'true'
-    localStorage.setItem('showGifs', 'true')
-}
-
-if (settings.showGifs === 'true') {
-    const taylors = [
-        '/assets/gifs/01.gif'
-        // 'https://media.tenor.com/xNcRxJCm5C8AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/x8GcrEwUv0AAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/wulosAyQ60gAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/4WZ34muN9FMAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/AUM6s6Nu4TAAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/chuOhNjprmsAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/GoueKp_19I8AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/ehnYxLxKU10AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/kh_XvCdWbSkAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
-        // 'https://media.tenor.com/dyQlFbIpt-IAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/mVFHo2j01V0AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/ESVbz9s7rc4AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/45rtnGyVtQ0AAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/BvBceGqz4CwAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
-        // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/Go6zC_2xFXMAAAAi/taylor-swift-yes.gif',
-        // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
-    ]
-    
-    document.addEventListener("DOMContentLoaded", function(event) {
-        document.getElementById('load-img').src = taylors[0] // [Math.floor(Math.random() * (17 - 1 + 1)) + 1]
-    }) 
-
-    window.addEventListener("load", function() {
-        afterPageLoad()
-        setLoading(false, 2500)
-    })
-} else {
-    window.addEventListener("load", function() {
-        afterPageLoad()
-        setLoading(false, 0)
-    })
-}
+// LOAD PAGE
 
 function afterPageLoad() {
     let fullPath = window.location.pathname.replace('public_html/', '')
@@ -384,7 +338,6 @@ function afterPageLoad() {
     $('body').children().removeClass('hide')
 }
 
-// LOAD MUSICS
 
 let currentContent = {
     contentType: undefined,
@@ -405,6 +358,47 @@ $(document).ready(function () {
     })
 
     getLanguage()
+    
+    if (settings.showGifs === null) {
+        settings.showGifs = 'true'
+        localStorage.setItem('showGifs', 'true')
+    }
+    
+    if (settings.showGifs === 'true') {
+        // 'https://media.tenor.com/xNcRxJCm5C8AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/x8GcrEwUv0AAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/chuOhNjprmsAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/Fik_22HrNgUAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/GoueKp_19I8AAAAi/taylor-swift-reactions-taylor-swift.gif',
+
+        // 'https://media.tenor.com/wulosAyQ60gAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/4WZ34muN9FMAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/AUM6s6Nu4TAAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/ehnYxLxKU10AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/kh_XvCdWbSkAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
+        // 'https://media.tenor.com/dyQlFbIpt-IAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/mVFHo2j01V0AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/ESVbz9s7rc4AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/45rtnGyVtQ0AAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BvBceGqz4CwAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
+        // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
+        // 'https://media.tenor.com/Go6zC_2xFXMAAAAi/taylor-swift-yes.gif',
+        // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
+
+        document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (3 - 0) + 1) }.gif`
+    
+        window.addEventListener("load", function() {
+            afterPageLoad()
+            setLoading(false, 2500)
+        })
+    } else {
+        window.addEventListener("load", function() {
+            afterPageLoad()
+            setLoading(false, 0)
+        })
+    }
 
     window.onload = function() {
         updateLanguage()
@@ -417,6 +411,8 @@ $(document).ready(function () {
         loadCopy()
     }
 })
+
+// MUSICS
 
 let musics = {}
 
