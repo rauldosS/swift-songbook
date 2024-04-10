@@ -395,7 +395,9 @@ $(document).ready(function () {
         afterPageLoad()
         setLoading(false, 0)
     }
+})
 
+window.onload = function() {
     updateLanguage()
 
     $('#unpin-shortcuts').click(() => {
@@ -404,7 +406,7 @@ $(document).ready(function () {
     })
 
     loadCopy()
-})
+}
 
 // MUSICS
 
