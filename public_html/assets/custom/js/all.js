@@ -307,6 +307,8 @@ userLang = navigator.language || navigator.userLanguage
 languages = ['en-US', 'pt-BR']
 userContainsLanguage = languages.includes(userLang)
 
+getLanguage()
+
 let settings = {
     showGifs: localStorage.getItem('showGifs'),
     showLyricsOnly: localStorage.getItem('showLyricsOnly'),
@@ -356,8 +358,6 @@ $(document).ready(function () {
     $('[data-toggle=tooltip]').tooltip({
         trigger : 'hover'
     })
-
-    getLanguage()
     
     if (settings.showGifs === null) {
         settings.showGifs = 'true'
