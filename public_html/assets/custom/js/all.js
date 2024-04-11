@@ -11,6 +11,31 @@ const coverAlbuns = {
     'midnights': 'https://upload.wikimedia.org/wikipedia/pt/thumb/2/2b/Taylor_Swift_-_Midnights.png/220px-Taylor_Swift_-_Midnights.png',
 }
 
+userLang = navigator.language || navigator.userLanguage
+languages = ['en-US', 'pt-BR']
+userContainsLanguage = languages.includes(userLang)
+
+let language = languages[0]
+
+getLanguage = () => {
+    (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
+    $.ajax({
+        url:  '/assets/languages/' +  localStorage.getItem('language') + '.json',
+        dataType: 'json', async: false, dataType: 'json', 
+        success: function (lang) {
+            language = lang
+        }
+    })
+}
+
+getLanguage()
+
+function setLanguage(lang) {
+    localStorage.setItem('language', lang)
+    getLanguage()
+    updateLanguage()
+}
+
 albuns = [
     {
         id: 'taylor-swift',
@@ -303,12 +328,6 @@ albuns = [
     },
 ]
 
-userLang = navigator.language || navigator.userLanguage
-languages = ['en-US', 'pt-BR']
-userContainsLanguage = languages.includes(userLang)
-
-getLanguage()
-
 let settings = {
     showGifs: localStorage.getItem('showGifs'),
     showLyricsOnly: localStorage.getItem('showLyricsOnly'),
@@ -474,24 +493,6 @@ updateCurrentContent = (path = undefined, contentType = undefined) => {
     currentContent['path'] = path
     currentContent['contentType'] = contentType
 }
-
-getLanguage = () => {
-    (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
-    $.ajax({
-        url:  '/assets/languages/' +  localStorage.getItem('language') + '.json',
-        dataType: 'json', async: false, dataType: 'json', 
-        success: function (lang) {
-            language = lang
-        }
-    })
-}
-
-function setLanguage(lang) {
-    localStorage.setItem('language', lang)
-    getLanguage()
-    updateLanguage()
-}
-
 
 
 
