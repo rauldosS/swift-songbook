@@ -382,12 +382,10 @@ $(document).ready(function () {
         // 'https://media.tenor.com/ESVbz9s7rc4AAAAi/taylor-swift-reactions-taylor-swift.gif',
         // 'https://media.tenor.com/45rtnGyVtQ0AAAAi/taylor-swift-reactions-taylor-swift.gif',
         // 'https://media.tenor.com/BvBceGqz4CwAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/BgOoQFoYqvgAAAAi/taylor-swift-stop-it.gif',
         // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
-        // 'https://media.tenor.com/Go6zC_2xFXMAAAAi/taylor-swift-yes.gif',
         // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
 
-        document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (3 - 0) + 1) }.gif`
+        document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (17 - 1) + 1) }.gif`
     
         afterPageLoad()
         setLoading(false, 2500)
@@ -466,7 +464,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
-    if (loading) document.getElementById('load-img').src = taylors[Math.floor(Math.random() * (17 - 1 + 1)) + 1]
+    if (loading) document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (17 - 1) + 1) }.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
