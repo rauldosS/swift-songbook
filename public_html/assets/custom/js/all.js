@@ -28,6 +28,14 @@ getLanguage = () => {
     })
 }
 
+changeSidebarTitle = () => {
+    if ($(window).width() < 768) {
+        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
+    } else {
+        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
+    }
+}
+
 updateLanguage = () => {
     $('#main-alert').html(language.mainAlert)
 
@@ -648,12 +656,4 @@ changeText = (element) => {
     setTimeout(function() {
         element.html(`${ text }`)
     }, 1000);
-}
-
-changeSidebarTitle = () => {
-    if ($(window).width() < 768) {
-        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.show)
-    } else {
-        $('#shortcuts #hide-albuns-toggle span').text(language.shortcuts.albumToggle.hide)
-    }
 }
