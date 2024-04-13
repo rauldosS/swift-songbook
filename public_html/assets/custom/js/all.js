@@ -404,7 +404,7 @@ $(document).ready(function () {
         // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
         // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
 
-        document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (17 - 1) + 1) }.gif`
+        document.getElementById('load-img').src = `/assets/gifs/${ Math.floor(Math.random() * (15 - 1) + 1) }.gif`
     
         afterPageLoad()
         setLoading(false, 2500)
