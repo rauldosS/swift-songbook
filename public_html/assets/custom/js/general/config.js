@@ -404,7 +404,7 @@ updateCurrentContent = (content = undefined, name = undefined) => {
 getLanguage = () => {
     (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
     $.ajax({
-        url:  'assets/languages/' +  localStorage.getItem('language') + '.json',
+        url:  '/public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
