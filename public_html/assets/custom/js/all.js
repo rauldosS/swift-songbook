@@ -20,7 +20,7 @@ let language = languages[0]
 getLanguage = () => {
     (localStorage.getItem('language') == null) ? setLanguage(userContainsLanguage ? userLang : languages[0]) : false
     $.ajax({
-        url:  '/public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
+        url:  'public_html/assets/languages/' +  localStorage.getItem('language') + '.json',
         dataType: 'json', async: false, dataType: 'json', 
         success: function (lang) {
             language = lang
@@ -428,9 +428,9 @@ let currentContent = {
 }
 
 $(document).ready(function () {
-    $("#sidebar").load("/public_html/templates/base/sidebar.html")
-    $("#shortcuts").load("/public_html/templates/base/shortcuts.html")
-    $("#contribution").load("/public_html/templates/base/contribution.html")
+    $("#sidebar").load("public_html/templates/base/sidebar.html")
+    $("#shortcuts").load("public_html/templates/base/shortcuts.html")
+    $("#contribution").load("public_html/templates/base/contribution.html")
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
@@ -466,7 +466,7 @@ $(document).ready(function () {
         // 'https://media.tenor.com/Lxu3q9ZG4fYAAAAi/taylor-swift-reactions-taylor-swift.gif',
         // 'https://media.tenor.com/A2Jk-ImN064AAAAj/taylor-swift-reactions-taylor-swift.gif'
 
-        document.getElementById('load-img').src = `/public_html/assets/gifs/${ Math.floor(Math.random() * (15 - 1) + 1) }.gif`
+        document.getElementById('load-img').src = `public_html/assets/gifs/${ Math.floor(Math.random() * (15 - 1) + 1) }.gif`
     
         afterPageLoad()
         setLoading(false, 2500)
@@ -545,7 +545,7 @@ scrollToElement = (elementSelector, scrollContainerSelector = '.scrolling') => {
 }
 
 setLoading = (loading, timeout = 0) => {
-    if (loading) document.getElementById('load-img').src = `/public_html/assets/gifs/${ Math.floor(Math.random() * (17 - 1) + 1) }.gif`
+    if (loading) document.getElementById('load-img').src = `public_html/assets/gifs/${ Math.floor(Math.random() * (17 - 1) + 1) }.gif`
     setTimeout(() => {
         $('#loading').modal(loading ? 'show' : 'hide')
     }, timeout)
@@ -574,7 +574,7 @@ btnHome = $('#btn-home')
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
     updateCurrentContent(path, contentType)
 
-    content.load(`/public_html/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+    content.load(`public_html/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
         // if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
         updateLanguage()
         // }
