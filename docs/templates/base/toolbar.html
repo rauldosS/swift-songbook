@@ -1,0 +1,103 @@
+<div class="menu-actions d-flex justify-content-center">
+    <div class="action">
+        <div class="font-action">
+            <span class="font-action-title">Font</span>
+            <span class="NWgb3">
+                <button type="button" class="btn-action font-action-button increase normal-btn-action">
+                    <span class="action-content">−1</span>
+                </button>
+                <span class="divider"></span>
+                <button type="button" class="btn-action font-action-button decrease normal-btn-action">
+                    <span class="action-content">+1</span>
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="action">
+        <button type="button" class="btn-action btn-action-chords normal-btn-action btn-action-cursor-pointer">
+            <span class="chords-action-title action-content">Chords</span>
+        </button>
+    </div>
+    <div class="action column-action">
+        <div class="font-action">
+            <span class="columns-action-title">COLUMNS</span>
+            <span class="NWgb3">
+                <button type="button" class="btn-action columns-action-button increase normal-btn-action">
+                    <span class="action-content">−1</span>
+                </button>
+                <span class="divider"></span>
+                <button type="button" class="btn-action columns-action-button decrease normal-btn-action">
+                    <span class="action-content">+1</span>
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="action">
+        <button type="button" class="btn-action btn-action-full-screen normal-btn-action btn-action-cursor-pointer" style="
+            vertical-align: middle;
+            text-align: center;
+            display: flex;
+            align-items: center;"
+        >
+            <span class="action-content">
+                <i class="fa-solid fa-expand fa-lg"></i>
+            </span>
+        </button>
+    </div>
+    <div class="action dropup">
+        <button type="button" class="btn-action normal-btn-action btn-action-cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg viewBox="0 0 16 16">
+                <path
+                    d="M13 6.5a1.5 1.5 0 1 0 .001 3.001A1.5 1.5 0 0 0 13 6.5m-5 0a1.5 1.5 0 1 0 .001 3.001A1.5 1.5 0 0 0 8 6.5M4.5 8a1.5 1.5 0 1 1-3.001-.001A1.5 1.5 0 0 1 4.5 8"
+                    fill-rule="nonzero">
+                </path>
+            </svg>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+            <li>
+                <a id="unpin-toolbar" class="dropdown-item">
+                    <span>Desafixar</span>
+                    📌
+                </a>
+            </li>
+            <li>
+                <a id="only-lyrics" class="dropdown-item">
+                    <span>Exibir apenas letra</span>
+                    🎤
+                </a>
+            </li>
+            <li>
+                <a id="hide-lyrics" class="dropdown-item">
+                    <span>Ocultar letra</span>
+                    👀
+                </a>
+            </li>
+            <li>
+                <a id="hide-progressions" class="dropdown-item">
+                    <span>Ocultar progressões</span>
+                    🎸
+                </a>
+            </li>
+            <li>
+                <a id="hide-tabs" class="dropdown-item">
+                    <span>Ocultar tablaturas</span>
+                    🎼
+                </a>
+            </li>
+            <li>
+                <a id="hide-miniplayer" class="dropdown-item">
+                    <span>Ocultar miniplayer</span>
+                    <i class="bi bi-youtube color-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a id="share-cipher" class="dropdown-item" data-clipboard-text="">
+                    <span>Compartilhar cifra</span>
+                    🔗
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="/assets/custom/js/general/toolbar.js"></script>

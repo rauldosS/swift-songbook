@@ -1,0 +1,141 @@
+<div class="alert alert-warning d-flex align-items-center mt-4 rounded-pill" role="alert">
+    <div id="main-alert" class="text-center w-100 w-bold"></div>
+</div>
+
+<h1 class="font-taylor-swift-base text-center mt-4 title-home">Taylor's Songbook</h1>
+<h6  class="font-taylor-swift-base text-center caption-home">The Music Industry</h6>
+
+<div id="summary" class="mt-4 text-center">
+    <div class="collapse" id="collapseSummary">
+    </div>
+    <a class="collapsed action" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <a class="btn btn-whatsapp shadow animate__animated animate__bounce animate__delay-3s" href="https://chat.whatsapp.com/BS4Vx1FpM0TFf95iPfGylP" target="_blank">
+        <div><i class="bi bi-whatsapp"></i></div>
+        <div id="whatsapp"></div>
+    </a>
+</div>
+
+<div class="line"></div>
+
+<div id="mostAccessed" class="animate__animated animate__fadeInDown animate__delay-3s">
+    <h4 class="font-taylor-swift-base"></h4>
+
+    <ol class="list-group">
+        <li
+            class="list-group-item d-flex justify-content-between align-items-center" onclick="selectMusic('enchanted')"
+        >
+            <div class="p-2 number bd-highlight">1</div>
+            <div class="p-2 bd-highlight">
+                Enchanted
+                <i class="bi bi-question-circle color-fearless"></i>
+                <!-- <i class="bi bi-check-circle color-taylor-swift"></i> -->
+            </div>
+            <div class="ms-auto p-2 bd-highlight">
+                <span class="badge color-speak-now border-speak-now rounded-pill">Enchanted</span>
+            </div>
+        </li>
+        <li
+            class="list-group-item d-flex justify-content-between align-items-center" onclick="$(this).toggleClass('animate__animated animate__hinge z-index')"
+        >
+            <div class="p-2 number bd-highlight">1</div>
+            <div class="p-2 bd-highlight">
+                Cruel Summer
+                <i class="bi bi-question-circle color-fearless"></i>
+                <!-- <i class="bi bi-check-circle color-taylor-swift"></i> -->
+            </div>
+            <div class="ms-auto p-2 bd-highlight">
+                <span class="badge color-lover border-lover rounded-pill">Cruel Summer</span>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div class="line"></div>
+
+<div id="influencers" class="animate__animated animate__fadeInDown animate__delay-3s">
+
+    <div class="container marketing">
+        <h4 id="influencers-title" class="font-taylor-swift-base">Contribuições</h4>
+
+        <div id="influencers-data" class="pb-3"></div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="/assets/images/influencers/luca.webp" >
+
+                <h2>Luca</h2>
+                <p id="influencers-luca"></p>
+                <div>
+                    <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@tunezbylucz7752" target="_blank"><i class="bi bi-youtube"></i> Youtube</a>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-music-note-list"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-speak-now" music="enchanted">Enchanted</button>
+                            <button class="dropdown-item color-midnights" music="anti-hero">Anti-Hero</button>
+                            <button class="dropdown-item color-midnights" music="karma">Karma</button>
+                            <button class="dropdown-item color-midnights" music="lavender-haze">Lavender Haze</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="/assets/images/influencers/nena.webp" >
+
+                <h2>Nena Shelby</h2>
+                <p id="influencers-nena"></p>
+                <div>
+                    <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@NenaShelby" target="_blank"><i class="bi bi-youtube"></i> Youtube</a>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-music-note-list"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item color-fearless" music="fearless">Fearless</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="/assets/images/influencers/mike.webp" >
+
+                <h2>Mike Garcia</h2>
+                <p id="influencers-mike"></p>
+                <div>
+                    <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@MikeLive1285" target="_blank"><i class="bi bi-youtube"></i> Youtube</a>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-music-note-list"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item color-folklore" music="hoax">Hoax</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle shadow" width="140" height="140" src="/assets/images/influencers/goddess.webp" >
+
+                <h2>Guitar Goddess</h2>
+                <p id="influencers-goddess"></p>
+                <div>
+                    <a class="btn btn-youtube mb-2" href="https://www.youtube.com/@GuitarGoddess" target="_blank"><i class="bi bi-youtube"></i> Youtube</a>
+                    <div class="btn-group mb-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-music-note-list"></i> Chords
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item color-lover" href="/song/the-man">The Man</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script src="/assets/custom/js/home.js"></script> -->
