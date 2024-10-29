@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $("#mini-player").load("/docs/templates/base/mini-player.html")
-    $("#toolbar").load("/docs/templates/base/toolbar.html")
+    $("#mini-player").load("/templates/base/mini-player.html")
+    $("#toolbar").load("/templates/base/toolbar.html")
 })
 
 // CHORDS

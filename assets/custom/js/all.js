@@ -398,7 +398,7 @@ let settings = {
 // LOAD PAGE
 
 function afterPageLoad() {
-    let fullPath = window.location.pathname.replace('/docs/', '')
+    let fullPath = window.location.pathname.replace('/', '')
 
     if (fullPath.charAt(0) === '/') {
         fullPath = fullPath.slice(1)
@@ -428,9 +428,9 @@ let currentContent = {
 }
 
 $(document).ready(function () {
-    $("#sidebar").load("/docs/templates/base/sidebar.html")
-    $("#shortcuts").load("/docs/templates/base/shortcuts.html")
-    $("#contribution").load("/docs/templates/base/contribution.html")
+    $("#sidebar").load("/templates/base/sidebar.html")
+    $("#shortcuts").load("/templates/base/shortcuts.html")
+    $("#contribution").load("/templates/base/contribution.html")
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active')
@@ -574,7 +574,7 @@ btnHome = $('#btn-home')
 loadContent = (path, contentType = undefined, switchLanguage = false) => {
     updateCurrentContent(path, contentType)
 
-    content.load(`/docs/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
+    content.load(`/templates/${ switchLanguage ? language.code : '' }/${ path }.html`, function() {
         // if (!['album', 'about', 'music', 'help'].includes(currentContent.contentType)) {
         updateLanguage()
         // }
